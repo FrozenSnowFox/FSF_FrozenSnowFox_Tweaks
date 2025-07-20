@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPsycastTweaksSolarPinhole</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Solar Pinhole Provides Sunlight -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/VEF.Abilities.AbilityDef[defName = "VPE_SolarPinhole"]/description</xpath>
+				<value>
+					<description>Generate a microscopic skipgate linked to the core of a nearby star for a few days. Solar material leaks through the pinprick in spacetime, illuminating and warming the surrounding area until it closes.</description>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "SolarPinhole"]/comps/li[@Class = "CompProperties_Glower"]</xpath>
+				<value>
+					<li Class="CompProperties_Glower">
+						<overlightRadius>7.0</overlightRadius>
+						<glowRadius>15</glowRadius>
+						<glowColor>(370,370,370,0)</glowColor>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

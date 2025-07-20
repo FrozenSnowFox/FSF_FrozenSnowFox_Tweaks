@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAnimalsDontMineToEscape</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Animals Don't Mine To Escape -->
+		
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThinkTreeDef[defName != "AA_AnimalDigger"]/thinkRoot/subNodes/li[@Class = "ThinkNode_ConditionalHasFaction"] [subNodes/li[@Class = "ThinkNode_ConditionalStarving"]/subNodes/li[@Class = "ThinkNode_ConditionalBodySize"]/subNodes/li[@Class = "ThinkNode_Subtree"]/treeDef [text()="DigOutIfCannotReachMapEdge"]]</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

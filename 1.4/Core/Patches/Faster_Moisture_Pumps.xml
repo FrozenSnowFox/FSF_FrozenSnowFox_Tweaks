@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFFasterMoisturePumpsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFFasterMoisturePumps</key>
+		<defaultValue>60</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Faster Moisture Pumps -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MoisturePump"]/comps/li[@Class = "CompProperties_TerrainPumpDry"]/daysToRadius</xpath>
+				<value>
+					<daysToRadius>{FSFFasterMoisturePumps}</daysToRadius>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

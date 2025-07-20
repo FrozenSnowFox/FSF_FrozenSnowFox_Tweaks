@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMiningWorksiteResources</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Better Worksite Resources -->
+			
+			<!-- Deep Drill Commonality
+
+				Silver 0.5
+				Gold 0.5
+				Steel 4
+				Plasteel 1
+				Uranium 1
+				Jade 0.5
+				ComponentIndustrial 0.5 (Estimated)
+
+				Total Resource Weight should add up to 2.0 to match the selection weight.
+ 
+			-->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/SitePartDef[defName = "WorkSite_Mining"]/lootTable</xpath>
+				<value>
+					<lootTable>
+						<li>
+							<thing>Steel</thing>
+							<weight>0.8</weight>
+						</li>
+						<li>
+							<thing>Plasteel</thing>
+							<weight>0.3</weight>
+						</li>
+						<li>
+							<thing>Uranium</thing>
+							<weight>0.3</weight>
+						</li>
+						<li>
+							<thing>Gold</thing>
+							<weight>0.15</weight>
+						</li>
+						<li>
+							<thing>Silver</thing>
+							<weight>0.15</weight>
+						</li>
+						<li>
+							<thing>Jade</thing>
+							<weight>0.15</weight>
+						</li>
+						<li>
+							<thing>ComponentIndustrial</thing>
+							<weight>0.15</weight>
+						</li>
+					</lootTable>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

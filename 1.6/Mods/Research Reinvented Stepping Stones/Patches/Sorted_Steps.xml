@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRRSSSortedSteps</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Sorted Steps Setting -->
+				
+			<!-- Core -->
+				
+			<li Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="EggBox"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[@Name="FlagstoneBase"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+			
+			<li Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="PlantPot"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_Agriculture</li>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="Sandbags"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="WoodPlankFloor"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+
+			<!-- Doormats -->
+				
+			<li MayRequire="dracoix.doormat.r12a" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LT_DoorMatLeather"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="dracoix.doormat.r12a" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LT_DoorMatCheckerLeather"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="dracoix.doormat.r12a" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LT_DoorMatBigLeather"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="dracoix.doormat.r12a" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LT_DoorMatBigCheckerLeather"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Dubs Bad Hygiene -->
+				
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="LogBoilers"]</xpath>
+				<value>
+					<prerequisites>
+						<li>RR_Fire</li>
+					</prerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="Plumbing"]</xpath>
+				<value>
+					<prerequisites>
+						<li>ComplexFurniture</li>
+					</prerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="SewageSludgeComposting"]</xpath>
+				<value>
+					<prerequisites>
+						<li>RR_Agriculture</li>
+					</prerequisites>
+				</value>
+			</li>
+				
+			<!-- Dubs Skylights -->
+				
+			<li MayRequire="Dubwise.DubsSkylights" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name="BasedSkyLight"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- [HRK] Vanilla Expanded Extra Embrasures -->
+				
+			<li MayRequire="Harkon.VEAddOn.VanillaExpandedExtraEmbrasures" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="CE_Embrasure"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="Harkon.VEAddOn.VanillaExpandedExtraEmbrasures,Ludeon.RimWorld.Royalty,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="HRK_FineEmbrasure"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- [LTS] Ammunition Simple Ammo Pack -->
+				
+			<li MayRequire="LimeTreeSnake.Ammo" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/RecipeDef[defName="Make_AmmoPrimitive"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicRangedWeapons</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Neolithic Desk and Blackboard -->
+				
+			<li MayRequire="Hol.NeolStuff" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="NeolithicDesk"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="Hol.NeolStuff" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="NeolithicBlackboard"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Nopower Comms Simplified -->
+				
+			<li MayRequire="Meltup.NopowerCommsSimplified" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="ProjectBirdPost"]</xpath>
+				<value>
+					<prerequisites>
+						<li>RR_BasicFoodPrep</li>
+						<li>RR_Trapping</li>
+						<li>ComplexFurniture</li>
+						<li MayRequire="VanillaExpanded.VBooksE">VBE_Writing</li>
+					</prerequisites>
+				</value>
+			</li>
+				
+			<!-- ReBuild: Doors and Corners -->
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[@Name="RB_FinePlankWoodBase"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Regrowth Core -->
+				
+			<li MayRequire="ReGrowth.BOTR.Core" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="RG_Hedge"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_Agriculture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Vanilla Expanded Memes -->
+				
+			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VME_SmallFishingTrap"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_Trapping</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VME_MediumFishingTrap"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_Trapping</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VME_LargeFishingTrap"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_Trapping</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Vanilla Furniture Expanded Architect -->
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[@Name="VFEArch_WoodenParquetBase"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_WoodPlankFloorWalnut"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_WoodPlankFloorBirch"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_WoodPlankFloorMahogany"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[@Name="CobblestoneBase"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_FineWoodenFloor"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_FineWoodenFloorWalnut"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_FineWoodenFloorBirch"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_FineWoodenFloorMahogany"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Vanilla Furniture Expanded Farming -->
+				
+			<li MayRequire="VanillaExpanded.VFEFarming" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_PlanterBox"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_Agriculture</li>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEFarming" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VFE_PlanterBox_Tilable"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_Agriculture</li>
+						<li>RR_BasicFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Vanilla Furniture Expanded Security -->
+				
+			<li MayRequire="VanillaExpanded.VFESecurity" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VFES_CavalrySpikes"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RR_BasicStructures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFESecurity" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VFES_BearTrap"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ComplexFurniture</li>
+						<li>RR_Trapping</li>
+					</researchPrerequisites>
+				</value>
+			</li>				
+				
+				
+				
+			<!-- Research Reinvented Blacklist -->
+				
+			<!-- Alpha Memes -->
+				
+			<li MayRequire="PeteTimesSix.ResearchReinvented,Sarg.AlphaMemes" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/TerrainDef[defName = "AM_Tile_Futuristic_Kemetic"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			<li MayRequire="PeteTimesSix.ResearchReinvented,Sarg.AlphaMemes" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "AM_FuturisticObelisk"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			<li MayRequire="PeteTimesSix.ResearchReinvented,Sarg.AlphaMemes" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "AM_FuturisticPyramid"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			<li MayRequire="PeteTimesSix.ResearchReinvented,Sarg.AlphaMemes" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "AM_FuturisticStele"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			<!-- Vanilla Furniture Expanded Architect -->
+				
+			<li MayRequire="PeteTimesSix.ResearchReinvented,VanillaExpanded.VFEArchitect" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "VFEArch_InvisibleFence"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

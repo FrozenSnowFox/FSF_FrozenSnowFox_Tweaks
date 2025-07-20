@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreChildrenClothing</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- More Children Clothing -->
+				
+			<!-- Core -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "OrbitalTargeterBombardment"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "OrbitalTargeterPowerBeam"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "TornadoGenerator"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_WarMask"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PsychicFoilHelmet"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_SmokepopBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_FirefoampopPack"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PsychicShockLance"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PsychicInsanityLance"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Biotech -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackTox"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Ideology -->
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_VisageMask"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_Slicecap"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_Collar"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_AuthorityCap"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_Tailcap"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Royalty -->
+
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "OrbitalTargeterMechCluster"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackJump"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackBroadshield"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_Coronet"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_Crown"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_CrownStellic"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Dubs Rimkit -->
+				
+			<li MayRequire="Dubwise.DubsRimkit" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "dubsApparelBase"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- [LTS] Ammunition - Framework -->
+				
+			<li MayRequire="LimeTreeSnake.Ammunition" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "PackBase"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- River's Tribal Mittens -->
+				
+			<li MayRequire="River.Tribal.Mittens" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "River_Tribal_mittens"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- River's Tribal Shoes -->
+				
+			<li MayRequire="River.Tribal.Mittens" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "River_Tribal_sandals"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="River.Tribal.Mittens" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "River_Tribal_moccasins"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="River.Tribal.Mittens" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "River_Tribal_mukluks"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Apparel Expanded -->
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Footwear_Boots"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Footwear_Shoes"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Handwear_Gloves"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_Fedora"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_Scarf"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_Beret"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_Hardhat"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_SurgicalMask"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_BaseballCap"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_Sunglasses"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_Glasses"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_ChefsToque"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Apparel Expanded - Accessories -->
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/VAE_Accessories.CaravanCapacityApparelDef[defName = "VAEA_Apparel_Backpack"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_BattleBanner"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_MedicBag"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_Quiver"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_ToolBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_AmmoPack"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_ExplosiveBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_RangedShieldBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_RessurectorBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_MiniTurretPack"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded - Deserters -->
+				
+			<li MayRequire="OskarPotocki.VFE.Deserters" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFED_Apparel_BombPack"]/apparel/developmentalStageFilter</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Deserters" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFED_Apparel_InvisibilityEngulfer"]/apparel/developmentalStageFilter</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Deserters" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFED_DeserterDeclassifier"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded - Insectoids -->
+				
+			<li MayRequire="OskarPotocki.VFE.Insectoid" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEI_Artifacts_PsychicPacifier"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Insectoid" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEI_Artifacts_PsychicAnimalTamer"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Insectoid" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEI_Artifacts_ArchotechEraser"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded - Vikings -->
+				
+			<li MayRequire="OskarPotocki.VFE.Vikings" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEV_Apparel_TorchBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Vikings" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEV_MooseHeaddress"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Vikings" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEV_BearHeaddress"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Vikings" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEV_JarlCrown"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Weapons Expanded - Grenades -->
+				
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeFragBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeMolotovBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeEMPBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeToxicBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,OskarPotocki.VanillaFactionsExpanded.SettlersModule" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_DynamiteBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeSmokeBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeFlashBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWENL" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeTearGasBelt"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

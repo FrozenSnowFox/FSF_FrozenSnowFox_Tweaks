@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNeuralSuperchargerCooldownOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNeuralSuperchargerCooldown</key>
+		<defaultValue>60000</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NeuralSupercharger"]/comps/li[@Class = "CompProperties_NeuralSupercharger"]/ticksToRecharge</xpath>
+				<value>
+					<ticksToRecharge>{FSFNeuralSuperchargerCooldown}</ticksToRecharge>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

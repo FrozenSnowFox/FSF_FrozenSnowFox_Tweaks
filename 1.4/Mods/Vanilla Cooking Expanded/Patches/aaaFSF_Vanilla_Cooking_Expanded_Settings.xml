@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVanillaCookingExpanded"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Vanilla Cooking Expanded Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksVanillaCookingExpandedTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Bulk Canning Recipes -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Bulk Canning Recipes</label>
+				<key>FSFVCookEBulkCanningRecipes</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksVCookEBulkCanningRecipesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds recipes to process food in larger quantities with the canning machine.</text>
+				<tKey>FSFTweaksVCookEBulkCanningRecipesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- No Ruined Grills -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Ruined Grills</label>
+				<key>FSFVCookENoRuinedGrills</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksVCookENoRuinedGrillsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes grill meals so they no longer get ruined by low temperatures.</text>
+				<tKey>FSFTweaksVCookENoRuinedGrillsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>					
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

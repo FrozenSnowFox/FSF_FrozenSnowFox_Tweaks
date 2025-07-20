@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVehicleFrameworkFactionsStockVehiclePartsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFVehicleFrameworkFactionsStockVehiclePartsMin</li>
+			<li>FSFVehicleFrameworkFactionsStockVehiclePartsMax</li>
+		</keys>
+		<defaultValues>
+			<li>5</li>
+			<li>10</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Factions Stock Vehicle Parts -->
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef  [defName [contains(text(), "Base")] ]/stockGenerators [li/thingDef [text() = "ComponentSpacer"]]</xpath>
+				<value>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_EngineBlock</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarAlternator</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarExhaust</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarSuspension</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarWheel</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarBattery</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarFuelTank</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarTransmission</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarRadiator</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>VVE_CarWiring</thingDef>
+						<countRange>{FSFVehicleFrameworkFactionsStockVehiclePartsMin}~{FSFVehicleFrameworkFactionsStockVehiclePartsMax}</countRange>
+					</li>					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

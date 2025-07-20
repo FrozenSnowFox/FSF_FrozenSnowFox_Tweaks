@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFWolvesAreDogs</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Wolves Are Dogs -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "ThingBaseWolf"]/statBases/FilthRate</xpath>
+				<value>
+					<FilthRate>1</FilthRate>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "ThingBaseWolf"]/race/petness</xpath>
+				<value>
+					<petness>1</petness>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ThingBaseWolf"]/race</xpath>
+				<value>
+					<nuzzleMtbHours>12</nuzzleMtbHours>
+				</value>
+			</li>
+				
+			<!-- Add Trade Tags to Animals and Add them for sale at Faction Bases -->
+				
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]/tradeTags</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]/tradeTags</xpath>
+					<value>
+						<li>FSFWolfArctic</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Wolf_Arctic"]</xpath>
+					<value>
+						<tradeTags>
+							<li>FSFWolfArctic</li>
+						</tradeTags>
+					</value>
+				</nomatch>
+			</li>
+			
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef[defName = "Wolf_Timber"]/tradeTags</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Wolf_Timber"]/tradeTags</xpath>
+					<value>
+						<li>FSFWolfTimber</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Wolf_Timber"]</xpath>
+					<value>
+						<tradeTags>
+							<li>FSFWolfTimber</li>
+						</tradeTags>
+					</value>
+				</nomatch>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef [defName [contains(text(), "Base")]]/stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_Animals">
+						<tradeTagsSell>
+							<li>FSFWolfArctic</li>
+						</tradeTagsSell>
+						<kindCountRange>2</kindCountRange>
+						<countRange>4</countRange>
+						<createMatingPair>
+							<li>FSFWolfArctic</li>
+						</createMatingPair>
+					</li>
+					<li Class="StockGenerator_Animals">
+						<tradeTagsSell>
+							<li>FSFWolfTimber</li>
+						</tradeTagsSell>
+						<kindCountRange>2</kindCountRange>
+						<countRange>4</countRange>
+						<createMatingPair>
+							<li>FSFWolfTimber</li>
+						</createMatingPair>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

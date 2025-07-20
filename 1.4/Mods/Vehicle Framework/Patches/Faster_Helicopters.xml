@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVehicleFrameworkFasterHelicopters</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Faster Helicopters -->
+				
+			<!-- Mosquito
+
+					Defaults (Toad Launches in maxTicks 1200)
+
+					Take Off
+						maxTicks 800
+						maxTicksVertical 600
+						maxTicksPropeller 1200
+			
+					Landing
+						maxTicks 600
+						maxTicksVertical 1400
+						maxTicksPropeller 900
+ 
+			-->
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Mosquito"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicks</xpath>
+				<value>
+					<maxTicks>300</maxTicks>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Mosquito"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksVertical</xpath>
+				<value>
+					<maxTicksVertical>200</maxTicksVertical>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Mosquito"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksPropeller</xpath>
+				<value>
+					<maxTicksPropeller>400</maxTicksPropeller>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Mosquito"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicks</xpath>
+				<value>
+					<maxTicks>200</maxTicks>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Mosquito"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksVertical</xpath>
+				<value>
+					<maxTicksVertical>500</maxTicksVertical>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Mosquito"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksPropeller</xpath>
+				<value>
+					<maxTicksPropeller>300</maxTicksPropeller>
+				</value>
+			</li>
+	
+			<!-- Cherokee
+		
+					Defaults (Toad Launches in maxTicks 1200)
+
+					Take Off
+						maxTicks 1200
+						maxTicksVertical 300
+						maxTicksPropeller 2000
+			
+					Landing
+						maxTicks 600
+						maxTicksVertical 1400
+						maxTicksPropeller 900
+ 
+			-->
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Cherokee"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicks</xpath>
+				<value>
+					<maxTicks>400</maxTicks>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Cherokee"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksVertical</xpath>
+				<value>
+					<maxTicksVertical>100</maxTicksVertical>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Cherokee"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksPropeller</xpath>
+				<value>
+					<maxTicksPropeller>700</maxTicksPropeller>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Cherokee"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicks</xpath>
+				<value>
+					<maxTicks>200</maxTicks>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Cherokee"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksVertical</xpath>
+				<value>
+					<maxTicksVertical>500</maxTicksVertical>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Cherokee"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksPropeller</xpath>
+				<value>
+					<maxTicksPropeller>300</maxTicksPropeller>
+				</value>
+			</li>
+			
+			<!-- Louie
+
+					Defaults (Toad Launches in maxTicks 1200)
+
+					Take Off
+						maxTicks 800
+						maxTicksVertical 600
+						maxTicksPropeller 1200
+			
+					Landing
+						maxTicks 600
+						maxTicksVertical 1400
+						maxTicksPropeller 900
+ 
+			-->
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Louie"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicks</xpath>
+				<value>
+					<maxTicks>300</maxTicks>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Louie"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksVertical</xpath>
+				<value>
+					<maxTicksVertical>200</maxTicksVertical>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Louie"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/launchProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksPropeller</xpath>
+				<value>
+					<maxTicksPropeller>400</maxTicksPropeller>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Louie"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicks</xpath>
+				<value>
+					<maxTicks>200</maxTicks>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Louie"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksVertical</xpath>
+				<value>
+					<maxTicksVertical>500</maxTicksVertical>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpandedTier3" Class="PatchOperationReplace">
+				<xpath>/Defs/Vehicles.VehicleDef[defName = "VVE_Louie"]/comps/li[@Class = "Vehicles.CompProperties_VehicleLauncher"]/launchProtocol [@Class = "Vehicles.PropellerTakeoff"]/landingProperties [@Class = "Vehicles.PropellerProtocolProperties"]/maxTicksPropeller</xpath>
+				<value>
+					<maxTicksPropeller>300</maxTicksPropeller>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

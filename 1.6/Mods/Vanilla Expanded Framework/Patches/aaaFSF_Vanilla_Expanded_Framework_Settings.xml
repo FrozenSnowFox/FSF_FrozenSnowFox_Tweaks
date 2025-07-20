@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVanillaExpandedFramework"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Vanilla Expanded Framework Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksVanillaExpandedFrameworkTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Vanilla Expanded Pipe Network -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Vanilla Expanded Pipe Network</label>
+				<key>FSFVEPipeNetworkOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFVEPipeNetworkTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise the storage capacity of various Pipe Networks that use the Vanilla Expanded Pipe Network framework.</text>
+				<tKey>FSFTweaksVEPipeNetworkOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFVEPipeNetworkOn</key>
+				<caseTrue>
+					<li MayRequire="VanillaExpanded.VChemfuelE" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="VanillaExpanded.VChemfuelE" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFVEPNChemfuelTank</key>
+						<defaultValue>3000</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Chemfuel Tanks</label>
+						<tKey>FSFTweaksVEPNChemfuelTank</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.VChemfuelE" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFVEPNDeepchemTank</key>
+						<defaultValue>3000</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Deepchem Tanks</label>
+						<tKey>FSFTweaksVEPNDeepchemTank</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.VChemfuelE" Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the amount of fuel that can be stored within the tanks.  The vanilla stack limit of Chemfuel and Deepchem is 150, the tanks take up 6 tiles, at 10x stack size with shelves providing 3 slots per tile the recommended minimum storage capacity is 27,000.</text>
+						<tKey>FSFTweaksVEPNChemfuelDesc</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.VChemfuelE" Class="XmlExtensions.Setting.SetColor"/>
+					<li MayRequire="VanillaExpanded.HelixienGas" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="VanillaExpanded.HelixienGas" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFVEPNHelixienTank</key>
+						<defaultValue>3000</defaultValue>
+						<min>1</min>
+						<max>100000</max>
+						<label>Helixien Gas Tanks</label>
+						<tKey>FSFTweaksVEPNHelixienTank</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.HelixienGas" Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the amount of helixien gas that can be stored within the tanks.  The vanilla capacity is 3000.</text>
+						<tKey>FSFTweaksVEPNHelixienDesc</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.HelixienGas" Class="XmlExtensions.Setting.SetColor"/>
+					<li MayRequire="vanillaracesexpanded.sanguophage" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="vanillaracesexpanded.sanguophage" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFVEPNHemogenTank</key>
+						<defaultValue>200</defaultValue>
+						<min>1</min>
+						<max>100000</max>
+						<label>Hemogen Tanks</label>
+						<tKey>FSFTweaksVEPNHemogenTank</tKey>
+					</li>
+					<li MayRequire="vanillaracesexpanded.sanguophage" Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the amount of hemogen that can be stored within the tanks.  The vanilla capacity is 200, the stack limit of Hemogen Packs is 10, the tank takes up 4 tiles.</text>
+						<tKey>FSFTweaksVEPNHemogenDesc</tKey>
+					</li>
+					<li MayRequire="vanillaracesexpanded.sanguophage" Class="XmlExtensions.Setting.SetColor"/>
+					<li MayRequire="vanillaracesexpanded.android" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="vanillaracesexpanded.android" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFVEPNNeutroamineTank</key>
+						<defaultValue>3000</defaultValue>
+						<min>1</min>
+						<max>100000</max>
+						<label>Neutroamine Tanks</label>
+						<tKey>FSFTweaksVEPNNeutroamineTank</tKey>
+					</li>
+					<li MayRequire="vanillaracesexpanded.android" Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the amount of neutroamine that can be stored within the tanks.  The vanilla stack limit of Neutroamine is 150, the tank takes up 6 tiles, at 10x stack size with shelves providing 3 slots per tile the recommended minimum storage capacity is 27,000.</text>
+						<tKey>FSFTweaksVEPNNeutroamineDesc</tKey>
+					</li>
+					<li MayRequire="vanillaracesexpanded.android" Class="XmlExtensions.Setting.SetColor"/>
+					<li MayRequire="VanillaExpanded.VNutrientE" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="VanillaExpanded.VNutrientE" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFVEPNPasteTank</key>
+						<defaultValue>150</defaultValue>
+						<min>1</min>
+						<max>100000</max>
+						<label>Nutrient Paste Tanks</label>
+						<tKey>FSFTweaksVEPNPasteTank</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.VNutrientE" Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the amount of paste that can be stored within the tanks.  The vanilla stack limit of Paste Meals is 10, the tank takes up 4 tiles, at 10x stack size with shelves providing 3 slots per tile the recommended minimum storage capacity is 1,200.</text>
+						<tKey>FSFTweaksVEPNPasteDesc</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.VNutrientE" Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>					
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksLethalDarkness"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Lethal Darkness Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksLethalDarknessTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Pitch Black Darkness -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Pitch Black Darkness</label>
+				<key>FSFPitchBlackDarkness</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPitchBlackDarknessTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes all weather types to give a pitch black darkness effect regardless of the time of day making it impossible to see anything without light sources.  This is designed to be used in conjunction with a permanent variant of Unnatural Darkness.</text>
+				<tKey>FSFTweaksPitchBlackDarknessDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+						
+				
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

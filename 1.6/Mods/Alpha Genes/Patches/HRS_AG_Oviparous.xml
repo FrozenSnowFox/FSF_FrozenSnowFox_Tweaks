@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHumanReproductonOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+
+			
+			
+			
+		<!-- Alpha Genes Oviparous Gene -->
+			
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFAGEggLayDays</li>
+			<li>FSFAGEggHatchDays</li>
+		</keys>
+		<defaultValues>
+			<li>9</li>
+			<li>15</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+		<!-- Alpha Genes Oviparous Egg Laying Interval -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName = "AG_HumanEggLaying"]/comps/li[@Class = "VEF.Genes.HediffCompProperties_HumanEggLayer"]/eggLayIntervalDays</xpath>
+				<value>
+					<eggLayIntervalDays>{FSFAGEggLayDays}</eggLayIntervalDays>
+				</value>
+			</li>
+				
+		<!-- Alpha Genes Oviparous Egg Days To Hatch -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AG_HumanEgg"]/comps/li[@Class = "VEF.Genes.CompProperties_HumanHatcher"]/hatcherDaystoHatch</xpath>
+				<value>
+					<hatcherDaystoHatch>{FSFAGEggHatchDays}</hatcherDaystoHatch>
+				</value>
+			</li>
+				
+		<!-- Add Oviparous Egg Laying Days and Oviparous Egg Hatch Days together to get Total Days -->
+				
+			<li Class="XmlExtensions.CreateVariable">
+				<storeIn>FSFAGEggTotalDays</storeIn>
+				<value>{FSFAGEggLayDays}</value>
+				<value2>{FSFAGEggHatchDays}</value2>
+				<operation>+</operation>
+					<apply>
+						
+						<Operation Class="PatchOperationReplace">
+							<xpath>/Defs/GeneDef[defName="AG_EggLaying"]/customEffectDescriptions/li[3]</xpath>
+							<value>
+								<li>The whole process takes ({FSFAGEggTotalDays} days total).</li>
+							</value>
+						</Operation>
+						
+					</apply>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

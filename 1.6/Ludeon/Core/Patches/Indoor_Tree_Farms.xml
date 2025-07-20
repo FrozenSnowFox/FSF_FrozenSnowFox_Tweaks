@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFIndoorTreeFarmsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Indoor Tree Farms -->
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFIndoorTreeFarmsAdjacentSow</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+				
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Block Adjacent Sowing -->
+			
+            <li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[plant]/plant/blockAdjacentSow</xpath>
+            </li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[plant]/plant</xpath>
+				<value>
+					<blockAdjacentSow>false</blockAdjacentSow>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFIndoorTreeFarmsRoof</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+				
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Interferes With Roof -->
+			
+            <li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[plant]/plant/interferesWithRoof</xpath>
+            </li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[plant]/plant</xpath>
+				<value>
+					<interferesWithRoof>false</interferesWithRoof>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFIndoorTreeFarmsWildToSow</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+				
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Must Be Wild To Sow -->
+			
+            <li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[plant]/plant/mustBeWildToSow</xpath>
+            </li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[plant]/plant</xpath>
+				<value>
+					<mustBeWildToSow>false</mustBeWildToSow>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

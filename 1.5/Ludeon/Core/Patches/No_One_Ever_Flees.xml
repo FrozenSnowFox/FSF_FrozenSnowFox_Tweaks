@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoOneEverFlees</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No One Ever Flees -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/FactionDef/autoFlee</xpath>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef</xpath>
+				<value>
+					<autoFlee>false</autoFlee>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

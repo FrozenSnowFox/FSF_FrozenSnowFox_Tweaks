@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBiggerRiversOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFBiggerRiversHugeRiver</li>
+			<li>FSFBiggerRiversLargeRiver</li>
+			<li>FSFBiggerRiversRiver</li>
+			<li>FSFBiggerRiversCreek</li>
+		</keys>
+		<defaultValues>
+			<li>30</li>
+			<li>14</li>
+			<li>6</li>
+			<li>4</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Bigger Rivers -->
+		
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RiverDef[defName = "HugeRiver"]/widthOnMap</xpath>
+			<value>
+				<widthOnMap>{FSFBiggerRiversHugeRiver}</widthOnMap>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RiverDef[defName = "LargeRiver"]/widthOnMap</xpath>
+			<value>
+				<widthOnMap>{FSFBiggerRiversLargeRiver}</widthOnMap>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RiverDef[defName = "River"]/widthOnMap</xpath>
+			<value>
+				<widthOnMap>{FSFBiggerRiversRiver}</widthOnMap>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RiverDef[defName = "Creek"]/widthOnMap</xpath>
+			<value>
+				<widthOnMap>{FSFBiggerRiversCreek}</widthOnMap>
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

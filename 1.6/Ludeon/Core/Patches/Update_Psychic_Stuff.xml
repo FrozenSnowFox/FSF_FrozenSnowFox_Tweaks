@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFUpdatePsychicStuff</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Update Psychic Stuff -->
+			
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/TraitDef[defName = "PsychicSensitivity"]/degreeDatas/li [label = "psychically hypersensitive"]/statOffsets</xpath>
+				<value>
+					<MeditationFocusGain>0.4</MeditationFocusGain>
+					<PsychicEntropyRecoveryRate>0.4</PsychicEntropyRecoveryRate>
+				</value>
+			</li>
+				
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/TraitDef[defName = "PsychicSensitivity"]/degreeDatas/li [label = "psychically sensitive"]/statOffsets</xpath>
+				<value>
+					<MeditationFocusGain>0.2</MeditationFocusGain>
+					<PsychicEntropyRecoveryRate>0.2</PsychicEntropyRecoveryRate>
+				</value>
+			</li>
+				
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/TraitDef[defName = "PsychicSensitivity"]/degreeDatas/li [label = "psychically dull"]/statOffsets</xpath>
+				<value>
+					<MeditationFocusGain>-0.25</MeditationFocusGain>
+					<PsychicEntropyRecoveryRate>-0.25</PsychicEntropyRecoveryRate>
+				</value>
+			</li>
+				
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/TraitDef[defName = "PsychicSensitivity"]/degreeDatas/li [label = "psychically deaf"]/statOffsets</xpath>
+				<value>
+					<MeditationFocusGain>-0.5</MeditationFocusGain>
+					<PsychicEntropyRecoveryRate>-0.5</PsychicEntropyRecoveryRate>
+				</value>
+			</li>
+				
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty" Class="PatchOperationConditional">		
+				<xpath>/Defs/HediffDef[defName = "PsychicSensitizer"]/stages/li/statOffsets</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/HediffDef[defName = "PsychicSensitizer"]/stages/li/statOffsets</xpath>
+					<value>
+						<MeditationFocusGain>0.125</MeditationFocusGain>
+						<PsychicEntropyRecoveryRate>0.125</PsychicEntropyRecoveryRate>
+					</value>
+				</match>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

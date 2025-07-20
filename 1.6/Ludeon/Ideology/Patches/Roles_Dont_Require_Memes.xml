@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRolesDontRequireMemes</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Remove Meme Ability Lock
+				Note: Exclude Exalted Priesthood otherwise it allows leaders to use moral guide abilities.
+			-->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/AbilityDef [not(requiredMemes/li [text()="VME_ExaltedPriesthood"] )] /requiredMemes</xpath>
+			</li>
+				
+			<!-- Remove Precept Meme requirements for Precepts using ParentDef PreceptRoleSingleBase and PreceptRoleMultiBase -->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PreceptDef [@ParentName = "PreceptRoleSingleBase" or @ParentName = "PreceptRoleMultiBase"] /requiredMemes</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

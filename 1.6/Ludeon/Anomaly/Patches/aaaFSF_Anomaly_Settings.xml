@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksAnomaly"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Anomaly Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksAnomalyTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Shambler Settings -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Shambler Settings</label>
+				<key>FSFShamblerSettingsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksShamblerSettingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Provides a suite of options to adjust how shamblers function.</text>
+				<tKey>FSFTweaksShamblerSettingsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFShamblerSettingsOn</key>
+				<caseTrue>
+					
+					<!-- Lethal Shambler Infections -->
+					
+					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare" Class="XmlExtensions.Setting.Checkbox">
+						<label>Lethal Shambler Infections</label>
+						<key>FSFLethalShamblers</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksLethalShamblersTitle</tKey>
+					</li>
+					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare" Class="XmlExtensions.Setting.Text">
+						<text>Changes Shambler infections from Alpha Genes and Ushankas Biological Warfare to be lethal.  These infections can no longer be tended and the natural immunity gain is non-existent.</text>
+						<tKey>FSFTweaksLethalShamblersDesc</tKey>
+					</li>
+					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare" Class="XmlExtensions.Setting.SetColor"/>
+					
+					<!-- Shamblers Aggro Further -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Shamblers Aggro Further</label>
+						<key>FSFShamblersAggroFurther</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksShamblersAggroFurtherTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Changes the Shambler Acquire Aggro Radius from 20 to 50 and the Keep Aggro Radius from 30 to 60.  This causes Shamblers to seek out targets much further than before.</text>
+						<tKey>FSFTweaksShamblersAggroFurtherDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					
+					<!-- Shamblers Wander Further -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Shamblers Wander Further</label>
+						<key>FSFShamblersWanderFurther</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksShamblersWanderFurtherTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Changes the Shambler wander radius from 5 to the maximum 12.  This causes Shamblers to wander and spread out more instead of idling near the map edge.</text>
+						<tKey>FSFTweaksShamblersWanderFurtherDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+
+				</caseTrue>
+			</li>
+
+					
+					
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+						
+						
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLessDesirableLongTermFood</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Less Desirable Long Term Food
+
+				Set food to RawBad so its priority is very low
+				Set optimalityOffsetHumanlikes to +3 for Lavish Quality Meals so its prioritised above Fine Quality Meals
+				Set optimalityOffsetHumanlikes to +4 for Fine Quality Meals so its prioritised above Packaged Simple Meals
+				Set optimalityOffsetHumanlikes to +5 for Packaged Survival Meals so its prioritised above raw food
+				Set optimalityOffsetHumanlikes to +8 for Jerky so its prioritised above Packaged Survival Meals
+				Set optimalityOffsetHumanlikes to +10 for Pemmican so its prioritised above Packaged Survival Meals
+				Set optimalityOffsetHumanlikes to +10 for Rations so its prioritised above Packaged Survival Meals
+				Set optimalityOffsetFeedingAnimals to -12 for Lavish Quality Meals so its prioritised below Packaged Survival Meals
+				Set optimalityOffsetFeedingAnimals to -11 for Fine Quality Meals so its prioritised below Packaged Survival Meals
+				Set optimalityOffsetFeedingAnimals to -10 for Packaged Survival Meals so its prioritised below raw food
+				Set optimalityOffsetFeedingAnimals to -8 for Jerky so its prioritised above Packaged Survival Meals but below raw food
+				Set optimalityOffsetFeedingAnimals to -5 for Pemmican so its prioritised above Packaged Survival Meals but below raw food
+				Set optimalityOffsetFeedingAnimals to -5 for Rations so its prioritised above Packaged Survival Meals but below raw food
+
+			-->
+				
+			<!-- Core - Package Survival Meal -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MealSurvivalPack"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MealSurvivalPack"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>5</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MealSurvivalPack"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Big and Small - Large Package Survival Meal -->
+			
+			<li MayRequire="RedMattis.BigSmall.Core" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "BS_MealLargeSurvivalPack"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="RedMattis.BigSmall.Core" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "BS_MealLargeSurvivalPack"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>5</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="RedMattis.BigSmall.Core" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "BS_MealLargeSurvivalPack"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+			
+			<!-- Core - Pemmican -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Pemmican"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Pemmican"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Pemmican"]/ingestible</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-5</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+			
+			<!-- Ancient Hydroponic Farm Facilities - Survival Nutrient Pack -->
+			
+			<li MayRequire="XMB.AncientHydroponicFarmFacilities.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "SurvivalNutrientPack"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientHydroponicFarmFacilities.MO" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "SurvivalNutrientPack"]/ingestible</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>5</optimalityOffsetHumanlikes>
+					<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Potato Chips A - Fine Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsA"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsA"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>4</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsA"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Potato Chips B - Fine Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsB"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsB"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>4</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsB"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Potato Chips C - Fine Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsC"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsC"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>4</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsC"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Potato Chips D - Fine Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsD"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsD"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>4</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsD"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Potato Chips E - Fine Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsE"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsE"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>4</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsE"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Potato Chips F - Fine Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsF"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsF"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>4</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_PotatoChipsF"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - MRE - Simple Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_MRE"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_MRE"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>5</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_MRE"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Canned Braised Pork - Lavish Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedBraisedPorkbelly"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedBraisedPorkbelly"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>3</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedBraisedPorkbelly"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Canned Herring - Lavish Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedHerring"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedHerring"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>3</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedHerring"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Canned Peas - Fine Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedPeas"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedPeas"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>4</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedPeas"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-11</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Canned Stewed Beef - Lavish Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedStewedBeef"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedStewedBeef"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>3</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_CannedStewedBeef"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins - Delicious Canned Beef - Lavish Meal -->
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_DeliciousCannedBeef"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_DeliciousCannedBeef"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>3</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AM_DeliciousCannedBeef"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-12</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Medieval Overhaul - Rations -->
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_MealRations"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_MealRations"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_MealRations"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-5</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded Classical - Jerky -->
+				
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFEC_Jerky"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEC_Jerky"]/ingestible</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>8</optimalityOffsetHumanlikes>
+					<optimalityOffsetFeedingAnimals>-8</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

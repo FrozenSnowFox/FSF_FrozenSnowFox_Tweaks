@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterUtilityLayers</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Ensure all Utilities don't count as clothing for Nudists -->
+			
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef/apparel [layers/li [text()="Belt"] ] [countsAsClothingForNudity]</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef/apparel</xpath>
+					<value>
+						<countsAsClothingForNudity>false</countsAsClothingForNudity>
+					</value>
+				</nomatch>
+			</li>
+			
+			<!-- Core -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_SmokepopBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_FirefoampopPack"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PsychicShockLance"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Shoulders</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PsychicInsanityLance"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Shoulders</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "OrbitalUtilityBase"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+
+			<!-- Royalty DLC -->
+			
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackJump"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackBroadshield"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<!-- Biotech DLC -->
+			
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackControl"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackBandwidth"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackTox"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<!-- Anomaly DLC -->
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_DisruptorFlarePack"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PackTurret"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_DeadlifePack"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ShardPsychicShockLance"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Shoulders</li>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ShardPsychicInsanityLance"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Shoulders</li>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_BiomutationLance"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Shoulders</li>
+				</value>
+			</li>
+				
+			<!-- Eccentric Extras Flares -->
+			
+			<li MayRequire="Aelanna.EccentricTech.Flares2" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "Eccentric_BaseIlluminatorPack"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+				
+			<!-- Medieval Overhaul -->
+			
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Apparel_FlashPotBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Apparel_FirePotBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Apparel_SmokePotBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Apparel_AcidFlaskBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<!-- Vanilla Apparel Expanded Accessories -->
+				
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_AmmoPack"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_MedicBag"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VAEAccessories" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VAEA_Apparel_ToolBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+				
+			<!-- Vanilla Ideology Expanded Memes and Structures -->
+			
+			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VME_TackleBox"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<!-- Vanilla Weapons Expanded Grenades -->
+			
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeFragBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeMolotovBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeEMPBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEG,Ludeon.RimWorld.Biotech" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeToxicBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEG,OskarPotocki.VanillaFactionsExpanded.SettlersModule" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_DynamiteBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeSmokeBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeFlashBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWENL" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeTearGasBelt"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

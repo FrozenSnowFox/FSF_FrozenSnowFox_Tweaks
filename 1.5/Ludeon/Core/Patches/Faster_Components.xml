@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFFasterComponents</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Faster Components -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "FabricationBench" or defName = "VFE_ComponentFabricationBench" or defName = "FSFBionicsTable"]/recipes</xpath>
+				<value>
+					<li>FSF_Make_ComponentIndustrial5</li>
+					<li>FSF_Make_ComponentIndustrial10</li>
+					<li>FSF_Make_ComponentIndustrial25</li>
+					<li>FSF_Make_ComponentIndustrial50</li>
+					<li>FSF_Make_ComponentSpacer5</li>
+					<li>FSF_Make_ComponentSpacer10</li>
+					<li>FSF_Make_ComponentSpacer25</li>
+					<li>FSF_Make_ComponentSpacer50</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_ComponentIndustrial"]/workAmount</xpath>
+				<value>
+					<workAmount>1250</workAmount>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/RecipeDef[defName = "Make_ComponentIndustrial"]</xpath>
+				<value>
+					<researchPrerequisite>Fabrication</researchPrerequisite>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_ComponentSpacer"]/workAmount</xpath>
+				<value>
+					<workAmount>2500</workAmount>
+				</value>
+			</li>
+		
+			<!-- Industrial Components -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+				
+	<RecipeDef>
+		<defName>FSF_Make_ComponentIndustrial5</defName>
+		<label>make 5 components</label>
+		<description>Make 5 components.</description>
+		<jobString>Making components.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>6250</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>60</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</products>
+		<researchPrerequisite>Fabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+				
+	<RecipeDef>
+		<defName>FSF_Make_ComponentIndustrial10</defName>
+		<label>make 10 components</label>
+		<description>Make 10 components.</description>
+		<jobString>Making 10 components.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>12500</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>120</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</products>
+		<researchPrerequisite>Fabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+				
+	<RecipeDef>
+		<defName>FSF_Make_ComponentIndustrial25</defName>
+		<label>make 25 components</label>
+		<description>Make 25 components.</description>
+		<jobString>Making 25 components.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>31250</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>300</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentIndustrial>25</ComponentIndustrial>
+		</products>
+		<researchPrerequisite>Fabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+				
+	<RecipeDef>
+		<defName>FSF_Make_ComponentIndustrial50</defName>
+		<label>make 50 components</label>
+		<description>Make 50 components.</description>
+		<jobString>Making 50 components.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>62500</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>600</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentIndustrial>50</ComponentIndustrial>
+		</products>
+		<researchPrerequisite>Fabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+				
+	<!-- Advanced Components -->
+				
+	<RecipeDef>
+		<defName>FSF_Make_ComponentSpacer5</defName>
+		<label>make 5 advanced components</label>
+		<description>Make 5 advanced components.</description>
+		<jobString>Making 5 advanced components.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>12500</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>1.5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ComponentIndustrial</li>
+				<li>Steel</li>
+				<li>Plasteel</li>
+				<li>Gold</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentSpacer>5</ComponentSpacer>
+		</products>
+		<researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+	</RecipeDef>
+				
+	<RecipeDef>
+		<defName>FSF_Make_ComponentSpacer10</defName>
+		<label>make 10 advanced components</label>
+		<description>Make 10 advanced components.</description>
+		<jobString>Making 10 advanced components.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>25000</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>200</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ComponentIndustrial</li>
+				<li>Steel</li>
+				<li>Plasteel</li>
+				<li>Gold</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentSpacer>10</ComponentSpacer>
+		</products>
+		<researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+	</RecipeDef>
+				
+	<RecipeDef>
+		<defName>FSF_Make_ComponentSpacer25</defName>
+		<label>make 25 advanced components</label>
+		<description>Make 25 advanced components.</description>
+		<jobString>Making 25 advanced components.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>62500</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>500</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>250</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>7.5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ComponentIndustrial</li>
+				<li>Steel</li>
+				<li>Plasteel</li>
+				<li>Gold</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentSpacer>25</ComponentSpacer>
+		</products>
+		<researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+	</RecipeDef>
+				
+	<RecipeDef>
+		<defName>FSF_Make_ComponentSpacer50</defName>
+		<label>make 50 advanced components</label>
+		<description>Make 50 advanced components.</description>
+		<jobString>Making 50 advanced components.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>125000</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1000</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>500</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ComponentIndustrial</li>
+				<li>Steel</li>
+				<li>Plasteel</li>
+				<li>Gold</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentSpacer>50</ComponentSpacer>
+		</products>
+		<researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+	</RecipeDef>
+					
+				</value>
+			</li>
+				
+	<!-- Vanilla Skills Expanded -->				
+				
+			<li MayRequire="vanillaexpanded.skills" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "FSF_Make_ComponentIndustrial5" or defName = "FSF_Make_ComponentIndustrial10" or defName = "FSF_Make_ComponentIndustrial25" or defName = "FSF_Make_ComponentIndustrial50" or defName = "FSF_Make_ComponentSpacer5" or defName = "FSF_Make_ComponentSpacer10" or defName = "FSF_Make_ComponentSpacer25" or defName = "FSF_Make_ComponentSpacer50"]/workSpeedStat</xpath>
+				<value>
+					<workSpeedStat>VSE_ComponentCraftingSpeed</workSpeedStat>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

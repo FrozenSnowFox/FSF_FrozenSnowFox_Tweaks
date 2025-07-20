@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoHumanFilth</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- No Human Filth -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_Trash"]/filth/disappearsInDays</xpath>
+				<value>
+					<disappearsInDays>0.0001</disappearsInDays>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

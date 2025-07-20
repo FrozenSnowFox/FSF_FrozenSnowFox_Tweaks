@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLactatingNoFertilityMalus</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName = "Lactating"]/description</xpath>
+				<value>
+					<description>The condition of being able to breastfeed a baby. The breasts are actively producing and storing milk. The lactating state begins when a mother gives birth, and continues indefinitely as long as she breastfeeds a baby at least once every 10 days.</description>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/HediffDef[defName = "Lactating"]/stages</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

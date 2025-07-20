@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVCookEBulkCanningRecipes</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Bulk Canning Recipes -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					
+						<RecipeDef MayRequire="VanillaExpanded.VCEF">
+							<defName>VCE_CanFish_x100</defName>
+							<label>can fish x100</label>
+							<description>Safely store fish in a steel can. Canning food extends its shelf life almost indefinitely.</description>
+							<jobString>Canning fish.</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<allowMixingIngredients>true</allowMixingIngredients>
+							<recipeUsers>
+								<li>VCE_CanningMachine</li>					
+							</recipeUsers>	
+									<ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>VCEF_RawFishCategory</li>
+
+										</categories>
+									</filter>
+									<count>5</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Steel</li>
+										</thingDefs>
+									</filter>
+									<count>5</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<categories>
+									<li>VCEF_RawFishCategory</li>				
+								</categories>			
+							</fixedIngredientFilter>
+							<defaultIngredientFilter>
+								<categories>
+									<li>VCEF_RawFishCategory</li>				
+								</categories>								
+								<disallowedCategories>							
+								</disallowedCategories>
+							</defaultIngredientFilter>
+							<products>
+								<VCE_CannedFish>100</VCE_CannedFish>
+							</products>
+						</RecipeDef>
+
+	<RecipeDef>
+		<defName>VCE_CanMeats_x100</defName>
+		<label>can meats x100</label>
+		<description>Safely store meat chunks in a steel can. Canning food extends its shelf life almost indefinitely.</description>
+		<jobString>Canning meats.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers>
+			<li>VCE_CanningMachine</li>					
+		</recipeUsers>	
+		<ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>				
+			</categories>		
+			<disallowedThingDefs>				
+				<li>VCE_CannedMeat</li>		
+				<li MayRequire="VanillaExpanded.VCEF">VCE_CannedFish</li>
+			</disallowedThingDefs>			
+			<disallowedCategories>		
+				<li MayRequire="VanillaExpanded.VCEF">VCEF_RawFishCategory</li>
+			</disallowedCategories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>				
+			</categories>
+			<disallowedThingDefs>
+				<li>Meat_Human</li>
+				<li>Meat_Megaspider</li>	
+
+			</disallowedThingDefs>
+			<disallowedCategories>		
+				<li MayRequire="VanillaExpanded.VCEF">VCEF_RawFishCategory</li>
+			</disallowedCategories>
+		</defaultIngredientFilter>
+		<products>
+			<VCE_CannedMeat>100</VCE_CannedMeat>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VCE_CanProduce_x100</defName>
+		<label>can produce x100</label>
+		<description>Safely store vegetables in a steel can. Canning food extends its shelf life almost indefinitely.</description>
+		<jobString>Canning produce.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+
+		<recipeUsers>
+			<li>VCE_CanningMachine</li>					
+		</recipeUsers>	
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>				
+			</categories>	
+			<disallowedThingDefs>
+				<li>RawBerries</li>
+				<li>VCE_CannedFruit</li>	
+				<li>VCE_CannedProduce</li>			
+			</disallowedThingDefs>	
+			<disallowedCategories>		
+				<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+			</disallowedCategories>			
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>PlantFoodRaw</li>				
+			</categories>
+			<disallowedThingDefs>
+				<li>RawBerries</li>
+				<li>VCE_CannedFruit</li>	
+				<li>VCE_CannedProduce</li>
+
+			</disallowedThingDefs>
+			<disallowedCategories>		
+				<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+			</disallowedCategories>
+		</defaultIngredientFilter>
+		<products>
+			<VCE_CannedProduce>100</VCE_CannedProduce>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VCE_CanFruit_x100</defName>
+		<label>can fruit x100</label>
+		<description>Safely store fruit in a steel can. Canning food extends its shelf life almost indefinitely.\n\nPreserved fruit can be used in the production of desserts.</description>
+		<jobString>Canning produce.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+		<recipeUsers>
+			<li>VCE_CanningMachine</li>					
+		</recipeUsers>	
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawBerries</li>
+					</thingDefs>
+					<categories>
+						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+			</categories>
+			<thingDefs>
+				<li>RawBerries</li>
+			</thingDefs>
+			<disallowedThingDefs>	
+				<li>VCE_CannedFruit</li>		
+			</disallowedThingDefs>		
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+			</categories>
+			<thingDefs>
+				<li>RawBerries</li>
+			</thingDefs>
+			<disallowedThingDefs>						
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+		<products>
+			<VCE_CannedFruit>100</VCE_CannedFruit>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>VCE_CanEggs_x100</defName>
+		<label>can eggs x100</label>
+		<description>Safely store boiled eggs in a steel can. Canning food extends its shelf life almost indefinitely.</description>
+		<jobString>Canning eggs.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>VanillaCookingExpanded.IngredientValueGetter_NutritionWithExtraIngredient</ingredientValueGetterClass>
+
+		<recipeUsers>
+			<li>VCE_CanningMachine</li>					
+		</recipeUsers>	
+
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>EggsUnfertilized</li>
+						<li>EggsFertilized</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>EggsUnfertilized</li>	
+				<li>EggsFertilized</li>				
+			</categories>			
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>EggsUnfertilized</li>	
+				<li>EggsFertilized</li>				
+			</categories>
+			<disallowedCategories>
+				<li>EggsFertilized</li>
+			</disallowedCategories>
+
+		</defaultIngredientFilter>
+		<products>
+			<VCE_CannedAP>100</VCE_CannedAP>
+		</products>
+	</RecipeDef>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

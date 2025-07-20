@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFTableSearchRadiusOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFTableSearchRadius</key>
+		<defaultValue>75</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Table Search Radius -->
+				
+			<!--
+				Look for items with nutrition
+	 			Then look for items with a foodType
+				Then exclude any with a foodType of Plant and Tree
+			-->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [ingestible/preferability != "NeverForNutrition" ] /ingestible/chairSearchRadius</xpath>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef [ingestible/preferability != "NeverForNutrition" ] /ingestible</xpath>
+				<value>
+					<chairSearchRadius>{FSFTableSearchRadius}</chairSearchRadius>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

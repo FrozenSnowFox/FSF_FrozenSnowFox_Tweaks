@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreFiltersOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreFiltersDrugs</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- More Filters Drugs -->
+				
+			<!-- Note: Drugs must be directly under the Drugs category otherwise they will not work for genetic drug dependencies.  -->
+				
+			<!-- Core -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					
+	<ThingCategoryDef>
+		<defName>FSFDrugsHard</defName>
+		<label>hard</label>
+		<parent>Drugs</parent>
+		<iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef>
+		<defName>FSFDrugsMedical</defName>
+		<label>medical</label>
+		<parent>Drugs</parent>
+		<iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef>
+		<defName>FSFDrugsSocial</defName>
+		<label>Social</label>
+		<parent>Drugs</parent>
+		<iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+	</ThingCategoryDef>
+					
+				</value>
+			</li>
+				
+			<!-- Sort drugs into categories -->
+			
+			<li Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/ThingDef [ingestible [drugCategory = "Hard"]]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFDrugsHard</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/ThingDef [ingestible [drugCategory = "Medical"]]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFDrugsMedical</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/ThingDef [ingestible [drugCategory = "Social"]]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFDrugsSocial</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Medical Supplements (Continued)
+				Note: Remove Category from Base Def to prevent both Parent and Child having it resulting in errors.
+			-->
+				
+			<li MayRequire="Mlie.MedicalSupplements" Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/ThingDef[@Name = "MSDrugBase"]/thingCategories/li[text()="FSFDrugsMedical"]</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

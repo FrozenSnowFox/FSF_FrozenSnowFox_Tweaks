@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFConversionRitualEffectivenessOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFConversionRitualCooldown</li>
+			<li>FSFConversionRETerribleChance</li>
+			<li>FSFConversionRETerribleCertainty</li>
+			<li>FSFConversionREIneffectiveChance</li>
+			<li>FSFConversionREIneffectiveCertainty</li>
+			<li>FSFConversionREEffectiveChance</li>
+			<li>FSFConversionREEffectiveCertainty</li>
+			<li>FSFConversionREMasterfulChance</li>
+			<li>FSFConversionREMasterfulCertainty</li>
+		</keys>
+		<defaultValues>
+			<li>480000</li>
+			<li>0.05</li>
+			<li>0.2</li>
+			<li>0.15</li>
+			<li>0.12</li>
+			<li>0.6</li>
+			<li>0.3</li>
+			<li>0.2</li>
+			<li>1</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Conversion Ritual Effectiveness Tweaks -->
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/AbilityDef[defName = "ConversionRitual"]/cooldownTicksRange</xpath>
+			<value>
+				<cooldownTicksRange>{FSFConversionRitualCooldown}</cooldownTicksRange>
+			</value>
+		</li>
+		
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RitualOutcomeEffectDef[defName = "Conversion"]/outcomeChances/li[1]/chance</xpath>
+			<value>
+				<chance>{FSFConversionRETerribleChance}</chance>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RitualOutcomeEffectDef[defName = "Conversion"]/outcomeChances/li[1]/ideoCertaintyOffset</xpath>
+			<value>
+				<ideoCertaintyOffset>{FSFConversionRETerribleCertainty}</ideoCertaintyOffset>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RitualOutcomeEffectDef[defName = "Conversion"]/outcomeChances/li[2]/chance</xpath>
+			<value>
+				<chance>{FSFConversionREIneffectiveChance}</chance>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RitualOutcomeEffectDef[defName = "Conversion"]/outcomeChances/li[2]/ideoCertaintyOffset</xpath>
+			<value>
+				<ideoCertaintyOffset>{FSFConversionREIneffectiveCertainty}</ideoCertaintyOffset>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RitualOutcomeEffectDef[defName = "Conversion"]/outcomeChances/li[3]/chance</xpath>
+			<value>
+				<chance>{FSFConversionREEffectiveChance}</chance>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RitualOutcomeEffectDef[defName = "Conversion"]/outcomeChances/li[3]/ideoCertaintyOffset</xpath>
+			<value>
+				<ideoCertaintyOffset>-{FSFConversionREEffectiveCertainty}</ideoCertaintyOffset>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RitualOutcomeEffectDef[defName = "Conversion"]/outcomeChances/li[4]/chance</xpath>
+			<value>
+				<chance>{FSFConversionREMasterfulChance}</chance>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/RitualOutcomeEffectDef[defName = "Conversion"]/outcomeChances/li[4]/ideoCertaintyOffset</xpath>
+			<value>
+				<ideoCertaintyOffset>-{FSFConversionREMasterfulCertainty}</ideoCertaintyOffset>
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

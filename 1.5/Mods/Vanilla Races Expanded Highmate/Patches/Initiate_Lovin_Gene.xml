@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVREHighmateInitiateLovinGeneOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Initiate Lovin Gene -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<GeneDef>
+						<defName>FSFInitiateLovin</defName>
+						<label>initiate lovin</label>
+						<description>Carriers of this gene can initiate lovin anywhere and anytime.</description>
+						<displayCategory>Reproduction</displayCategory>
+						<iconPath>UI/Gizmo/Gizmo_InitiateLovin</iconPath>
+						<displayOrderInCategory>10.1</displayOrderInCategory>
+						<biostatMet>0</biostatMet>
+						<biostatCpx>0</biostatCpx>
+						<abilities>
+							<li>VRE_InitiateLovin</li>
+						</abilities>
+						<descriptionHyperlinks>
+							<AbilityDef>VRE_InitiateLovin</AbilityDef>
+						</descriptionHyperlinks>
+					</GeneDef>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName = "VRE_GotSomeLovin"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>8</baseMoodEffect>
+				</value>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			<!-- Initiate Lovin For Everyone -->
+	
+		<Operation Class="XmlExtensions.OptionalPatch">
+			<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+			<key>FSFVREHighmateInitiateLovinForEveryone</key>
+			<defaultValue>false</defaultValue>
+			<caseTrue>
+			
+			<Operation Class="PatchOperationSequence">
+				<success>Normal</success>
+				<operations>
+
+				<!-- Add Gene Tag to Baseliner if Missing -->
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/XenotypeDef[defName = "Baseliner"]/genes</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/XenotypeDef[defName = "Baseliner"]</xpath>
+						<value>
+							<genes>
+							</genes>
+						</value>
+					</nomatch>
+				</li>
+					
+				<!-- Add Inheritable Tag to Baseliner if Missing -->
+				
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/XenotypeDef[defName = "Baseliner"]/inheritable</xpath>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/XenotypeDef[defName = "Baseliner"]</xpath>
+						<value>
+							<inheritable>true</inheritable>
+						</value>
+					</nomatch>
+				</li>
+					
+				<!-- Add Gene to All Xenotypes Except ones with a ParentDef (Note: Can use @Name to do the reverse all except those with parents) -->
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/XenotypeDef[not(@ParentName)]/genes</xpath>
+					<value>
+						<li>FSFInitiateLovin</li>
+					</value>
+				</li>
+					
+				<!-- Remove Initial Lovin ability from Very High Libido Gene to prevent conflicts -->
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/GeneDef[defName = "VRE_Libido_VeryHigh"]/abilities</xpath>
+				</li>
+					
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/GeneDef[defName = "VRE_Libido_VeryHigh"]/descriptionHyperlinks</xpath>
+				</li>
+				
+				</operations>
+			</Operation>
+			
+			</caseTrue>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

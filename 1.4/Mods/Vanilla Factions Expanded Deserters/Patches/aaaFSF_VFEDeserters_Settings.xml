@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVFEDeserters"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Vanilla Factions Expanded Deserters Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksVFEDesertersTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Intel Never Expires -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Intel Never Expires</label>
+				<key>FSFVFEDesertersIntelNeverExpires</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksVFEDesertersIntelNeverExpiresTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Intel and Critical Intel so they never expire allowing you to stockpile or use them as you please.</text>
+				<tKey>FSFTweaksVFEDesertersIntelNeverExpiresDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- More Contraband Items -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>More Contraband Items</label>
+				<key>FSFVFEDesertersMoreContrabandItems</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksVFEDesertersMoreContrabandItemsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds a range of new contraband items to be purchased from the deserter network.  The items themselves are all Spacer and Ultra tech items.</text>
+				<tKey>FSFTweaksVFEDesertersMoreContrabandItemsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

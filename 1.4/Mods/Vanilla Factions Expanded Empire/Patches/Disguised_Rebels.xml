@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVFEEDisguisedRebels</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Disguised Rebels -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter"]/label</xpath>
+				<value>
+					<label>soldier</label>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter"]/apparelRequired/li[text()="VFEE_Apparel_DeserterHelmet"]</xpath>
+				<value>
+					<li>Apparel_ArmorHelmetCataphract</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter"]/apparelRequired/li[text()="VFEE_Apparel_ArmorDeserter"]</xpath>
+				<value>
+					<li>Apparel_ArmorCataphract</li>
+				</value>
+			</li>
+				
+			<!-- Vanilla Psycasts Expanded -->
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Conflagator"]/label</xpath>
+				<value>
+					<label>soldier</label>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Conflagator"]/apparelRequired/li[text()="VFEE_Apparel_DeserterHelmet"]</xpath>
+				<value>
+					<li>Apparel_ArmorHelmetCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Conflagator"]/apparelRequired/li[text()="VFEE_Apparel_ArmorDeserter"]</xpath>
+				<value>
+					<li>Apparel_ArmorCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Warlord"]/label</xpath>
+				<value>
+					<label>soldier</label>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Warlord"]/apparelRequired/li[text()="VFEE_Apparel_DeserterHelmet"]</xpath>
+				<value>
+					<li>Apparel_ArmorHelmetCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Warlord"]/apparelRequired/li[text()="VFEE_Apparel_ArmorDeserter"]</xpath>
+				<value>
+					<li>Apparel_ArmorCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Nightstalker"]/label</xpath>
+				<value>
+					<label>soldier</label>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Nightstalker"]/apparelRequired/li[text()="VFEE_Apparel_DeserterHelmet"]</xpath>
+				<value>
+					<li>Apparel_ArmorHelmetCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Nightstalker"]/apparelRequired/li[text()="VFEE_Apparel_ArmorDeserter"]</xpath>
+				<value>
+					<li>Apparel_ArmorCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Protector"]/label</xpath>
+				<value>
+					<label>soldier</label>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Protector"]/apparelRequired/li[text()="VFEE_Apparel_DeserterHelmet"]</xpath>
+				<value>
+					<li>Apparel_ArmorHelmetCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Protector"]/apparelRequired/li[text()="VFEE_Apparel_ArmorDeserter"]</xpath>
+				<value>
+					<li>Apparel_ArmorCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Harmonist"]/label</xpath>
+				<value>
+					<label>soldier</label>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Harmonist"]/apparelRequired/li[text()="VFEE_Apparel_DeserterHelmet"]</xpath>
+				<value>
+					<li>Apparel_ArmorHelmetCataphract</li>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "VFEE_Deserter_Harmonist"]/apparelRequired/li[text()="VFEE_Apparel_ArmorDeserter"]</xpath>
+				<value>
+					<li>Apparel_ArmorCataphract</li>
+				</value>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

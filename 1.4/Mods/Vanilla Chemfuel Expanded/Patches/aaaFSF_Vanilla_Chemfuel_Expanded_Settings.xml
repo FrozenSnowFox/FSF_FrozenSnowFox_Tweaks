@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVanillaChemfuelExpanded"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Vanilla Chemfuel Expanded Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksVanillaChemfuelExpandedTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Larger Fuel Storage -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Larger Fuel Storage</label>
+				<key>FSFLargerFuelStorageOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksLargerFuelStorageTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFLargerFuelStorageOn</key>
+				<caseFalse>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to customise how much fuel the tanks store.</text>
+						<tKey>FSFTweaksLargerFuelStorageOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>				
+				</caseFalse>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLargerFuelStorageChemfuelTank</key>
+						<defaultValue>1500</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Chemfuel Tanks</label>
+						<tKey>FSFTweaksLargerFuelStorageChemfuelTank</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLargerFuelStorageDeepchemTank</key>
+						<defaultValue>1500</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Deepchem Tanks</label>
+						<tKey>FSFTweaksLargerFuelStorageDeepchemTank</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the amount of fuel that can be stored within the tanks.</text>
+						<tKey>FSFTweaksLargerFuelStorageDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>					
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

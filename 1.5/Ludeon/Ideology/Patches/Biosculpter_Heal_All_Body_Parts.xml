@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBiosculpterPodRestoreAllBodyParts</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "BiosculpterPod"]/comps/li[@Class = "CompProperties_BiosculpterPod_HealingCycle"]/bodyPartsToRestore</xpath>
+				<value>
+					<li>Spine</li>
+					<li>Stomach</li>
+					<li>Heart</li>
+					<li>Lung</li>
+					<li>Kidney</li>
+					<li>Liver</li>
+					<li>Jaw</li>
+					<li>Shoulder</li>
+					<li>Clavicle</li>
+					<li>Arm</li>
+					<li>Humerus</li>
+					<li>Radius</li>
+					<li>Hand</li>
+					<li>Leg</li>
+					<li>Femur</li>
+					<li>Tibia</li>
+					<li>Foot</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "BiosculpterPod"]/comps/li[@Class = "CompProperties_BiosculpterPod_HealingCycle"]/conditionsToPossiblyCure</xpath>
+				<value>
+					<li>OrganDecay</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

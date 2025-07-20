@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVEPipeNetworkOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVEPNHelixienTank</key>
+		<defaultValue>3000</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Helixien Gas -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VHGE_GasTank"]/comps/li[@Class = "PipeSystem.CompProperties_ResourceStorage"]/storageCapacity</xpath>
+				<value>
+					<storageCapacity>{FSFVEPNHelixienTank}</storageCapacity>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

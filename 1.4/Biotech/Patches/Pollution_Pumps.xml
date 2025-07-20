@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPollutionPumpsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFPollutionPumpsPower</li>
+			<li>FSFPollutionPumpsRadius</li>
+			<li>FSFPollutionPumpsWaste</li>
+			<li>FSFPollutionPumpsInterval</li>
+		</keys>
+		<defaultValues>
+			<li>200</li>
+			<li>10</li>
+			<li>6</li>
+			<li>15000</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Better Pollution Pumps -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "PollutionPump"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>
+					<basePowerConsumption>{FSFPollutionPumpsPower}</basePowerConsumption>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "PollutionPump"]/comps/li[@Class = "CompProperties_PollutionPump"]/radius</xpath>
+				<value>
+					<radius>{FSFPollutionPumpsRadius}.9</radius>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "PollutionPump"]/comps/li[@Class = "CompProperties_PollutionPump"]/pumpsPerWastepack</xpath>
+				<value>
+					<pumpsPerWastepack>{FSFPollutionPumpsWaste}</pumpsPerWastepack>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "PollutionPump"]/comps/li[@Class = "CompProperties_PollutionPump"]/intervalTicks</xpath>
+				<value>
+					<intervalTicks>{FSFPollutionPumpsInterval}</intervalTicks>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

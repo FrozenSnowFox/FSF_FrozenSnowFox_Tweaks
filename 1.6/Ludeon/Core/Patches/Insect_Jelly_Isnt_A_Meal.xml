@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFInsectJellyIsntAMeal</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Insect Jelly Isn't A Meal -->
+				
+			<!-- Core -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "InsectJelly"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawTasty</preferability>
+				</value>
+			</li>
+				
+			<!-- Alpha Animals -->
+				
+			<li MayRequire="sarg.alphaanimals" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AA_BlackInsectJelly"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawTasty</preferability>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

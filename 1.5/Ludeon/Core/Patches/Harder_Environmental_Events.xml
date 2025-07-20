@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHarderEnvironmentalEvents</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Harder Environmental Events -->
+				
+			<!--
+				Note: Durations are calculated by using Purple Event duration and baseChance as a base.
+				Anomaly DLC Death Pall does not follow this logic.
+			-->
+				
+			<!-- 
+				VEE Purple Events
+				baseChance 0.04
+				earliestDay 180
+				minRefireDays 300
+				durationDays 40~120
+			-->
+				
+			<!-- 
+				Toxic Fallout
+				baseChance 0.12
+				earliestDay 60
+				minRefireDays 90
+				durationDays 2.5~10.5
+			-->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "ToxicFallout"]/minRefireDays</xpath>
+				<value>
+					<minRefireDays>100</minRefireDays>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "ToxicFallout"]/durationDays</xpath>
+				<value>
+					<durationDays>10~40</durationDays>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/GameConditionDef[defName = "ToxicFallout"]/letterText</xpath>
+				<value>
+					<letterText>A distant chemical fire has released a plume of poison over this entire region.\n\nAny person or creature not under a roof will be slowly sickened by the toxic dust settling out of the atmosphere.\n\nIt could pass in a few weeks, or it might last many quadrums.</letterText>
+				</value>
+			</li>
+				
+			<!-- 
+				Volcanic Winter
+				baseChance 0.08
+				earliestDay 60
+				minRefireDays 140
+				durationDays 7.5~40
+			-->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "VolcanicWinter"]/minRefireDays</xpath>
+				<value>
+					<minRefireDays>150</minRefireDays>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "VolcanicWinter"]/durationDays</xpath>
+				<value>
+					<durationDays>20~60</durationDays>
+				</value>
+			</li>
+				
+			<!-- 
+				Heat Wave
+				baseChance 1.0
+				minRefireDays 30
+				durationDays 1.5~3.5
+			-->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "HeatWave"]/durationDays</xpath>
+				<value>
+					<durationDays>3~7</durationDays>
+				</value>
+			</li>
+				
+			<!-- 
+				Cold Snap
+				baseChance 1.0
+				minRefireDays 30
+				durationDays 1.5~3.5
+			-->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "ColdSnap"]/durationDays</xpath>
+				<value>
+					<durationDays>3~7</durationDays>
+				</value>
+			</li>
+				
+			<!-- Anomaly DLC -->
+				
+			<!-- 
+				Blood Rain
+				baseChance 0.5
+				minRefireDays 45
+				durationDays 0.33~1.5 (8~36 Hours)
+			-->
+				
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "BloodRain"]/durationDays</xpath>
+				<value>
+					<durationDays>1.5~3</durationDays>
+				</value>
+			</li>
+				
+			<!-- 
+				Death Pall
+				baseChance 0.12
+				minRefireDays 30
+				durationDays 1~3
+			-->
+				
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "DeathPall"]/durationDays</xpath>
+				<value>
+					<durationDays>3~7</durationDays>
+				</value>
+			</li>
+				
+			<!-- Vanilla Events Expanded -->
+				
+			<!-- 
+				Drought
+				baseChance 0.15
+				minRefireDays 40
+				durationDays 6~10
+			-->
+				
+			<li MayRequire="VanillaExpanded.VEE" Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "VEE_Drought"]/minRefireDays</xpath>
+				<value>
+					<minRefireDays>75</minRefireDays>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VEE" Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "VEE_Drought"]/durationDays</xpath>
+				<value>
+					<durationDays>
+						<min>10</min>
+						<max>30</max>
+					</durationDays>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

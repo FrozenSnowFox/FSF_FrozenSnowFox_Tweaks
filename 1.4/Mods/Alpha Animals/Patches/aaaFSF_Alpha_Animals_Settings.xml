@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksAlphaAnimals"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Alpha Animals Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksAlphaAnimalsTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Mime Scenario Setting -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Mime Scenario Setting</label>
+				<key>FSFMimeScenarioSetting</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMimeScenarioSettingTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Modifies the Mime hediff Hiding in Plain Sight to be usable in the scenario settings.  In the scenario editor click Add Part -> Forced Health Condition -> Hiding in Plain Sight.  Set the severity to 1, modify the percentage chance and set the context.\n\nWhen set up this allows you to have Mimes spawn in place of any person in the game based on the percentage you entered.  Mimes can be anywhere and anyone.  For best results disable the mime wanderer event so there's no predictable reveals.\n\nNote: Currently the scenario settings treats colony born children as non player characters upon creation so its possible for them to inherit the mime trait based on your selected odds.  You can use dev mode to remove the hediff should this happen.</text>
+				<tKey>FSFTweaksMimeScenarioSettingDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

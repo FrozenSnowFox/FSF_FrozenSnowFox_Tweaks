@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreTraderItemsPoluxSeedOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFMoreTraderItemsPoluxSeedMin</li>
+			<li>FSFMoreTraderItemsPoluxSeedMax</li>
+		</keys>
+		<defaultValues>
+			<li>0</li>
+			<li>1</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+				<value>
+					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>PoluxSeed</thingDef>
+						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+					</li>
+
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
+				<value>
+					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>PoluxSeed</thingDef>
+						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+					</li>
+
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+				<value>
+					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>PoluxSeed</thingDef>
+						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+					</li>
+					
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_Empire"]/stockGenerators</xpath>
+				<value>
+					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>PoluxSeed</thingDef>
+						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="zhrocks11.letstrade" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_Farming"]/stockGenerators</xpath>
+				<value>
+					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>PoluxSeed</thingDef>
+						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

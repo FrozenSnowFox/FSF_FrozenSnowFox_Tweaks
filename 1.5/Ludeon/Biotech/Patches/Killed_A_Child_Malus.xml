@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFKilledAChildMalus</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!--
+				Killed A Child Malus
+ 				Note: nullifiedIfNotColonist flag does not work on KilledChild_Opinion for some reason.
+			-->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName = "KilledChild_Opinion"]/stages/li/baseOpinionOffset</xpath>
+				<value>
+					<baseOpinionOffset>0</baseOpinionOffset>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAttributeSet">
+				<xpath>/Defs/ThoughtDef[defName = "KilledChild"]</xpath>
+				<attribute>ParentName</attribute>
+				<value>DeathMemory</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

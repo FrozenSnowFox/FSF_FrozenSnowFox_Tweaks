@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFUnlockHediffsForScenario</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Unlock Hediffs For Scenario Settings -->
+				
+			<!-- Anomaly DLC - Metal Horror -->
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/HediffDef[defName="MetalhorrorImplant"]</xpath>
+				<value>
+					<scenarioCanAdd>True</scenarioCanAdd>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/HediffDef[defName="Regeneration"]</xpath>
+				<value>
+					<scenarioCanAdd>True</scenarioCanAdd>
+				</value>
+			</li>
+				
+			<!-- Alpha Animals - Mime -->
+				
+			<li MayRequire="sarg.alphaanimals" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/HediffDef[defName="AA_MimeHediff"]</xpath>
+				<value>
+					<label>mime</label>
+				</value>
+			</li>
+			
+			<li MayRequire="sarg.alphaanimals" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/HediffDef[defName="AA_MimeHediff"]</xpath>
+				<value>
+					<scenarioCanAdd>True</scenarioCanAdd>
+				</value>
+			</li>
+				
+			<!-- Ushankas Biological Warfare - Necroa -->
+				
+			<li MayRequire="Ushanka.BiologicalWarfare" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/HediffDef[defName="USH_Necroa"]</xpath>
+				<value>
+					<scenarioCanAdd>True</scenarioCanAdd>
+				</value>
+			</li>
+				
+			<!-- Vanilla Events Expanded - Traitor -->
+				
+			<li MayRequire="VanillaExpanded.VEE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/HediffDef[defName="Traitor"]</xpath>
+				<value>
+					<scenarioCanAdd>True</scenarioCanAdd>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+			<!-- Vanilla Events Expanded - Traitor -->
+			
+		<Operation Class="XmlExtensions.UseSettings">
+			<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+			<keys>
+				<li>FSFScenarioHediffTraitorMinTicks</li>
+				<li>FSFScenarioHediffTraitorMaxTicks</li>
+			</keys>
+			<defaultValues>
+				<li>120000</li>
+				<li>360000</li>
+			</defaultValues>
+			<apply>
+				
+			<Operation Class="PatchOperationSequence">
+				<success>Normal</success>
+				<operations>
+				
+				<!-- Traitor Ticks to Reveal -->
+				
+				<li MayRequire="VanillaExpanded.VEE" Class="PatchOperationReplace">
+					<xpath>/Defs/HediffDef[defName = "Traitor"]/comps/li[@Class = "VEE.HediffCompPropreties_Traitor"]/disappearsAfterTicks/min</xpath>
+					<value>
+						<min>{FSFScenarioHediffTraitorMinTicks}</min>
+					</value>
+				</li>
+					
+				<li MayRequire="VanillaExpanded.VEE" Class="PatchOperationReplace">
+					<xpath>/Defs/HediffDef[defName = "Traitor"]/comps/li[@Class = "VEE.HediffCompPropreties_Traitor"]/disappearsAfterTicks/max</xpath>
+					<value>
+						<max>{FSFScenarioHediffTraitorMaxTicks}</max>
+					</value>
+				</li>
+				
+				</operations>
+			</Operation>
+			
+			</apply>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

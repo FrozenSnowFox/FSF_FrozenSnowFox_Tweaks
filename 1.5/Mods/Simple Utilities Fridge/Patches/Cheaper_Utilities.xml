@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFSUFCheaperUtilitiesOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFSUFCheaperUtilitiesFridge</li>
+			<li>FSFSUFCheaperUtilitiesDoubleFridge</li>
+		</keys>
+		<defaultValues>
+			<li>80</li>
+			<li>150</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Cheaper Utilities -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "owl_refrigerator"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>
+					<basePowerConsumption>{FSFSUFCheaperUtilitiesFridge}</basePowerConsumption>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "owl_doublerefrigerator"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>
+					<basePowerConsumption>{FSFSUFCheaperUtilitiesDoubleFridge}</basePowerConsumption>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

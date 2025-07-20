@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksSimpleUtilitiesFridge"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Simple Utilities Fridge Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksSimpleUtilitiesFridgeTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Cheaper Utilities -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Cheaper Utilities</label>
+				<key>FSFSUFCheaperUtilitiesOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksSUFCheaperUtilitiesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFSUFCheaperUtilitiesOn</key>
+				<caseFalse>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to customise the power usage on various utilities.</text>
+						<tKey>FSFTweaksSUFCheaperUtilitiesOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>				
+				</caseFalse>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFSUFCheaperUtilitiesFridge</key>
+						<defaultValue>80</defaultValue>
+						<min>1</min>
+						<max>80</max>
+						<label>Refrigerator</label>
+						<tKey>FSFTweaksSUFCheaperUtilitiesFridge</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFSUFCheaperUtilitiesDoubleFridge</key>
+						<defaultValue>150</defaultValue>
+						<min>1</min>
+						<max>150</max>
+						<label>Double Refrigerator</label>
+						<tKey>FSFTweaksSUFCheaperUtilitiesDoubleFridge</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the power usage.\n Vanilla values Refrigerator (Default 80W), Double Refrigerator (Default 150W).</text>
+						<tKey>FSFTweaksSUFCheaperUtilitiesDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>						
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

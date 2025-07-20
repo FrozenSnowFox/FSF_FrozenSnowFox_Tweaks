@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMimeScenarioSetting</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Mime Scenario Setting -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="AA_MimeHediff"]/scenarioCanAdd</xpath>
+				<value>
+					<scenarioCanAdd>True</scenarioCanAdd>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

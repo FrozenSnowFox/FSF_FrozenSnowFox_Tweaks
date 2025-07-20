@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVanillaEventsExpanded"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Vanilla Events Expanded Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksVanillaEventsExpandedTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Traitor Scenario Setting -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Traitor Scenario Setting</label>
+				<key>FSFTraitorScenarioSettingOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksTraitorScenarioSettingTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFTraitorScenarioSettingOn</key>
+				<caseFalse>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+					<text>Modifies the Traitor hediff to be usable in the scenario settings.  When set up this allows you to have Traitors spawn in place of any person in the game based on the percentage you entered.  Traitors can be anywhere and anyone.</text>
+					<tKey>FSFTweaksTraitorScenarioSettingOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>				
+				</caseFalse>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFTraitorScenarioSettingMinTicks</key>
+						<defaultValue>120000</defaultValue>
+						<min>1</min>
+						<max>999999999</max>
+						<label>Minimum Time Range In Ticks</label>
+						<tKey>FSFTweaksTraitorScenarioSettingMinTicks</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFTraitorScenarioSettingMaxTicks</key>
+						<defaultValue>360000</defaultValue>
+						<min>1</min>
+						<max>999999999</max>
+						<label>Maximum Time Range In Ticks</label>
+						<tKey>FSFTweaksTraitorScenarioSettingMaxTicks</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input values to adjust the minimum and maximum time range of a Traitor reveal.  The value is written in what the game calls ticks.  There are 2500 ticks in one game hour and 60000 ticks in a day.\nThe Vanilla value is 120000 (2 day) to 360000 (6 days).</text>
+						<tKey>FSFTweaksTraitorScenarioSettingTicksDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Modifies the Traitor hediff to be usable in the scenario settings.  In the scenario editor click Add Part -> Forced Health Condition -> Traitor.  Set the severity to 1, modify the percentage chance and set the context.\n\nWhen set up this allows you to have Traitors spawn in place of any person in the game based on the percentage you entered.  Traitors can be anywhere and anyone.  For best results disable the traitor wanderer event so there's no predictable reveals.\n\nNote: Currently the scenario settings treats colony born children as non player characters upon creation so its possible for them to inherit the traitor trait based on your selected odds.  You can use dev mode to remove the hediff should this happen.</text>
+						<tKey>FSFTweaksTraitorScenarioSettingDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

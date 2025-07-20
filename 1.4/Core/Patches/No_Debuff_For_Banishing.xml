@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoDebuffForBanishing</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- No Debuff For Banishing -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName = "DeniedJoining"]/durationDays</xpath>
+				<value>
+					<durationDays>0.0001</durationDays>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName = "ColonistBanished"]/durationDays</xpath>
+				<value>
+					<durationDays>0.0001</durationDays>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName = "ColonistBanishedToDie"]/durationDays</xpath>
+				<value>
+					<durationDays>0.0001</durationDays>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName = "PrisonerBanishedToDie"]/durationDays</xpath>
+				<value>
+					<durationDays>0.0001</durationDays>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName = "BondedAnimalBanished"]/durationDays</xpath>
+				<value>
+					<durationDays>0.0001</durationDays>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoAgeRestrictionForIdeologies</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Children Can Have Roles -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PreceptDef[@Name="PreceptRoleSingleBase"]</xpath>
+				<value>
+					<roleCanBeChild>true</roleCanBeChild>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PreceptDef[@Name="PreceptRoleMultiBase"]</xpath>
+				<value>
+					<roleCanBeChild>true</roleCanBeChild>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RitualBehaviorDef/roles/li/allowChild</xpath>
+				<value>
+					<allowChild>True</allowChild>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/AbilityDef/comps/li/allowedForChild</xpath>
+				<value>
+					<allowedForChild>True</allowedForChild>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

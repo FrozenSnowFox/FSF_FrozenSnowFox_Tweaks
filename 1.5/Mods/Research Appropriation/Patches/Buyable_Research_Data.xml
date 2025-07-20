@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRABuyableResearchDataOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFRABuyableResearchDataMin</li>
+			<li>FSFRABuyableResearchDataMax</li>
+		</keys>
+		<defaultValues>
+			<li>1</li>
+			<li>3</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Neolithic - Core -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Base_Neolithic_Standard"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Neolithic_BulkGoods"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Neolithic_WarMerchant"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Neolithic_Slaver"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Neolithic_ShamanMerchant"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<!-- Medieval - Vanilla Factions Expanded Classical -->
+				
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEC_Base_Republic_Standard"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEC_Caravan_Republic_BulkGoods"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEC_Caravan_Republic_WarMerchant"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEC_Caravan_Republic_Slaver"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<!-- Medieval - Vanilla Factions Expanded Medieval -->
+				
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEM_Base_Medieval_Standard"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEM_Caravan_Medieval_Farmer"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEM_Caravan_Medieval_ArtPatron"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEM_Caravan_Medieval_Armourer"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEM_Caravan_Medieval_Weaponsmith"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEM_Caravan_Medieval_Sellswords"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<!-- Medieval - Vanilla Factions Expanded Vikings -->
+				
+			<li MayRequire="OskarPotocki.VFE.Vikings" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "VFEV_Caravan_Looter"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_NeolithicResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<!-- Outlander - Core -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Base_Outlander_Standard"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Outlander_CombatSupplier"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Outlander_PirateMerchant"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_MedievalResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<!-- Spacer - Core -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_BulkGoods"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_SpacerResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_CombatSupplier"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_SpacerResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_SpacerResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_PirateMerchant"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_SpacerResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_IndustrialResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<!-- Ultra - Royalty -->
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Base_Empire_Standard"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_UltraResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_SpacerResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_UltraResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_SpacerResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_Empire"]/stockGenerators</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_UltraResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>GarryFlowers_SpacerResearchData</thingDef>
+						<countRange>{FSFRABuyableResearchDataMin}~{FSFRABuyableResearchDataMax}</countRange>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

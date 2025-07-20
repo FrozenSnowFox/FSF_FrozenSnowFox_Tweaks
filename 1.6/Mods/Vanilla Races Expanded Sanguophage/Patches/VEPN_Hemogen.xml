@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVEPipeNetworkOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVEPNHemogenTank</key>
+		<defaultValue>200</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Hemogen -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_HemogenVat"]/comps/li[@Class = "PipeSystem.CompProperties_ResourceStorage"]/storageCapacity</xpath>
+				<value>
+					<storageCapacity>{FSFVEPNHemogenTank}</storageCapacity>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBiotechMechsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMechanoidRechargeWaste</key>
+		<defaultValue>5</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Mechanoids Wastepacks Per Recharge -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "BaseMechanoid"]/statBases/WastepacksPerRecharge</xpath>
+				<value>
+					<WastepacksPerRecharge MayRequire="Ludeon.Rimworld.Biotech">{FSFMechanoidRechargeWaste}</WastepacksPerRecharge>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFWastepackAtomizerPower</li>
+			<li>FSFWastepackAtomizerStackLimit</li>
+			<li>FSFWastepackAtomizerSpeed</li>
+		</keys>
+		<defaultValues>
+			<li>400</li>
+			<li>10</li>
+			<li>30000</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "WastepackAtomizer"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>
+					<basePowerConsumption>{FSFWastepackAtomizerPower}</basePowerConsumption>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "WastepackAtomizer"]/comps/li[@Class = "CompProperties_Atomizer"]/stackLimit</xpath>
+				<value>
+					<stackLimit>{FSFWastepackAtomizerStackLimit}</stackLimit>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "WastepackAtomizer"]/comps/li[@Class = "CompProperties_Atomizer"]/ticksPerAtomize</xpath>
+				<value>
+					<ticksPerAtomize>{FSFWastepackAtomizerSpeed}</ticksPerAtomize>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

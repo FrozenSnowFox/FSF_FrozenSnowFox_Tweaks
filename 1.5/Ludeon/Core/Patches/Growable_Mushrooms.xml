@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGrowableMushrooms</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Growable Mushrooms -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Glowstool"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+						<li>Hydroponic</li>
+					</sowTags>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Glowstool"]/plant/growDays</xpath>
+				<value>
+					<growDays>8.3</growDays>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Glowstool"]/plant/harvestYield</xpath>
+				<value>
+					<harvestYield>16</harvestYield>
+				</value>
+			</li>
+			
+			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Glowstool"]/plant</xpath>
+				<value>
+					<sowResearchPrerequisites>
+						<li>RG_MushroomCultivation</li>
+					</sowResearchPrerequisites>
+				</value>
+			</li>
+
+	<!-- Agarilux -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Agarilux"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+					</sowTags>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				  <xpath>/Defs/ThingDef[defName = "Agarilux"]/plant/growDays</xpath>
+				  <value>
+					  <growDays>14.5</growDays>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Agarilux"]/plant/harvestYield</xpath>
+				<value>
+					<harvestYield>28</harvestYield>
+				</value>
+			</li>
+			
+			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Agarilux"]/plant</xpath>
+				<value>
+					<sowResearchPrerequisites>
+						<li>RG_MushroomCultivation</li>
+					</sowResearchPrerequisites>
+				</value>
+			</li>
+
+	<!-- Timbershroom -->
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_Timbershroom"]/plant</xpath>
+				<value>
+					<interferesWithRoof>false</interferesWithRoof>
+					<mustBeWildToSow>false</mustBeWildToSow>
+					<sowTags>
+						<li>Ground</li>
+					</sowTags>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology,ReGrowth.BOTR.Core" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Plant_Timbershroom"]/plant/sowResearchPrerequisites</xpath>
+				<value>
+					<sowResearchPrerequisites>
+						<li>RG_MushroomCultivation</li>
+					</sowResearchPrerequisites>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

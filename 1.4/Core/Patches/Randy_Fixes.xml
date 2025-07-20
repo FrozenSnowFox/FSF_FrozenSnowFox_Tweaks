@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRandyFixes</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Add Missing Fields To Randy -->
+		
+ 		<li Class="PatchOperationAdd">
+			<xpath>/Defs/StorytellerDef[defName = "Randy"]/comps</xpath>
+			<value>
+				
+      <!-- Ally/neutral interaction -->
+      <li Class="StorytellerCompProperties_FactionInteraction">
+        <incident>TraderCaravanArrival</incident>
+        <minDaysPassed>5</minDaysPassed>
+        <baseIncidentsPerYear>5</baseIncidentsPerYear>
+        <minSpacingDays>6</minSpacingDays>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+      </li>
+      <li Class="StorytellerCompProperties_FactionInteraction">
+        <incident>VisitorGroup</incident>
+        <minDaysPassed>3</minDaysPassed>
+        <baseIncidentsPerYear>4</baseIncidentsPerYear>
+        <minSpacingDays>5</minSpacingDays>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+      </li>
+      <li Class="StorytellerCompProperties_FactionInteraction">
+        <incident>TravelerGroup</incident>
+        <minDaysPassed>1</minDaysPassed>
+        <baseIncidentsPerYear>6</baseIncidentsPerYear>
+        <minSpacingDays>1</minSpacingDays>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+      </li>
+				
+      <!-- Orbital trader -->
+      <li Class="StorytellerCompProperties_OnOffCycle">
+        <incident>OrbitalTraderArrival</incident>
+        <onDays>7</onDays>
+        <offDays>8</offDays>
+        <numIncidentsRange>1</numIncidentsRange>
+      </li>
+				
+			</value>
+		</li>
+				
+	<!-- Add Missing Fields To Basilicus Bestower -->
+		
+ 		<li Class="PatchOperationAdd" MayRequire="VanillaExpanded.VPsycastsE">
+			<xpath>/Defs/StorytellerDef[defName = "VPE_Basilicus"]/comps</xpath>
+			<value>
+				
+      <!-- Ally/neutral interaction -->
+      <li Class="StorytellerCompProperties_FactionInteraction">
+        <incident>TraderCaravanArrival</incident>
+        <minDaysPassed>5</minDaysPassed>
+        <baseIncidentsPerYear>5</baseIncidentsPerYear>
+        <minSpacingDays>6</minSpacingDays>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+      </li>
+      <li Class="StorytellerCompProperties_FactionInteraction">
+        <incident>VisitorGroup</incident>
+        <minDaysPassed>3</minDaysPassed>
+        <baseIncidentsPerYear>4</baseIncidentsPerYear>
+        <minSpacingDays>5</minSpacingDays>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+      </li>
+      <li Class="StorytellerCompProperties_FactionInteraction">
+        <incident>TravelerGroup</incident>
+        <minDaysPassed>1</minDaysPassed>
+        <baseIncidentsPerYear>6</baseIncidentsPerYear>
+        <minSpacingDays>1</minSpacingDays>
+        <allowedTargetTags>
+          <li>Map_PlayerHome</li>
+        </allowedTargetTags>
+      </li>
+				
+      <!-- Orbital trader -->
+      <li Class="StorytellerCompProperties_OnOffCycle">
+        <incident>OrbitalTraderArrival</incident>
+        <onDays>7</onDays>
+        <offDays>8</offDays>
+        <numIncidentsRange>1</numIncidentsRange>
+      </li>
+				
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

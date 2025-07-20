@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFXenogeneRegrowTimeOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFXenogeneRegrowTimeMin</li>
+			<li>FSFXenogeneRegrowTimeMax</li>
+		</keys>
+		<defaultValues>
+			<li>6000000</li>
+			<li>8400000</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Xenogene Regrow Time -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName = "XenogermReplicating"]/comps/li[@Class = "HediffCompProperties_Disappears"]/disappearsAfterTicks</xpath>
+				<value>
+					<disappearsAfterTicks>{FSFXenogeneRegrowTimeMin}~{FSFXenogeneRegrowTimeMax}</disappearsAfterTicks>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

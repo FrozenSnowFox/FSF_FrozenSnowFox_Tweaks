@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFOAGNLargerGenebanksOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFOAGNLargerGeneArchive</li>
+			<li>FSFOAGNLargerGeneRegister</li>
+		</keys>
+		<defaultValues>
+			<li>24</li>
+			<li>80</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- OAGN Larger Gene Banks -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "ThingGeneArchive"]/comps/li[@Class = "CompProperties_GenepackContainer"]/maxCapacity</xpath>
+				<value>
+					<maxCapacity>{FSFOAGNLargerGeneArchive}</maxCapacity>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "ThingGeneRegister"]/comps/li[@Class = "CompProperties_GenepackContainer"]/maxCapacity</xpath>
+				<value>
+					<maxCapacity>{FSFOAGNLargerGeneRegister}</maxCapacity>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

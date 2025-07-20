@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	        <!-- Big And Small Robots -->
+				
+            <li MayRequire="RedMattis.BigSmall.SimpleAndroids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name = "BS_TVAndroidThingBase"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts Inherit="False">
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<Steel>40</Steel>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="RedMattis.BigSmall.SimpleAndroids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name = "BS_CommandoBotThingBase"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts Inherit="False">
+						<ComponentSpacer>3</ComponentSpacer>
+						<ComponentIndustrial>14</ComponentIndustrial>
+						<Hyperweave>60</Hyperweave>
+						<Plasteel>200</Plasteel>
+					</butcherProducts>
+				</value>
+            </li>
+        
+            <li MayRequire="RedMattis.BigSmall.SimpleAndroids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "BS_SynthRace"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts Inherit="False">
+						<ComponentSpacer>2</ComponentSpacer>
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<Hyperweave>80</Hyperweave>
+						<Plasteel>80</Plasteel>
+					</butcherProducts>
+				</value>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

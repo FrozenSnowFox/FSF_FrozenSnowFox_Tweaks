@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFFoodsAreSafe</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Foods Are Safe -->
+				
+			<li Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible/preferability='RawTasty'] /statBases</xpath>
+				<value>
+					<FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible/joyKind='Gluttonous'] [@ParentName = "OrganicProductBase"] /statBases</xpath>
+				<value>
+					<FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

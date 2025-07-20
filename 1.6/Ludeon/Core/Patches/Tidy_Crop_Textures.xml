@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFTidyCropTextures</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Tidy Crop Textures -->
+				
+			<!-- Core - Rice -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Plant_Rice"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Core - Haygrass -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Plant_Haygrass"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Brewing Expanded - Tea -->
+				
+			<li MayRequire="vanillaexpanded.vbrewe" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VBE_Plant_Tea"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Cooking Expanded - Sugarcane -->
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Sugarcane"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Cooking Expanded - Wheat -->
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Wheat"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded - Onion -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Onion"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded - Pepper -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Pepper"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded - Beet -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Beet"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Lettuce -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Lettuce"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Brussels Sprout -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_BrusselsSprout"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Cassava -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Cassava"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Sweet Potato -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_SweetPotato"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Radish -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Radish"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Buckwheat -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Buckwheat"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Buckwheat -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Buckwheat"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Garlic -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Garlic"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Carrot -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Carrot"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Barley -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore,VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Barley"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Sorghum -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore,VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Sorghum"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Rye -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore,VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Rye"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			<!-- Vanilla Plants Expanded More Plants - Oats -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsEMore,VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_Oats"]/plant/maxMeshCount</xpath>
+				<value>
+					<maxMeshCount>1</maxMeshCount>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

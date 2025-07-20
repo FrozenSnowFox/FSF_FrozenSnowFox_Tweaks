@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+		<!-- Note: Mod related patches are under their mod folders since MayRequire didn't work for some reason -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGeneticsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoRNGGeneTools</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No RNG Gene Tools -->
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AG_GeneRemover"]/description</xpath>
+				<value>
+					<description>A genetic toolkit capable of removing a specific gene from a human target. This removal is quite destructive, and as a result, the target will drop into a coma for 3 days. Using the remover on a colonist suffering from the coma will have no effect.</description>
+				</value>
+			</li>
+		
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AG_GeneRemover"]/comps</xpath>
+				<value>
+					<comps>
+						<li Class="CompProperties_Usable">
+							<useJob>AG_UseArchoGeneRemover</useJob>
+							<useLabel>Use gene remover</useLabel>
+							<useDuration>60</useDuration>
+						</li>
+						<li Class="AlphaGenes.CompProperties_TargetableHuman">				
+						</li>
+						<li Class="AlphaGenes.CompProperties_TargetEffect_ChooseAndRemoveGene">				
+						</li>
+					</comps>
+				</value>
+			</li>
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AG_Endogenefier"]/description</xpath>
+				<value>
+					<description>A genetic toolkit capable of converting a specific xenogene from a human target into an endogene. As a result, the target will drop into a coma for 3 days. Using the archotech endogenefier on a colonist suffering from the coma will have no effect.</description>
+				</value>
+			</li>
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AG_Endogenefier"]/comps</xpath>
+				<value>
+					<comps>
+						<li Class="CompProperties_Usable">
+							<useJob>AG_UseArchoEndogenefier</useJob>
+							<useLabel>Use endogenefier</useLabel>
+							<useDuration>60</useDuration>
+						</li>
+						<li Class="AlphaGenes.CompProperties_TargetableHuman">				
+						</li>
+						<li Class="AlphaGenes.CompProperties_TargetEffect_ArchoEndogenefier">
+						</li>
+					</comps>
+				</value>
+			</li>
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AG_Xenogenefier"]/description</xpath>
+				<value>
+					<description>A genetic toolkit capable of converting a specific endogene from a human target into a xenogene. As a result, the target will drop into a coma for 3 days. Using the archotech xenogenefier on a colonist suffering from the coma will have no effect.</description>
+				</value>
+			</li>
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AG_Xenogenefier"]/comps</xpath>
+				<value>
+					<comps>
+						<li Class="CompProperties_Usable">
+							<useJob>AG_UseArchoXenogenefier</useJob>
+							<useLabel>Use xenogenefier</useLabel>
+							<useDuration>60</useDuration>
+						</li>
+						<li Class="AlphaGenes.CompProperties_TargetableHuman">				
+						</li>
+						<li Class="AlphaGenes.CompProperties_TargetEffect_ArchoXenogenefier">
+						</li>
+					</comps>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

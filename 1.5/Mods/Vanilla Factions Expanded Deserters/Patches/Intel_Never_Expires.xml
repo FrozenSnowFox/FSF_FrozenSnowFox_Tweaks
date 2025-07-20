@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVFEDesertersIntelNeverExpires</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Intel Never Expires -->
+				
+			<!-- Normal Intel -->
+
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VFED_Intel"]/tickerType</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VFED_Intel"]/comps</xpath>
+			</li>
+				
+			<!-- Critical Intel -->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VFED_CriticalIntel"]/tickerType</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VFED_CriticalIntel"]/comps</xpath>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

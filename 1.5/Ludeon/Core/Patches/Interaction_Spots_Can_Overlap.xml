@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFInteractionSpotsCanOverlap</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Interaction Spots Can Overlap -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef/placeWorkers/li[text()="PlaceWorker_PreventInteractionSpotOverlap"]</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

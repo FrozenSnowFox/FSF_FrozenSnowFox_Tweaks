@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRanchingNoPlantMalus</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PreceptDef[defName = "Ranching_Central"]/description</xpath>
+				<value>
+					<description>We must raise and consume many large animals.</description>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PreceptDef[defName = "Ranching_Central"]/comps/li[@Class = "PreceptComp_SelfTookMemoryThought"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PreceptDef[defName = "Ranching_Central"]/statFactors/PlantWorkSpeed</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

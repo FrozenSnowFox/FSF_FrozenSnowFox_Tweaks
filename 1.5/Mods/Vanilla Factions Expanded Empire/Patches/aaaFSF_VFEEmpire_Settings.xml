@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVFEEmpire"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Vanilla Factions Expanded Empire Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksVFEEmpireTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Disguised Rebels -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Disguised Rebels</label>
+				<key>FSFVFEEDisguisedRebels</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksVFEEDisguisedRebelsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the name and equipment of rebel soldiers so they blend in with empire troops.</text>
+				<tKey>FSFTweaksVFEEDisguisedRebelsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>						
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

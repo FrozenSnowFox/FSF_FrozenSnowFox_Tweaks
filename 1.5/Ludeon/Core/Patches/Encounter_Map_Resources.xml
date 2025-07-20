@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFEncounterMapResources</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Encounter Map Resources -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps/li[text()="RocksFromGrid_NoMinerals"]</xpath>
+				<value>
+					<li>RocksFromGrid</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

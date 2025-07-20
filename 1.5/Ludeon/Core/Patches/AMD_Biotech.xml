@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	        <!-- Biotech Mechanoids -->
+				
+	        <!-- Light Mechanoids -->
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Militor"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>50</Steel>
+						<SubcoreBasic>1</SubcoreBasic>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Lifter"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>50</Steel>
+						<SubcoreBasic>1</SubcoreBasic>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Constructoid"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>50</Steel>
+						<SubcoreBasic>1</SubcoreBasic>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Fabricor"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>100</Steel>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Agrihand"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>50</Steel>
+						<SubcoreBasic>1</SubcoreBasic>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Cleansweeper"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>50</Steel>
+						<SubcoreBasic>1</SubcoreBasic>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_WarUrchin"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>25</Steel>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Paramedic"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>100</Steel>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+	        <!-- Medium Mechanoids -->
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Legionary"]</xpath>
+				<value>
+					<butcherProducts>
+						<Plasteel>100</Plasteel>
+						<ComponentIndustrial>6</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Tesseron"]</xpath>
+				<value>
+					<butcherProducts>
+						<Plasteel>110</Plasteel>
+						<ComponentIndustrial>7</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Scorcher"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>80</Steel>
+						<Plasteel>32</Plasteel>
+						<ComponentIndustrial>3</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+				
+	        <!-- Note: Apocriton Resources are Estimated -->
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Apocriton"]</xpath>
+				<value>
+					<butcherProducts>
+						<Plasteel>150</Plasteel>
+						<ComponentSpacer>3</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+	        <!-- Heavy Mechanoids -->
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Tunneler"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>150</Steel>
+						<Plasteel>75</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+				
+	        <!-- Super Heavy Mechanoids -->
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Centurion"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>300</Steel>
+						<Plasteel>200</Plasteel>
+						<ComponentSpacer>2</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Warqueen"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>600</Steel>
+						<Plasteel>300</Plasteel>
+						<ComponentSpacer>3</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Diabolus"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>300</Steel>
+						<Plasteel>300</Plasteel>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

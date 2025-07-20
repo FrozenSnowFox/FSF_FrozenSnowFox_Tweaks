@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBiodomeSunlamp</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Biodome Sunlamp -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+
+					<ThingDef ParentName="LampBase">
+						<defName>FSFBiodomeSunlamp</defName>
+						<label>biodome sun lamp</label>
+						<description>A sun lamp that requires no power and is designed to act as a transparent biodome ceiling.  It's a simple alternative to mods that add skylights or transparent roofing.</description>
+						<graphicData>
+							<texPath>Things/Building/Production/CeilingSunLamp</texPath>
+							<color>(1,1,1,0.5)</color>
+							<shaderType>Transparent</shaderType>
+						</graphicData>
+						<drawerType>MapMeshOnly</drawerType>
+						<tickerType>Rare</tickerType>
+						<statBases>
+							<Flammability>0</Flammability>
+							<Mass>4.5</Mass>
+							<MaxHitPoints>1000</MaxHitPoints>
+							<WorkToBuild>15000</WorkToBuild>
+						</statBases>
+						<costList>
+							<Steel>400</Steel>
+						</costList>
+						<comps>
+							<li MayRequire="oskarpotocki.vanillafactionsexpanded.core" Class="VEF.Buildings.CompProperties_RandomBuildingGraphic">
+								<randomGraphics>
+									<li>Things/Building/Production/CeilingSunLamp</li>
+									<li>Things/Building/Production/Square_CeilingSunLamp</li>
+								</randomGraphics>
+								<startAsRandom>false</startAsRandom>
+								<disableRandomButton>true</disableRandomButton>
+							</li>
+							<li Class="CompProperties_Glower">
+								<overlightRadius>15.0</overlightRadius>
+								<glowRadius>15</glowRadius>
+								<glowColor>(370,370,370,0)</glowColor>
+							</li>
+							<li Class="CompProperties_Schedule">
+								<!-- Match plant growing times -->
+								<startTime>0.25</startTime>
+								<endTime>0.8</endTime>
+								<offMessage>Off for plant resting period</offMessage>
+							</li>
+						</comps>
+						<modExtensions>
+							<li Class="CeilingUtilities.CeilingFixture" />
+							<li MayRequire="owlchemist.perspectivebuildings" Class="Perspective.Offsetter">
+								<mirror>False</mirror>
+								<offsetType>Eight</offsetType>
+								<offsets>
+									<li>(0.5, 0, 0.5)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+						<specialDisplayRadius>11</specialDisplayRadius>
+						<altitudeLayer>MoteOverhead</altitudeLayer>
+						<pathCost />
+						<minifiedDef />
+						<thingCategories Inherit="False" />
+						<building>
+							<isEdifice>false</isEdifice>
+							<isInert>true</isInert>
+							<ai_chillDestination>false</ai_chillDestination>
+						</building>
+						<designatorDropdown>CeilingFixtures</designatorDropdown>
+						<passability>Standable</passability>
+						<placeWorkers>
+							<li>CeilingUtilities.PlaceWorker_OnlyUnderRoof</li>
+						</placeWorkers>
+						<clearBuildingArea>false</clearBuildingArea>
+						<fillPercent>0</fillPercent>
+					</ThingDef>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

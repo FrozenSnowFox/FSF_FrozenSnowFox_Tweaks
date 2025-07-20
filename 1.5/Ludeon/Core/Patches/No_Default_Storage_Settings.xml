@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoDefaultStorageSettings</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- No Default Storage Settings -->
+			
+            <li Class="PatchOperationReplace">				
+                <xpath>/Defs/ThingDef/building/defaultStorageSettings</xpath>
+				<value>
+					<defaultStorageSettings>
+						<priority>Normal</priority>
+						<filter>
+							<categories>
+							</categories>
+						</filter>
+					</defaultStorageSettings>
+				</value>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

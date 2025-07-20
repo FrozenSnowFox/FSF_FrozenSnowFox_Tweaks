@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksTimeKills"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Time Kills Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksTimeKillsTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Ageing Rebalance -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Ageing Rebalance</label>
+				<key>FSFTKAgeingRebalance</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksTKAgeingRebalanceTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Lowers the age requirement for the Old Age condition so it starts at 70 and reaches its maximum chance of 10% per year at 80.  This makes it more accurately reflect the Human life expectancy of 80.  By default Time Kills has the condition start at 80 and reach its peak of 10% per year at 84.</text>
+				<tKey>FSFTweaksTKAgeingRebalanceDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+						
+				
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

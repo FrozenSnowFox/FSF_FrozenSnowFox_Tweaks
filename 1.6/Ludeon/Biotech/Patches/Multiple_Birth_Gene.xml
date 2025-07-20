@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+		<!-- Note: Mod related patches are under their mod folders since MayRequire didn't work for some reason -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGeneticsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMultipleBirthGene</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Multiple Birth Gene -->
+			
+			<li MayRequire="RedMattis.BigSmall.Core" Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					
+  <GeneDef>
+    <defName>FSF_MultipleBirth</defName>
+    <label>multiple birth</label>
+    <description>Carriers of this gene normally give birth to one child.  However, they have a very rare chance to give birth to twins, triplets or quads.</description>
+    <iconPath>GeneIcons/BS_PregnancyTwins</iconPath>
+    <displayCategory>Reproduction</displayCategory>
+    <exclusionTags><li>BS_Babycount</li></exclusionTags>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <biostatArc>0</biostatArc>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <babyBirthCount>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>			
+        </babyBirthCount>
+      </li>
+		</modExtensions>
+  </GeneDef>
+				
+				</value>								
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

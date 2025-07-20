@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+		<!-- Note: Mod related patches are under their mod folders since MayRequire didn't work for some reason -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGeneticsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFTwinsBirthGene</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Twins Birth Gene -->
+			
+			<li MayRequire="RedMattis.BigSmall.Core" Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+
+  <GeneDef>
+    <defName>FSF_TwinsBirth</defName>
+    <label>twin birth</label>
+    <description>Carriers of this gene always give birth to twins.</description>
+    <iconPath>GeneIcons/BS_PregnancyTwins</iconPath>
+    <displayCategory>Reproduction</displayCategory>
+    <exclusionTags><li>BS_Babycount</li></exclusionTags>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <biostatArc>0</biostatArc>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <babyBirthCount>
+          <li>2</li>
+        </babyBirthCount>
+      </li>
+		</modExtensions>
+  </GeneDef>
+
+				</value>								
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoImprovisedWeapons</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Improvised Weapons -->
+				
+			<!-- Ingestibles -->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [ingestible] [defName != "MeleeWeapon_Macecarab"] /equipmentType</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [ingestible] [defName != "MeleeWeapon_Macecarab"] /comps/li[compClass="CompEquippable"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [ingestible] [defName != "MeleeWeapon_Macecarab"] /weaponClasses</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [ingestible] [defName != "MeleeWeapon_Macecarab"] /tools</xpath>
+			</li>
+				
+			<!-- Resources -->
+				
+			<li Class="PatchOperationAttributeSet">
+				<xpath>/Defs/ThingDef[@ParentName = "ResourceVerbBase"][thingCategories/li[text()="ResourcesRaw"]]</xpath>
+				<attribute>ParentName</attribute>
+				<value>ResourceBase</value>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[thingCategories/li[text()="ResourcesRaw"]]/weaponClasses</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[thingCategories/li[text()="ResourcesRaw"]]/tools</xpath>
+			</li>
+				
+			<!-- Vanilla Brewing Expanded -->
+				
+			<li MayRequire="VanillaExpanded.VBrewE" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[@Name = "VBE_DrugToolBase"]/tools</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

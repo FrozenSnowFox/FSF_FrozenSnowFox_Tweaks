@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFConsciousnessLearningSpeed</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+			<!-- FSFConsciousnessLearningSpeed -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/StatDef[defName = "GlobalLearningFactor"]</xpath>
+				<value>
+					<capacityFactors>
+						<li>
+							<capacity>Consciousness</capacity>
+							<weight>1.0</weight>
+						</li>
+					</capacityFactors>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRRSSSortedStepsVFETribals</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Sorted Steps VFE Tribals -->
+				
+			<!-- Core -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,ReGrowth.BOTR.Core" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="Devilstrand"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>RG_MushroomCultivation</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Adaptive Primitive Storage -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_CellarWood"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_CoveredClayPot"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_UncoveredClayPot"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_Granary"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_LargeLogPile"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_MeatRack"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_SmallLogPile"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_StoragePit"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_StorageTent"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_WeaponRack"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_WovenBasket"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_WovenBasketDouble"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ASF_WovenBasketTriple"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ASNeolithicNeolithicStorage</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Ancient Urban Ruins -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,XMB.AncientUrbanrUins.MO" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[@Name="AM_FloorBase"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>Stonecutting</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Anima Obelisk -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,DimonSever000.AnimaObelisk.Specific" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="AnimaObelisk_ThingDef_AnimaObelisk"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Doormats -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,dracoix.doormat.r12a" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LT_DoorMatLeather"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,dracoix.doormat.r12a" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LT_DoorMatCheckerLeather"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,dracoix.doormat.r12a" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LT_DoorMatBigLeather"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,dracoix.doormat.r12a" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LT_DoorMatBigCheckerLeather"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Dubs Bad Hygiene -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="ToiletStallDoor"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Comment Out 
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="PitLatrine"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="PrimitiveWell"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+
+			-->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="WashBucket"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LitterBox"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Dubwise.DubsBadHygiene" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="BathMat"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Dubs Skylights -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Dubwise.DubsSkylights" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name="BasedSkyLight"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Eccentric Extras - Flares -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,River.Tribal.Shoes" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="EccentricFlares_TorchPack"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+				
+			<!-- [HRK] Vanilla Expanded Extra Embrasures -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Harkon.VEAddOn.VanillaExpandedExtraEmbrasures" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="CE_Embrasure"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Harkon.VEAddOn.VanillaExpandedExtraEmbrasures,Ludeon.RimWorld.Royalty,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="HRK_FineEmbrasure"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- [LTS] Ammunition Framework -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,LimeTreeSnake.Ammunition" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="LTS_KitSmall"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Bow</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+				
+			<!-- [LTS] Ammunition Simple Ammo Pack -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,LimeTreeSnake.Ammo" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/RecipeDef[defName="Make_AmmoPrimitive"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Bow</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Neolithic Desk and Blackboard -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Hol.NeolStuff" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="NeolithicDesk"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Hol.NeolStuff" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="NeolithicBlackboard"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Furniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Nopower Comms Simplified -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Meltup.NopowerCommsSimplified" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="ProjectBirdPost"]</xpath>
+				<value>
+					<prerequisites>
+						<li>RR_BasicFoodPrep</li>
+						<li>VFET_Hunting</li>
+						<li>ComplexFurniture</li>
+						<li MayRequire="VanillaExpanded.VBooksE">VBE_Writing</li>
+					</prerequisites>
+				</value>
+			</li>
+				
+			<!-- ReBuild: Doors and Corners -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[@Name="RB_FinePlankWoodBase"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- River's Tribal Mittens -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,River.Tribal.Mittens" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="River_Tribal_mittens"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+				
+			<!-- River's Tribal Shoes -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,River.Tribal.Shoes" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="River_Tribal_sandals"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,River.Tribal.Shoes" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="River_Tribal_moccasins"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,River.Tribal.Shoes" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="River_Tribal_mukluks"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+				
+			<!-- Uncompromising Tribal Faction -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Fuu.UncompromisingTribalFaction" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="UncompromisingTribalFaction_Apparel_SmokeBomb"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+				
+			<!-- Unofficial VE Shields Addon -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Scorpio.Shields" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="Scorpio_TribalShield"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Weapons</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+				
+			<!-- Vanilla Expanded Memes -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VME_SmallFishingTrap"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Hunting</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VME_MediumFishingTrap"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Hunting</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VME_LargeFishingTrap"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Hunting</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded Medieval 2 -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,OskarPotocki.VFE.Medieval2" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VFEM2_ClothWall"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,OskarPotocki.VFE.Medieval2" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="VFEM2_TimberedWall"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,OskarPotocki.VFE.Medieval2" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/VFEMedieval.LeatherTerrainTemplateDef[defName="VFEM2_Matting_"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,OskarPotocki.VFE.Medieval2,Ludeon.RimWorld.Royalty" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/VFEMedieval.LeatherTerrainTemplateDef[defName="VFEM2_FineMatting_"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded Tribal -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals" Class="PatchOperationReplace">
+				<xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Furniture"]/label</xpath>
+				<value>
+					<label>crude furniture</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals" Class="PatchOperationReplace">
+				<xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Furniture"]/description</xpath>
+				<value>
+					<description>Introduce crude furniture crafting for improved living conditions.</description>
+				</value>
+			</li>
+				
+			<!-- Vanilla Furniture Expanded Architect -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[@Name="VFEArch_WoodenParquetBase"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_WoodPlankFloorWalnut"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_WoodPlankFloorBirch"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_WoodPlankFloorMahogany"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[@Name="CobblestoneBase"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_FineWoodenFloor"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_FineWoodenFloorWalnut"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_FineWoodenFloorBirch"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/TerrainDef[defName="VFEArch_FineWoodenFloorMahogany"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Vanilla Weapons Expanded -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VWE" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ResearchProjectDef[defName="Gunsmithing"]</xpath>
+				<value>
+					<prerequisites>
+						<li>Machining</li>
+						<li>VWE_Gunpowder</li>
+					</prerequisites>
+				</value>
+			</li>
+				
+
+				
+			<!-- Research Reinvented Blacklist -->
+				
+			<!-- Alpha Memes -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,PeteTimesSix.ResearchReinvented,Sarg.AlphaMemes" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/TerrainDef[defName = "AM_Tile_Futuristic_Kemetic"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,PeteTimesSix.ResearchReinvented,Sarg.AlphaMemes" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "AM_FuturisticObelisk"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,PeteTimesSix.ResearchReinvented,Sarg.AlphaMemes" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "AM_FuturisticPyramid"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,PeteTimesSix.ResearchReinvented,Sarg.AlphaMemes" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "AM_FuturisticStele"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			<!-- Vanilla Furniture Expanded Architect -->
+				
+			<li MayRequire="OskarPotocki.VFE.Tribals,PeteTimesSix.ResearchReinvented,VanillaExpanded.VFEArchitect" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "VFEArch_InvisibleFence"]</xpath>
+				<value>
+					<li Class="PeteTimesSix.ResearchReinvented.Rimworld.DefModExtensions.Blacklisted"/>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

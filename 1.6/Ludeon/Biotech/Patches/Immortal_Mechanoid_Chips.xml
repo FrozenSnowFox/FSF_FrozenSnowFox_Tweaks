@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFImmortalMechanoidChips</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Immortal Mechanoid Chips -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "MechResourceBase"]</xpath>
+				<value>
+					<useHitPoints>false</useHitPoints>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "MechResourceBase"]/statBases/Flammability</xpath>
+				<value>
+					<Flammability>0</Flammability>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "MechResourceBase"]/statBases/DeteriorationRate</xpath>
+				<value>
+					<DeteriorationRate>0</DeteriorationRate>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

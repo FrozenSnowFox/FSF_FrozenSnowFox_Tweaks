@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVREHighmate"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Vanilla Races Expanded Highmate Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksVREHighmateTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- High Libido Lovin Ability -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>High Libido Lovin Ability</label>
+				<key>FSFVREHighmateHighLibidoLovinAbility</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksVREHighmateHighLibidoLovinAbilityTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds the initiate lovin ability to the High Libido gene.  Also reduces the mood bonus for lovin to match the vanilla one.</text>
+				<tKey>FSFTweaksVREHighmateHighLibidoLovinAbilityDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Initiate Lovin Gene -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Initiate Lovin Gene</label>
+				<key>FSFVREHighmateInitiateLovinGeneOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksVREHighmateInitiateLovinGeneTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFVREHighmateInitiateLovinGeneOn</key>
+				<caseFalse>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+					<text>Adds a new gene to the game with 0 Complexity and 0 Metabolism that provides the Initiate Lovin ability.  Also reduces the mood bonus from lovin to match the vanilla lovin bonus.</text>
+					<tKey>FSFTweaksVREHighmateInitiateLovinGeneOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>				
+				</caseFalse>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+					<text>Adds a new gene to the game with 0 Complexity and 0 Metabolism that provides the Initiate Lovin ability.  Also reduces the mood bonus from lovin to match the vanilla lovin bonus.</text>
+					<tKey>FSFTweaksVREHighmateInitiateLovinGeneOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Add the Initiate Lovin gene to every xenotype in the game allowing any pawn to use the Initiate Lovin ability.</label>
+						<key>FSFVREHighmateInitiateLovinForEveryone</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksVREHighmateInitiateLovinForEveryone</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

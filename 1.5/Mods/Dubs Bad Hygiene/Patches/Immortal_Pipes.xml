@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFDubsBadHygieneImmortalPipes</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Immortal Pipes -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "DubsDirtyPipeBase"]</xpath>
+				<value>
+					<useHitPoints>false</useHitPoints>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "DubsDirtyPipeBase"]/statBases/Flammability</xpath>
+				<value>
+					<Flammability>0</Flammability>
+				</value>
+			</li>
+				
+			<!-- Replace original with this in 1.6
+				
+			<li Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name = "DubsDirtyPipeBase"]</xpath>
+				<value>
+					<building>
+						<ai_neverTrashThis>true</ai_neverTrashThis>
+						<isTargetable>false</isTargetable>
+						<expandHomeArea>false</expandHomeArea>
+						<canBeDamagedByAttacks>false</canBeDamagedByAttacks>
+					</building>
+				</value>
+			</li>
+
+			-->
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAlwaysRefuelTurrets</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Always Refuel Turrets -->
+			
+	        <!-- Search for turretGunDef which appears on all gun based things.  Search for those with Comp Refuel but exclude Components and Mortar Barrels -->
+        
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef [building/turretGunDef] /comps/li [@Class = "CompProperties_Refuelable"] [fuelFilter/thingDefs/li [text()!="ComponentIndustrial"] and fuelFilter/thingDefs/li [text()!="ReinforcedBarrel"]] /autoRefuelPercent</xpath>
+                    <value>
+                        <autoRefuelPercent>0.99</autoRefuelPercent>
+                    </value>
+            </li>
+				
+	        <!-- Search for turretGunDef which appears on all gun based things.  Search for those with Comp Refuel and change all using Components -->
+				
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef [building/turretGunDef] /comps/li [@Class = "CompProperties_Refuelable"] [fuelFilter/thingDefs/li [text()="ComponentIndustrial"]] /autoRefuelPercent</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef [building/turretGunDef] /comps/li [@Class = "CompProperties_Refuelable"] [fuelFilter/thingDefs/li [text()="ComponentIndustrial"]] /autoRefuelPercent</xpath>
+                    <value>
+                        <autoRefuelPercent>0.75</autoRefuelPercent>
+                    </value>
+                </match>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

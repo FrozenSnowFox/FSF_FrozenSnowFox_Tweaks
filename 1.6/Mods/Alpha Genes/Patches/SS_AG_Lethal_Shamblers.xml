@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFShamblerSettingsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			
+			
+			
+		<!-- Alpha Genes Lethal Shamblers -->
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLethalShamblers</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li MayRequire="Ludeon.RimWorld.Anomaly,sarg.alphagenes" Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="AG_PlaguedClaws"]/tendable</xpath>
+				<value>
+					<tendable>false</tendable>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly,sarg.alphagenes" Class="PatchOperationRemove">
+				<xpath>/Defs/HediffDef[defName="AG_PlaguedClaws"]/comps/li[@Class = "HediffCompProperties_TendDuration"]</xpath>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly,sarg.alphagenes" Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="AG_PlaguedClaws"]/comps/li[@Class = "HediffCompProperties_Immunizable"]</xpath>
+				<value>
+					<li Class="HediffCompProperties_Immunizable">
+						<severityPerDayNotImmune>0.84</severityPerDayNotImmune>
+						<severityPerDayImmune>-0.70</severityPerDayImmune>
+						<immunityPerDaySick>0.0001</immunityPerDaySick>
+						<immunityPerDayNotSick>-0.40</immunityPerDayNotSick>						
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

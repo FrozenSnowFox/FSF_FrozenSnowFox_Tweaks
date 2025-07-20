@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVREHighmateHighLibidoLovinAbility</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- High Libido Lovin Ability -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/GeneDef[defName = "Libido_High"]</xpath>
+				<value>
+					<descriptionHyperlinks>
+						<AbilityDef>VRE_InitiateLovin</AbilityDef>
+					</descriptionHyperlinks>
+					<abilities>
+						<li>VRE_InitiateLovin</li>
+					</abilities>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThoughtDef[defName = "VRE_GotSomeLovin"]/stages/li/baseMoodEffect</xpath>
+				<value>
+					<baseMoodEffect>8</baseMoodEffect>
+				</value>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

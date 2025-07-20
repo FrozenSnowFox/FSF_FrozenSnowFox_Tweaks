@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPowerGenerationMultiplierOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFPowerGenerationMultiplier</li>
+			<li>FSFBatteryStorageMultiplier</li>
+			<li>FSFVanometricGenerationMultiplier</li>
+			<li>FSFVQEGPowerGenerationMultiplier</li>
+		</keys>
+		<defaultValues>
+			<li>2.0</li>
+			<li>2.0</li>
+			<li>2.0</li>
+			<li>2.0</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Power Generation Multiplier -->
+				
+			<li Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Power"] [(substring-after(basePowerConsumption, '-'))] /basePowerConsumption</xpath>
+				<value>{FSFPowerGenerationMultiplier}</value>
+				<operation>*</operation>
+			</li>
+				
+			<!-- Battery Storage Capacity Multiplier -->
+				
+			<li Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Battery"]/storedEnergyMax</xpath>
+				<value>{FSFBatteryStorageMultiplier}</value>
+				<operation>*</operation>
+			</li>
+				
+			<!-- Vanometric Power Generation Multiplier -->
+				
+			<li Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/ThingDef[defName = "VanometricPowerCell"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>{FSFVanometricGenerationMultiplier}</value>
+				<operation>*</operation>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/ThingDef[defName = "UnstablePowerCell"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>{FSFVanometricGenerationMultiplier}</value>
+				<operation>*</operation>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEPower" Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/ThingDef[defName = "VFE_SmallVanometricPowerCell"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>{FSFVanometricGenerationMultiplier}</value>
+				<operation>*</operation>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEPower" Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/ThingDef[defName = "VFE_LargeVanometricPowerCell"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>{FSFVanometricGenerationMultiplier}</value>
+				<operation>*</operation>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VFEPower" Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/ThingDef[defName = "VPE_ArchotechViolenceGenerator"]/comps/li[@Class = "CompProperties_Power"]/basePowerConsumption</xpath>
+				<value>{FSFVanometricGenerationMultiplier}</value>
+				<operation>*</operation>
+			</li>
+				
+			<!-- VQE The Generator - Power Generation Multiplier -->
+				
+			<li MayRequire="vanillaquestsexpanded.generator" Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/ThingDef/comps/li[@Class = "VanillaQuestsExpandedTheGenerator.CompProperties_PowerGenetron"] [(substring-after(basePowerConsumption, '-'))] /basePowerConsumption</xpath>
+				<value>{FSFVQEGPowerGenerationMultiplier}</value>
+				<operation>*</operation>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

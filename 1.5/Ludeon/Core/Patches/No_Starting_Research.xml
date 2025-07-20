@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoStartingResearchOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			<!-- No Starting Research -->
+			
+		<Operation Class="XmlExtensions.OptionalPatch">
+			<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+			<key>FSFNoStartingResearchAll</key>
+			<defaultValue>false</defaultValue>
+			<caseTrue>
+			
+				<Operation Class="PatchOperationSequence">
+					<success>Normal</success>
+					<operations>
+						
+					<!-- All Player Factions -->
+				
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/FactionDef/startingResearchTags [not(li = "WildMenStart")]</xpath>
+					</li>
+			
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/FactionDef/startingTechprintsResearchTags</xpath>
+					</li>
+				
+					</operations>
+				</Operation>
+			
+			</caseTrue>
+		</Operation>
+			
+		<!-- Core -->
+			
+		<Operation Class="XmlExtensions.OptionalPatch">
+			<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+			<key>FSFNoStartingResearchColony</key>
+			<defaultValue>false</defaultValue>
+			<caseTrue>
+			
+				<Operation Class="PatchOperationSequence">
+					<success>Normal</success>
+					<operations>
+						
+					<!-- Colony -->
+				
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/FactionDef[defName = "PlayerColony"]/startingResearchTags</xpath>
+					</li>
+			
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/FactionDef[defName = "PlayerColony"]/startingTechprintsResearchTags</xpath>
+					</li>
+				
+					</operations>
+				</Operation>
+			
+			</caseTrue>
+		</Operation>
+			
+		<Operation Class="XmlExtensions.OptionalPatch">
+			<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+			<key>FSFNoStartingResearchTribal</key>
+			<defaultValue>false</defaultValue>
+			<caseTrue>
+			
+				<Operation Class="PatchOperationSequence">
+					<success>Normal</success>
+					<operations>
+						
+					<!-- Tribal -->
+				
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/FactionDef[defName = "PlayerTribe"]/startingResearchTags</xpath>
+					</li>
+			
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/FactionDef[defName = "PlayerTribe"]/startingTechprintsResearchTags</xpath>
+					</li>
+				
+					</operations>
+				</Operation>
+			
+			</caseTrue>
+		</Operation>
+			
+		<!-- Anomaly DLC -->
+			
+		<Operation Class="XmlExtensions.OptionalPatch">
+			<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+			<key>FSFNoStartingResearchResearchEx</key>
+			<defaultValue>false</defaultValue>
+			<caseTrue>
+			
+				<Operation Class="PatchOperationSequence">
+					<success>Normal</success>
+					<operations>
+						
+					<!-- Colony -->
+				
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/FactionDef[defName = "ResearchExpedition"]/startingResearchTags</xpath>
+					</li>
+			
+					<li Class="PatchOperationRemove">
+						<xpath>/Defs/FactionDef[defName = "ResearchExpedition"]/startingTechprintsResearchTags</xpath>
+					</li>
+				
+					</operations>
+				</Operation>
+			
+			</caseTrue>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

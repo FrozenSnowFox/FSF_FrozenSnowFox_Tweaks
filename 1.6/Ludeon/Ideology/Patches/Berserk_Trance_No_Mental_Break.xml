@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBerserkTranceNoMentalBreak</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/AbilityDef[defName = "BerserkTrance"]/comps/li[@Class = "CompProperties_AbilityGiveMentalState"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/HediffDef[defName = "BerserkTrance"]/comps/li[@Class = "HediffCompProperties_Disappears"]/requiredMentalState</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+		<!-- Note: Mod related patches are under their mod folders since MayRequire didn't work for some reason -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHumanReproductonOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->			
+			
+		<!-- Induce Lactation Recipe -->
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNeolithicFertilityProcedures</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+
+					<ResearchProjectDef>
+						<defName>FSFNeolithicFertilityProcedures</defName>
+						<label>primitive fertility procedures</label>
+						<description>Perform basic procedures to manage fertility, lactation and perform sterilization surgeries.</description>
+						<techLevel>Neolithic</techLevel>
+						<baseCost>500</baseCost>
+						<researchViewX>2.00</researchViewX>
+						<researchViewY>0.70</researchViewY>
+						<generalRules>
+							<rulesStrings>
+								<li>subject->primitive fertility procedures</li>
+
+								<li>subject_story->taught tribes on neolithic worlds procedures to manage their population</li>
+								<li>subject_story->helped couples with low fertility achieve their dreams of having children</li>
+								<li>subject_story->organized a community program for babies to be wet nursed by carers to free up time for struggling mothers</li>
+
+								<li>subject_gerund->altering human fertility</li>
+
+								<li>subject_gerund->improving or blocking human fertility</li>
+							</rulesStrings>
+						</generalRules>
+					</ResearchProjectDef>
+					
+					<RecipeDef ParentName="SurgeryInstallImplantBase">
+						<defName>FSFBoostFertility</defName>
+						<label>administer fertility booster</label>
+						<description>Use some medicinal herbs to boost a person's fertility for a seven days.</description>
+						<jobString>Administering fertility booster drugs to TargetA.</jobString>
+						<workerClass>Recipe_AddHediff</workerClass>
+						<addsHediff>FSFBoostFertility</addsHediff>
+						<minAllowedAge>13</minAllowedAge>
+						<anesthetize>false</anesthetize>
+						<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+						<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+						<surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+						<uiIconThing>MedicineHerbal</uiIconThing>
+						<workAmount>500</workAmount>
+						<hideBodyPartNames>true</hideBodyPartNames>
+						<isViolation>true</isViolation>
+						<targetsBodyPart>false</targetsBodyPart>
+						<skillRequirements Inherit="False"/>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<categories>
+										<li>Medicine</li>         
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<categories>
+								<li>Medicine</li>
+							</categories>
+						</fixedIngredientFilter>
+						<incompatibleWithHediffTags>
+							<li>FSFPrimitiveFertility</li>
+						</incompatibleWithHediffTags>
+						<researchPrerequisites>
+							<li>FSFNeolithicFertilityProcedures</li>
+						</researchPrerequisites>
+					</RecipeDef>
+					
+					<RecipeDef ParentName="SurgeryInstallImplantBase">
+						<defName>FSFRemoveBoostFertility</defName>
+						<label>remove fertility booster</label>
+						<description>Use some medicinal herbs to remove a person's fertility booster.</description>
+						<jobString>Administering drugs to remove TargetA's fertility booster.</jobString>
+						<successfullyRemovedHediffMessage>{0} has removed {1}'s fertility booster using some medicinal herbs.</successfullyRemovedHediffMessage>
+						<workerClass>Recipe_RemoveHediff</workerClass>
+						<removesHediff>FSFBoostFertility</removesHediff>
+						<minAllowedAge>13</minAllowedAge>
+						<anesthetize>false</anesthetize>
+						<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+						<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+						<surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+						<uiIconThing>MedicineHerbal</uiIconThing>
+						<workAmount>500</workAmount>
+						<hideBodyPartNames>true</hideBodyPartNames>
+						<isViolation>true</isViolation>
+						<targetsBodyPart>false</targetsBodyPart>
+						<skillRequirements Inherit="False"/>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<categories>
+										<li>Medicine</li>         
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<categories>
+								<li>Medicine</li>
+							</categories>
+						</fixedIngredientFilter>
+						<researchPrerequisites>
+							<li>FSFNeolithicFertilityProcedures</li>
+						</researchPrerequisites>
+					</RecipeDef>
+					
+					<HediffDef>
+						<defName>FSFBoostFertility</defName>
+						<label>fertility booster</label>
+						<description>Through the use of some medicinal herbs the user has had their fertility temporarily boosted.</description>
+						<hediffClass>HediffWithComps</hediffClass>
+						<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+						<isBad>false</isBad>
+						<initialSeverity>1</initialSeverity>
+						<stages>
+							<li>
+								<statFactors>
+									<Fertility>2</Fertility>
+								</statFactors>
+								<statOffsets>
+									<VEF_MTBLovinFactor MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-0.25</VEF_MTBLovinFactor>			
+								</statOffsets>
+							</li>
+						</stages>
+						<comps>
+							<li Class="HediffCompProperties_SeverityPerDay">
+								<severityPerDay>-0.143</severityPerDay>
+								<showHoursToRecover>true</showHoursToRecover>
+							</li>
+						</comps>
+						<tags>
+							<li>FSFPrimitiveFertility</li>
+						</tags>
+					</HediffDef>
+					
+					<RecipeDef ParentName="SurgeryInstallImplantBase">
+						<defName>FSFInhibitFertility</defName>
+						<label>administer fertility inhibitor</label>
+						<description>Use some medicinal herbs to inhibit a person's fertility for seven days.</description>
+						<jobString>Administering fertility inhibitor drugs to TargetA.</jobString>
+						<successfullyRemovedHediffMessage>{0} has inhibited {1}'s fertility for seven days using some medicinal herbs.</successfullyRemovedHediffMessage>
+						<workerClass>Recipe_AddHediff</workerClass>
+						<addsHediff>FSFInhibitFertility</addsHediff>
+						<minAllowedAge>13</minAllowedAge>
+						<anesthetize>false</anesthetize>
+						<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+						<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+						<surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+						<uiIconThing>MedicineHerbal</uiIconThing>
+						<workAmount>500</workAmount>
+						<hideBodyPartNames>true</hideBodyPartNames>
+						<isViolation>true</isViolation>
+						<targetsBodyPart>false</targetsBodyPart>
+						<skillRequirements Inherit="False"/>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<categories>
+										<li>Medicine</li>         
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<categories>
+								<li>Medicine</li>
+							</categories>
+						</fixedIngredientFilter>
+						<incompatibleWithHediffTags>
+							<li>FSFPrimitiveFertility</li>
+						</incompatibleWithHediffTags>
+						<researchPrerequisites>
+							<li>FSFNeolithicFertilityProcedures</li>
+						</researchPrerequisites>
+					</RecipeDef>
+					
+					<RecipeDef ParentName="SurgeryInstallImplantBase">
+						<defName>FSFRemoveInhibitFertility</defName>
+						<label>remove fertility inhibitor</label>
+						<description>Use some medicinal herbs to remove a person's fertility inhibitor.</description>
+						<jobString>Administering drugs to remove TargetA's fertility inhibitor.</jobString>
+						<successfullyRemovedHediffMessage>{0} has removed {1}'s fertility inhibitor using some medicinal herbs.</successfullyRemovedHediffMessage>
+						<workerClass>Recipe_RemoveHediff</workerClass>
+						<removesHediff>FSFInhibitFertility</removesHediff>
+						<minAllowedAge>13</minAllowedAge>
+						<anesthetize>false</anesthetize>
+						<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+						<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+						<surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+						<uiIconThing>MedicineHerbal</uiIconThing>
+						<workAmount>500</workAmount>
+						<hideBodyPartNames>true</hideBodyPartNames>
+						<isViolation>true</isViolation>
+						<targetsBodyPart>false</targetsBodyPart>
+						<skillRequirements Inherit="False"/>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<categories>
+										<li>Medicine</li>         
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<categories>
+								<li>Medicine</li>
+							</categories>
+						</fixedIngredientFilter>
+						<researchPrerequisites>
+							<li>FSFNeolithicFertilityProcedures</li>
+						</researchPrerequisites>
+					</RecipeDef>
+					
+					<HediffDef>
+						<defName>FSFInhibitFertility</defName>
+						<label>fertility inhibitor</label>
+						<description>Through the use of some medicinal herbs the user has been rendered temporarily sterile.</description>
+						<hediffClass>HediffWithComps</hediffClass>
+						<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+						<isBad>false</isBad>
+						<initialSeverity>1</initialSeverity>
+						<preventsPregnancy>true</preventsPregnancy>
+						<stages>
+							<li>
+								<statFactors>
+									<Fertility>0</Fertility>
+								</statFactors>
+							</li>
+						</stages>
+						<comps>
+							<li Class="HediffCompProperties_SeverityPerDay">
+								<severityPerDay>-0.143</severityPerDay>
+								<showHoursToRecover>true</showHoursToRecover>
+							</li>
+						</comps>
+						<tags>
+							<li>FSFPrimitiveFertility</li>
+						</tags>
+					</HediffDef>
+
+					<RecipeDef ParentName="SurgeryInstallImplantBase">
+						<defName>FSFInduceLactation</defName>
+						<label>induce lactation</label>
+						<description>Use some medicinal herbs to induce a person to lactate.</description>
+						<jobString>Inducing lactation in TargetA.</jobString>
+						<workerClass>Recipe_AddHediff</workerClass>
+						<addsHediff>Lactating</addsHediff>
+						<minAllowedAge>13</minAllowedAge>
+						<anesthetize>false</anesthetize>
+						<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+						<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+						<surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+						<uiIconThing>MedicineHerbal</uiIconThing>
+						<workAmount>500</workAmount>
+						<hideBodyPartNames>true</hideBodyPartNames>
+						<isViolation>true</isViolation>
+						<targetsBodyPart>false</targetsBodyPart>
+						<skillRequirements Inherit="False"/>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<categories>
+										<li>Medicine</li>         
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<categories>
+								<li>Medicine</li>
+							</categories>
+						</fixedIngredientFilter>
+						<researchPrerequisites>
+							<li>FSFNeolithicFertilityProcedures</li>
+						</researchPrerequisites>
+					</RecipeDef>
+					
+					<RecipeDef ParentName="SurgeryInstallImplantBase">
+						<defName>FSFRemoveLactation</defName>
+						<label>stop lactation</label>
+						<description>Use some medicinal herbs to stop a person from lactating.</description>
+						<jobString>Stopping lactation in TargetA.</jobString>
+						<successfullyRemovedHediffMessage>{0} has stopped {1}'s lactation using some medicinal herbs.</successfullyRemovedHediffMessage>
+						<workerClass>Recipe_RemoveHediff</workerClass>
+						<removesHediff>Lactating</removesHediff>
+						<minAllowedAge>13</minAllowedAge>
+						<anesthetize>false</anesthetize>
+						<surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+						<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+						<surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+						<uiIconThing>MedicineHerbal</uiIconThing>
+						<workAmount>500</workAmount>
+						<hideBodyPartNames>true</hideBodyPartNames>
+						<isViolation>true</isViolation>
+						<targetsBodyPart>false</targetsBodyPart>
+						<skillRequirements Inherit="False"/>
+						<ingredients Inherit="False">
+							<li>
+								<filter>
+									<categories>
+										<li>Medicine</li>         
+									</categories>
+								</filter>
+								<count>1</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<categories>
+								<li>Medicine</li>
+							</categories>
+						</fixedIngredientFilter>
+						<researchPrerequisites>
+							<li>FSFNeolithicFertilityProcedures</li>
+						</researchPrerequisites>
+					</RecipeDef>
+					
+					<RecipeDef ParentName="SurgeryInstallImplantBase">
+						<defName>FSFSterilizeHumanNonReversible</defName>
+						<label>sterilize</label>
+						<description>Perform a non reversible procedure to permanently sterilize a patient rendering them unable to reproduce.</description>
+						<jobString>Performing a sterilization procedure on TargetA.</jobString>
+						<successfullyRemovedHediffMessage>{0} has successfully performed a sterilizen procedure on {1}.</successfullyRemovedHediffMessage>
+						<workerClass>Recipe_AddHediff</workerClass>
+						<addsHediff>Sterilized</addsHediff>
+						<minAllowedAge>13</minAllowedAge>
+						<uiIconThing>MedicineHerbal</uiIconThing>
+						<hideBodyPartNames>true</hideBodyPartNames>
+						<isViolation>true</isViolation>
+						<targetsBodyPart>false</targetsBodyPart>
+						<incompatibleWithHediffTags>
+							<li>Sterilized</li>
+						</incompatibleWithHediffTags>
+						<researchPrerequisites>
+							<li>FSFNeolithicFertilityProcedures</li>
+						</researchPrerequisites>
+					</RecipeDef>
+					
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "Sterilize"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>FSFNeolithicFertilityProcedures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "TerminatePregnancy"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>FSFNeolithicFertilityProcedures</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ResearchProjectDef[defName = "FertilityProcedures"]/baseCost</xpath>
+				<value>
+					<baseCost>500</baseCost>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ResearchProjectDef[defName = "FertilityProcedures"]/prerequisites</xpath>
+				<value>
+					<li>FSFNeolithicFertilityProcedures</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+						
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

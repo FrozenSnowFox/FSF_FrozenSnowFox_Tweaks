@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVFESecurityCavalrySpikes</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Cavalry Spikes Don’t Expire -->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VFES_CavalrySpikes"]/comps/li[@Class = "CompProperties_Lifespan"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFES_CavalrySpikes"]/description</xpath>
+				<value>
+					<description>Wooden stakes placed in a row to build defensive fortifications. Very cheap and quick to build, provides basic cover and deals damage to people trying to traverse them.</description>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "VFES_CavalrySpikes"]</xpath>
+				<value>
+					<li Class="VFESecurity.ExtendedBuildingProperties">
+						<trapDestroyOnSpringChance>0.2</trapDestroyOnSpringChance>
+					</li>
+				</value>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

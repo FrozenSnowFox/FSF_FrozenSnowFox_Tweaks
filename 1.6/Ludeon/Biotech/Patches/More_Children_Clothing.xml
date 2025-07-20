@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreChildrenClothing</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- More Children Clothing -->
+				
+			<!-- Patch all Utility layer items -->
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef [apparel/layers/li [contains(text(), "Belt")] ]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<!-- Patch Base Hat Defs -->
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name = "HatBase"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name = "HatMakeableBase"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name = "ArmorHelmetMakeableBase"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name = "NobleHatMakeableBase"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<!-- Royalty DLC -->
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_PsyfocusHelmet"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "Apparel_EltexSkullcap"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<!-- D Elves (Continued) -->
+				
+			<li MayRequire="Devdesigner.Elves.Continued" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name = "DevDesigner_WoodElves_Utility"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="Devdesigner.Elves.Continued" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [@ParentName = "DevDesigner_DarkElves_ClothHeadgear"]/apparel/developmentalStageFilter</xpath>
+			</li>
+				
+			<li MayRequire="Devdesigner.Elves.Continued" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [@ParentName = "DevDesigner_DarkElves_MetalHeadgear"]/apparel/developmentalStageFilter</xpath>
+			</li>
+				
+			<li MayRequire="Devdesigner.Elves.Continued" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [@ParentName = "DevDesigner_Elves_MetalHeadgear"]/apparel/developmentalStageFilter</xpath>
+			</li>
+				
+			<li MayRequire="Devdesigner.Elves.Continued" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [@ParentName = "DevDesigner_HighElves_MetalHeadgear"]/apparel/developmentalStageFilter</xpath>
+			</li>
+				
+			<li MayRequire="Devdesigner.Elves.Continued" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [@ParentName = "DevDesigner_WoodElves_ClothHeadgear"]/apparel/developmentalStageFilter</xpath>
+			</li>
+				
+			<li MayRequire="Devdesigner.Elves.Continued" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef [@ParentName = "DevDesigner_WoodElves_MetalHeadgear"]/apparel/developmentalStageFilter</xpath>
+			</li>
+				
+			<!-- [LTS] Ammunition - Framework -->
+				
+			<li MayRequire="LimeTreeSnake.Ammunition" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "PackBase"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+
+			<!-- Medieval Overhaul -->
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Footwear_BootsLeather"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Footwear_BootsSplinted"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Footwear_BootsPlate"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Handwear_GlovesLeather"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Handwear_GlovesSplinted"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Handwear_GlovesPlate"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<!-- Research Reinvented -->
+				
+			<li MayRequire="PeteTimesSix.ResearchReinvented" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name = "RR_FieldResearchKitBase"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<!-- River's Tribal Mittens -->
+				
+			<li MayRequire="River.Tribal.Mittens" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "River_Tribal_mittens"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- River's Tribal Shoes -->
+				
+			<li MayRequire="River.Tribal.Mittens" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "River_Tribal_sandals"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="River.Tribal.Mittens" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "River_Tribal_moccasins"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="River.Tribal.Mittens" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "River_Tribal_mukluks"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Apparel Expanded -->
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Footwear_Boots"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Footwear_Shoes"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VAPPE" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Handwear_Gloves"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Armour Expanded -->
+				
+			<li MayRequire="VanillaExpanded.VARME" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Footwear_PlateBoots"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VARME" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Footwear_MarineBoots"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VARME" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Handwear_PlateGloves"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VARME" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Handwear_MarineGloves"]/apparel</xpath>
+				<value>
+					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+				</value>
+			</li>
+				
+			<!-- Vanilla Psycasts Expanded -->
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VPE_Apparel_EltexMask"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VPE_Psyring"]</xpath>
+				<value>
+					<apparel>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</apparel>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

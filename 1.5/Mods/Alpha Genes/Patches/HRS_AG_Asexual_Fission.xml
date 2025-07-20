@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHumanReproductonOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+
+			
+			
+			
+		<!-- Alpha Genes Asexual Fission Interval -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAGAsexualFissionDays</key>
+		<defaultValue>25</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName = "AG_AsexualFission"]/comps/li[@Class = "AnimalBehaviours.HediffCompProperties_AsexualReproduction"]/reproductionIntervalDays</xpath>
+				<value>
+					<reproductionIntervalDays>{FSFAGAsexualFissionDays}</reproductionIntervalDays>
+				</value>
+			</li>
+				
+	        <!-- Check for plurality and change text accordingly -->
+				
+	        <li Class="XmlExtensions.IfStatement">
+	        	<condition Class="XmlExtensions.Boolean.Comparison">
+	        		<value1>1</value1>
+	        		<value2>{FSFAGAsexualFissionDays}</value2>
+	        		<relation>eq</relation>
+	        	</condition>
+				
+	        	<!-- Singular case -->
+				
+	        	<caseTrue>
+			        <Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/GeneDef[defName = "AG_AsexualFission"]/customEffectDescriptions/li[1]</xpath>
+					    <value>
+							<li>Will produce newborns via asexual fission every {FSFAGAsexualFissionDays} day</li>
+					    </value>
+			        </Operation>
+	        	</caseTrue>
+				
+	        	<!-- Plural case -->
+				
+	        	<caseFalse>
+	        		<Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/GeneDef[defName = "AG_AsexualFission"]/customEffectDescriptions/li[1]</xpath>
+					    <value>
+							<li>Will produce newborns via asexual fission every {FSFAGAsexualFissionDays} days</li>
+					    </value>
+			        </Operation>
+	        	</caseFalse>
+				
+	        </li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

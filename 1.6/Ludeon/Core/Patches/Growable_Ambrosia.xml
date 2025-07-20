@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGrowableAmbrosia</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Growable Ambrosia -->
+
+			<!-- Add Ambrosia Research Def -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					<ResearchProjectDef>
+						<defName>FSFAmbrosiaResearch</defName>
+						<label>ambrosia</label>
+						<description>Allow colonists to plant ambrosia, a rare addictive fruit.</description>
+						<baseCost>1500</baseCost>
+						<techLevel>Neolithic</techLevel>
+						<researchViewX>2.00</researchViewX>
+						<researchViewY>0.00</researchViewY>
+						<generalRules>
+							<rulesStrings>
+								<li>subject->ambrosia cultivation</li>
+								<li>subject_story->managed a secret grove on a tribal world</li>
+								<li>subject_story->fended off herds of ambrosia addicted animals</li>
+								<li>subject_story->developed specialized growing techniques</li>
+								<li>subject_gerund->cultivating ambrosia</li>
+							</rulesStrings>
+						</generalRules>
+					</ResearchProjectDef>
+				</value>
+			</li>
+				
+			<!-- Core -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_Ambrosia"]/plant</xpath>
+				<value>
+					<sowMinSkill>10</sowMinSkill>
+					<sowTags>
+						<li>Ground</li>
+						<li>Hydroponic</li>
+					</sowTags>
+					<sowResearchPrerequisites>
+						<li>FSFAmbrosiaResearch</li>
+					</sowResearchPrerequisites>
+				</value>
+			</li>
+				
+			<!-- Biomes Caverns -->
+		
+			<li MayRequire="BiomesTeam.BiomesCaverns" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "BMT_AmbrosyxFungus"]/plant</xpath>
+				<value>
+					<minifiedDef>MinifiedTree</minifiedDef>
+					<sowMinSkill>10</sowMinSkill>
+					<sowTags>
+						<li>Ground</li>
+						<li>Hydroponic</li>
+					</sowTags>
+					<sowResearchPrerequisites>
+						<li>FSFAmbrosiaResearch</li>
+					</sowResearchPrerequisites>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

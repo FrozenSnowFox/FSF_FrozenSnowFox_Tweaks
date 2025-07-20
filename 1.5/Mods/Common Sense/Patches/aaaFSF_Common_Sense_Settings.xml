@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksCommonSense"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Common Sense Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksCommonSenseTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Smarter Cleaning -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Smarter Cleaning</label>
+				<key>FSFCSSmarterCleaning</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksCSSmarterCleaningTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Disables opportunistic cleaning for a number of tasks.  Such as Flicking switches, Opening items, Repairing things, Uninstalling things, Deconstructing things, Rearming traps/turrets and more.</text>
+				<tKey>FSFTweaksCSSmarterCleaningDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+						
+				
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

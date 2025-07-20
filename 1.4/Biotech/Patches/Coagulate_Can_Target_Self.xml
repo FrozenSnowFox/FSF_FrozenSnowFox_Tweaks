@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFCoagulateCanTargetSelf</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Coagulate Can Target Self -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/AbilityDef[defName = "Coagulate"]/verbProperties/targetParams/canTargetSelf</xpath>
+				<value>
+					<canTargetSelf>true</canTargetSelf>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

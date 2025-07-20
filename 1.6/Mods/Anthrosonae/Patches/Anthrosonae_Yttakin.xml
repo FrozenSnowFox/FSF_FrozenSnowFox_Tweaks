@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAnthrosonaeYttakin</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Anthrosonae Yttakin -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/genes/li[text()="VoiceRoar"]</xpath>
+			</li>
+
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/genes/li[text()="Body_Hulk"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/genes/li[text()="Furskin"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/genes/li[text()="Hair_BaldOnly"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/genes/li[text()="Tail_Furry"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/genes/li[text()="Beard_Always"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/genes</xpath>
+				<order>Prepend</order>
+				<value>
+					<li>Hair_Grayless</li>
+					<li>Beard_NoBeardOnly</li>
+					<li>ATK_AnthrowolfFur</li>
+					<li>ATK_AnthrowolfEars</li>
+					<li>ATK_AnthrowolfTail</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

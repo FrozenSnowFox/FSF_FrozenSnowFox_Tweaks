@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFTKAgeingRebalance</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Ageing Rebalance -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li MayRequire="silencer59.timekills" Class="PatchOperationReplace">
+				<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers/li[hediff = "TK_OldAge"]/ageFractionChanceCurve/points</xpath>
+				<value>
+					<points>
+						<li>(0.87, 0.0)</li>
+						<li>(1.0, 0.1)</li>
+					</points>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

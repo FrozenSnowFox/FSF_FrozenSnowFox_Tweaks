@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFWildAnimalReproduction</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Wild Animal Reproduction -->
+				
+			<!-- Add Mating Outside of Tamed Node -->
+			
+			<li Class="PatchOperationInsert">
+				<xpath>/Defs/ThinkTreeDef[defName = "Animal"]/thinkRoot/subNodes/li[@Class="ThinkNode_Subtree" and treeDef="SatisfyBasicNeeds"]</xpath>
+				<order>Append</order>
+				<value>
+					<li Class="ThinkNode_ChancePerHour_Mate">
+						<subNodes>
+							<li Class="ThinkNode_Tagger">
+								<tagToGive>SatisfyingNeeds</tagToGive>
+								<subNodes>
+									<li Class="JobGiver_Mate" />
+								</subNodes>
+							</li>
+						</subNodes>
+					</li>
+				</value>
+			</li>
+				
+			<!-- Remove Existing Mating Node Under Tamed -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThinkTreeDef[defName = "Animal"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalHasFaction"]/subNodes/li[@Class="ThinkNode_ChancePerHour_Mate"]</xpath>
+			</li>
+				
+			<!-- Prevent Deterioration of Fertilized Eggs -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "EggFertBase"]</xpath>
+				<value>
+					<statBases>
+						<DeteriorationRate>0</DeteriorationRate>
+					</statBases>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

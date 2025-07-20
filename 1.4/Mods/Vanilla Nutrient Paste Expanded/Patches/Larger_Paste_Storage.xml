@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLargerPasteStorageOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLargerPasteStorageTank</key>
+		<defaultValue>75</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Larger Paste Storage -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VNPE_NutrientPasteVat"]/description</xpath>
+				<value>
+					<description>A large tank that can store up to {FSFLargerPasteStorageTank} nutrient paste meals in it. Makes a big mess when destroyed.</description>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VNPE_NutrientPasteVat"]/comps/li[@Class = "PipeSystem.CompProperties_ResourceStorage"]/storageCapacity</xpath>
+				<value>
+					<storageCapacity>{FSFLargerPasteStorageTank}</storageCapacity>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

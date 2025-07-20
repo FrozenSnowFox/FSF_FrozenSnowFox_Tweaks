@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->		
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	        <!-- phynilla Expanded Mechs Scyther -->
+        
+            <li MayRequire="pphhyy.ExpandedMechsScyther" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "pphhyy_ScytherExpandedTank"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>150</Steel>
+						<Plasteel>75</Plasteel>
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="pphhyy.ExpandedMechsScyther" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "pphhyy_ScytherExpandedSearing"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>100</Steel>
+						<Plasteel>85</Plasteel>
+						<ComponentIndustrial>6</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="pphhyy.ExpandedMechsScyther" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "pphhyy_ScytherExpandedArch"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>100</Steel>
+						<Plasteel>85</Plasteel>
+						<ComponentIndustrial>6</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="pphhyy.ExpandedMechsScyther" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "pphhyy_ScytherExpandedMono"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>100</Steel>
+						<Plasteel>85</Plasteel>
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+						<SignalChip>1</SignalChip>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li MayRequire="pphhyy.ExpandedMechsScyther" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "pphhyy_ScytherExpandedPrestige"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>120</Steel>
+						<Plasteel>120</Plasteel>
+						<ComponentIndustrial>6</ComponentIndustrial>
+						<ComponentSpacer>2</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+						<PowerfocusChip>1</PowerfocusChip>
+					</butcherProducts>
+				</value>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

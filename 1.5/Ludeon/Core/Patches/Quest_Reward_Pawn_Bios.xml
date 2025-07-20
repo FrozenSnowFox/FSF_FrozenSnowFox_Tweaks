@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFQuestRewardPawnBios</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Quest Reward Pawn Bios -->
+				
+			<!-- Core -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef/root/nodes/li/rewardDetailsHidden</xpath>
+				<value>
+					<rewardDetailsHidden>false</rewardDetailsHidden>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded Vikings -->
+		
+			<li MayRequire="oskarpotocki.vfe.vikings" Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef/root/nodes/li/node/nodes/li/rewardDetailsHidden</xpath>
+				<value>
+					<rewardDetailsHidden>false</rewardDetailsHidden>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

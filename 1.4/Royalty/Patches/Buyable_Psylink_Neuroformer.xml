@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBuyablePsylinkOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+		<!-- Make Psylink Neuroformers Buyable -->
+			
+	<Operation Class="PatchOperationConditional">
+		<success>Normal</success>
+		
+		<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/tradeability</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
+			<value>
+				<tradeability>Buyable</tradeability>
+			</value>
+		</nomatch>
+
+	</Operation>
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFBuyablePsylinkFactions</li>
+			<li>FSFTweaksBuyablePsylinkMin</li>
+			<li>FSFTweaksBuyablePsylinkMax</li>
+		</keys>
+		<defaultValues>
+			<li>FSFBuyablePsylinkFactionsEmpire</li>
+			<li>1</li>
+			<li>2</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="XmlExtensions.IfStatement">
+			<condition Class="XmlExtensions.Boolean.Comparision">
+				<value1>{FSFBuyablePsylinkFactions}</value1>
+				<value2>FSFBuyablePsylinkFactionsEmpire</value2>
+				<nonNumeric>true</nonNumeric>
+				<relation>eq</relation>
+			</condition>
+			<caseTrue>
+
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef [defName [contains(text(), "Empire")] ]/stockGenerators</xpath>
+				<value>
+					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>PsychicAmplifier</thingDef>
+						<countRange>{FSFTweaksBuyablePsylinkMin}~{FSFTweaksBuyablePsylinkMax}</countRange>
+					</li>
+
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+				
+			</caseTrue>
+		</Operation>
+			
+		<Operation Class="XmlExtensions.IfStatement">
+			<condition Class="XmlExtensions.Boolean.Comparision">
+				<value1>{FSFBuyablePsylinkFactions}</value1>
+				<value2>FSFBuyablePsylinkFactionsEveryone</value2>
+				<nonNumeric>true</nonNumeric>
+				<relation>eq</relation>
+			</condition>
+			<caseTrue>
+
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef/stockGenerators [li/thingDef [text() = "MedicineUltratech"]]</xpath>
+				<value>
+					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>PsychicAmplifier</thingDef>
+						<countRange>{FSFTweaksBuyablePsylinkMin}~{FSFTweaksBuyablePsylinkMax}</countRange>
+					</li>
+
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+				
+			</caseTrue>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

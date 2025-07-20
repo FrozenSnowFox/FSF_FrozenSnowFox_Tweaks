@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVREPhytokiSapBloodNoWorkspeedMalus</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Workspeed Malus On Sap Blood -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/GeneDef[defName = "VRE_SapBlood"]/description</xpath>
+				<value>
+					<description>Carriers of this gene have thick, sticky, orange blood that greatly slows down their bleed out time.</description>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/GeneDef[defName = "VRE_SapBlood"]/biostatMet</xpath>
+				<value>
+					<biostatMet>-1</biostatMet>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/HediffDef[defName = "VRE_SapBlood"]/stages/li/statFactors</xpath>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName = "VRE_SapBlood"]/description</xpath>
+				<value>
+					<description>This person has a thick, sticky, orange blood that greatly slows down their bleed out time.</description>
+				</value>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

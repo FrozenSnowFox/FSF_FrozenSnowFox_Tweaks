@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRenderHairOverClothing</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Render Hair Over Clothing -->
+				
+			<!-- Note: The method of adding shellRenderedBehindHead true creates a new bug for short hairstyles which is rendering the head over clothing. -->
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef [apparel/layers/li[text()="Shell"]] /apparel</xpath>
+				<value>
+					<drawData>
+						<dataNorth>
+							<layer>51</layer>
+						</dataNorth>
+					</drawData>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

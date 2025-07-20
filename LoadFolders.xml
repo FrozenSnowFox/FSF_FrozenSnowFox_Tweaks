@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<loadFolders>
+	
+	<v1.4>	
+
+		<!-- Vanilla -->
+		
+		<li>/</li>
+		
+		<li>1.4/Core</li>
+		
+		<!-- DLC Royalty -->
+		
+		<li IfModActive="Ludeon.RimWorld.Royalty">1.4/Royalty</li>
+		
+		<!-- DLC Ideology -->
+		
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/Ideology</li>
+		
+		<!-- DLC Biotech -->
+		
+		<li IfModActive="Ludeon.RimWorld.Biotech">1.4/Biotech</li>
+		
+		
+		
+		<!-- Mods -->
+
+		<!-- Alpha Animals -->
+		<li IfModActive="sarg.alphaanimals">1.4/Mods/Alpha Animals</li>
+		
+		<!-- Anthrosonae -->
+		<li IfModActive="ATK.Anthrosonae">1.4/Mods/Anthrosonae</li>
+		
+		<!-- Dubs Bad Hygiene -->
+		<li IfModActive="dubwise.dubsbadhygiene">1.4/Mods/Dubs Bad Hygiene</li>
+		
+		<!-- [LTS]Ammunition - Simple Ammo Pack -->
+		<li IfModActive="LimeTreeSnake.Ammo">1.4/Mods/LTS Ammunition Simple</li>
+		
+		<!-- Oops All Gene Banks -->
+		<li IfModActive="redundant.oopsallgenepacks">1.4/Mods/Oops All Gene Banks</li>
+		
+		<!-- Packs Are Not Belts -->
+		<li IfModActive="turnovus.submod.backpacksarenotbelts">1.4/Mods/Packs Are Not Belts</li>
+		
+		<!-- Research Appropriation -->
+		<li IfModActive="GarryFlowers.ResearchAppropriation">1.4/Mods/Research Appropriation</li>
+
+		<!-- SafeJobWorld -->
+		<li IfModActive="safe.job.world,rim.job.world">1.4/Mods/SafeJobWorld</li>
+		
+		<!-- Simple Utilities Ceiling -->
+		<li IfModActive="Owlchemist.CeilingUtilities">1.4/Mods/Simple Utilities Ceiling</li>
+		
+		<!-- Simple Utilities Fridge -->
+		<li IfModActive="Owlchemist.FridgeUtilities">1.4/Mods/Simple Utilities Fridge</li>
+		
+		<!-- Vanilla Chemfuel Expanded -->
+		<li IfModActive="vanillaexpanded.vchemfuele">1.4/Mods/Vanilla Chemfuel Expanded</li>
+		
+		<!-- Vanilla Cooking Expanded -->
+		<li IfModActive="VanillaExpanded.VCookE">1.4/Mods/Vanilla Cooking Expanded</li>
+		
+		<!-- Vanilla Events Expanded -->
+		<li IfModActive="VanillaExpanded.VEE">1.4/Mods/Vanilla Events Expanded</li>
+		
+		<!-- Vanilla Factions Expanded Deserters -->
+		<li IfModActive="OskarPotocki.VFE.Deserters">1.4/Mods/Vanilla Factions Expanded Deserters</li>
+		
+		<!-- Vanilla Factions Expanded Empire -->
+		<li IfModActive="OskarPotocki.VFE.Empire">1.4/Mods/Vanilla Factions Expanded Empire</li>
+		
+		<!-- Vanilla Ideology Expanded - Dryads -->
+		<li IfModActive="VanillaExpanded.Ideo.Dryads">1.4/Mods/Vanilla Ideology Expanded Dryads</li>
+		
+		<!-- Vanilla Ideology Expanded - Memes and Structures -->
+		<li IfModActive="VanillaExpanded.VMemesE">1.4/Mods/Vanilla Expanded Memes</li>
+		
+		<!-- Vanilla Nutrient Paste Expanded -->
+		<li IfModActive="VanillaExpanded.VNutrientE">1.4/Mods/Vanilla Nutrient Paste Expanded</li>
+		
+		<!-- Vanilla Psycasts Expanded -->
+		<li IfModActive="VanillaExpanded.VPsycastsE">1.4/Mods/Vanilla Psycasts Expanded</li>
+
+		<!-- Vanilla Races Expanded - Genie -->
+		<li IfModActive="vanillaracesexpanded.genie">1.4/Mods/Vanilla Races Expanded Genie</li>
+		
+		<!-- Vanilla Races Expanded - Highmate -->
+		<li IfModActive="vanillaracesexpanded.highmate">1.4/Mods/Vanilla Races Expanded Highmate</li>
+		
+		<!-- Vanilla Races Expanded - Phytoki -->
+		<li IfModActive="vanillaracesexpanded.phytokin">1.4/Mods/Vanilla Races Expanded Phytoki</li>
+		
+		<!-- Vehicle Framework Expanded -->
+		<li IfModActive="SmashPhil.VehicleFramework">1.4/Mods/Vehicle Framework</li>
+		
+	</v1.4>
+	
+	<v1.5>	
+
+		<!-- Ludeon -->
+		
+		<!-- Core -->
+		
+		<li>/</li>
+		
+		<li>1.5/Ludeon/Core</li>
+		
+		<!-- DLC Royalty -->		
+		<li IfModActive="Ludeon.RimWorld.Royalty">1.5/Ludeon/Royalty</li>
+		
+		<!-- DLC Ideology -->		
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/Ludeon/Ideology</li>
+		
+		<!-- DLC Biotech -->		
+		<li IfModActive="Ludeon.RimWorld.Biotech">1.5/Ludeon/Biotech</li>
+		
+		<!-- DLC Anomaly -->		
+		<li IfModActive="Ludeon.RimWorld.Anomaly">1.5/Ludeon/Anomaly</li>
+		
+		
+		
+		<!-- Mods -->
+		
+		<!-- Alpha Genes -->
+		<li IfModActive="sarg.alphagenes">1.5/Mods/Alpha Genes</li>
+		
+		<!-- Anthrosonae -->
+		<li IfModActive="ATK.Anthrosonae">1.5/Mods/Anthrosonae</li>
+		
+		<!-- Common Sense -->
+		<li IfModActive="avilmask.CommonSense">1.5/Mods/Common Sense</li>
+		
+		<!-- Dubs Bad Hygiene -->
+		<li IfModActive="dubwise.dubsbadhygiene">1.5/Mods/Dubs Bad Hygiene</li>
+		
+		<!-- Lethal Darkness -->
+		<li IfModActive="Aranmaho.BetterDarkness">1.5/Mods/Lethal Darkness</li>
+		
+		<!-- [LTS]Ammunition - Simple Ammo Pack -->
+		<li IfModActive="LimeTreeSnake.Ammo">1.5/Mods/LTS Ammunition Simple</li>
+		
+		<!-- Oops All Gene Banks -->
+		<li IfModActive="redundant.oopsallgenepacks">1.5/Mods/Oops All Gene Banks</li>
+		
+		<!-- Packs Are Not Belts -->
+		<li IfModActive="turnovus.submod.backpacksarenotbelts">1.5/Mods/Packs Are Not Belts</li>
+		
+		<!-- Research Appropriation -->
+		<li IfModActive="GarryFlowers.ResearchAppropriation">1.5/Mods/Research Appropriation</li>
+		
+		<!-- Research Reinvented Stepping Stones -->
+		<li IfModActive="PeteTimesSix.ResearchReinvented.SteppingStones">1.5/Mods/Research Reinvented Stepping Stones</li>
+
+		<!-- SafeJobWorld -->
+		<li IfModActive="safe.job.world,rim.job.world">1.5/Mods/SafeJobWorld</li>
+		
+		<!-- Simple Utilities Ceiling -->
+		<li IfModActive="Owlchemist.CeilingUtilities">1.5/Mods/Simple Utilities Ceiling</li>
+		
+		<!-- Simple Utilities Fridge -->
+		<li IfModActive="Owlchemist.FridgeUtilities">1.5/Mods/Simple Utilities Fridge</li>
+		
+		<!-- Time Kills -->
+		<li IfModActive="silencer59.timekills">1.5/Mods/Time Kills</li>
+		
+		<!-- Ushankas Biological Warfare -->
+		<li IfModActive="Ushanka.BiologicalWarfare">1.5/Mods/Ushankas Biological Warfare</li>
+		
+		<!-- Vanilla Chemfuel Expanded -->
+		<li IfModActive="vanillaexpanded.vchemfuele">1.5/Mods/Vanilla Chemfuel Expanded</li>
+		
+		<!-- Vanilla Cooking Expanded -->
+		<li IfModActive="VanillaExpanded.VCookE">1.5/Mods/Vanilla Cooking Expanded</li>
+		
+		<!-- Vanilla Expanded Framework -->
+		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">1.5/Mods/Vanilla Expanded Framework</li>
+		
+		<!-- Vanilla Factions Expanded Deserters -->
+		<li IfModActive="OskarPotocki.VFE.Deserters">1.5/Mods/Vanilla Factions Expanded Deserters</li>
+		
+		<!-- Vanilla Factions Expanded Empire -->
+		<li IfModActive="OskarPotocki.VFE.Empire">1.5/Mods/Vanilla Factions Expanded Empire</li>
+		
+		<!-- Vanilla Furniture Expanded Security -->
+		<li IfModActive="VanillaExpanded.VFESecurity">1.5/Mods/Vanilla Furniture Expanded Security</li>
+		
+		<!-- Vanilla Helixien Gas Expanded -->
+		<li IfModActive="VanillaExpanded.HelixienGas">1.5/Mods/Vanilla Helixien Gas Expanded</li>
+		
+		<!-- Vanilla Ideology Expanded - Dryads -->
+		<li IfModActive="VanillaExpanded.Ideo.Dryads">1.5/Mods/Vanilla Ideology Expanded Dryads</li>
+		
+		<!-- Vanilla Ideology Expanded - Memes and Structures -->
+		<li IfModActive="VanillaExpanded.VMemesE">1.5/Mods/Vanilla Expanded Memes</li>
+		
+		<!-- Vanilla Nutrient Paste Expanded -->
+		<li IfModActive="VanillaExpanded.VNutrientE">1.5/Mods/Vanilla Nutrient Paste Expanded</li>
+		
+		<!-- Vanilla Psycasts Expanded -->
+		<li IfModActive="VanillaExpanded.VPsycastsE">1.5/Mods/Vanilla Psycasts Expanded</li>
+
+		<!-- Vanilla Races Expanded - Android -->
+		<li IfModActive="vanillaracesexpanded.android">1.5/Mods/Vanilla Races Expanded Android</li>
+		
+		<!-- Vanilla Races Expanded - Genie -->
+		<li IfModActive="vanillaracesexpanded.genie">1.5/Mods/Vanilla Races Expanded Genie</li>
+		
+		<!-- Vanilla Races Expanded - Highmate -->
+		<li IfModActive="vanillaracesexpanded.highmate">1.5/Mods/Vanilla Races Expanded Highmate</li>
+		
+		<!-- Vanilla Races Expanded - Phytoki -->
+		<li IfModActive="vanillaracesexpanded.phytokin">1.5/Mods/Vanilla Races Expanded Phytoki</li>
+
+		<!-- Vanilla Races Expanded - Sanguophage -->
+		<li IfModActive="vanillaracesexpanded.sanguophage">1.5/Mods/Vanilla Races Expanded Sanguophage</li>
+		
+		<!-- Vanilla Races Expanded - Saurid -->
+		<li IfModActive="vanillaracesexpanded.saurid">1.5/Mods/Vanilla Races Expanded Saurid</li>
+		
+		<!-- Vehicle Framework Expanded -->
+		<li IfModActive="SmashPhil.VehicleFramework">1.5/Mods/Vehicle Framework</li>
+		
+	</v1.5>
+	
+	<v1.6>	
+
+		<!-- Ludeon -->
+		
+		<!-- Core -->
+		
+		<li>/</li>
+		
+		<li>1.6/Ludeon/Core</li>
+		
+		<!-- DLC Royalty -->		
+		<li IfModActive="Ludeon.RimWorld.Royalty">1.6/Ludeon/Royalty</li>
+		
+		<!-- DLC Ideology -->		
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/Ludeon/Ideology</li>
+		
+		<!-- DLC Biotech -->		
+		<li IfModActive="Ludeon.RimWorld.Biotech">1.6/Ludeon/Biotech</li>
+		
+		<!-- DLC Anomaly -->		
+		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/Ludeon/Anomaly</li>
+		
+		
+		
+		<!-- Mods -->
+		
+		<!-- Alpha Genes -->
+		<li IfModActive="sarg.alphagenes">1.6/Mods/Alpha Genes</li>
+		
+		<!-- Anthrosonae -->
+		<li IfModActive="ATK.Anthrosonae">1.6/Mods/Anthrosonae</li>
+		
+		<!-- Common Sense -->
+		<li IfModActive="avilmask.CommonSense">1.6/Mods/Common Sense</li>
+		
+		<!-- Dubs Bad Hygiene -->
+		<li IfModActive="dubwise.dubsbadhygiene">1.6/Mods/Dubs Bad Hygiene</li>
+		
+		<!-- Lethal Darkness -->
+		<li IfModActive="Aranmaho.BetterDarkness">1.6/Mods/Lethal Darkness</li>
+		
+		<!-- [LTS]Ammunition - Simple Ammo Pack -->
+		<li IfModActive="LimeTreeSnake.Ammo">1.6/Mods/LTS Ammunition Simple</li>
+		
+		<!-- Oops All Gene Banks -->
+		<li IfModActive="redundant.oopsallgenepacks">1.6/Mods/Oops All Gene Banks</li>
+		
+		<!-- Packs Are Not Belts -->
+		<li IfModActive="turnovus.submod.backpacksarenotbelts">1.6/Mods/Packs Are Not Belts</li>
+		
+		<!-- Research Appropriation -->
+		<li IfModActive="GarryFlowers.ResearchAppropriation">1.6/Mods/Research Appropriation</li>
+		
+		<!-- Research Reinvented Stepping Stones -->
+		<li IfModActive="PeteTimesSix.ResearchReinvented.SteppingStones">1.6/Mods/Research Reinvented Stepping Stones</li>
+
+		<!-- SafeJobWorld -->
+		<li IfModActive="safe.job.world,rim.job.world">1.6/Mods/SafeJobWorld</li>
+		
+		<!-- Simple Utilities Ceiling -->
+		<li IfModActive="Owlchemist.CeilingUtilities">1.6/Mods/Simple Utilities Ceiling</li>
+		
+		<!-- Simple Utilities Fridge -->
+		<li IfModActive="Owlchemist.FridgeUtilities">1.6/Mods/Simple Utilities Fridge</li>
+		
+		<!-- Time Kills -->
+		<li IfModActive="silencer59.timekills">1.6/Mods/Time Kills</li>
+		
+		<!-- Ushankas Biological Warfare -->
+		<li IfModActive="Ushanka.BiologicalWarfare">1.6/Mods/Ushankas Biological Warfare</li>
+		
+		<!-- Vanilla Chemfuel Expanded -->
+		<li IfModActive="vanillaexpanded.vchemfuele">1.6/Mods/Vanilla Chemfuel Expanded</li>
+		
+		<!-- Vanilla Cooking Expanded -->
+		<li IfModActive="VanillaExpanded.VCookE">1.6/Mods/Vanilla Cooking Expanded</li>
+		
+		<!-- Vanilla Expanded Framework -->
+		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">1.6/Mods/Vanilla Expanded Framework</li>
+		
+		<!-- Vanilla Factions Expanded Deserters -->
+		<li IfModActive="OskarPotocki.VFE.Deserters">1.6/Mods/Vanilla Factions Expanded Deserters</li>
+		
+		<!-- Vanilla Factions Expanded Empire -->
+		<li IfModActive="OskarPotocki.VFE.Empire">1.6/Mods/Vanilla Factions Expanded Empire</li>
+		
+		<!-- Vanilla Furniture Expanded Security -->
+		<li IfModActive="VanillaExpanded.VFESecurity">1.6/Mods/Vanilla Furniture Expanded Security</li>
+		
+		<!-- Vanilla Helixien Gas Expanded -->
+		<li IfModActive="VanillaExpanded.HelixienGas">1.6/Mods/Vanilla Helixien Gas Expanded</li>
+		
+		<!-- Vanilla Ideology Expanded - Dryads -->
+		<li IfModActive="VanillaExpanded.Ideo.Dryads">1.6/Mods/Vanilla Ideology Expanded Dryads</li>
+		
+		<!-- Vanilla Ideology Expanded - Memes and Structures -->
+		<li IfModActive="VanillaExpanded.VMemesE">1.6/Mods/Vanilla Expanded Memes</li>
+		
+		<!-- Vanilla Nutrient Paste Expanded -->
+		<li IfModActive="VanillaExpanded.VNutrientE">1.6/Mods/Vanilla Nutrient Paste Expanded</li>
+		
+		<!-- Vanilla Psycasts Expanded -->
+		<li IfModActive="VanillaExpanded.VPsycastsE">1.6/Mods/Vanilla Psycasts Expanded</li>
+
+		<!-- Vanilla Races Expanded - Android -->
+		<li IfModActive="vanillaracesexpanded.android">1.6/Mods/Vanilla Races Expanded Android</li>
+		
+		<!-- Vanilla Races Expanded - Genie -->
+		<li IfModActive="vanillaracesexpanded.genie">1.6/Mods/Vanilla Races Expanded Genie</li>
+		
+		<!-- Vanilla Races Expanded - Highmate -->
+		<li IfModActive="vanillaracesexpanded.highmate">1.6/Mods/Vanilla Races Expanded Highmate</li>
+		
+		<!-- Vanilla Races Expanded - Phytoki -->
+		<li IfModActive="vanillaracesexpanded.phytokin">1.6/Mods/Vanilla Races Expanded Phytoki</li>
+
+		<!-- Vanilla Races Expanded - Sanguophage -->
+		<li IfModActive="vanillaracesexpanded.sanguophage">1.6/Mods/Vanilla Races Expanded Sanguophage</li>
+		
+		<!-- Vanilla Races Expanded - Saurid -->
+		<li IfModActive="vanillaracesexpanded.saurid">1.6/Mods/Vanilla Races Expanded Saurid</li>
+		
+		<!-- Vehicle Framework Expanded -->
+		<li IfModActive="SmashPhil.VehicleFramework">1.6/Mods/Vehicle Framework</li>
+		
+	</v1.6>
+	
+</loadFolders>

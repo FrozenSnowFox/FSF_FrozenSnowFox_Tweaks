@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreGenepacksOnTradersOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFMoreGenepacksOnTradersGenepackMin</li>
+			<li>FSFMoreGenepacksOnTradersGenepackMax</li>
+			<li>FSFMoreGenepacksOnTradersArchiteCapulesMin</li>
+			<li>FSFMoreGenepacksOnTradersArchiteCapulesMax</li>
+		</keys>
+		<defaultValues>
+			<li>5</li>
+			<li>6</li>
+			<li>6</li>
+			<li>7</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraderKindDef/stockGenerators/li [thingDef [text() = "Genepack"]]/countRange</xpath>
+				<value>
+					<countRange>{FSFMoreGenepacksOnTradersGenepackMin}~{FSFMoreGenepacksOnTradersGenepackMax}</countRange>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraderKindDef/stockGenerators/li [thingDef [text() = "ArchiteCapsule"]]/countRange</xpath>
+				<value>
+					<countRange>{FSFMoreGenepacksOnTradersArchiteCapulesMin}~{FSFMoreGenepacksOnTradersArchiteCapulesMax}</countRange>
+				</value>
+			</li>
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef/stockGenerators [li/thingDef [text() = "Genepack"]]</xpath>
+				<value>					
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>AG_Alphapack</thingDef>
+						<countRange>1</countRange>
+					</li>
+					<li Class="StockGenerator_SingleDef">
+						<thingDef>AG_Mixedpack</thingDef>
+						<countRange>1</countRange>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

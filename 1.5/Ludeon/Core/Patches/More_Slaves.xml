@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreSlavesOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFMoreSlavesMin</li>
+			<li>FSFMoreSlavesMax</li>
+		</keys>
+		<defaultValues>
+			<li>9</li>
+			<li>10</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- More Slaves -->
+		
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/TraderKindDef [category [text() = "Slaver"]]/requestable</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraderKindDef [category [text() = "Slaver"]]/commonalityMultFromPopulationIntent</xpath>
+				<value>
+					<commonalityMultFromPopulationIntent>
+						<points>
+							<li>(-1, 1)</li>
+							<li>(1,   1)</li>
+							<li>(2,   3)</li>
+						</points>
+					</commonalityMultFromPopulationIntent>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/TraderKindDef/stockGenerators/li[@Class = "StockGenerator_Slaves"]/respectPopulationIntent</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraderKindDef/stockGenerators/ li[@Class = "StockGenerator_Slaves"] [not(slaveKindDef)] /countRange</xpath>
+				<value>
+					<countRange>{FSFMoreSlavesMin}~{FSFMoreSlavesMax}</countRange>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationConditional">		
+				<xpath>/Defs/TraderKindDef[defName = "Base_Empire_Standard"]/stockGenerators/li[@Class = "StockGenerator_Slaves"] [slaveKindDef [text()="Slave_Empire"]] /countRange</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>/Defs/TraderKindDef[defName = "Base_Empire_Standard"]/stockGenerators/li[@Class = "StockGenerator_Slaves"] [slaveKindDef [text()="Slave_Empire"]] /countRange</xpath>
+					<value>
+						<countRange>{FSFMoreSlavesMin}~{FSFMoreSlavesMax}</countRange>
+					</value>
+				</match>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

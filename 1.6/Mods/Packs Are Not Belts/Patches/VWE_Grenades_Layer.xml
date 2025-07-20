@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGrenadeBeltLayering</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Vanilla Weapons Expanded Grenades -->
+				
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeFragBelt"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeMolotovBelt"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeEMPBelt"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,Ludeon.RimWorld.Biotech" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeToxicBelt"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,OskarPotocki.VanillaFactionsExpanded.SettlersModule" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_DynamiteBelt"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeSmokeBelt"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeFlashBelt"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VWEG,VanillaExpanded.VWENL" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadeTearGasBelt"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

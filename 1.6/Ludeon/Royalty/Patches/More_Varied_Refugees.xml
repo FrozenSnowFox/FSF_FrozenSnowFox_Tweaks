@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreVariedRefugees</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- More Varied Refugees -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]</xpath>
+				<value>
+					<biocodeWeaponChance>0.3</biocodeWeaponChance>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/gearHealthRange</xpath>
+				<value>
+					<gearHealthRange>0.2~0.9</gearHealthRange>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/itemQuality</xpath>
+				<value>
+					<itemQuality>Normal</itemQuality>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/apparelMoney</xpath>
+				<value>
+					<apparelMoney>90~600</apparelMoney>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/apparelAllowHeadgearChance</xpath>
+				<value>
+					<apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/apparelTags</xpath>
+				<value>
+					<li>IndustrialMilitaryBasic</li>
+					<li>IndustrialMilitaryAdvanced</li>
+					<li>BeltDefensePop</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/weaponMoney</xpath>
+				<value>
+					<weaponMoney>60~400</weaponMoney>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/weaponTags</xpath>
+				<value>
+					<li>Gun</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/techHediffsMoney</xpath>
+				<value>
+					<techHediffsMoney>50~1500</techHediffsMoney>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef[defName = "Refugee"]/techHediffsTags</xpath>
+				<value>
+					<li>Simple</li>
+					<li>Advanced</li>
+					<li>ImplantEmpireCommon</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

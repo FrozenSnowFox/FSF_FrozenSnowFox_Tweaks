@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGrowthVatNoDefaultSettings</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "GrowthVat"]/building/defaultStorageSettings</xpath>
+					<value>
+	      				<defaultStorageSettings>
+       						<filter>
+	          					<categories>
+	       	  					</categories>
+	        				</filter>
+	   	  				</defaultStorageSettings>
+					</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHumanReproductonOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			
+			
+		<!-- Vanilla Races Expanded Phytokin -->
+		<!-- Sapling Fatigue -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+	   	<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+	   	<key>FSFSaplingFatigueDays</key>
+	   	<defaultValue>18</defaultValue>
+	   	<apply>
+				
+	        <!-- Convert settings from days to negative inverse to get severity -->
+				
+	        <Operation Class="XmlExtensions.CreateVariable">
+	        	<storeIn>FSFSaplingFatigueSeverity</storeIn>
+	        	<value>-1</value>
+	   	    	<value2>{FSFSaplingFatigueDays}</value2>
+	       		<defaultValue2>18</defaultValue2>
+	       		<operation>/</operation>
+	        	<apply>
+						
+		      		<Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="VRE_TempSterile"]/comps/li[@Class = "HediffCompProperties_SeverityPerDay"]/severityPerDay</xpath>
+					    <value>
+							<severityPerDay>{FSFSaplingFatigueSeverity}</severityPerDay>
+				    	</value>
+			        </Operation>
+						
+	        	</apply>
+	   	    </Operation>
+				
+	   	</apply>
+	</Operation>
+					
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

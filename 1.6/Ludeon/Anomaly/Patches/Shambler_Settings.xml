@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFShamblerSettingsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			
+			
+			
+		<!-- Shamblers Aggro Further -->
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFShamblersAggroFurther</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThinkTreeDef[defName="Shambler"]/thinkRoot/subNodes/li[@Class = "JobGiver_ShamblerFight"]</xpath>
+				<value>
+					<li Class="JobGiver_ShamblerFight">
+						<targetAcquireRadius>50</targetAcquireRadius>
+						<targetKeepRadius>60</targetKeepRadius>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+		<!-- Shamblers Wander Further -->
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFShamblersWanderFurther</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThinkTreeDef[defName="Shambler"]/thinkRoot/subNodes/li[@Class = "JobGiver_ShamblerWander"]/wanderRadius</xpath>
+				<value>
+					<wanderRadius>12</wanderRadius>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

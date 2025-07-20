@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMeditationFreedomOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMeditationFreedomFocusStr</key>
+		<defaultValue>0.40</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Meditation Focus -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+				
+	<ThingDef ParentName="BuildingBase">
+		<defName>FSFMeditationFocus</defName>
+		<label>meditation focus</label>
+		<description>Designates a spot for people to focus their attention while meditating.</description>
+    	<graphicData>
+			<texPath>Things/Building/FSFSpotTransparentCircle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<designationCategory>Misc</designationCategory>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>Standable</passability>
+		<surfaceType>Item</surfaceType>
+		<statBases>
+			<WorkToBuild>0</WorkToBuild>
+			<MeditationFocusStrength>{FSFMeditationFreedomFocusStr}</MeditationFocusStrength>
+		</statBases>
+		<rotatable>false</rotatable>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>False</useHitPoints>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<canPlaceOverImpassablePlant>true</canPlaceOverImpassablePlant>
+			<isEdifice>false</isEdifice>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+		</building>
+		<comps>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Dignified</li>
+					<li>Natural</li>
+					<li>Artistic</li>
+					<li>Morbid</li>
+					<li>Minimal</li>
+					<li>Flame</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly">Void</li>
+				</focusTypes>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic">
+				<startAsRandom>false</startAsRandom>
+				<disableRandomButton>true</disableRandomButton>
+				<randomGraphics>
+					<li>Things/Building/FSFSpotTransparentCircle</li>
+					<li>Things/Building/FSFSpotInvisible</li>
+				</randomGraphics>
+			</li>
+    	</comps>
+  </ThingDef>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMeditationFreedomAnimaTreeStr</key>
+		<defaultValue>0.28</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Anima Tree Focus Strength -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>{FSFMeditationFreedomAnimaTreeStr}</MeditationFocusStrength>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMeditationFreedomBackstoryReq</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Remove Backstory Requirement for Natural Meditation -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/MeditationFocusDef[defName = "Natural"]/requiredBackstoriesAny</xpath>
+			</li>
+				
+			<!-- Remove Natural Meditation Type from Traits -->
+				
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/TraitDef/degreeDatas/li/allowedMeditationFocusTypes/li[text()="Natural"]</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+			
+		<!-- Place Meditation Spots Anywhere -->
+ 
+		<li Class="XmlExtensions.PatchOperationSafeAdd">
+			<xpath>/Defs/ThingDef[defName="MeditationSpot"]/building</xpath>
+			<value>
+				<isEdifice>false</isEdifice>
+			</value>
+		</li>
+			
+		<!-- Stop Grass Dying -->
+ 
+		<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Plant_GrassAnima"]/plant/lifespanDaysPerGrowDays</xpath>
+			<value>
+				<lifespanDaysPerGrowDays>1200</lifespanDaysPerGrowDays>
+			</value>
+		</li>
+			
+		<!-- Remove Anima Tree Artificial Building Radius -->
+
+		<li Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName = "Plant_TreeAnima"]/comps/li[@Class = "CompProperties_MeditationFocus"]/offsets/li[@Class = "FocusStrengthOffset_ArtificialBuildings"]/radius</xpath>
+			<value>
+				<radius>0</radius>
+			</value>
+		</li>
+			
+		<!-- Remove Anima Grass Artificial Building Radius -->
+
+		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StatDef[defName = "MeditationPlantGrowthOffset"]/parts/li[@Class = "StatPart_ArtificialBuildingsNearbyOffset"]/radius</xpath>
+			<value>
+				<radius>0</radius>
+			</value>
+		</li>
+			
+		<!-- Replantable Anima Trees -->
+
+		<li Class="XmlExtensions.PatchOperationSafeRemove">
+			<xpath>/Defs/ThingDef[defName = "Plant_TreeAnima"]/minifiedDef</xpath>
+		</li>
+			
+		<li Class="XmlExtensions.PatchOperationSafeRemove">
+			<xpath>/Defs/ThingDef[defName = "Plant_TreeAnima"]/plant/sowTags</xpath>
+		</li>
+			
+		<li Class="XmlExtensions.PatchOperationSafeRemove">
+			<xpath>/Defs/ThingDef[defName = "Plant_TreeAnima"]/plant/sowResearchPrerequisites</xpath>
+		</li>
+			
+		<li Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant</xpath>
+			<value>
+				<mustBeWildToSow>false</mustBeWildToSow>
+				<blockAdjacentSow>false</blockAdjacentSow>
+				<interferesWithRoof>false</interferesWithRoof>
+				<neverBlightable>true</neverBlightable>
+			</value>
+		</li>
+			
+		<!-- Remove Nature Psycaster Requirement from Shrines -->
+			
+		<li Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[@Name = "NatureShrineBase"]/placeWorkers/li[text()="PlaceWorker_RequireNaturePsycaster"]</xpath>
+		</li>
+			
+		</operations>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

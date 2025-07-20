@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPsycastTweaksPowerLeap</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Power Leap Works Through Walls -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VEF.Abilities.AbilityDef[defName = "VPE_PowerLeap"]</xpath>
+				<value>
+					<requireLineOfSight>false</requireLineOfSight>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

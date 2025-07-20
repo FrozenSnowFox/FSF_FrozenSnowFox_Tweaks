@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFUnlockPsycastTrees</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Unlock Psycast Trees -->
+				
+			<!-- Archotechist -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPE_Archotechist"]/description</xpath>
+				<value>
+					<description>Archotechist path is a special path that allows spreading insanity, using psychic shock to down any wrong-doers, and to offload neural heat to others, as well as use neural heat in combat.</description>
+				</value>
+			</li>
+			
+        	<li Class="PatchOperationRemove">
+          		<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPE_Archotechist"]/lockedReason</xpath>
+        	</li>
+				
+        	<li Class="PatchOperationRemove">
+          		<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPE_Archotechist"]/requiredBackstoriesAny</xpath>
+        	</li>
+				
+			<!-- Wildspeaker -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPE_Wildspeaker"]/description</xpath>
+				<value>
+					<description>Wildspeaker path is a special path that's all about controlling nature and animals for defense and survival.</description>
+				</value>
+			</li>
+			
+        	<li Class="PatchOperationRemove">
+          		<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPE_Wildspeaker"]/lockedReason</xpath>
+        	</li>
+				
+        	<li Class="PatchOperationRemove">
+          		<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPE_Wildspeaker"]/requiredFocus</xpath>
+        	</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/MeditationFocusDef[defName = "Natural"]/modExtensions/li[@Class = "VanillaPsycastsExpanded.MeditationFocusExtension"]/canBeUnlocked</xpath>
+			</li>
+				
+			<!-- Vanilla Psycasts Expanded - Puppeteer -->
+				
+			<li MayRequire="VanillaExpanded.VPE.Puppeteer" Class="PatchOperationReplace">
+				<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPEP_Puppeteer"]/tooltip</xpath>
+				<value>
+					<tooltip>Masters of psychic manipulation, puppeteers can delve into minds, inflicting deep psychic wounds or taking control. They craft mindless puppets, extensions of their own will, which collect knowledge and serve their whims. In times of danger, a puppeteer can transfer their very essence into a puppet, achieving a form of immortality.</tooltip>
+				</value>
+			</li>
+				
+        	<li MayRequire="VanillaExpanded.VPE.Puppeteer" Class="PatchOperationRemove">
+          		<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPEP_Puppeteer"]/lockedReason</xpath>
+        	</li>
+				
+        	<li MayRequire="VanillaExpanded.VPE.Puppeteer" Class="PatchOperationRemove">
+          		<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VPEP_Puppeteer"]/requiredBackstoriesAny</xpath>
+        	</li>
+				
+			<!-- Vanilla Races Expanded - Archon -->
+				
+			<li MayRequire="vanillaracesexpanded.archon" Class="PatchOperationReplace">
+				<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VREA_Transcendent"]/description</xpath>
+				<value>
+					<description>Transcendent psycaster path gives access to a number of new offensive psycasts that are meant to inflict pain in one way or another. By manipulating the psychic energy and shaping it into various types of projectiles, psycasters are capable of raining death at the cost of psychic entropy build up.</description>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaracesexpanded.archon" Class="PatchOperationReplace">
+				<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VREA_Transcendent"]/tooltip</xpath>
+				<value>
+					<tooltip>Utilising the connection to the unknown, psycasters are able to deliver pure destruction by channeling the distant engines of hatred and focusing their wrath on single living creatures. Their power gets further amplified with their psychic sensitivity, allowing psycasters to unleash devastation on everyone around them.</tooltip>
+				</value>
+			</li>
+				
+        	<li MayRequire="vanillaracesexpanded.archon" Class="PatchOperationRemove">
+          		<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VREA_Transcendent"]/requiredGene</xpath>
+        	</li>
+				
+        	<li MayRequire="vanillaracesexpanded.archon" Class="PatchOperationRemove">
+          		<xpath>/Defs/VanillaPsycastsExpanded.PsycasterPathDef[defName = "VREA_Transcendent"]/lockedReason</xpath>
+        	</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

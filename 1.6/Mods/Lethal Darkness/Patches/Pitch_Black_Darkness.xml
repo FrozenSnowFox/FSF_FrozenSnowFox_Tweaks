@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPitchBlackDarkness</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Pitch Black Darkness -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/WeatherDef/skyColorsDay</xpath>
+				<value>
+					<skyColorsDay>
+						<sky>(0.01,0.01,0.01)</sky>
+						<shadow>(0.9,0.9,0.93)</shadow>
+						<overlay>(0.1,0.1,0.1)</overlay>
+						<saturation>0.7</saturation>
+					</skyColorsDay>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/WeatherDef/skyColorsDusk</xpath>
+				<value>
+					<skyColorsDusk>
+						<sky>(0.01,0.01,0.01)</sky>
+						<shadow>(0.9,0.9,0.93)</shadow>
+						<overlay>(0.1,0.1,0.1)</overlay>
+						<saturation>0.7</saturation>
+					</skyColorsDusk>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/WeatherDef/skyColorsNightEdge</xpath>
+				<value>
+					<skyColorsNightEdge>
+						<sky>(0.01,0.01,0.01)</sky>
+						<shadow>(0.9,0.9,0.93)</shadow>
+						<overlay>(0.1,0.1,0.1)</overlay>
+						<saturation>0.7</saturation>
+					</skyColorsNightEdge>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/WeatherDef/skyColorsNightMid</xpath>
+				<value>
+					<skyColorsNightMid>
+						<sky>(0.01,0.01,0.01)</sky>
+						<shadow>(0.9,0.9,0.93)</shadow>
+						<overlay>(0.1,0.1,0.1)</overlay>
+						<saturation>0.7</saturation>
+					</skyColorsNightMid>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

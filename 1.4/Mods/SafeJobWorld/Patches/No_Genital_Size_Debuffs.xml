@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFSJWNoGenitalSizeDebuffs</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Genital Size Debuffs -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/rjw.HediffDef_PartBase/stages/li/capMods/li[capacity[text()="Moving"]]</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/rjw.HediffDef_PartBase/stages/li/capMods/li[capacity[text()="Manipulation"]]</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterPawnLendingQuestOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterPawnLendingQuest</key>
+		<defaultValue>5</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Better Pawn Lending Quest -->
+			
+			<!-- Calculate colonist count to lend -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef[defName = "PawnLend"]/root[@Class = "QuestNode_Sequence"]/nodes/li[@Class = "QuestNode_GetRandomInRangeForChallengeRating"][storeAs[text()="colonyPercentageToLend"]]</xpath>
+				<value>
+					<li Class="QuestNode_GetRandomInRangeForChallengeRating">
+						<storeAs>colonyPercentageToLend</storeAs>
+						<oneStarRange>0.0~0.20</oneStarRange>
+						<twoStarRange>0.21~0.4</twoStarRange>
+						<threeStarRange>0.41~0.5</threeStarRange>
+					</li>
+				</value>
+			</li>
+			
+			<!-- Calculate days to lend colonists for -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef[defName = "PawnLend"]/root[@Class = "QuestNode_Sequence"]/nodes/li[@Class = "QuestNode_GetRandomInRangeForChallengeRating"][storeAs[text()="lendForDays"]]</xpath>
+				<value>
+					<li Class="QuestNode_GetRandomInRangeForChallengeRating">
+						<storeAs>lendForDays</storeAs>
+						<oneStarRange>5~15</oneStarRange>
+						<twoStarRange>5~15</twoStarRange>
+						<threeStarRange>5~15</threeStarRange>
+						<roundRandom>true</roundRandom>
+					</li>
+				</value>
+			</li>
+			
+			<!-- Calculate reward from colonistsToLendCount * lendForDays -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef[defName = "PawnLend"]/root[@Class = "QuestNode_Sequence"]/nodes/li[@Class = "QuestNode_EvaluateSimpleCurve"]</xpath>
+				<value>
+					<li Class="QuestNode_EvaluateSimpleCurve">
+						<value>$($colonistsToLendCount*$lendForDays*{FSFBetterPawnLendingQuest})</value>
+						<storeAs>rewardValue</storeAs>
+						<curve>
+							<points>
+								<li>5, 500</li>
+								<li>10, 700</li>
+								<li>15, 800</li>
+								<li>20, 900</li>
+								<li>25, 1000</li>
+								<li>30, 1100</li>
+								<li>35, 1200</li>
+								<li>40, 1300</li>
+								<li>45, 1500</li>
+								<li>50, 1500</li>
+								<li>75, 1875</li>
+								<li>100, 2250</li>
+								<li>150, 3000</li>
+								<li>200, 4000</li>
+								<li>250, 5000</li>
+								<li>300, 6000</li>
+								<li>350, 7000</li>
+								<li>400, 8000</li>
+								<li>450, 9000</li>
+								<li>500, 10000</li>
+							</points>
+						</curve>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

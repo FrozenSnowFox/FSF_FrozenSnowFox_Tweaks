@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFStackableChunksOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFStackableChunksRocks</li>
+			<li>FSFStackableChunksSlag</li>
+		</keys>
+		<defaultValues>
+			<li>25</li>
+			<li>25</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Stackable Chunks -->
+			
+			<!-- Change Chunk Base -->
+		
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ChunkBase"]</xpath>
+				<value>
+					<drawGUIOverlay>true</drawGUIOverlay>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[@Name = "ChunkBase"]/passability</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[@Name = "ChunkBase"]/saveCompressible</xpath>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "ChunkBase"]/stackLimit</xpath>
+				<value>
+					<stackLimit>{FSFStackableChunksRocks}</stackLimit>
+				</value>
+			</li>
+				
+			<!-- Change Slag Chunk -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "ChunkSlagSteel"]</xpath>
+				<value>
+					<stackLimit>{FSFStackableChunksSlag}</stackLimit>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

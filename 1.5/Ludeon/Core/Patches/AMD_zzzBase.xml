@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+			
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFAccurateMechDisassemblyMaxEff</li>
+			<li>FSFAccurateMechDisassemblyBaseEff</li>
+		</keys>
+		<defaultValues>
+			<li>1</li>
+			<li>0.75</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+	
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/StatDef[defName = "ButcheryMechanoidEfficiency"]</xpath>
+				<value>
+					<maxValue>{FSFAccurateMechDisassemblyMaxEff}</maxValue>
+				</value>
+            </li>
+				
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/StatDef[defName = "ButcheryMechanoidEfficiency"]/skillNeedFactors/li[@Class = "SkillNeed_BaseBonus"]/baseValue</xpath>
+				<value>
+					<baseValue>{FSFAccurateMechDisassemblyBaseEff}</baseValue>
+				</value>
+            </li>
+	
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+			
+			
+			
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	        <!-- Remove Mechanoid Slag Drops -->
+				
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef/race/detritusLeavings [li/def[text()="ChunkMechanoidSlag"]]</xpath>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+			
+			
+			
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblySubcores</key>
+		<defaultValue>true</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Disable Mechanoid Subcores -->
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef/butcherProducts/SubcoreBasic</xpath>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef/butcherProducts/SubcoreRegular</xpath>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef/butcherProducts/SubcoreHigh</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

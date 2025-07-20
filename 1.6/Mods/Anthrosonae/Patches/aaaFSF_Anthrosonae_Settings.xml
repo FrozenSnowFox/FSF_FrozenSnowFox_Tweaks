@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksAnthrosonae"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Anthrosonae Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksAnthrosonaeTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Anthrosonae Animusen -->
+					
+			<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.Checkbox">
+				<label>Anthrosonae Animusen</label>
+				<key>FSFAnthrosonaeAnimusen</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnthrosonaeAnimusenTitle</tKey>
+			</li>
+			<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.Text">
+				<text>Changes the Animusen xenotype from the mod Alpha Genes to use cosmetic Anthrosonae Anthrofox genes.</text>
+				<tKey>FSFTweaksAnthrosonaeAnimusenDesc</tKey>
+			</li>
+			<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Anthrosonae Yttakin -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Anthrosonae Yttakin</label>
+				<key>FSFAnthrosonaeYttakin</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnthrosonaeYttakinTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the Yttakin from the Biotech DLC to use cosmetic Anthrosonae Anthrowolf genes.</text>
+				<tKey>FSFTweaksAnthrosonaeYttakinDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAnthrosonaeAnimusen</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Anthrosonae Animusen -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "AG_Animusen"]/genes/li[text()="AG_AnimusEars"]</xpath>
+			</li>
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "AG_Animusen"]/genes/li[text()="AG_FoxFace"]</xpath>
+			</li>
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "AG_Animusen"]/genes/li[text()="AG_FoxTail"]</xpath>
+			</li>
+				
+			<li MayRequire="sarg.alphagenes" Class="PatchOperationAdd">
+				<xpath>/Defs/XenotypeDef[defName = "AG_Animusen"]/genes</xpath>
+				<order>Prepend</order>
+				<value>
+					<li>Hair_Grayless</li>
+					<li>ATK_AnthrofoxFur</li>
+					<li>ATK_AnthrofoxEars</li>
+					<li>ATK_AnthrofoxTail</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

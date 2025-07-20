@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHumanReproductonOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+
+			
+			
+			
+		<!-- Alpha Genes Parasitic Implantation Duration -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAGParasiticImplantationDays</key>
+		<defaultValue>15</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Convert settings from days to negative inverse to get severity -->
+				
+			<li Class="XmlExtensions.CreateVariable">
+		       	<storeIn>FSFAGParasiticImplantationSeverity</storeIn>
+		       	<value>1</value>
+	    	   	<value2>{FSFAGParasiticImplantationDays}</value2>
+	        	<operation>/</operation>
+		       	<apply>
+						
+			   		<Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName = "AG_ParasiticImplantation"]/comps/li[@Class = "HediffCompProperties_SeverityPerDay"]/severityPerDay</xpath>
+					    <value>
+							<severityPerDay>{FSFAGParasiticImplantationSeverity}</severityPerDay>
+				    	</value>
+			        </Operation>
+						
+		       	</apply>
+	    	</li>
+				
+	        <!-- Check for plurality and change text accordingly -->
+				
+	        <li Class="XmlExtensions.IfStatement">
+	        	<condition Class="XmlExtensions.Boolean.Comparison">
+	        		<value1>1</value1>
+	        		<value2>{FSFAGParasiticImplantationDays}</value2>
+	        		<relation>eq</relation>
+	        	</condition>
+				
+	        	<!-- Singular case -->
+				
+	        	<caseTrue>
+					
+			        <Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName = "AG_ParasiticImplantation"]/description</xpath>
+					    <value>
+							<description>Affected by parasitic implantation. If the implantation advances to severity 1, or if the creature dies when it is sufficiently advanced (more than 90%), the human larvae inside the parasitic eggs will devour the victim from inside and hatch from its corpse. Gestation time is {FSFAGParasiticImplantationDays} day.</description>
+					    </value>
+			        </Operation>
+					
+	        	</caseTrue>
+				
+	        	<!-- Plural case -->
+				
+	        	<caseFalse>
+					
+	        		<Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName = "AG_ParasiticImplantation"]/description</xpath>
+					    <value>
+							<description>Affected by parasitic implantation. If the implantation advances to severity 1, or if the creature dies when it is sufficiently advanced (more than 90%), the human larvae inside the parasitic eggs will devour the victim from inside and hatch from its corpse. Gestation time is {FSFAGParasiticImplantationDays} days.</description>
+					    </value>
+			        </Operation>
+					
+	        	</caseFalse>
+				
+	        </li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

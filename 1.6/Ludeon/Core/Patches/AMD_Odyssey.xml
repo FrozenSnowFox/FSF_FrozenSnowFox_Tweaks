@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	        <!-- Odyssey Mechanoids -->
+        
+            <li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Cyclops"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>120</Steel>
+						<Plasteel>40</Plasteel>
+						<ComponentIndustrial>5</ComponentIndustrial>
+						<SubcoreRegular MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+				
+	        <!-- Note: Sentry Drone Resources are Estimated based on Scyther, Removed Plasteel and made Subcore Basic -->
+				
+            <li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "Drone_Sentry"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>75</Steel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreBasic MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreBasic>
+					</butcherProducts>
+				</value>
+            </li>
+				
+	        <!-- Note: Wasp Drones when compared to War Urchins size are about correct resource wise -->
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

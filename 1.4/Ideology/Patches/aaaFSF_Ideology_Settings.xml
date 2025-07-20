@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksIdeology"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Ideology Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksIdeologyTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- All Roles Are Capable -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>All Roles Are Capable</label>
+				<key>FSFAllRolesAreCapable</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAllRolesAreCapableTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes all the disabled worktypes from all ideologion roles.</text>
+				<tKey>FSFTweaksAllRolesAreCapableDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Archonexus Radius -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Archonexus Radius</label>
+				<key>FSFArchonexusRadius</key>
+				<tKey>FSFTweaksArchonexusRadiusTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Scales down the radius of the Archonexus's effects on the initial structures so it expands only slightly out from the towers.  This allows you to safely build and plant around the Archonexus while still allowing it to produce its effects.  The number and density of anima grass has also been doubled.</text>
+				<tKey>FSFTweaksArchonexusRadiusDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Artists Are Production Specialists -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Artists Are Production Specialists</label>
+				<key>FSFArtistsAreProductionSpecialists</key>
+				<tKey>FSFTweaksArtistsAreProductionSpecialistsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the Production Specialist role to include Artistic as a viable skill.</text>
+				<tKey>FSFTweaksArtistsAreProductionSpecialistsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Better Mining Worksite Resources -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Better Mining Worksite Resources</label>
+				<key>FSFMiningWorksiteResources</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMiningWorksiteResourcesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Mining Worksites so they can spawn with extra resource types like Jade, Plasteel and Uranium.  The weighting odds are balanced around the Deep Drill commonality.</text>
+				<tKey>FSFTweaksMiningWorksiteResourcesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Berserk Trance No Mental Break -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Berserk Trance No Mental Break</label>
+				<key>FSFBerserkTranceNoMentalBreak</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBerserkTranceNoMentalBreakTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the mental break from the berserk trance.  This allows you to continue controlling your pawn while the ability is active.</text>
+				<tKey>FSFTweaksBerserkTranceNoMentalBreakDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Biosculpter Pod No Default Settings -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Biosculpter Pod No Default Settings</label>
+				<key>FSFBiosculpterPodNoDefaultSettings</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBiosculpterPodNoDefaultSettingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>When enabled Biosculpter Pods will no longer have any default settings for nutrition.\nNote: This tweak is not needed if No Default Storage Settings is enabled but it will not cause issues if it is.</text>
+				<tKey>FSFTweaksBiosculpterPodNoDefaultSettingsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Biosculpter Pod Restore All Body Parts -->			
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Biosculpter Pod Restore All Body Parts</label>
+				<key>FSFBiosculpterPodRestoreAllBodyParts</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBiosculpterPodRestoreAllBodyPartsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>When enabled the Biosculpter Pods Bioregeneration cycle will restore all body parts.  This includes all organs, bones and limbs.</text>
+				<tKey>FSFTweaksBiosculpterPodRestoreAllBodyPartsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Conversion Ritual Effectiveness -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Conversion Ritual Effectiveness</label>
+				<key>FSFConversionRitualEffectivenessOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksConversionRitualEffectivenessTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFConversionRitualEffectivenessOn</key>
+				<caseFalse>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to customise the cooldown, chance and certainly gain/loss when performing conversion rituals.</text>
+						<tKey>FSFTweaksConversionRitualEffectivenessOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>				
+				</caseFalse>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFConversionRitualCooldown</key>
+						<defaultValue>480000</defaultValue>
+						<min>0</min>
+						<max>480000</max>
+						<label>Ticks to Cooldown (2500 is one hour, 60000 is one day)</label>
+						<tKey>FSFTweaksConversionRitualCooldown</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFConversionRETerribleChance</key>
+						<defaultValue>0.05</defaultValue>
+						<min>0.01</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Terrible Quality Chance {FSFConversionRETerribleChance}</label>
+						<tKey>FSFTweaksConversionRETerribleChance</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFConversionRETerribleCertainty</key>
+						<defaultValue>0.20</defaultValue>
+						<min>0.01</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Terrible Quality Certainly Gain {FSFConversionRETerribleCertainty}</label>
+						<tKey>FSFTweaksConversionRETerribleCertainty</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFConversionREIneffectiveChance</key>
+						<defaultValue>0.15</defaultValue>
+						<min>0.01</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Ineffective Quality Chance {FSFConversionREIneffectiveChance}</label>
+						<tKey>FSFTweaksConversionREIneffectiveChance</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFConversionREIneffectiveCertainty</key>
+						<defaultValue>0.12</defaultValue>
+						<min>0.01</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Ineffective Quality Certainly Gain {FSFConversionREIneffectiveCertainty}</label>
+						<tKey>FSFTweaksConversionREIneffectiveCertainty</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFConversionREEffectiveChance</key>
+						<defaultValue>0.60</defaultValue>
+						<min>0.01</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Effective Quality Chance {FSFConversionREEffectiveChance}</label>
+						<tKey>FSFTweaksConversionREEffectiveChance</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFConversionREEffectiveCertainty</key>
+						<defaultValue>0.30</defaultValue>
+						<min>0.01</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Effective Quality Certainly Gain -{FSFConversionREEffectiveCertainty}</label>
+						<tKey>FSFTweaksConversionREEffectiveCertainty</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFConversionREMasterfulChance</key>
+						<defaultValue>0.20</defaultValue>
+						<min>0.01</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Masterful Quality Chance {FSFConversionREMasterfulChance}</label>
+						<tKey>FSFTweaksConversionREMasterfulChance</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFConversionREMasterfulCertainty</key>
+						<defaultValue>1.00</defaultValue>
+						<min>0.01</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Masterful Quality Certainly Gain -{FSFConversionREMasterfulCertainty}</label>
+						<tKey>FSFTweaksConversionREMasterfulCertainty</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input values to adjust the resulting Conversion Ritual Effectiveness's chance and certainty for each ritual quality.  Terrible and Ineffective are always negative and Effective and Masterful are always positive.  If you change the ritual chances ensure the four ritual quality chances add up to 100% otherwise there may be issues.\nVanilla Settings (Terrible 0.05, 0.20, Ineffective 0.15, 0.12, Effective 0.60, -0.30, Masterful 0.20, -1.00).</text>
+						<tKey>FSFTweaksConversionRitualEffectivenessDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Embodied Theist Number Of Deities -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Embodied Theist Number Of Deities</label>
+				<key>FSFEmbodiedTheistDeities</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksEmbodiedTheistDeitiesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the minimum and maximum amount of Deities allowed from 2-4 to 1-10.</text>
+				<tKey>FSFTweaksEmbodiedTheistDeitiesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- More Ideology Colours -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>More Ideology Colours</label>
+				<key>FSFMoreIdeologyColours</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMoreIdeologyColoursTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds a collection of colours usable for Ideologies and Clothing.</text>
+				<tKey>FSFTweaksMoreIdeologyColoursDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Neural Supercharger Cooldown -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Neural Supercharger Cooldown</label>
+				<key>FSFNeuralSuperchargerCooldownOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNeuralSuperchargerCooldownTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFNeuralSuperchargerCooldownOn</key>
+				<caseFalse>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to customise the cooldown of the Neural Supercharger.</text>
+						<tKey>FSFTweaksNeuralSuperchargerCooldownOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>				
+				</caseFalse>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFNeuralSuperchargerCooldown</key>
+						<defaultValue>60000</defaultValue>
+						<min>0</min>
+						<max>60000</max>
+						<label>Ticks to Recharge</label>
+						<tKey>FSFTweaksNeuralSuperchargerCooldown</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the cooldown of the Neural Supercharger.  The value is written in what the game calls ticks.  There are 2500 ticks in one game hour.\nThe Vanilla value is 60000 (1 day), set to 0 to remove the cooldown completely.</text>
+						<tKey>FSFTweaksNeuralSuperchargerCooldownDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- No Age Restriction For Ideologies -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Age Restriction For Ideologies</label>
+				<key>FSFNoAgeRestrictionForIdeologies</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoAgeRestrictionForIdeologiesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the restrictions on Ideology roles, rituals and abilities to allow children.  In other words they can do everything adults can do when it comes to Ideology interactions.</text>
+				<tKey>FSFTweaksNoAgeRestrictionForIdeologiesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Pain Idealized Pain Threshold -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Pain Idealized Pain Threshold</label>
+				<key>FSFPainIdealizedPainThreshold</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPainIdealizedPainThresholdTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds a buff to the Pain Idealized precept that increases the pain shock threshold.</text>
+				<tKey>FSFTweaksPainIdealizedPainThresholdDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- People Required For Roles -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>People Required For Roles</label>
+				<key>FSFPeopleRequiredForRolesOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPeopleRequiredForRolesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFPeopleRequiredForRolesOn</key>
+				<caseFalse>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to change the required amount of people for ideology roles to unlock from the 3 to whatever number you want.</text>
+						<tKey>FSFTweaksPeopleRequiredForRolesOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>				
+				</caseFalse>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFPeopleRequiredForRolesNum</key>
+						<defaultValue>3</defaultValue>
+						<min>2</min>
+						<max>100</max>
+						<label>People required for roles to activate</label>
+						<tKey>FSFTweaksPeopleRequiredForRolesNum</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the number of people required to activate ideology roles.\nThe Vanilla value is 3 and the minimum is 2 due to there being a minimum of 2 roles for ideologies the leader and moral guide.</text>
+						<tKey>FSFTweaksPeopleRequiredForRolesDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Raider No Work Speed Malus -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Raider No Work Speed Malus</label>
+				<key>FSFRaiderNoWorkSpeedMalus</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRaiderNoWorkSpeedMalusTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the work speed penalty from the Raiding precepts.</text>
+				<tKey>FSFTweaksRaiderNoWorkSpeedMalusDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Ranching No Plant Malus -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Ranching No Plant Malus</label>
+				<key>FSFRanchingNoPlantMalus</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRanchingNoPlantMalusTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the dislike of plants from the Ranching precept.</text>
+				<tKey>FSFTweaksRanchingNoPlantMalusDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Wear Masks With Hats -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Wear Masks With Hats</label>
+				<key>FSFWearMasksWithHats</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksWearMasksWithHatsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the Visage Mask layer to EyeCover so it can be worn with hats.</text>
+				<tKey>FSFTweaksWearMasksWithHatsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+					
+					
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+						
+						
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

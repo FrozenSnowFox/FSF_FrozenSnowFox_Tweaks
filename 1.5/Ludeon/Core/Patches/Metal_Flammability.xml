@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMetalFlammabilityOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFMetalFlammabilityBioferrite</li>
+			<li>FSFMetalFlammabilityGold</li>
+			<li>FSFMetalFlammabilitySilver</li>
+			<li>FSFMetalFlammabilitySteel</li>
+			<li>FSFMetalFlammabilityIron</li>
+		</keys>
+		<defaultValues>
+			<li>0.75</li>
+			<li>0.00</li>
+			<li>0.00</li>
+			<li>0.00</li>
+			<li>0.00</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+		<!-- Metal Flammability -->
+				
+ 			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Bioferrite"]/stuffProps/statFactors/Flammability</xpath>
+				<value>
+					<Flammability>{FSFMetalFlammabilityBioferrite}</Flammability>
+				</value>
+			</li>
+		
+ 			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Gold"]/stuffProps/statFactors/Flammability</xpath>
+				<value>
+					<Flammability>{FSFMetalFlammabilityGold}</Flammability>
+				</value>
+			</li>
+				
+ 			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_IronIngot"]/stuffProps/statFactors/Flammability</xpath>
+				<value>
+					<Flammability>{FSFMetalFlammabilityIron}</Flammability>
+				</value>
+			</li>
+				
+ 			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Silver"]/stuffProps/statFactors/Flammability</xpath>
+				<value>
+					<Flammability>{FSFMetalFlammabilitySilver}</Flammability>
+				</value>
+			</li>
+				
+ 			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Steel"]/stuffProps/statFactors/Flammability</xpath>
+				<value>
+					<Flammability>{FSFMetalFlammabilitySteel}</Flammability>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

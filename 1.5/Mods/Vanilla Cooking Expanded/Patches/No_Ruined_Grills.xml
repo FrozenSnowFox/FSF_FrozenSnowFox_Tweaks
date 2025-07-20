@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVCookENoRuinedGrills</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Ruined Grills -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VCE_SimpleGrill"]/comps</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VCE_FineGrill"]/comps</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VCE_LavishGrill"]/comps</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VCE_GourmetGrill"]/comps</xpath>
+			</li>
+				
+			<!-- Fix Preferability -->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VCE_SimpleGrill"]/ingestible/optimalityOffsetHumanlikes</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VCE_FineGrill"]/ingestible/optimalityOffsetHumanlikes</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VCE_LavishGrill"]/ingestible/optimalityOffsetHumanlikes</xpath>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_GourmetGrill"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>20</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

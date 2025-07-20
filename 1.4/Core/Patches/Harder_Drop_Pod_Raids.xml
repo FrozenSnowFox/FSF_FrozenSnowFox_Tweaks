@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHarderDropPodRaids</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Harder Drop Pod Raids -->
+			
+			<!--
+				Center Drop
+				Human Default 3.5
+				Mechanoid Default 1.3
+			-->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnsArrivalModeDef[defName = "CenterDrop"]/selectionWeightCurve</xpath>
+				<value>
+					<selectionWeightCurve> <!-- not usable in many strategies and by many factions, so this gets boosted -->
+						<points>
+							<li>(300, 0.0)</li>
+							<li>(1000, 7)</li>
+						</points>
+					</selectionWeightCurve>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnsArrivalModeDef[defName = "CenterDrop"]/selectionWeightCurvesPerFaction/li [faction [text()="Mechanoid"] ]/selectionWeightPerPointsCurve</xpath>
+				<value>
+					<selectionWeightPerPointsCurve>
+						<points>
+							<li>(300, 0)</li>
+							<li>(1000, 2.6)</li>
+						</points>
+					</selectionWeightPerPointsCurve>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PawnsArrivalModeDef[defName = "CenterDrop"]/pointsFactorCurve</xpath>
+			</li>
+			
+			<!--
+				Center Drop
+				Human Default 1.9
+				Mechanoid Default 1.3
+			-->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnsArrivalModeDef[defName = "RandomDrop"]/selectionWeightCurve</xpath>
+				<value>
+					<selectionWeightCurve> <!-- not usable in many strategies and by many factions, so this gets boosted -->
+						<points>
+							<li>(300, 0.0)</li>
+							<li>(1000, 3.8)</li>
+						</points>
+					</selectionWeightCurve>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnsArrivalModeDef[defName = "RandomDrop"]/selectionWeightCurvesPerFaction/li [faction [text()="Mechanoid"] ]/selectionWeightPerPointsCurve</xpath>
+				<value>
+					<selectionWeightPerPointsCurve>
+						<points>
+							<li>(300, 0)</li>
+							<li>(1000, 2.6)</li>
+						</points>
+					</selectionWeightPerPointsCurve>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PawnsArrivalModeDef[defName = "RandomDrop"]/pointsFactorCurve</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

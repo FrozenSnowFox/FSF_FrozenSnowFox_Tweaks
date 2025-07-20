@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreFiltersOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreFiltersFood</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- More Filters Food -->
+				
+			<!-- Note: Foods must be directly under the Foods category otherwise this will cause issues with mods.  -->
+				
+			<!-- Core -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					
+	<ThingCategoryDef>
+		<defName>FSFRawTasty</defName>
+		<label>raw tasty</label>
+		<parent>FoodRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodRaw</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef MayRequireAnyOf="DankPyon.Medieval.Overhaul,sarg.alphaanimals">
+		<defName>FSFJelly</defName>
+		<label>jelly</label>
+		<parent>AnimalProductRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/AnimalProductRaw</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef MayRequire="sarg.alphaanimals">
+		<defName>FSFMilk</defName>
+		<label>milk</label>
+		<parent>AnimalProductRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/AnimalProductRaw</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>FSFMealAwful</defName>
+		<label>awful</label>
+		<parent>FoodMeals</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodMeals</iconPath>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>FSFMealSimple</defName>
+		<label>simple</label>
+		<parent>FoodMeals</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodMeals</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>FSFMealFine</defName>
+		<label>fine</label>
+		<parent>FoodMeals</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodMeals</iconPath>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>FSFMealLavish</defName>
+		<label>lavish</label>
+		<parent>FoodMeals</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodMeals</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef MayRequire="VanillaExpanded.VCookE">
+		<defName>FSFMealGourmet</defName>
+		<label>gourmet</label>
+		<parent>FoodMeals</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodMeals</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef>
+		<defName>FSFMealLongTerm</defName>
+		<label>long term</label>
+		<parent>FoodMeals</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodMeals</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef MayRequire="VanillaExpanded.VCookE">
+		<defName>FSFConfectionery</defName>
+		<label>confectionery</label>
+		<parent>FoodMeals</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodMeals</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef>
+		<defName>FSFMealBaby</defName>
+		<label>baby food</label>
+		<parent>Foods</parent>
+		<iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef>
+		<defName>FSFMealAnimal</defName>
+		<label>animal feed</label>
+		<parent>Foods</parent>
+		<iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef>
+		<defName>FSFGluttonous</defName>
+		<label>gluttonous</label>
+		<parent>Foods</parent>
+		<iconPath>UI/Icons/ThingCategories/Foods</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>FSFBlood</defName>
+		<label>blood</label>
+		<parent>Foods</parent>
+		<iconPath>UI/Icons/ThingCategories/FoodRaw</iconPath>
+	</ThingCategoryDef>
+					
+	<ThingCategoryDef MayRequire="VanillaExpanded.VBrewE">
+		<defName>FSFDrinksCocktails</defName>
+		<label>cocktails</label>
+		<parent>VBE_Drinks</parent>
+		<iconPath>Things/Items/Drinks/VBE_Whiskey/VBE_Whiskey_b</iconPath>
+	</ThingCategoryDef>
+					
+				</value>
+			</li>
+				
+			<!-- Meals but exclude those specific categories -->
+			
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible [preferability = "MealAwful"]] [statBases/Nutrition >= 0.6]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealAwful</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible [preferability = "MealSimple"]] [statBases/Nutrition >= 0.6]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealSimple</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible [preferability = "MealFine"]] [statBases/Nutrition >= 0.6]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealFine</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible [preferability = "MealLavish"]] [statBases/Nutrition >= 0.6]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealLavish</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Vanilla Cooking Expanded Meals -->
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible [tasteThought = "VCE_AteGourmetMeal"]
+					or ingestible [tasteThought = "VCE_AteGourmetGrill"]
+					or ingestible [tasteThought = "VCE_AteGourmetSushi"]]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealGourmet</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_RuinedGourmetGrill"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealGourmet</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible [joyKind = "VCE_Confectionery"]]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFConfectionery</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Long Term Food -->
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "MealSurvivalPack"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealLongTerm</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "Pemmican"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealLongTerm</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_MealRations"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealLongTerm</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_MealRationsVegetarian"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealLongTerm</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="XMB.AncientHydroponicFarmFacilities.MO" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "SurvivalNutrientPack"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealLongTerm</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[@ParentName = "AM_MealBase"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFMealLongTerm</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Animal Feed -->
+				
+			<li Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "Hay"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFMealAnimal</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible [foodType = "Kibble"]]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFMealAnimal</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_RawFlax"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFMealAnimal</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "DankPyon_Straw"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFMealAnimal</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Ideology,VanillaExpanded.VPlantsEMore" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_RawMoss"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFMealAnimal</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="dismarzero.VGP.VGPVegetableGarden" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "Silage"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFMealAnimal</li>
+					</thingCategories>
+				</value>
+			</li>				
+				
+			<!-- Fix VFE Classical Jerky
+				Note: Do After Animal Food as someone tagged it as Kibble Foodtype for some reason. -->
+				
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VFEC_Jerky"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>MeatRaw</li>
+						<li>FSFMealLongTerm</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Cheese -->
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [comps/li[@Class = "VFECore.CompProperties_IngestedThoughtFromQuality"] [ingestedThought = "VCE_AteCheese"]]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>VCE_Cheese</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Jelly -->
+				
+			<li MayRequireAnyOf="DankPyon.Medieval.Overhaul,sarg.alphaanimals" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [defName [contains(text(), "Jelly")]] [ingestible/foodType[contains(text(), "AnimalProduct")]]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFJelly</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Milk
+				Note: Medieval Overhaul uses the thingCategories DankPyon_Milk for cheese processing, so it needs reverting.
+			-->
+				
+			<li MayRequire="sarg.alphaanimals" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [defName [contains(text(), "Milk")]] [ingestible/foodType[contains(text(), "AnimalProduct")]]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFMilk</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [defName [contains(text(), "Milk")]] [ingestible/foodType[contains(text(), "AnimalProduct")]]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>DankPyon_Milk</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Raw Tasty -->
+				
+			<li Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/ThingDef [ingestible [preferability = "RawTasty"]]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFRawTasty</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Gluttonous -->
+
+			<li Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/ThingDef [ingestible [joyKind = "Gluttonous"]] [ingestible [not(drugCategory = "Social")]]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>FSFGluttonous</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [defName [contains(text(), "VCE_DeepFried")]]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFGluttonous</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="XMB.AncientUrbanrUins.MO" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[@ParentName = "AM_SoftDrink"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFGluttonous</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Baby Food -->
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/ThingDef [ingestible [babiesCanIngest = "true"]]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFMealBaby</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "BabyFood"]</xpath>
+				<value>
+					<thingCategories>
+						<li>FSFMealBaby</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Blood -->
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible [specialThoughtDirect = "IngestedHemogenPack"]]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFBlood</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Cocktails -->
+				
+			<li MayRequire="VanillaExpanded.VBrewE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef [ingestible/outcomeDoers/li[@Class = "IngestionOutcomeDoer_GiveHediff"] [hediffDef = "VBE_ConsumedCocktail"]]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>FSFDrinksCocktails</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Remove Food Categories from things -->
+				
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/ThingDef [ingestible [joyKind = "Gluttonous"]]/thingCategories/li[text() = "Foods"]</xpath>
+			</li>
+				
+			<!-- Replace VCE Canned Items Category -->
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_CannedMeat"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>MeatRaw</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_CannedProduce"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>PlantFoodRaw</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_CannedFruit"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li MayRequire="VanillaExpanded.VPlantsE">VCE_Fruit</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_CannedAP"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>EggsUnfertilized</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanEggs"]/fixedIngredientFilter</xpath>
+				<value>
+					<disallowedThingDefs>
+						<li>VCE_CannedAP</li>
+					</disallowedThingDefs>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_CannedFish"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>MeatRaw</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VCookE,VanillaExpanded.VCEF" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_CannedFish"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>VCEF_RawFishCategory</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			<!-- Replace VBE Juice Category -->
+				
+			<li MayRequire="VanillaExpanded.VBrewE" Class="XmlExtensions.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName = "VBE_Juice"]</xpath>
+				<value>
+					<thingCategories Inherit="False">
+						<li>VBE_DrinksNonAlcoholic</li>
+					</thingCategories>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

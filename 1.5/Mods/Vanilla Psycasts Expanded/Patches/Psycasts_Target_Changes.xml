@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPsycastTweaksTargetChanges</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Psycasts Target Changes -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_WordofProductivity"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>False</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_WordofProtection"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>True</canTargetAnimals>
+						<canTargetMechs>True</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_WordofForetelling"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>False</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_WordofJoy"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>False</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_WordofInspiration"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>False</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_Bliss"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>False</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_WordofHealing"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>True</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_Stabilize"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>True</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_WordofImmunity"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>True</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_RegrowLimbs"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>True</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_WordofProgress"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>False</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetSelf>True</canTargetSelf>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>False</canTargetAnimals>
+						<canTargetMechs>False</canTargetMechs>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_Waterskip"]</xpath>
+				<value>
+					<targetingParameters>
+						<canTargetLocations>True</canTargetLocations>
+						<canTargetBuildings>False</canTargetBuildings>
+						<canTargetHumans>True</canTargetHumans>
+						<canTargetAnimals>True</canTargetAnimals>
+					</targetingParameters>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName ="VPE_Mend"]/targetingParameters</xpath>
+				<value>
+					<canTargetSelf>True</canTargetSelf>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

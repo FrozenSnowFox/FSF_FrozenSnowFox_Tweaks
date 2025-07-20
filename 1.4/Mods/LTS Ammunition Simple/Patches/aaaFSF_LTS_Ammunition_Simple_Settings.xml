@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksLTSAmmunitionSimple"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>[LTS] Ammunition - Simple Ammo Pack Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksLTSAmmunitionSimpleTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Ammunition Production Customisation -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Ammunition Production Customisation</label>
+				<key>FSFLTSAmmoCraftOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksLTSAmmoCraftTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFLTSAmmoCraftOn</key>
+				<caseFalse>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to customise how much work is required and how much ammunition is created when you craft a batch of ammunition.</text>
+						<tKey>FSFTweaksLTSAmmoCraftOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>				
+				</caseFalse>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftPrimitiveYield</key>
+						<defaultValue>45</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Primitive Ammunition Yield</label>
+						<tKey>FSFTweaksLTSAmmoCraftPrimitiveYield</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftPrimitiveWork</key>
+						<defaultValue>400</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Primitive Ammunition Work To Make</label>
+						<tKey>FSFTweaksLTSAmmoCraftPrimitiveWork</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFLTSAmmoCraftPrimitivePrice</key>
+						<defaultValue>0.8</defaultValue>
+						<min>0.1</min>
+						<max>5.0</max>
+						<decimals>1</decimals>
+						<label>Market Value {FSFLTSAmmoCraftPrimitivePrice}</label>
+						<tKey>FSFTweaksLTSAmmoCraftPrimitivePrice</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftMedievalYield</key>
+						<defaultValue>23</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Medieval Ammunition Yield</label>
+						<tKey>FSFTweaksLTSAmmoCraftMedievalYield</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftMedievalWork</key>
+						<defaultValue>500</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Medieval Ammunition Work To Make</label>
+						<tKey>FSFTweaksLTSAmmoCraftMedievalWork</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFLTSAmmoCraftMedievalPrice</key>
+						<defaultValue>0.8</defaultValue>
+						<min>0.1</min>
+						<max>5.0</max>
+						<decimals>1</decimals>
+						<label>Market Value {FSFLTSAmmoCraftMedievalPrice}</label>
+						<tKey>FSFTweaksLTSAmmoCraftMedievalPrice</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftIndustrialYield</key>
+						<defaultValue>45</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Industrial Ammunition Yield</label>
+						<tKey>FSFTweaksLTSAmmoCraftIndustrialYield</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftIndustrialWork</key>
+						<defaultValue>600</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Industrial Ammunition Work To Make</label>
+						<tKey>FSFTweaksLTSAmmoCraftIndustrialWork</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFLTSAmmoCraftIndustrialPrice</key>
+						<defaultValue>1.3</defaultValue>
+						<min>0.1</min>
+						<max>5.0</max>
+						<decimals>1</decimals>
+						<label>Market Value {FSFLTSAmmoCraftIndustrialPrice}</label>
+						<tKey>FSFTweaksLTSAmmoCraftIndustrialPrice</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftSpacerYield</key>
+						<defaultValue>30</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Spacer Ammunition Yield</label>
+						<tKey>FSFTweaksLTSAmmoCraftSpacerYield</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftSpacerWork</key>
+						<defaultValue>1300</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Spacer Ammunition Work To Make</label>
+						<tKey>FSFTweaksLTSAmmoCraftSpacerWork</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFLTSAmmoCraftSpacerPrice</key>
+						<defaultValue>7.0</defaultValue>
+						<min>0.1</min>
+						<max>10.0</max>
+						<decimals>1</decimals>
+						<label>Market Value {FSFLTSAmmoCraftSpacerPrice}</label>
+						<tKey>FSFTweaksLTSAmmoCraftSpacerPrice</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftExplosiveYield</key>
+						<defaultValue>30</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Explosive Ammunition Yield</label>
+						<tKey>FSFTweaksLTSAmmoCraftExplosiveYield</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFLTSAmmoCraftExplosiveWork</key>
+						<defaultValue>400</defaultValue>
+						<min>1</min>
+						<max>1000000</max>
+						<label>Explosive Ammunition Work To Make</label>
+						<tKey>FSFTweaksLTSAmmoCraftExplosiveWork</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFLTSAmmoCraftExplosivePrice</key>
+						<defaultValue>2.8</defaultValue>
+						<min>0.1</min>
+						<max>10.0</max>
+						<decimals>1</decimals>
+						<label>Market Value {FSFLTSAmmoCraftExplosivePrice}</label>
+						<tKey>FSFTweaksLTSAmmoCraftExplosivePrice</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the values.  The default ammo yield is calculated to be 1.5 of the material cost which follows Rimworld's turret ammo cost logic.  The default work amount is the original scaled down to match the ammo yield.\nThe LTS Ammo default numbers are Primitive 75/800/0.5, Medieval 75/1600/0.5, Industrial 150/1200/0.5, Spacer 150/4000/1.5, Explosive 150/1200/0.5.\nThe FSF Tweaks default numbers are Primitive 45/400/0.8, Medieval 23/500/0.8, Industrial 45/600/1.3, Spacer 30/1300/7.0, Explosive 30/400/2.8.</text>
+						<tKey>FSFTweaksLTSAmmoCraftDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>					
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

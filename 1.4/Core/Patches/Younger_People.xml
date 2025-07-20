@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFYoungerPeople</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Younger People -->
+			
+			<!--
+				Adjust minGenerationAge on existing PawnKindDef's to prevent errors
+				Remove existing maxGenerationAge on all pawns
+				Add maxGenerationAge with preset age to all pawns
+			-->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef/minGenerationAge</xpath>
+				<value>
+					<minGenerationAge>18</minGenerationAge>
+				</value>
+			</li>
+	
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PawnKindDef/maxGenerationAge</xpath>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef</xpath>
+				<value>
+					<maxGenerationAge>25</maxGenerationAge>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPsycastTweaksSkipshield</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Shield Psycasts Allow Outgoing Projectiles -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName = "VPE_Shrineshield"]/description</xpath>
+				<value>
+					<description>Generate a spherical skipgate on a nature shrine that sends any incoming projectiles, including mortar shells, to some distant place. People and items are not affected and the size of the sphere depends on the size of the shrine, while duration scales with the caster’s psychic sensitivity.</description>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VPE_Shrineshield_Small"]/comps/li[@Class = "CompProperties_ProjectileInterceptor"]/interceptOutgoingProjectiles</xpath>
+				<value>
+					<interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VPE_Shrineshield_Large"]/comps/li[@Class = "CompProperties_ProjectileInterceptor"]/interceptOutgoingProjectiles</xpath>
+				<value>
+					<interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName = "VPE_Skipshield"]/description</xpath>
+				<value>
+					<description>Generate a spherical skipgate that sends all incoming ground-level projectiles to some distant place. People and items are not affected. Duration scales with psychic sensitivity of the caster.</description>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "BulletShieldPsychic"]/comps/li[@Class = "CompProperties_ProjectileInterceptor"]/interceptOutgoingProjectiles</xpath>
+				<value>
+					<interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

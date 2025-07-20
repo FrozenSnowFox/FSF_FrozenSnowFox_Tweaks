@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksResearchAppropriation"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Research Appropriation Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksResearchAppropriationTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Buyable Research Data -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Buyable Research Data</label>
+				<key>FSFRABuyableResearchDataOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRABuyableResearchDataTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds tech appropriate Research Data buyable from bases, caravans and orbital traders for all factions.  The amount of which can be customized.</text>
+				<tKey>FSFTweaksRABuyableResearchDataOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFRABuyableResearchDataOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFRABuyableResearchDataMin</key>
+						<defaultValue>1</defaultValue>
+						<min>0</min>
+						<max>1000</max>
+						<label>Research Data Amount Minimum Range</label>
+						<tKey>FSFTweaksRABuyableResearchDataMin</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFRABuyableResearchDataMax</key>
+						<defaultValue>3</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Research Data Amount Maximum Range</label>
+						<tKey>FSFTweaksRABuyableResearchDataMax</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Adds tech appropriate Research Data buyable from bases, caravans and orbital traders for all factions.  Input values to adjust the minimum and maximum ranges for the above items.  You can set a minimum and maximum for the range.  The game will then use RNG to determine a number between those two numbers.\nDefault settings (1-3)</text>
+						<tKey>FSFTweaksRABuyableResearchDataDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFSealedPowerArmour</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Sealed Power Armour -->
+			<!--
+				Helmets should have 0.8 ToxicEnvironmentResistance and immuneToToxGasExposure true
+				Armour should have 0.2 ToxicEnvironmentResistance
+			-->
+				
+			<!-- Marine Armour -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ApparelArmorPowerBase"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ApparelArmorHelmetPowerBase"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ApparelArmorHelmetPowerBase"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<!-- Recon Armour
+				 Note: Recon Helmet Base is used on many non closed helmets.
+			-->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ApparelArmorReconBase"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ArmorHelmetRecon"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ArmorHelmetRecon"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ArmorHelmetMechCommander"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ArmorHelmetMechCommander"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ArmorHelmetMechlordHelmet"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ArmorHelmetMechlordHelmet"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ArmorHelmetReconPrestige"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Apparel_ArmorHelmetReconPrestige"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<!-- Cataphract Armour -->
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ApparelArmorCataphractBase"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ApparelArmorHelmetCataphractBase"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ApparelArmorHelmetCataphractBase"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<!-- Altered Carbon 2: ReSleeved -->
+				
+			<li MayRequire="hlx.UltratechAlteredCarbon" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "AC_ApparelArmorChrysalisMakeableBase"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="hlx.UltratechAlteredCarbon" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "AC_ApparelArmorHelmetChrysalisMakeableBase"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li MayRequire="hlx.UltratechAlteredCarbon" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "AC_ApparelArmorHelmetChrysalisMakeableBase"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<!-- Spartan Foundry -->
+				
+			<li MayRequire="Mlie.RimworldSpartanFoundry" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "SpartanFoundryHelmetsBase"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+				
+			<li MayRequire="Mlie.RimworldSpartanFoundry" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "SpartanFoundryHelmetsBase"]</xpath>
+				<value>
+					<apparel>
+						<immuneToToxGasExposure>true</immuneToToxGasExposure>
+					</apparel>
+				</value>
+			</li>
+				
+			<!-- Vanilla Armour Expanded
+				 Note: Siegebreaker Body Armour is using ApparelArmorPowerBase so is already patched.
+			-->
+				
+			<li MayRequire="vanillaexpanded.varme" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Apparel_TrooperArmor"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaexpanded.varme" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_HeavyMarineHelmet"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaexpanded.varme" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_HeavyMarineHelmet"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded - Pirates -->
+				
+			<li MayRequire="oskarpotocki.vfe.pirates" Class="PatchOperationAdd">
+				<xpath>/Defs/VFEPirates.WarcasketDef[@Name = "VFEP_WarcasketArmorBase"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+				
+			<li MayRequire="oskarpotocki.vfe.pirates" Class="PatchOperationAdd">
+				<xpath>/Defs/VFEPirates.WarcasketDef[@Name = "VFEP_WarcasketArmorBase"]/apparel</xpath>
+				<value>
+					<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="oskarpotocki.vfe.pirates" Class="PatchOperationAdd">
+				<xpath>/Defs/VFEPirates.WarcasketDef[@Name = "VFEP_WarcasketHelmetBase"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li MayRequire="oskarpotocki.vfe.pirates" Class="PatchOperationAdd">
+				<xpath>/Defs/VFEPirates.WarcasketDef[@Name = "VFEP_WarcasketHelmetBase"]</xpath>
+				<value>
+					<apparel>
+						<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+						<immuneToToxGasExposure>true</immuneToToxGasExposure>
+					</apparel>
+				</value>
+			</li>
+				
+			<li MayRequire="oskarpotocki.vfe.pirates" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEP_Apparel_Privateer"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+				
+			<li MayRequire="oskarpotocki.vfe.pirates" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEP_Apparel_Rumsuit"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded - Empire -->
+				
+			<!-- VFEE_Apparel_TechfriarCrown causes raiders to always spawn with it on polluted zones.  This is likely due to its lack of market value.  Decided to disable it instead of patching the value. -->
+				
+			<li MayRequire="OskarPotocki.VFE.Empire" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEE_Apparel_AbsolverHelmet"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Empire" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEE_Apparel_AbsolverHelmet"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Empire" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEE_Apparel_DeserterHelmet"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Empire" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEE_Apparel_DeserterHelmet"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Empire" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEE_Apparel_ArmorDeserter"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VFE.Empire" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VFEE_Apparel_ArmorAbsolver"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<!-- Vanilla Factions Expanded - Vikings -->
+				
+			<li MayRequire="oskarpotocki.vfe.vikings" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "VFEV_ApparelArmorCryptoBase"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="oskarpotocki.vfe.vikings" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "VFEV_ApparelCryptoHelmetPowerBase"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			
+			<li MayRequire="oskarpotocki.vfe.vikings" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "VFEV_ApparelCryptoHelmetPowerBase"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+			
+			<!-- Vanilla Armour Expanded Prestige Siegebreaker
+				 Note: Body Armour is using ApparelArmorPowerBase so is already patched.
+				 Note: Prestige variant is added via patch method so should be in a seperate patch operation to avoid failure.
+			-->
+
+			<li MayRequire="vanillaexpanded.varme" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Apparel_RoyalTrooperArmor"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaexpanded.varme" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_RoyalSiegeHelmet"]/equippedStatOffsets</xpath>
+				<value>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaexpanded.varme" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VAE_Headgear_RoyalSiegeHelmet"]/apparel</xpath>
+				<value>
+					<immuneToToxGasExposure>true</immuneToToxGasExposure>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

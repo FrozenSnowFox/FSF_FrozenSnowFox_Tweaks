@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreQuestsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFMoreQuestsonDays</li>
+			<li>FSFMoreQuestsnumIncidentsRange</li>
+			<li>FSFMoreQuestsminSpacingDays</li>
+		</keys>
+		<defaultValues>
+			<li>12</li>
+			<li>2</li>
+			<li>3</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- More Quests -->
+			
+	<!-- Modify All StorytellerCompProperties_RandomQuest -->
+		
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StorytellerDef//comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/onDays</xpath>
+			<value>
+				<onDays>{FSFMoreQuestsonDays}</onDays>
+			</value>
+		</li>
+			
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StorytellerDef//comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/numIncidentsRange</xpath>
+			<value>
+				<numIncidentsRange>{FSFMoreQuestsnumIncidentsRange}</numIncidentsRange>
+			</value>
+		</li>
+			
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StorytellerDef//comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/minSpacingDays</xpath>
+			<value>
+				<minSpacingDays>{FSFMoreQuestsminSpacingDays}</minSpacingDays>
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

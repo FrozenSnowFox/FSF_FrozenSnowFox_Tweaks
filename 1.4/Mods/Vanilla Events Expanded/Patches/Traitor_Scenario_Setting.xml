@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFTraitorScenarioSettingOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Traitor Scenario Setting -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/HediffDef[defName="Traitor"]</xpath>
+				<value>
+					<scenarioCanAdd>True</scenarioCanAdd>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+		<Operation Class="XmlExtensions.UseSettings">
+			<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+			<keys>
+				<li>FSFTraitorScenarioSettingMinTicks</li>
+				<li>FSFTraitorScenarioSettingMaxTicks</li>
+			</keys>
+			<defaultValues>
+				<li>120000</li>
+				<li>360000</li>
+			</defaultValues>
+			<apply>
+				
+			<Operation Class="PatchOperationSequence">
+				<success>Normal</success>
+				<operations>
+				
+				<!-- Traitor Ticks to Reveal -->
+				
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HediffDef[defName = "Traitor"]/comps/li[@Class = "VEE.HediffCompPropreties_Traitor"]/disappearsAfterTicks/min</xpath>
+					<value>
+						<min>{FSFTraitorScenarioSettingMinTicks}</min>
+					</value>
+				</li>
+					
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/HediffDef[defName = "Traitor"]/comps/li[@Class = "VEE.HediffCompPropreties_Traitor"]/disappearsAfterTicks/max</xpath>
+					<value>
+						<max>{FSFTraitorScenarioSettingMaxTicks}</max>
+					</value>
+				</li>
+				
+				</operations>
+			</Operation>
+			
+			</apply>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

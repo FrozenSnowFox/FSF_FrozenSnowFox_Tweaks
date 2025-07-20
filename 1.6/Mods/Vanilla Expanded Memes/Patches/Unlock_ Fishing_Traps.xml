@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFUnlockFishingTraps</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Unlock Fishing Traps -->
+			
+			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VME_SmallFishingTrap"]/canGenerateDefaultDesignator</xpath>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VME_MediumFishingTrap"]/canGenerateDefaultDesignator</xpath>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VME_LargeFishingTrap"]/canGenerateDefaultDesignator</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

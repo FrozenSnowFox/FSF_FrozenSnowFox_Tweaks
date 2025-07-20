@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGrowableGrass</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Growable Grass -->
+			
+	<!-- Grass -->
+		
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_Grass"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+					</sowTags>
+				</value>
+			</li>
+			
+	<!-- Tall Grass -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_TallGrass"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+					</sowTags>
+				</value>
+			</li>
+				
+	<!-- Biotech Gray Grass -->
+		
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_GrayGrass"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+					</sowTags>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

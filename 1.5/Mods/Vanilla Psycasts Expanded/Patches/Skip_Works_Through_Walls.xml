@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPsycastTweaksSkip</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Skip Works Through Walls -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName = "VPE_Skip"]</xpath>
+				<value>
+					<requireLineOfSight>false</requireLineOfSight>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName = "VPE_ChaosSkip"]</xpath>
+				<value>
+					<requireLineOfSight>false</requireLineOfSight>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/VFECore.Abilities.AbilityDef[defName = "VPE_MassChaosSkip"]</xpath>
+				<value>
+					<requireLineOfSight>false</requireLineOfSight>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

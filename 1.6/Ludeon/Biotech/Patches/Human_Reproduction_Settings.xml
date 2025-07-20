@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+		<!-- Note: Mod related patches are under their mod folders since MayRequire didn't work for some reason -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHumanReproductonOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+		<!-- Lactating No Fertility Malus -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLactatingNoFertilityMalus</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+	        <!-- Remove Fertility Malus -->
+			
+			<Operation Class="PatchOperationSequence">
+				<success>Normal</success>
+				<operations>
+				
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/HediffDef[defName = "Lactating"]/stages</xpath>
+				</li>
+				
+				</operations>
+			</Operation>
+			
+			<!-- Lactation Duration -->
+			
+			<Operation Class="XmlExtensions.UseSetting">
+	    	<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+	    	<key>FSFLactationDuration</key>
+	    	<defaultValue>10</defaultValue>
+	    	<apply>
+				
+		        <!-- Convert settings from days to negative inverse to get severity -->
+				
+		        <Operation Class="XmlExtensions.CreateVariable">
+		        	<storeIn>FSFLactatingSeverity</storeIn>
+		        	<value>-1</value>
+	    	    	<value2>{FSFLactationDuration}</value2>
+	        		<operation>/</operation>
+		        	<apply>
+						
+			      		<Operation Class="PatchOperationReplace">
+				            <xpath>/Defs/HediffDef[defName="Lactating"]/comps/li[@Class = "HediffCompProperties_SeverityPerDay"]/severityPerDay</xpath>
+						    <value>
+								<severityPerDay>{FSFLactatingSeverity}</severityPerDay>
+					    	</value>
+				        </Operation>
+						
+		        	</apply>
+	    	    </Operation>
+			
+	        <!-- Check for plurality and change text accordingly -->
+			
+	        <Operation Class="XmlExtensions.IfStatement">
+	        	<condition Class="XmlExtensions.Boolean.Comparison">
+	        		<value1>1</value1>
+	        		<value2>{FSFLactationDuration}</value2>
+	        		<relation>eq</relation>
+	        	</condition>
+				
+	        	<!-- Singular case -->
+				
+	        	<caseTrue>
+				
+				<Operation Class="PatchOperationSequence">
+					<success>Normal</success>
+					<operations>
+				
+					<li Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="Lactating"]/description</xpath>
+					    <value>
+					      <description>The condition of being able to breastfeed a baby. The breasts are actively producing and storing milk. The lactating state begins when a mother gives birth, and continues indefinitely as long as she breastfeeds a baby at least once everyday.</description>
+					  	</value>
+					</li>
+						
+					<li Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="Lactating"]/comps/li[@Class = "HediffCompProperties_MessageOnRemoval"]/message</xpath>
+					    <value>
+							<message>{0} is no longer lactating due to not breastfeeding for {FSFLactationDuration} day.</message>
+					  	</value>
+					</li>
+				
+					</operations>
+				</Operation>
+					
+	        	</caseTrue>
+				
+	        	<!-- Plural case -->
+				
+	        	<caseFalse>
+				
+				<Operation Class="PatchOperationSequence">
+					<success>Normal</success>
+					<operations>
+				
+					<li Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="Lactating"]/description</xpath>
+					    <value>
+					      <description>The condition of being able to breastfeed a baby. The breasts are actively producing and storing milk. The lactating state begins when a mother gives birth, and continues indefinitely as long as she breastfeeds a baby at least once every {FSFLactationDuration} days.</description>
+					  	</value>
+					</li>
+						
+					<li Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="Lactating"]/comps/li[@Class = "HediffCompProperties_MessageOnRemoval"]/message</xpath>
+					    <value>
+							<message>{0} is no longer lactating due to not breastfeeding for {FSFLactationDuration} days.</message>
+					  	</value>
+					</li>
+				
+					</operations>
+				</Operation>
+					
+	        	</caseFalse>
+				
+	        </Operation>
+				
+	    </apply>
+		</Operation>
+			
+		</caseTrue>
+		
+		<caseFalse>
+			
+	        <!-- Keep Fertility Malus -->
+			
+			<!-- Lactation Duration -->
+			
+			<Operation Class="XmlExtensions.UseSetting">
+	    	<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+	    	<key>FSFLactationDuration</key>
+	    	<defaultValue>10</defaultValue>
+	    	<apply>
+				
+		        <!-- Convert settings from days to negative inverse to get severity -->
+				
+		        <Operation Class="XmlExtensions.CreateVariable">
+		        	<storeIn>FSFLactatingSeverity</storeIn>
+		        	<value>-1</value>
+	    	    	<value2>{FSFLactationDuration}</value2>
+	        		<operation>/</operation>
+		        	<apply>
+						
+			      		<Operation Class="PatchOperationReplace">
+				            <xpath>/Defs/HediffDef[defName="Lactating"]/comps/li[@Class = "HediffCompProperties_SeverityPerDay"]/severityPerDay</xpath>
+						    <value>
+								<severityPerDay>{FSFLactatingSeverity}</severityPerDay>
+					    	</value>
+				        </Operation>
+						
+		        	</apply>
+	    	    </Operation>
+			
+	        <!-- Check for plurality and change text accordingly -->
+			
+	        <Operation Class="XmlExtensions.IfStatement">
+	        	<condition Class="XmlExtensions.Boolean.Comparison">
+	        		<value1>1</value1>
+	        		<value2>{FSFLactationDuration}</value2>
+	        		<relation>eq</relation>
+	        	</condition>
+				
+	        	<!-- Singular case -->
+				
+	        	<caseTrue>
+				
+				<Operation Class="PatchOperationSequence">
+					<success>Normal</success>
+					<operations>
+				
+					<li Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="Lactating"]/description</xpath>
+					    <value>
+					      <description>The condition of being able to breastfeed a baby. The breasts are actively producing and storing milk. The lactating state begins when a mother gives birth, and continues indefinitely as long as she breastfeeds a baby at least once everyday.\n\nPeople who are lactating will have a harder time becoming pregnant.</description>
+					  	</value>
+					</li>
+						
+					<li Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="Lactating"]/comps/li[@Class = "HediffCompProperties_MessageOnRemoval"]/message</xpath>
+					    <value>
+							<message>{0} is no longer lactating due to not breastfeeding for {FSFLactationDuration} day.</message>
+					  	</value>
+					</li>
+				
+					</operations>
+				</Operation>
+					
+	        	</caseTrue>
+				
+	        	<!-- Plural case -->
+				
+	        	<caseFalse>
+				
+				<Operation Class="PatchOperationSequence">
+					<success>Normal</success>
+					<operations>
+				
+					<li Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="Lactating"]/description</xpath>
+					    <value>
+					      <description>The condition of being able to breastfeed a baby. The breasts are actively producing and storing milk. The lactating state begins when a mother gives birth, and continues indefinitely as long as she breastfeeds a baby at least once every {FSFLactationDuration} days.\n\nPeople who are lactating will have a harder time becoming pregnant.</description>
+					  	</value>
+					</li>
+						
+					<li Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="Lactating"]/comps/li[@Class = "HediffCompProperties_MessageOnRemoval"]/message</xpath>
+					    <value>
+							<message>{0} is no longer lactating due to not breastfeeding for {FSFLactationDuration} days.</message>
+					  	</value>
+					</li>
+				
+					</operations>
+				</Operation>
+					
+	        	</caseFalse>
+				
+	        </Operation>
+				
+	    </apply>
+		</Operation>
+			
+		</caseFalse>		
+		
+	</Operation>
+			
+			
+						
+		<!-- Lactation Recharge Speed -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLactationRechargeSpeed</key>
+		<defaultValue>15000</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName = "Lactating"]/comps/li[@Class = "HediffCompProperties_Lactating"]/ticksToFullCharge</xpath>
+				<value>
+					<ticksToFullCharge>{FSFLactationRechargeSpeed}</ticksToFullCharge>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+			
+			
+		<!-- Ovum Extracted Duration -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFOvumExtractedDuration</key>
+		<defaultValue>600000</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName = "OvumExtracted"]/comps/li[@Class = "HediffCompProperties_Disappears"]/disappearsAfterTicks</xpath>
+				<value>
+					<disappearsAfterTicks>{FSFOvumExtractedDuration}</disappearsAfterTicks>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+
+			
+			
+		<!-- Human Pregnancy Duration -->
+			
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFHumanPregnancyDays</li>
+		</keys>
+		<defaultValues>
+			<li>18</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Human"]/race/gestationPeriodDays</xpath>
+				<value>
+					<gestationPeriodDays>{FSFHumanPregnancyDays}</gestationPeriodDays>
+				</value>
+			</li>
+				
+	        <!-- Update Description of Pregnant HediffDef -->				
+	        <!-- Check for plurality and change text accordingly -->
+				
+	        <li Class="XmlExtensions.IfStatement">
+	        	<condition Class="XmlExtensions.Boolean.Comparison">
+	        		<value1>1</value1>
+	        		<value2>{FSFHumanPregnancyDays}</value2>
+	        		<relation>eq</relation>
+	        	</condition>
+				
+	        	<!-- Singular case -->
+				
+	        	<caseTrue>
+			        <Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="PregnantHuman"]/description</xpath>
+					    <value>
+							<description>A baby growing inside a woman, preparing to be born. In humans, pregnancy lasts for {FSFHumanPregnancyDays} day and is divided into 3 trimesters. As the pregnancy grows it will reduce the mother's mobility. For some mothers, pregnancy may induce nausea or mood swings that can be hard to deal with.</description>
+					    </value>
+			        </Operation>
+	        	</caseTrue>
+				
+	        	<!-- Plural case -->
+				
+	        	<caseFalse>
+	        		<Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName="PregnantHuman"]/description</xpath>
+					    <value>
+							<description>A baby growing inside a woman, preparing to be born. In humans, pregnancy lasts for {FSFHumanPregnancyDays} days and is divided into 3 trimesters. As the pregnancy grows it will reduce the mother's mobility. For some mothers, pregnancy may induce nausea or mood swings that can be hard to deal with.</description>
+					    </value>
+			        </Operation>
+	        	</caseFalse>
+				
+	        </li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+			
+			
+		<!-- Human Postpartum Exhaustion Duration -->
+			
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPostpartumDuration</key>
+		<defaultValue>40000</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName = "PostpartumExhaustion"]/comps/li[@Class = "HediffCompProperties_Disappears"]/disappearsAfterTicks</xpath>
+				<value>
+					<disappearsAfterTicks>{FSFPostpartumDuration}</disappearsAfterTicks>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

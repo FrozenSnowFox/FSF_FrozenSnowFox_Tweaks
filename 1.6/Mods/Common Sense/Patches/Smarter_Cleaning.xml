@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFCSSmarterCleaning</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Smarter Cleaning -->
+		
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/JobDef[defName = "Flick"
+					or defName = "Open"
+					or defName = "RearmTurret"
+					or defName = "RearmTurretAtomic"
+					or defName = "Reload"
+					or defName = "VFES_RearmTrap"
+					or defName = "Repair"
+					or defName = "FixBrokenDownBuilding"
+					or defName = "Uninstall"
+					or defName = "Deconstruct"
+					or defName = "Strip"
+					or defName = "LTS_DoStrip"
+					or defName = "ExtractSkull"
+					or defName = "AC_ExtractStack"
+					or defName = "Bury"
+					or defName = "DoBillsCremate"
+				]</xpath>
+				<value>
+					<li Class="CommonSense.CleanOnOpportunity">
+						<doClean>False</doClean>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

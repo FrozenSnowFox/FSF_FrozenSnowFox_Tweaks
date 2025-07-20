@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVehicleFrameworkFasterVehiclesOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVehicleFrameworkFasterVehicles</key>
+		<defaultValue>2.0</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Faster Vehicles -->
+				
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/Vehicles.VehicleDef [vehicleType [text()="Land"] or vehicleType [text()="Sea"]] /properties/worldSpeedMultiplier</xpath>
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/Vehicles.VehicleDef [vehicleType [text()="Land"] or vehicleType [text()="Sea"]] /properties</xpath>
+                    <value>
+                        <worldSpeedMultiplier>1.0</worldSpeedMultiplier>
+                    </value>
+                </match>
+			</li>
+				
+			<li Class="XmlExtensions.PatchOperationMath">
+				<xpath>/Defs/Vehicles.VehicleDef [vehicleType [text()="Land"] or vehicleType [text()="Sea"]] /properties/worldSpeedMultiplier</xpath>
+				<value>{FSFVehicleFrameworkFasterVehicles}</value>
+				<operation>*</operation>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

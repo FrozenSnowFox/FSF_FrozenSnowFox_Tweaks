@@ -1,0 +1,2243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<XmlExtensions.SettingsMenuDef>
+		<defName>FrozenSnowFoxTweaksSettings</defName> <!--Can be anything unique with no periods-->
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId> <!--MUST be the same as the one entered earlier-->    
+		<label>FrozenSnowFox Tweaks</label> <!-- This is what displays as your mod's name-->    
+		<settings> <!--This is where you define what settings are in the settings menu-->
+
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>For any changed settings to take effect the game must be restarted.</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksModWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Core Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksCoreTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Accurate Mechanoid Disassembly</label>
+				<key>FSFAccurateMechDisassemblyOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAccurateMechDisassemblyTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Replaces the mechanoid disassembly returns with accurate resources based on the resources required for gestating them.  It also allows tweaking of the disassembly efficiency stat so the returns can be scaled down while remaining accurate.  To prevent excess resources Mechanoid Slag Chunk drops are removed from all mechanoids.</text>
+				<tKey>FSFTweaksAccurateMechDisassemblyOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>	
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFAccurateMechDisassemblyOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFAccurateMechDisassemblyBaseEff</key>
+						<defaultValue>0.75</defaultValue>
+						<min>0</min>
+						<max>1</max>
+						<decimals>2</decimals>
+						<label>Base Disassembly Efficiency {FSFAccurateMechDisassemblyBaseEff}</label>
+						<tKey>FSFTweaksAccurateMechDisassemblyBaseEff</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFAccurateMechDisassemblyMaxEff</key>
+						<defaultValue>1</defaultValue>
+						<min>0.1</min>
+						<max>1</max>
+						<decimals>2</decimals>
+						<label>Maximum Disassembly Efficiency {FSFAccurateMechDisassemblyMaxEff}</label>
+						<tKey>FSFTweaksAccurateMechDisassemblyMaxEff</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the efficiency stats for Mechanoid Disassembly.  The Base stat is the starting efficiency percentage before factoring in manipulation, eyesight and crafting skill while the Max stat is the maximum percentage of resources acquirable.\nVanilla (0.75, 1).</text>
+						<tKey>FSFTweaksAccurateMechDisassemblyDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Disable Mechanoid Subcores from disassembly loot.</label>
+						<key>FSFAccurateMechDisassemblySubcores</key>
+						<defaultValue>true</defaultValue>
+						<tKey>FSFTweaksAccurateMechDisassemblySubcores</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Always Refuel Turrets -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Always Refuel Turrets</label>
+				<key>FSFAlwaysRefuelTurrets</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAlwaysRefuelTurretsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes turrets to be rearmed even if they are 99% full of ammo.</text>
+				<tKey>FSFTweaksAlwaysRefuelTurretsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Animals Dont Eat Random Things -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Animals Dont Eat Random Things</label>
+				<key>FSFAnimalsDontEatRandomThings</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimalsDontEatRandomThingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the action of eating random things for curiosity from animal AI logic trees.</text>
+				<tKey>FSFTweaksAnimalsDontEatRandomThingsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Animals Don't Mine To Escape -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Animals Don't Mine To Escape</label>
+				<key>FSFAnimalsDontMineToEscape</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimalsDontMineToEscapeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the action of mining through walls and rock to escape when hungry from animal AI logic trees.  Instead they will now just starve to death.\nNote: This does not apply to Alpha Animals creatures who use the Animal Digger logic tree since they are designed to dig through things.</text>
+				<tKey>FSFTweaksAnimalsDontMineToEscapeDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Bed Rest Effectiveness -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Bed Rest Effectiveness</label>
+				<key>FSFBedRestEffectivenessOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBedRestEffectivenessTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise how furniture quality effects the Bed Rest Effectiveness stat.</text>
+				<tKey>FSFTweaksBedRestEffectivenessOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFBedRestEffectivenessOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFBedRestEffectivenessAwful</key>
+						<defaultValue>0.86</defaultValue>
+						<min>0.50</min>
+						<max>2.00</max>
+						<decimals>2</decimals>
+						<label>Awful Quality {FSFBedRestEffectivenessAwful}</label>
+						<tKey>FSFTweaksBedRestEffectivenessAwful</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFBedRestEffectivenessPoor</key>
+						<defaultValue>0.92</defaultValue>
+						<min>0.50</min>
+						<max>2.00</max>
+						<decimals>2</decimals>
+						<label>Poor Quality {FSFBedRestEffectivenessPoor}</label>
+						<tKey>FSFTweaksBedRestEffectivenessPoor</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFBedRestEffectivenessNormal</key>
+						<defaultValue>1.00</defaultValue>
+						<min>0.50</min>
+						<max>2.00</max>
+						<decimals>2</decimals>
+						<label>Normal Quality {FSFBedRestEffectivenessNormal}</label>
+						<tKey>FSFTweaksBedRestEffectivenessNormal</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFBedRestEffectivenessGood</key>
+						<defaultValue>1.08</defaultValue>
+						<min>0.50</min>
+						<max>2.00</max>
+						<decimals>2</decimals>
+						<label>Good Quality {FSFBedRestEffectivenessGood}</label>
+						<tKey>FSFTweaksBedRestEffectivenessGood</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFBedRestEffectivenessExcellent</key>
+						<defaultValue>1.14</defaultValue>
+						<min>0.50</min>
+						<max>2.00</max>
+						<decimals>2</decimals>
+						<label>Excellent Quality {FSFBedRestEffectivenessExcellent}</label>
+						<tKey>FSFTweaksBedRestEffectivenessExcellent</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFBedRestEffectivenessMasterwork</key>
+						<defaultValue>1.25</defaultValue>
+						<min>0.50</min>
+						<max>2.00</max>
+						<decimals>2</decimals>
+						<label>Masterwork Quality {FSFBedRestEffectivenessMasterwork}</label>
+						<tKey>FSFTweaksBedRestEffectivenessMasterwork</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFBedRestEffectivenessLegendary</key>
+						<defaultValue>1.60</defaultValue>
+						<min>0.50</min>
+						<max>2.00</max>
+						<decimals>2</decimals>
+						<label>Legendary Quality {FSFBedRestEffectivenessLegendary}</label>
+						<tKey>FSFTweaksBedRestEffectivenessLegendary</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Move the slider to adjust the Bed Rest Effectiveness stat for that particular quality.\nVanilla (0.86, 0.92, 1.00, 1.08, 1.14, 1.25, 1.60).</text>
+						<tKey>FSFTweaksBedRestEffectivenessDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Better Quest Rewards -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Better Quest Rewards</label>
+				<key>FSFBetterQuestRewardsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBetterQuestRewardsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to individually enable options that will add or change things in the quest reward pool.</text>
+				<tKey>FSFTweaksBetterQuestRewardsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFBetterQuestRewardsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Adds Hyperweave as a filler material.</label>
+						<key>FSFBetterQuestRewardsHyperweave</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterQuestRewardsHyperweave</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Adds Jade as a filler material.</label>
+						<key>FSFBetterQuestRewardsJade</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterQuestRewardsJade</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Adds Synthread as a filler material.</label>
+						<key>FSFBetterQuestRewardsSynthread</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterQuestRewardsSynthread</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Better Utility Layers -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Better Utility Layers</label>
+				<key>FSFBetterUtilityLayers</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBetterUtilityLayersTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the layering of a large number of utility items so they can be worn together.  For instance, many items are moved to the Torso, Lances are moved to the Shoulders, Orbital items are moved to the Legs.  This change does not cause issues for clothing/armour since all items are on the Utility layer which is normally unused except for Waist.  This tweak also includes a patch to change all Utility items to not count as clothing for nudists in the event they are not tagged correctly.</text>
+				<tKey>FSFTweaksBetterUtilityLayersDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Bigger Rivers -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Bigger Rivers</label>
+				<key>FSFBiggerRiversOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBiggerRiversTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise how large rivers appear on maps.</text>
+				<tKey>FSFTweaksBiggerRiversOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFBiggerRiversOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFBiggerRiversHugeRiver</key>
+						<defaultValue>30</defaultValue>
+						<min>1</min>
+						<max>100</max>
+						<label>Huge River</label>
+						<tKey>FSFTweaksBiggerRiversHugeRiver</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFBiggerRiversLargeRiver</key>
+						<defaultValue>14</defaultValue>
+						<min>1</min>
+						<max>100</max>
+						<label>Large River</label>
+						<tKey>FSFTweaksBiggerRiversLargeRiver</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFBiggerRiversRiver</key>
+						<defaultValue>6</defaultValue>
+						<min>1</min>
+						<max>100</max>
+						<label>River</label>
+						<tKey>FSFTweaksBiggerRiversRiver</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFBiggerRiversCreek</key>
+						<defaultValue>4</defaultValue>
+						<min>1</min>
+						<max>100</max>
+						<label>Creek</label>
+						<tKey>FSFTweaksBiggerRiversCreek</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the size of rivers.\nVanilla values (30, 14, 6, 4).</text>
+						<tKey>FSFTweaksBiggerRiversDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Consciousness Affects Learning Speed -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Consciousness Affects Learning Speed</label>
+				<key>FSFConsciousnessLearningSpeed</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksConsciousnessLearningSpeedTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the Global Learning Speed stat to be affected by consciousness.  This makes it so people with brain injuries learn slower while those with increased consciousness from bionics or drugs learn faster.</text>
+				<tKey>FSFTweaksConsciousnessLearningSpeedDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Default White Lights -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Default White Lights</label>
+				<key>FSFDefaultWhiteLights</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksDefaultWhiteLightsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the default colour of electric lights to be White.</text>
+				<tKey>FSFTweaksDefaultWhiteLightsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Encounter Map Ancient Dangers -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Encounter Map Ancient Dangers</label>
+				<key>FSFEncounterMapAncientDangers</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksEncounterMapAncientDangersTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows ancient dangers to spawn on encounter maps.</text>
+				<tKey>FSFTweaksEncounterMapAncientDangersDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Encounter Map Resources -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Encounter Map Resources</label>
+				<key>FSFEncounterMapResources</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksEncounterMapResourcesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows resources and deep drilling veins to spawn on encounter maps again.</text>
+				<tKey>FSFTweaksEncounterMapResourcesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Faster Components -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Faster Components</label>
+				<key>FSFFasterComponents</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksFasterComponentsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Reduces the crafting time of Components and Advanced Components to 1/4.  Also adds bulk recipes for crafting 5x 10x 25x and 50x.</text>
+				<tKey>FSFTweaksFasterComponentsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Faster Moisture Pumps -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Faster Moisture Pumps</label>
+				<key>FSFFasterMoisturePumpsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksFasterMoisturePumpsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise the speed of Moisture Pumps.</text>
+				<tKey>FSFTweaksFasterMoisturePumpsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFFasterMoisturePumpsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFFasterMoisturePumps</key>
+						<defaultValue>60</defaultValue>
+						<min>1</min>
+						<max>60</max>
+						<label>Days to Max Radius</label>
+						<tKey>FSFTweaksFasterMoisturePumps</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoisturePumpsRadius</key>
+						<defaultValue>6</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Radius</label>
+						<tKey>FSFTweaksMoisturePumpsRadius</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input values to adjust the speed and radius of Moisture Pumps.  The speed value is written in days.\nThe Vanilla value is 60 (1 year).</text>
+						<tKey>FSFTweaksFasterMoisturePumpsDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Filth Vanishes With Rain And Time -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Filth Vanishes With Rain And Time</label>
+				<key>FSFFilthVanishesWithRainAndTime</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksFilthVanishesWithRainAndTimeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes all filth types so they disappear within 14-15 days and wash away with rain/snow.  See the Filth Vanishes With Rain And Time workshop page for full details.</text>
+				<tKey>FSFTweaksFilthVanishesWithRainAndTimeDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFFilthVanishesWithRainAndTime</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow Revenant blood and trails to wash away with rain/snow.</label>
+						<key>FSFFilthVWRATRevenant</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksFilthVWRATRevenant</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(187,0,0)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Warning: This will make Revenants significantly more dangerous during bad weather as their traces will disappear almost immediately making them impossible to track.</text>
+						<tKey>FSFTweaksFilthVWRATRevenantDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Foods Are Safe -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Foods Are Safe</label>
+				<key>FSFFoodsAreSafe</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksFoodsAreSafeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the food poisoning chance from all RawTasty foods and all Gluttonous items that have the ParentDef OrganicProductBase.  Foods that use RawTasty are things like Berries, Milk and modded items such as Fruits.  Gluttonous items that have the ParentDef OrganicProductBase are things such as Insect Jelly and modded items such as Honey.</text>
+				<tKey>FSFTweaksFoodsAreSafeDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Growable Ambrosia -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Growable Ambrosia</label>
+				<key>FSFGrowableAmbrosia</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGrowableAmbrosiaTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows ambrosia to be researched and planted in growing zones.</text>
+				<tKey>FSFTweaksGrowableAmbrosiaDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Growable Grass -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Growable Grass</label>
+				<key>FSFGrowableGrass</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGrowableGrassTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows grass to be planted in growing zones.</text>
+				<tKey>FSFTweaksGrowableGrassDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Growable Mushrooms -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Growable Mushrooms</label>
+				<key>FSFGrowableMushrooms</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGrowableMushroomsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Glowstool, Agarilux and Timbershroom to be plantable crops.  Glowstool and Agarilux have tweaked growth/yield so they are comparable to other crops.</text>
+				<tKey>FSFTweaksGrowableMushroomsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Growable Pasture Grass -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Growable Pasture Grass</label>
+				<key>FSFPastureGrass</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPastureGrassTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds a new type of grass called Pasture Grass.  It's a species of grass designed for feeding grazing animals.  It lives for a long time and although it can be grown in low fertility soil it likes lushier soil.</text>
+				<tKey>FSFTweaksPastureGrassDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Harder Drop Pod Raids -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Harder Drop Pod Raids</label>
+				<key>FSFHarderDropPodRaids</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHarderDropPodRaidsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Doubles the selection weight of Drop Pod raid strategies.  Also removes the raid point scaling so drop pod raids are the same size as normal raids.</text>
+				<tKey>FSFTweaksHarderDropPodRaidsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Harder Environmental Events -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Harder Environmental Events</label>
+				<key>FSFHarderEnvironmentalEvents</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHarderEnvironmentalEventsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Modifies the duration of Environmental Events and increases the refire interval somewhat to compensate.  This makes events overall harder as they last longer.\n\nCold Snap and Heat Wave x2 Duration, Toxic Fallout x4 Duration, Volcanic Winter x2.5 Min and x1.5 Max Duration, Blood Rain x4.5 Min and x2 Max Duration (Anomaly DLC), Death Pall x2 Duration (Anomaly DLC), Drought (Vanilla Events Expanded) x1.7 Min and x3 Max Duration.</text>
+				<tKey>FSFTweaksHarderEnvironmentalEventsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Herd Migration On Any Biome -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Herd Migration On Any Biome</label>
+				<key>FSFHerdMigrationOnAnyBiome</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHerdMigrationOnAnyBiomeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the allowedBiomes tag on the Herd Migration event so it can trigger on any biome.</text>
+				<tKey>FSFTweaksHerdMigrationOnAnyBiomeDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Immortal Power Conduits -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Immortal Power Conduits</label>
+				<key>FSFImmortalPowerConduits</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksImmortalPowerConduitsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Makes power conduits immortal, they have no health and can't catch fire.</text>
+				<tKey>FSFTweaksImmortalPowerConduitsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Improved Vanometric Power Cells -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Improved Vanometric Power Cells</label>
+				<key>FSFImprovedVanometricPowerCellsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksImprovedVanometricPowerCellsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to multiply the power generation of Vanometric Power Cells by an input value.</text>
+				<tKey>FSFTweaksImprovedVanometricPowerCellsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFImprovedVanometricPowerCellsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFImprovedVanometricPowerCells</key>
+						<defaultValue>2.0</defaultValue>
+						<min>1.0</min>
+						<max>50.0</max>
+						<decimals>1</decimals>
+						<label>Power Multiplier {FSFImprovedVanometricPowerCells}</label>
+						<tKey>FSFTweaksImprovedVanometricPowerCells</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Move the slider to adjust the multiplier of Vanometric Power Cells.  The value is a straight multiplier, a value of 2 will double the original while 3 will triple it.\nThe Vanilla value is 1.\nNote: This tweak is not needed if Power Generation Multiplier is enabled and may cause issues if they have different values.</text>
+						<tKey>FSFTweaksImprovedVanometricPowerCellsDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Indoor Tree Farms -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Indoor Tree Farms</label>
+				<key>FSFIndoorTreeFarmsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksIndoorTreeFarmsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to individually enable options that will allow plants to be plantable under roofs, allow adjacent sowing and allow planting regardless of biome.  These limitations ordinarily only appear on tree or tree like plants.</text>
+				<tKey>FSFTweaksIndoorTreeFarmsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFIndoorTreeFarmsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow Adjacent Sowing on plants.</label>
+						<key>FSFIndoorTreeFarmsAdjacentSow</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksIndoorTreeFarmsAdjacentSow</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow plants to be planted under roofs.</label>
+						<key>FSFIndoorTreeFarmsRoof</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksIndoorTreeFarmsRoof</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow plants to be planted regardless of biome.</label>
+						<key>FSFIndoorTreeFarmsWildToSow</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksIndoorTreeFarmsWildToSow</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Insect Jelly Isn't A Meal -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Insect Jelly Isn't A Meal</label>
+				<key>FSFInsectJellyIsntAMeal</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksInsectJellyIsntAMealTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the preferability of Insect Jelly from Fine Meal to Raw Tasty.  This means pawns will only prefer it as food if there are no cooked meals.  However, they will still eat it for Gluttonous Recreation.  This allows you to easier keep your expensive jelly for sale and recreation.</text>
+				<tKey>FSFTweaksInsectJellyIsntAMealDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Interaction Spots Can Overlap -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Interaction Spots Can Overlap</label>
+				<key>FSFInteractionSpotsCanOverlap</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksInteractionSpotsCanOverlapTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the restriction on everything so interaction spots can overlap.  The interaction spot is where a pawn stands while using the building and typically where you place a seat for them.</text>
+				<tKey>FSFTweaksInteractionSpotsCanOverlapDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Less Desirable Long Term Food -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Less Desirable Long Term Food</label>
+				<key>FSFLessDesirableLongTermFood</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksLessDesirableLongTermFoodTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes long term foods like Pemmican and Packaged Survival Meals to be less desirable than normal meals.\nNote: Distance seems to be factored into food choice so for best results long term foods should be stored near other meals.</text>
+				<tKey>FSFTweaksLessDesirableLongTermFoodDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Warning: This tweak may cause friendlies to pilfer your food supplies more as their preserved meals are considered less desirable.</text>
+				<tKey>FSFTweaksLessDesirableLongTermFoodWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Metal Flammability -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Metal Flammability</label>
+				<key>FSFMetalFlammabilityOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMetalFlammabilityTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise the flammability stat of each metal.  You can make things less or more flammable or completely immune to fire.</text>
+				<tKey>FSFTweaksMetalFlammabilityOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFMetalFlammabilityOn</key>
+				<caseTrue>
+					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.Slider">
+						<key>FSFMetalFlammabilityBioferrite</key>
+						<defaultValue>0.75</defaultValue>
+						<min>0.00</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Bioferrite Flammability {FSFMetalFlammabilityBioferrite}</label>
+						<tKey>FSFTweaksMetalFlammabilityBioferrite</tKey>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFMetalFlammabilityGold</key>
+						<defaultValue>0.00</defaultValue>
+						<min>0.00</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Gold Flammability {FSFMetalFlammabilityGold}</label>
+						<tKey>FSFTweaksMetalFlammabilityGold</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.Setting.Slider">
+						<key>FSFMetalFlammabilityIron</key>
+						<defaultValue>0.00</defaultValue>
+						<min>0.00</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Iron Flammability {FSFMetalFlammabilityIron}</label>
+						<tKey>FSFTweaksMetalFlammabilityIron</tKey>
+					</li>
+					<li MayRequire="DankPyon.Medieval.Overhaul" Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFMetalFlammabilitySilver</key>
+						<defaultValue>0.00</defaultValue>
+						<min>0.00</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Silver Flammability {FSFMetalFlammabilitySilver}</label>
+						<tKey>FSFTweaksMetalFlammabilitySilver</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFMetalFlammabilitySteel</key>
+						<defaultValue>0.00</defaultValue>
+						<min>0.00</min>
+						<max>1.00</max>
+						<decimals>2</decimals>
+						<label>Steel Flammability {FSFMetalFlammabilitySteel}</label>
+						<tKey>FSFTweaksMetalFlammabilitySteel</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the flammability of each metal.  The lower the number the less flammable it is.  The displayed number is a percentage of its flammability.  Setting it to 0 will make that metal completely immune to fire.\nVanilla flammability is 0.4 (40%).</text>
+						<tKey>FSFTweaksMetalFlammabilityDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- More Filters -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>More Filters</label>
+				<key>FSFMoreFiltersOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMoreFiltersTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to individually toggle on options to add new filters for easier organisation and accessibility.  Such as sorting food or drugs into more specific categories.</text>
+				<tKey>FSFTweaksMoreFiltersDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFMoreFiltersOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>More Filters Drugs</label>
+						<key>FSFMoreFiltersDrugs</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksMoreFiltersDrugsTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Adds a number of new categories for drugs and organises items so they can be more easily accessed.  The following categories are added, Hard, Medical, Social.</text>
+						<tKey>FSFTweaksMoreFiltersDrugsDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>More Filters Food</label>
+						<key>FSFMoreFiltersFood</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksMoreFiltersFoodTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Adds a number of new categories for food and organises items so they can be more easily accessed.  The following categories are added, Awful, Simple, Fine, Lavish, Gourmet (VCE), Confectionery (VCE), Long Term, Jelly (Alpha Animals), Milk (Alpha Animals), Raw Tasty, Baby Food (Biotech DLC), Animal Feed, Gluttonous, Blood (Biotech DLC), Cocktails (VBE).</text>
+						<tKey>FSFTweaksMoreFiltersFoodDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(187,0,0)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Warning: Due to changing item categories this tweak can interfere with stacking mods that rely on categories.  For OgreStack this causes the items to be classed under Other instead of their default categories.  If you use more specific stacking settings be sure to account for this.</text>
+						<tKey>FSFTweaksMoreFiltersFoodWarning</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- More Quests -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>More Quests</label>
+				<key>FSFMoreQuestsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMoreQuestsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise how frequently quests appear.</text>
+				<tKey>FSFTweaksMoreQuestsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFMoreQuestsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreQuestsonDays</key>
+						<defaultValue>12</defaultValue>
+						<min>1</min>
+						<max>15</max>
+						<label>onDays</label>
+						<tKey>FSFTweaksMoreQuestsonDays</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreQuestsnumIncidentsRange</key>
+						<defaultValue>2</defaultValue>
+						<min>1</min>
+						<max>15</max>
+						<label>numIncidentsRange</label>
+						<tKey>FSFTweaksMoreQuestsnumIncidentsRange</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFMoreQuestsminSpacingDays</key>
+						<defaultValue>3.0</defaultValue>
+						<min>0.1</min>
+						<max>15</max>
+						<decimals>1</decimals>
+						<label>minSpacingDays {FSFMoreQuestsminSpacingDays}</label>
+						<tKey>FSFTweaksMoreQuestsminSpacingDays</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the amount of quests generated within a timeframe.  The minSpacingDays (minimum days between quests) must allow the numIncidentsRange (number of quests) to fit within onDays (how many days before this block of quests ends) otherwise the game will throw errors.\nVanilla (12, 2, 3), Double Vanilla (12, 4, 1), Triple Vanilla (12, 6, 1), Daily (1, 1, 0.5).\nNote: Quests by default require a certain wealth threshold to be reached to trigger. In very low wealth starts like naked brutality or tribals its possible you might not get quests for a year or more until you hit that specific threshold.</text>
+						<tKey>FSFTweaksMoreQuestsDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- More Slaves -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>More Slaves</label>
+				<key>FSFMoreSlavesOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMoreSlavesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise the number of slaves traders have for sale and makes it so you can request slave caravans.  Also removes the Population Intent on slave trading so you always have a full selection of slaves regardless of your colony population.</text>
+				<tKey>FSFTweaksMoreSlavesOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFMoreSlavesOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreSlavesMin</key>
+						<defaultValue>9</defaultValue>
+						<min>0</min>
+						<max>100</max>
+						<label>Slaves For Sale Minimum Range</label>
+						<tKey>FSFTweaksMoreSlavesMin</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreSlavesMax</key>
+						<defaultValue>10</defaultValue>
+						<min>0</min>
+						<max>100</max>
+						<label>Slaves For Sale Maximum Range</label>
+						<tKey>FSFTweaksMoreSlavesMax</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the number of slaves traders have for sale\nDefault Setting 9-10.</text>
+						<tKey>FSFTweaksMoreSlavesDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- More Varied Raid Loot -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>More Varied Raid Loot</label>
+				<key>FSFMoreVariedRaidLoot</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMoreVariedRaidLootTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds new items to the raid loot tables to add some more variety to the rewards for defeating raids.  Raid loot is a stack of items given to a raider or a number of raiders to serve as a reward for deating them, this typically comes in the form of resources, medicine or drugs.</text>
+				<tKey>FSFTweaksMoreVariedRaidLootDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Mounts For Sale -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Mounts For Sale</label>
+				<key>FSFMountsForSaleOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMountsForSaleTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds breeding pairs of Horses always for sale at Neolithic bases so you have an easy way to get caravan animals.</text>
+				<tKey>FSFTweaksMountsForSaleDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No Debuff For Banishing -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Debuff For Banishing</label>
+				<key>FSFNoDebuffForBanishing</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoDebuffForBanishingTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the duration of all thoughts for banishing or rejecting people to expire instantly.</text>
+				<tKey>FSFTweaksNoDebuffForBanishingDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No Default Fungus In Meals -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Default Fungus In Meals</label>
+				<key>FSFNoDefaultFungusInMeals</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoDefaultFungusInMealsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds Raw Fungus to the list of default disallowed ingredients on meals.</text>
+				<tKey>FSFTweaksNoDefaultFungusInMealsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No Default Storage Settings -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Default Storage Settings</label>
+				<key>FSFNoDefaultStorageSettings</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoDefaultStorageSettingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes every ThingDef to remove the defaultStorageSettings and changes the default priority to normal.  Unlike the mod No Default Shelf Storage which intentionally looks for a ThingClass to target only storage items this patch goes for everything.  This means it'll target things like Mortars, Sarcophaguses, Biosculpters, Growth Pods and more.</text>
+				<tKey>FSFTweaksNoDefaultStorageSettingsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No Human Filth -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Human Filth</label>
+				<key>FSFNoHumanFilth</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoHumanFilthTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the human FilthRate stat to 0 so they don't randomly spawn filth.</text>
+				<tKey>FSFTweaksNoHumanFilthDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No Improvised Weapons -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Improvised Weapons</label>
+				<key>FSFNoImprovisedWeapons</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoImprovisedWeaponsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the weapon stats from all Ingestible and Resource items so they can no longer be used as weapons.\nNote: If enabled mid save this will cause errors if anyone has these items equipped.  You can use the mod Character Editor to move items to the inventory to fix this.</text>
+				<tKey>FSFTweaksNoImprovisedWeaponsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No One Ever Flees -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No One Ever Flees</label>
+				<key>FSFNoOneEverFlees</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoOneEverFleesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Patches every faction adding autoflee false as a tag so they will never break or flee no matter how many people die.\nThis setting is best used in combination with other mods.  See the No One Ever Flees workshop page for full details.</text>
+				<tKey>FSFTweaksNoOneEverFleesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No Starting Research -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Starting Research</label>
+				<key>FSFNoStartingResearchOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoStartingResearchTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to pick which starting Player Factions should start the game with no completed research projects.</text>
+				<tKey>FSFNoStartingResearchOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFNoStartingResearchOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>All Factions</label>
+						<key>FSFNoStartingResearchAll</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNoStartingResearchAllTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Removes all starting research from every Player Faction.  This should work for all DLC and mods.  If this is enabled then none of the following settings should be enabled.\nNote: This does not remove any research added by starting Scenarios.</text>
+						<tKey>FSFTweaksNoStartingResearchAllDesc</tKey>
+					</li>	
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Colony Faction</label>
+						<key>FSFNoStartingResearchColony</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNoStartingResearchColonyTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Removes all starting research from the Player Colony Faction called New Arrivals which is used for industrial starting scenarios like Crashlanded.</text>
+						<tKey>FSFTweaksNoStartingResearchColonyDesc</tKey>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.Checkbox">
+						<label>Research Expedition</label>
+						<key>FSFNoStartingResearchResearchEx</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNoStartingResearchResearchExTitle</tKey>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.Text">
+						<text>Removes all starting research from the Player Research Expedition Faction called Research Expedition which is used for industrial starting scenarios like The Anomaly.</text>
+						<tKey>FSFTweaksNoStartingResearchResearchExDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Tribal Faction</label>
+						<key>FSFNoStartingResearchTribal</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNoStartingResearchTribalTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Removes all starting research from the Player Tribal Faction called New Tribe which is used for tribal starting scenarios like Lost Tribe.</text>
+						<tKey>FSFTweaksNoStartingResearchTribalDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Power Generation Multiplier -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Power Generation Multiplier</label>
+				<key>FSFPowerGenerationMultiplierOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPowerGenerationMultiplierTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to multiply the power generation of all Power Generating items and the Storage Capacity of all Batteries by an input value.</text>
+				<tKey>FSFTweaksPowerGenerationMultiplierOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>	
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFPowerGenerationMultiplierOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFPowerGenerationMultiplier</key>
+						<defaultValue>2.0</defaultValue>
+						<min>1.0</min>
+						<max>50.0</max>
+						<decimals>1</decimals>
+						<label>Power Generation Multiplier {FSFPowerGenerationMultiplier}</label>
+						<tKey>FSFTweaksPowerGenerationMultiplier</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFBatteryStorageMultiplier</key>
+						<defaultValue>2.0</defaultValue>
+						<min>1.0</min>
+						<max>50.0</max>
+						<decimals>1</decimals>
+						<label>Battery Storage Capacity Multiplier {FSFBatteryStorageMultiplier}</label>
+						<tKey>FSFTweaksBatteryStorageMultiplier</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li MayRequire="vanillaquestsexpanded.generator" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="vanillaquestsexpanded.generator" Class="XmlExtensions.Setting.Slider">
+						<key>FSFVQEGPowerGenerationMultiplier</key>
+						<defaultValue>2.0</defaultValue>
+						<min>1.0</min>
+						<max>50.0</max>
+						<decimals>1</decimals>
+						<label>Vanilla Quests Expanded The Generator - Power Generation Multiplier {FSFVQEGPowerGenerationMultiplier}</label>
+						<tKey>FSFTweaksVQEGPowerGenerationMultiplier</tKey>
+					</li>
+					<li MayRequire="vanillaquestsexpanded.generator" Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Move the sliders to adjust the multiplier of all Power Generating items and the Storage Capacity of all Batteries.  The value is a straight multiplier, a value of 2 will double the original while 3 will triple it.\nThe Vanilla value is 1.</text>
+						<tKey>FSFTweaksPowerGenerationMultiplierDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Randy Fixes -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Randy Fixes</label>
+				<key>FSFRandyFixes</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRandyFixesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Randy is missing the fields TraderCaravanArrival, VisitorGroup, TravelerGroup, OrbitalTraderArrival.  This is no doubt so it relies on his randomness.  Unfortunately the randomness tends to result in not getting these events very often.  This fix adds the fields from Cassandra so these events show up regularly.  This is an addition not a replacement, so the original randomness aspect is also present.  If Vanilla Psycasts Expanded is loaded this tweak also adds the fields to Basilicus Bestower, as he's an exact copy of Randy except for his unique ability.</text>
+				<tKey>FSFTweaksRandyFixesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Render Hair Over Clothing -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Render Hair Over Clothing</label>
+				<key>FSFRenderHairOverClothing</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRenderHairOverClothingTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>With the new rendering system clothing is rendered over a pawns head when viewed from behind.  This is most noticeable with long hairstyles, instead of the hair draping over the clothing as it should it instead ends up hidden beneath making things look rather odd.  This tweak patches all clothing that would pose an issue so hair is rendered over clothing allowing hair to drape over clothing as it should.</text>
+				<tKey>FSFTweaksRenderHairOverClothingDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Sealed Power Armour -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Sealed Power Armour</label>
+				<key>FSFSealedPowerArmour</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksSealedPowerArmourTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes power armour to be airtight if it fully covers the head or body.  Meaning when the body armour and helmet are worn together it provides full Toxic Environmental Resistance.  The helmets will also provide immunity to Toxic Gas.</text>
+				<tKey>FSFTweaksSealedPowerArmourDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Stackable Chunks -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Stackable Chunks</label>
+				<key>FSFStackableChunksOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksStackableChunksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes rock and slag chunks to be stacklable and allows you to customise the stack limit.</text>
+				<tKey>FSFTweaksStackableChunksOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Warning: If enabled midsave this option may cause all rock and slag chunks to vanish.</text>
+				<tKey>FSFTweaksStackableChunksWarningDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFStackableChunksOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFStackableChunksRocks</key>
+						<defaultValue>25</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Rock Chunks Stack Limit</label>
+						<tKey>FSFTweaksStackableChunksRocks</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFStackableChunksSlag</key>
+						<defaultValue>25</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Slag Chunks Stack Limit</label>
+						<tKey>FSFTweaksStackableChunksSlag</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFStackableChunksMechanoid</key>
+						<defaultValue>25</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Mechanoid Slag Chunks Stack Limit</label>
+						<tKey>FSFTweaksStackableChunksMechanoid</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input values to adjust the stack limit.</text>
+						<tKey>FSFTweaksStackableChunksDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Table Search Radius -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Table Search Radius</label>
+				<key>FSFTableSearchRadiusOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksTableSearchRadiusTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to set a maximum radius pawns will search for a table when consuming ingestible items.  This patches all items with a preferability except ones with NeverForNutrition.</text>
+				<tKey>FSFTweaksTableSearchRadiusOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFTableSearchRadiusOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFTableSearchRadius</key>
+						<defaultValue>75</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Table Search Radius</label>
+						<tKey>FSFTweaksTableSearchRadius</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to set a maximum radius pawns will search for a table when consuming ingestible items.  This patches all items with a preferability except ones with NeverForNutrition.\nNote: If a table is within this radius they will go to it before consuming items so be careful not to set it too high.  The default value of 75 is what I've found to be a nice middle ground.</text>
+						<tKey>FSFTweaksTableSearchRadiusDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Tidy Crop Textures -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Tidy Crop Textures</label>
+				<key>FSFTidyCropTextures</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksTidyCropTexturesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the texture drawing of crops like rice that have messy texture placement to be nice and uniform like corn.</text>
+				<tKey>FSFTweaksTidyCropTexturesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Tribal Patchleather -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Tribal Patchleather</label>
+				<key>FSFTribalPatchleather</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksTribalPatchleatherTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds the patchleather recipe to the crafting spot allowing tribals an easier way to craft leather items.</text>
+				<tKey>FSFTweaksTribalPatchleatherDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Unlock Hediffs For Scenario Settings -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Unlock Hediffs For Scenario Settings</label>
+				<key>FSFUnlockHediffsForScenario</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksUnlockHediffsForScenarioTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes a number of hediffs so they can be used in the scenario settings.  For instance this allows you to create a scenario where anyone can have a chance to spawn with Metal Horrors (Anomaly DLC), as a Mime (Alpha Animals) or a Traitor (Vanilla Expanded Events).\nTo do this in the scenario editor click Add Part -> Forced Health Condition -> (The hediff you want). Set the severity (depending on the hediff severity can do different things), modify the percentage chance and set the context.</text>
+				<tKey>FSFTweaksUnlockHediffsForScenarioDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFUnlockHediffsForScenario</key>
+				<caseTrue>
+					<li MayRequire="VanillaExpanded.VEE" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="VanillaExpanded.VEE" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFScenarioHediffTraitorMinTicks</key>
+						<defaultValue>120000</defaultValue>
+						<min>1</min>
+						<max>999999999</max>
+						<label>Traitor Minimum Time Range In Ticks</label>
+						<tKey>FSFTweaksScenarioHediffTraitorMinTicks</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.VEE" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFScenarioHediffTraitorMaxTicks</key>
+						<defaultValue>360000</defaultValue>
+						<min>1</min>
+						<max>999999999</max>
+						<label>Traitor Maximum Time Range In Ticks</label>
+						<tKey>FSFTweaksScenarioHediffTraitorMaxTicks</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.VEE" Class="XmlExtensions.Setting.Text">
+						<text>Input values to adjust the minimum and maximum time range of a Traitor reveal.  The value is written in what the game calls ticks.  There are 2500 ticks in one game hour and 60000 ticks in a day.\nThe Vanilla value is 120000 (2 day) to 360000 (6 days).</text>
+						<tKey>FSFTweaksScenarioHediffTraitorTicksDesc</tKey>
+					</li>
+					<li MayRequire="VanillaExpanded.VEE" Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Quest Reward Pawn Bios -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Quest Reward Pawn Bios</label>
+				<key>FSFQuestRewardPawnBios</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksQuestRewardPawnBiosTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Stops quests from hiding the bio of pawns given as rewards so you can decide if its worth doing the quest or not.</text>
+				<tKey>FSFTweaksQuestRewardPawnBiosDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Update Psychic Stuff -->
+			
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.Checkbox">
+				<label>Update Psychic Stuff</label>
+				<key>FSFUpdatePsychicStuff</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksUpdatePsychicStuffTitle</tKey>
+			</li>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.Text">
+				<text>Updates the Psychic Sensitivity traits and Psychic Sensitizer to have bonuses for Meditation Focus Gain and Psychic Entropy Recovery Rate.  These stats appear on Biotech genes relating to Psychic Sensitivity but these items were never changed.</text>
+				<tKey>FSFTweaksUpdatePsychicStuffDesc</tKey>
+			</li>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.SetColor"/>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Water Movement Tweaks -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Water Movement Tweaks</label>
+				<key>FSFWaterMovementTweaksOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksWaterMovementTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise the pathing cost of water and if the tiles are impassable.</text>
+				<tKey>FSFTweaksWaterMovementTweaksOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFWaterMovementTweaksOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFWaterMovementTweaksShallowCost</key>
+						<defaultValue>30</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Shallow Water Pathing Cost</label>
+						<tKey>FSFTweaksWaterMovementTweaksShallowCost</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Shallow Water is Impassable</label>
+						<key>FSFWaterMovementTweaksShallowImpassable</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksWaterMovementTweaksShallowImpassable</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFWaterMovementTweaksChestDeepCost</key>
+						<defaultValue>42</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Chest Deep Water Pathing Cost</label>
+						<tKey>FSFTweaksWaterMovementTweaksChestDeepCost</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Chest Deep Water is Impassable</label>
+						<key>FSFWaterMovementTweaksChestDeepImpassable</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksWaterMovementTweaksChestDeepImpassable</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFWaterMovementTweaksDeepCost</key>
+						<defaultValue>300</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Deep Water Pathing Cost</label>
+						<tKey>FSFTweaksWaterMovementTweaksDeepCost</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Deep Water is Passable</label>
+						<key>FSFWaterMovementTweaksDeepPassable</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksWaterMovementTweaksDeepPassable</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the pathing cost of water tiles.  The pathing cost is irrelevant if the terrain is set to impassable.\nPathing cost is a bit odd so you'll have to experiment with numbers.  A cost of 4 gives 76% movement speed on a tile but 40 gives 25%.\nVanilla Values Shallow Water 30, Chest Deep Water 42, Deep Water 300.</text>
+						<tKey>FSFTweaksWaterMovementTweaksDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Wild Animal Reproduction -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Wild Animal Reproduction</label>
+				<key>FSFWildAnimalReproduction</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksWildAnimalReproductionTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows wild animals to mate so they become pregnant just like colony animals.  Also removes the deterioration rate of fertilized eggs so they can survive outdoors.</text>
+				<tKey>FSFTweaksWildAnimalReproductionDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Wolves Are Dogs -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Wolves Are Dogs</label>
+				<key>FSFWolvesAreDogs</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksWolvesAreDogsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the FilthRate to 1, Petness to 1 and nuzzleMtbHours to 12 to match dogs allowing you to have clean, friendly, nuzzle happy wolves.  Also adds mating pairs of Timber Wolves and Arctic Wolves for sale at faction bases so they're easy to acquire.</text>
+				<tKey>FSFTweaksWolvesAreDogsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Younger People -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Younger People</label>
+				<key>FSFYoungerPeople</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksYoungerPeopleTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>This is intended for games with a high ageing multiplier to ensure a steady supply of new marriage candidates.  While the settings are set to 18 to 25 the actual age of people should be between 13 and 25 with it tending toward the average.  The numbers can skew outside of that range when you include children and parent/child relationships.  After spawning people will age at your set multiplier so you should see older pawns as time goes on provided they don't die and the game doesn't purge them.</text>
+				<tKey>FSFTweaksYoungerPeopleDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Anomaly Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksAnomaly</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Biotech Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksBiotech</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Ideology Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksIdeology</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Royalty Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksRoyalty</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Mod Settings -->
+			
+			<!-- Alpha Animals Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksAlphaAnimals</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Anthrosonae Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksAnthrosonae</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Common Sense Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksCommonSense</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Dubs Bad Hygiene Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksDubsBadHygiene</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Lethal Darkness Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksLethalDarkness</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- [LTS]Ammunition - Simple Ammo Pack Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksLTSAmmunitionSimple</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Oops All Gene Banks Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksOopsAllGeneBanks</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Packs Are Not Belts Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksPacksAreNotBelts</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Research Appropriation Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksResearchAppropriation</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Research Reinvented Stepping Stones Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksRRSS</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- SafeJobWorld Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksSafeJobWorld</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Simple Utilities Fridge Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksSimpleUtilitiesCeiling</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Simple Utilities Fridge Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksSimpleUtilitiesFridge</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Time Kills Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksTimeKills</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Cooking Expanded Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVanillaCookingExpanded</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Events Expanded Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVanillaEventsExpanded</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Expanded Framework Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVanillaExpandedFramework</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Factions Expanded - Deserters Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVFEDeserters</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Factions Expanded - Empire Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVFEEmpire</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Furniture Expanded - Security Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVFESecurity</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Ideology Expanded - Dryads Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVIEDryads</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Ideology Expanded - Memes and Structures Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVanillaExpandedMemes</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Nutrient Paste Expanded Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVanillaNutrientPaste</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Psycasts Expanded Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVanillaPsycastsExpanded</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Races Expanded - Android Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVanillaAndroid</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Races Expanded - Genie Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVREGenie</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Races Expanded - Highmate Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVREHighmate</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vanilla Races Expanded - Phytoki Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVREPhytoki</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Vehicle Framework Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVehicleFramework</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+
+</Defs>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLessDesirableLongTermFood</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Less Desirable Long Term Food
+
+				Set food to RawBad so its priority is very low
+				Set optimalityOffsetHumanlikes to +5 for Packaged Survival Meals so its prioritised above raw food
+				Set optimalityOffsetHumanlikes to +10 for Pemmican so its prioritised above Packaged Survival Meals
+				Set optimalityOffsetFeedingAnimals to -10 for Packaged Survival Meals so its prioritised below raw food
+				Set optimalityOffsetFeedingAnimals to -5 for Pemmican so its prioritised above Packaged Survival Meals but below raw food
+
+			-->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MealSurvivalPack"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MealSurvivalPack"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>5</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MealSurvivalPack"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+			
+			<!-- Core - Pemmican -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Pemmican"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Pemmican"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Pemmican"]/ingestible</xpath>
+				<value>
+					<optimalityOffsetFeedingAnimals>-5</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+			
+			<!-- Ancient Hydroponic Farm Facilities - Survival Nutrient Pack -->
+			
+			<li MayRequire="XMB.AncientHydroponicFarmFacilities.MO" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "SurvivalNutrientPack"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
+			
+			<li MayRequire="XMB.AncientHydroponicFarmFacilities.MO" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "SurvivalNutrientPack"]/ingestible</xpath>
+				<value>
+					<optimalityOffsetHumanlikes>5</optimalityOffsetHumanlikes>
+					<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

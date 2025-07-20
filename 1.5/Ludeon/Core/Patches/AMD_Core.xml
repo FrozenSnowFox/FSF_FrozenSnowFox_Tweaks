@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	        <!-- Core Mechanoids -->
+        
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_CentipedeBlaster"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>255</Steel>
+						<Plasteel>355</Plasteel>
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<SubcoreHigh MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_CentipedeGunner"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>255</Steel>
+						<Plasteel>255</Plasteel>
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<SubcoreHigh MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_CentipedeBurner"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>255</Steel>
+						<Plasteel>255</Plasteel>
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<SubcoreHigh MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Lancer"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>75</Steel>
+						<Plasteel>75</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreRegular MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Scyther"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>75</Steel>
+						<Plasteel>75</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreRegular MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+				
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "Mech_Pikeman"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>100</Steel>
+						<Plasteel>40</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreRegular MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+				
+	        <!-- Note: Termite Resources are Estimated, Centipede Body size is 3.0, Termite body size is 1.6, minus 47% resources to approximate the Termites required resources -->
+				
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "Mech_Termite"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>135</Steel>
+						<Plasteel>135</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreHigh MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

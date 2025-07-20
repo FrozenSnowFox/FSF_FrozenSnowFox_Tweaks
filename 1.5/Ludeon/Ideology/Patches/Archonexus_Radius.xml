@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFArchonexusRadius</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Archonexus Radius -->
+				
+			<!-- Tier 2 Structure -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MajorArchotechStructure"]/comps/li[@Class = "CompProperties_PlantDamager"]/radius</xpath>
+				<value>
+					<radius>16</radius>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MajorArchotechStructure"]/comps/li[@Class = "CompProperties_SpawnSubplant"]</xpath>
+				<value>
+					<li Class="CompProperties_SpawnSubplant" MayRequire="Ludeon.RimWorld.Royalty">
+						<compClass>CompSpawnImmortalSubplantsAround</compClass>
+						<subplant>Plant_GrassAnima</subplant>
+						<maxRadius>16</maxRadius>
+						<maxPlants>50</maxPlants>
+						<chanceOverDistance>
+							<points>
+								<li>(0,  0)</li>
+								<li>(4,  0.01)</li>
+								<li>(16, 1)</li>
+							</points>
+						</chanceOverDistance>
+					</li>
+				</value>
+			</li>
+				
+			<!-- Tier 3 Structure -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "GrandArchotechStructure"]/comps/li[@Class = "CompProperties_PlantDamager"]/radius</xpath>
+				<value>
+					<radius>16</radius>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "GrandArchotechStructure"]/comps/li[@Class = "CompProperties_SpawnSubplant"]</xpath>
+				<value>
+					<li Class="CompProperties_SpawnSubplant" MayRequire="Ludeon.RimWorld.Royalty">
+						<compClass>CompSpawnImmortalSubplantsAround</compClass>
+						<subplant>Plant_GrassAnima</subplant>
+						<maxRadius>16</maxRadius>
+						<maxPlants>100</maxPlants>
+						<chanceOverDistance>
+							<points>
+								<li>(0,  0)</li>
+								<li>(4,  0.01)</li>
+								<li>(16, 1)</li>
+							</points>
+						</chanceOverDistance>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

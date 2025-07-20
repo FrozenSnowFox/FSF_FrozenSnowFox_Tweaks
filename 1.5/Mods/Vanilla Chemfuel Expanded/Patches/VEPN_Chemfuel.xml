@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVEPipeNetworkOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFVEPNChemfuelTank</li>
+			<li>FSFVEPNDeepchemTank</li>
+		</keys>
+		<defaultValues>
+			<li>3000</li>
+			<li>3000</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Larger Fuel Storage -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "PS_ChemfuelTank"]/comps/li[@Class = "PipeSystem.CompProperties_ResourceStorage"]/storageCapacity</xpath>
+				<value>
+					<storageCapacity>{FSFVEPNChemfuelTank}</storageCapacity>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "PS_DeepchemTank"]/comps/li[@Class = "PipeSystem.CompProperties_ResourceStorage"]/storageCapacity</xpath>
+				<value>
+					<storageCapacity>{FSFVEPNDeepchemTank}</storageCapacity>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

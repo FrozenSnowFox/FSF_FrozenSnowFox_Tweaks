@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVFEDesertersMoreContrabandItems</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!--
+				More Contraband Items
+
+				Intel = 100 Market Value
+				Critical Intel = 1000 Market Value
+			-->
+			
+			<!-- Core -->
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "Hyperweave"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+						<countMult>111</countMult>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "MedicineUltratech"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>1</intelCost>
+						<countMult>1</countMult>
+					</li>
+				</value>
+			</li>
+			
+			<!--
+				FSF Advanced Bionics Expansion
+ 				Core Bionics
+			-->
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicEar"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>14</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicEye"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>18</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicJaw"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>14</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicArm"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>18</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicSpine"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>18</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicHeart"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>14</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicLung"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>14</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicKidney"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicLiver"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>14</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicStomach"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>14</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicLeg"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>18</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainMeleeCombat"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainRangedCombat"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainAddiction"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainRecreation"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainAnimals"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainMedical"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainPlants"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantTorsoClimateControl"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantTorsoRespirator"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantEMPShield"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicPowerArm"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>28</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicBreachArm"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>28</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicTaserArm"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>28</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicTaserJaw"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>21</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainConsciousness"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantMechanitesArmor"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>20</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantMechanitesSensory"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>20</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantMechanitesSpeed"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>20</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantMechanitesStrength"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>20</intelCost>
+					</li>
+				</value>
+			</li>
+				
+			<!--
+				FSF Advanced Bionics Expansion
+ 				Biotech DLC Bionics
+			-->
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion,Ludeon.RimWorld.Biotech" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantReproduction"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>8</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion,Ludeon.RimWorld.Biotech" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicMedicArm"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>31</intelCost>
+					</li>
+				</value>
+			</li>
+				
+			<!--
+				FSF Advanced Bionics Expansion
+ 				Ideology DLC Bionics
+			-->
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion,Ludeon.RimWorld.Ideology" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantBrainDarklight"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+				
+			<!--
+				FSF Advanced Bionics Expansion
+ 				Royalty DLC Bionics
+			-->
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion,Ludeon.RimWorld.Royalty" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicConstructionArm"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>30</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion,Ludeon.RimWorld.Royalty" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicDrillArm"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>30</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion,Ludeon.RimWorld.Royalty" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFAdvBionicFieldArm"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>30</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion,Ludeon.RimWorld.Royalty" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantMechanitesPsychic"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>20</intelCost>
+					</li>
+				</value>
+			</li>
+				
+			<!--
+				FSF Advanced Bionics Expansion
+ 				Vanilla Expanded Framework Bionics
+			-->
+			
+			<li MayRequire="FrozenSnowFox.AdvancedBionicsExpansion,OskarPotocki.VanillaFactionsExpanded.Core" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "FSFImplantMechanitesHealing"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>20</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<!-- [LTS] Ammunition - Simple Ammo Pack -->
+			
+			<li MayRequire="LimeTreeSnake.Ammo" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "AmmoSpacer"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Deserter</category>
+						<intelCost>1</intelCost>
+						<countMult>65</countMult>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="LimeTreeSnake.Ammo" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "AmmoUltratech"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Deserter</category>
+						<intelCost>1</intelCost>
+						<countMult>20</countMult>
+					</li>
+				</value>
+			</li>
+			
+			<!-- Research Appropriation -->
+			
+			<li MayRequire="GarryFlowers.ResearchAppropriation" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "GarryFlowers_NeolithicResearchData"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>5</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="GarryFlowers.ResearchAppropriation" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "GarryFlowers_MedievalResearchData"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>10</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="GarryFlowers.ResearchAppropriation" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "GarryFlowers_IndustrialResearchData"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>15</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="GarryFlowers.ResearchAppropriation" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "GarryFlowers_SpacerResearchData"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>20</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="GarryFlowers.ResearchAppropriation" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "GarryFlowers_UltraResearchData"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>25</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<!-- Vanilla Weapons Expanded - Coilguns -->
+			
+			<li MayRequire="VanillaExpanded.VWEC" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "VWE_Gun_GaussRifle"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>8</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEC" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "VWE_Gun_GaussMagnum"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>5</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VWEC" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "VWE_Gun_GaussLance"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>21</intelCost>
+					</li>
+				</value>
+			</li>
+			
+			<!-- VWE Coilguns - Unofficial Gauss Sniper -->
+			
+			<li MayRequire="sari.GaussSniper" Class="PatchOperationAddModExtension">
+				<xpath>/Defs/ThingDef[defName = "VWE_Gun_GaussSniper"]</xpath>
+				<value>
+					<li Class="VFED.ContrabandExtension">
+						<category>VFED_Imperial</category>
+						<intelCost>20</intelCost>
+					</li>
+				</value>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

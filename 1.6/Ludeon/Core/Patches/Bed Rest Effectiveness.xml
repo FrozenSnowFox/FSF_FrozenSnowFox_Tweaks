@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBedRestEffectivenessOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFBedRestEffectivenessAwful</li>
+			<li>FSFBedRestEffectivenessPoor</li>
+			<li>FSFBedRestEffectivenessNormal</li>
+			<li>FSFBedRestEffectivenessGood</li>
+			<li>FSFBedRestEffectivenessExcellent</li>
+			<li>FSFBedRestEffectivenessMasterwork</li>
+			<li>FSFBedRestEffectivenessLegendary</li>
+		</keys>
+		<defaultValues>
+			<li>0.86</li>
+			<li>0.92</li>
+			<li>1.00</li>
+			<li>1.08</li>
+			<li>1.14</li>
+			<li>1.25</li>
+			<li>1.60</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Lower Bed Rest Effectiveness Tweaks -->
+		
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StatDef[defName = "BedRestEffectiveness"]/parts/li[@Class = "StatPart_Quality"]/factorAwful</xpath>
+			<value>
+				<factorAwful>{FSFBedRestEffectivenessAwful}</factorAwful>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StatDef[defName = "BedRestEffectiveness"]/parts/li[@Class = "StatPart_Quality"]/factorPoor</xpath>
+			<value>
+				<factorPoor>{FSFBedRestEffectivenessPoor}</factorPoor>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StatDef[defName = "BedRestEffectiveness"]/parts/li[@Class = "StatPart_Quality"]/factorNormal</xpath>
+			<value>
+				<factorNormal>{FSFBedRestEffectivenessNormal}</factorNormal>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StatDef[defName = "BedRestEffectiveness"]/parts/li[@Class = "StatPart_Quality"]/factorGood</xpath>
+			<value>
+				<factorGood>{FSFBedRestEffectivenessGood}</factorGood>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StatDef[defName = "BedRestEffectiveness"]/parts/li[@Class = "StatPart_Quality"]/factorExcellent</xpath>
+			<value>
+				<factorExcellent>{FSFBedRestEffectivenessExcellent}</factorExcellent>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StatDef[defName = "BedRestEffectiveness"]/parts/li[@Class = "StatPart_Quality"]/factorMasterwork</xpath>
+			<value>
+				<factorMasterwork>{FSFBedRestEffectivenessMasterwork}</factorMasterwork>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/StatDef[defName = "BedRestEffectiveness"]/parts/li[@Class = "StatPart_Quality"]/factorLegendary</xpath>
+			<value>
+				<factorLegendary>{FSFBedRestEffectivenessLegendary}</factorLegendary>
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

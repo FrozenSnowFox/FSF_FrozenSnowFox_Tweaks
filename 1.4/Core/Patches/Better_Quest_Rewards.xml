@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterQuestRewardsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			<!-- Better Quest Rewards -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterQuestRewardsHyperweave</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Hyperweave -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "Reward_ItemsStandard"]/root[@Class = "ThingSetMaker_Sum"]/options/li [minTotalMarketValue=5500]/thingSetMaker[@Class = "ThingSetMaker_RandomOption"]/options</xpath>
+				<value>
+					
+			  <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Hyperweave</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterQuestRewardsJade</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Jade -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "Reward_ItemsStandard"]/root[@Class = "ThingSetMaker_Sum"]/options/li [minTotalMarketValue=5500]/thingSetMaker[@Class = "ThingSetMaker_RandomOption"]/options</xpath>
+				<value>
+					
+			  <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Jade</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterQuestRewardsSynthread</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Synthread -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "Reward_ItemsStandard"]/root[@Class = "ThingSetMaker_Sum"]/options/li [minTotalMarketValue=5500]/thingSetMaker[@Class = "ThingSetMaker_RandomOption"]/options</xpath>
+				<value>
+					
+			  <li>
+                <weight>0.75</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Synthread</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

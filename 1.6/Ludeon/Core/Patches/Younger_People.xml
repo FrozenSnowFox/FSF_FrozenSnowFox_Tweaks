@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFYoungerPeople</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Younger People -->
+			
+			<!--
+				Adjust minGenerationAge on existing PawnKindDef's to prevent errors
+				Remove existing maxGenerationAge on all pawns
+				Add maxGenerationAge with preset age to all pawns
+			-->
+				
+			<!-- Human Pawns -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef [number(minGenerationAge) >= 19] [race = "Human"] /minGenerationAge</xpath>
+				<value>
+					<minGenerationAge>18</minGenerationAge>
+				</value>
+			</li>
+	
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PawnKindDef [number(maxGenerationAge) >= 26] [race = "Human"] /maxGenerationAge</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/PawnKindDef [race = "Human"]</xpath>
+				<value>
+					<maxGenerationAge>25</maxGenerationAge>
+				</value>
+			</li>
+				
+			<!-- Patch to catch defs that inherit Race Human instead of having it directly -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef [number(minGenerationAge) >= 19] [apparelTags or specificApparelRequirements or weaponTags or weaponMoney] [not(race)] /minGenerationAge</xpath>
+				<value>
+					<minGenerationAge>18</minGenerationAge>
+				</value>
+			</li>
+				
+			<!-- CreepJoiner Pawns 
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/CreepJoinerFormKindDef [number(minGenerationAge) >= 19] /minGenerationAge</xpath>
+				<value>
+					<minGenerationAge>18</minGenerationAge>
+				</value>
+			</li>
+	
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/CreepJoinerFormKindDef [number(maxGenerationAge) >= 26] /maxGenerationAge</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/CreepJoinerFormKindDef</xpath>
+				<value>
+					<maxGenerationAge>25</maxGenerationAge>
+				</value>
+			</li>
+
+			-->
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

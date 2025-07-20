@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRaiderNoWorkSpeedMalus</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PreceptDef[defName = "Raiding_Respected"]/statOffsets</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PreceptDef[defName = "Raiding_Required"]/statOffsets</xpath>
+			</li>
+				
+			<li MayRequire="VanillaExpanded.VMemesE" Class="PatchOperationRemove">
+				<xpath>/Defs/PreceptDef[defName = "VME_Raiding_Honorable"]/statOffsets</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

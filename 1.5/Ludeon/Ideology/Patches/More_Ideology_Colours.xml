@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreIdeologyColours</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- More Ideology Colours -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoArchotech</defName>
+						<color>(139, 143, 104)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoLimestone</defName>
+						<color>(158, 153, 135)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoMarble</defName>
+						<color>(132, 135, 132)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoSandstone</defName>
+						<color>(126, 104, 94)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoGranite</defName>
+						<color>(105, 95, 97)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoSlate</defName>
+						<color>(70, 70, 70)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoSynthread</defName>
+						<color>(174, 219, 228)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoMuffaloLeather</defName>
+						<color>(152, 170, 174)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoHyperweave</defName>
+						<color>(0, 106, 126)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoAlpaca</defName>
+						<color>(237, 216, 174)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoDevilstrand</defName>
+						<color>(180, 60, 60)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoViolet</defName>
+						<color>(91, 62, 114)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoDarkViolet</defName>
+						<color>(71, 43, 93)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoDarkScarlet</defName>
+						<color>(86, 3, 25)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoPitchBlack</defName>
+						<color>(0.1, 0.1, 0.1)</color>
+					</ColorDef>
+					
+					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoBluishPitchBlack</defName>
+						<color>(28, 29, 33)</color>
+					</ColorDef>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVIEDNoSeparationSickness</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Separation Sickness -->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Carrier"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Clawer"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Barkskin"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Woodmaker"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Medicinemaker"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Berrymaker"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Stonedigger"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Nectarmaker"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Spitter"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VDE_AwakenedDryad_Gaubricmaker"]/comps/li[@Class = "AnimalBehaviours.CompProperties_DiseasesAfterPeriod"]</xpath>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

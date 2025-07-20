@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHemogenForFood</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Hemogen For Food -->
+				
+			<!-- Biotech DLC -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "HemogenPack"]/statBases/Nutrition</xpath>
+				<value>
+					<Nutrition>1.0</Nutrition>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "HemogenPack"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>MealAwful</preferability>
+				</value>
+			</li>
+				
+			<!-- Vanilla Races Expanded Sanguophage -->
+				
+			<li MayRequire="vanillaracesexpanded.sanguophage" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_HemogenPack_Animal"]/statBases/Nutrition</xpath>
+				<value>
+					<Nutrition>1.0</Nutrition>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaracesexpanded.sanguophage" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_HemogenPack_Animal"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>MealAwful</preferability>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaracesexpanded.sanguophage" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_HemogenPack_Corpse"]/statBases/Nutrition</xpath>
+				<value>
+					<Nutrition>1.0</Nutrition>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaracesexpanded.sanguophage" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_HemogenPack_Corpse"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>MealAwful</preferability>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaracesexpanded.sanguophage" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_HemogenPack_Sanguophage"]/statBases/Nutrition</xpath>
+				<value>
+					<Nutrition>1.0</Nutrition>
+				</value>
+			</li>
+				
+			<li MayRequire="vanillaracesexpanded.sanguophage" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_HemogenPack_Sanguophage"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>MealAwful</preferability>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

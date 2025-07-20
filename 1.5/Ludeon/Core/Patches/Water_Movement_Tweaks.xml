@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFWaterMovementTweaksOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFWaterMovementTweaksChestDeepCost</li>
+			<li>FSFWaterMovementTweaksShallowCost</li>
+			<li>FSFWaterMovementTweaksDeepCost</li>
+		</keys>
+		<defaultValues>
+			<li>42</li>
+			<li>30</li>
+			<li>300</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Water Movement Tweaks -->
+		
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/TerrainDef[@Name = "WaterChestDeepBase"]/pathCost</xpath>
+			<value>
+				<pathCost>{FSFWaterMovementTweaksChestDeepCost}</pathCost>
+			</value>
+		</li>
+			
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/TerrainDef[@Name = "WaterShallowBase"]/pathCost</xpath>
+			<value>
+				<pathCost>{FSFWaterMovementTweaksShallowCost}</pathCost>
+			</value>
+		</li>
+				
+ 		<li Class="PatchOperationReplace">
+			<xpath>/Defs/TerrainDef[@Name = "WaterDeepBase"]/pathCost</xpath>
+			<value>
+				<pathCost>{FSFWaterMovementTweaksDeepCost}</pathCost>
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFWaterMovementTweaksChestDeepImpassable</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Chest Deep Water is Impassable -->
+			
+ 		<li Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name = "WaterChestDeepBase"]</xpath>
+			<value>
+				<passability>Impassable</passability>
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFWaterMovementTweaksShallowImpassable</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Shallow Water is Impassable -->
+			
+ 		<li Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name = "WaterShallowBase"]</xpath>
+			<value>
+				<passability>Impassable</passability>
+			</value>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFWaterMovementTweaksDeepPassable</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Deep Water is Passable -->
+			
+ 		<li Class="PatchOperationRemove">
+			<xpath>/Defs/TerrainDef[@Name = "WaterDeepBase"]/passability</xpath>
+		</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

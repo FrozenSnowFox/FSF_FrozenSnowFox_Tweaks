@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoDefaultFungusInMeals</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- No Default Fungus In Meals -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs[li[text()="Meat_Human"]]</xpath>
+				<value>
+					<li>RawFungus</li>
+				</value>
+			</li>
+				
+			<li MayRequire="sarg.alphaanimals" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs[li[text()="Meat_Human"]]</xpath>
+				<value>
+					<li>AA_AgariluxRawFungus</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

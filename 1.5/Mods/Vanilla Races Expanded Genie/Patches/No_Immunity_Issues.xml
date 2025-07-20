@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVREGenieNoImmunityIssues</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Immunity Issues -->
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Genie"]/genes/li[text()="VRE_Immunity_VeryWeak"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Genie"]/genes/li[text()="VRE_Slow_Diseases"]</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Genie"]/genes/li[text()="AddictionResistant_VRE_Antibiotics"]</xpath>
+			</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksRRSS"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Research Reinvented Stepping Stones Tweaks</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksRRSSTweaksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Sorted Steps -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Sorted Steps</label>
+				<key>FSFRRSSSortedSteps</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRRSSSortedStepsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Patches numerous items from the Core game and mods that were missed to better fit the flow of research.  This is done by using research projects provided by Research Reinvented Stepping Stones and other mods such as Vanilla Expanded.  Also adds a number of items from mods to Research Reinvented's blacklist so they don't appear as research items.  These items are generally things like invisible walls or items that require a specific Ideology style.\nThis version is designed to only work without Vanilla Factions Expanded Tribals.</text>
+				<tKey>FSFTweaksRRSSSortedStepsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+					
+					
+					
+			<li MayRequire="OskarPotocki.VFE.Tribals" Class="XmlExtensions.Setting.Checkbox">
+				<label>Sorted Steps VFE Tribals</label>
+				<key>FSFRRSSSortedStepsVFETribals</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRRSSSortedStepsVFETribalsTitle</tKey>
+			</li>
+			<li MayRequire="OskarPotocki.VFE.Tribals" Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li MayRequire="OskarPotocki.VFE.Tribals" Class="XmlExtensions.Setting.Text">
+				<text>Patches numerous items from the Core game and mods that were missed to better fit the flow of research.  This is done by using research projects provided by Research Reinvented Stepping Stones and other mods such as Vanilla Expanded.  Also adds a number of items from mods to Research Reinvented's blacklist so they don't appear as research items.  These items are generally things like invisible walls or items that require a specific Ideology style.\nThis version requires Vanilla Factions Expanded Tribals.</text>
+				<tKey>FSFTweaksRRSSSortedStepsVFETribalsDesc</tKey>
+			</li>
+			<li MayRequire="OskarPotocki.VFE.Tribals" Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+				
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

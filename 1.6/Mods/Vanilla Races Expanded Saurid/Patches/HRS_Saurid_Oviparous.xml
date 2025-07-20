@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFHumanReproductonOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+
+			
+			
+			
+		<!-- Vanilla Races Expanded Saurid Oviparous Gene -->
+			
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFVRESauridEggFatigueDays</li>
+			<li>FSFVRESauridEggHatchDays</li>
+		</keys>
+		<defaultValues>
+			<li>18</li>
+			<li>18</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+		<!-- Vanilla Races Expanded Saurid Oviparous Egg Fatigue Duration -->
+				
+			<li Class="XmlExtensions.CreateVariable">
+		       	<storeIn>FSFVRESauridEggFatigueSeverity</storeIn>
+		       	<value>-1</value>
+	    	   	<value2>{FSFVRESauridEggFatigueDays}</value2>
+	        	<operation>/</operation>
+		       	<apply>
+						
+			   		<Operation Class="PatchOperationReplace">
+			            <xpath>/Defs/HediffDef[defName = "VRESaurids_EggFatigue"]/comps/li[@Class = "HediffCompProperties_SeverityPerDay"]/severityPerDay</xpath>
+					    <value>
+							<severityPerDay>{FSFVRESauridEggFatigueSeverity}</severityPerDay>
+				    	</value>
+			        </Operation>
+						
+		       	</apply>
+	    	</li>
+				
+		<!-- Vanilla Races Expanded Saurid Oviparous Egg Days To Hatch -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRESaurids_HumanEgg"]/comps/li[@Class = "VRESaurids.CompProperties_HumanHatcher"]/daysToHatch</xpath>
+				<value>
+					<daysToHatch>{FSFVRESauridEggHatchDays}</daysToHatch>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

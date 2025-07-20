@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMountsForSaleOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Mounts For Sale -->
+				
+			<!-- Add Trade Tags to Animals and Add them for sale at Faction Bases -->
+				
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef[defName = "Horse"]/tradeTags</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Horse"]/tradeTags</xpath>
+					<value>
+						<li>FSFHorse</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Horse"]</xpath>
+					<value>
+						<tradeTags>
+							<li>FSFHorse</li>
+						</tradeTags>
+					</value>
+				</nomatch>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef [defName [contains(text(), "Base")]] [defName [contains(text(), "Neolithic")]] /stockGenerators</xpath>
+				<value>
+					<li Class="StockGenerator_Animals">
+						<tradeTagsSell>
+							<li>FSFHorse</li>
+						</tradeTagsSell>
+						<kindCountRange>2</kindCountRange>
+						<countRange>4</countRange>
+						<createMatingPair>
+							<li>FSFHorse</li>
+						</createMatingPair>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

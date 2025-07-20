@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFArtistsAreProductionSpecialists</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PreceptDef[defName = "IdeoRole_ProductionSpecialist"]/description</xpath>
+				<value>
+					<description>A special ideoligious status focusing on crafting, construction and art to the exclusion of all else. This specialized role gives increased crafting and construction efficiency, and the ability to boost the production abilities of nearby allies. Holders of this role will refuse to do some non-production work.</description>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PreceptDef[defName = "IdeoRole_ProductionSpecialist"]/roleRequirements/li[@Class = "RoleRequirement_MinSkillAny"]/skills</xpath>
+				<value>
+					<Artistic>6</Artistic>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PreceptDef[defName = "IdeoRole_ProductionSpecialist"]/roleRequiredWorkTagAny</xpath>
+				<value>
+					<li>Artistic</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

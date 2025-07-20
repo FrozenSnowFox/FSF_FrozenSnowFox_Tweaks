@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoDefaultFungusInMeals</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Default Fungus In Meals -->
+				
+			<!-- Core Broad Patch -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs[li[text()="Meat_Human"]]</xpath>
+				<value>
+					<li>RawFungus</li>
+					<li MayRequire="sarg.alphaanimals">AA_AgariluxRawFungus</li>
+				</value>
+			</li>
+				
+			<!-- Vanilla Cooking Expanded Sushi -->
+				
+			<li MayRequire="VanillaExpanded.VCookESushi" Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/RecipeDef[@Name = "VCE_CookSushiMealBase"
+					or @Name = "VCE_CookFineSushiMealBase"
+					or @Name = "VCE_CookGourmetSushiMealBase"]
+				</xpath>
+				<value>
+					<defaultIngredientFilter>
+						<disallowedThingDefs>
+							<li>RawFungus</li>
+							<li MayRequire="sarg.alphaanimals">AA_AgariluxRawFungus</li>
+						</disallowedThingDefs>
+					</defaultIngredientFilter>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMoreVariedRaidLoot</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- More Varied Raid Loot -->
+			
+			<!--
+				Tribal
+
+            	Silver
+            	Jade
+            	MedicineHerbal
+            	Pemmican
+			-->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "TribeRaidLootMaker"]/root[@Class = "ThingSetMaker_MarketValue"]/fixedParams/filter/thingDefs</xpath>
+				<value>
+					<li>Ambrosia</li>
+					<li MayRequire="LimeTreeSnake.Ammo">AmmoPrimitive</li>
+					<li>Gold</li>
+					<li>InsectJelly</li>
+					<li>Leather_Thrumbo</li>
+					<li>PsychiteTea</li>
+					<li MayRequire="OskarPotocki.VFE.Vikings">VFEV_Honey</li>
+				</value>
+			</li>
+			
+			<!--
+				Outlander
+
+            	Silver
+            	MedicineIndustrial
+            	ComponentIndustrial
+            	MealSurvivalPack
+            	Neutroamine
+			-->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "OutlanderRaidLootMaker"]/root[@Class = "ThingSetMaker_MarketValue"]/fixedParams/filter/thingDefs</xpath>
+				<value>
+					<li MayRequire="LimeTreeSnake.Ammo">AmmoIndustrial</li>
+					<li MayRequire="vanillaracesexpanded.genie">VRE_Antibiotics</li>
+					<li>Beer</li>
+					<li MayRequire="VanillaExpanded.VBrewE">VBE_HotCoffee</li>
+					<li>DevilstrandCloth</li>
+					<li>Penoxycyline</li>
+					<li MayRequire="VanillaExpanded.VBrewE">VBE_Tea</li>
+				</value>
+			</li>
+			
+			<!--
+				Pirate
+
+	            Silver
+    	        MedicineIndustrial
+        	    MealSurvivalPack
+	            Flake
+    	        Yayo
+        	    GoJuice
+	            WakeUp
+    	        SmokeleafJoint
+        	    Luciferium
+			-->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "PirateRaidLootMaker"]/root[@Class = "ThingSetMaker_MarketValue"]/fixedParams/filter/thingDefs</xpath>
+				<value>
+					<li MayRequire="LimeTreeSnake.Ammo">AmmoIndustrial</li>
+					<li MayRequire="LimeTreeSnake.Ammo">AmmoSpacer</li>
+					<li>Gold</li>
+					<li>Synthread</li>
+					<li MayRequire="VanillaExpanded.VBrewE">VBE_Vodka</li>
+					<li MayRequire="VanillaExpanded.VBrewE">VBE_Whiskey</li>
+				</value>
+			</li>
+			
+			<!--
+				Mechanoid
+
+	            Plasteel
+				ComponentIndustrial
+
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "MechanoidRaidLootMaker"]/root[@Class = "ThingSetMaker_MarketValue"]/fixedParams/filter/thingDefs</xpath>
+				<value>
+					
+				</value>
+			</li>
+
+			-->
+			
+			<!--
+				Empire (Royalty DLC)
+
+            	Gold
+            	MedicineUltratech
+            	Uranium
+            	MealSurvivalPack
+			-->
+			
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "EmpireRaidLootMaker"]/root[@Class = "ThingSetMaker_MarketValue"]/fixedParams/filter/thingDefs</xpath>
+				<value>
+					<li MayRequire="LimeTreeSnake.Ammo">AmmoSpacer</li>
+					<li>Hyperweave</li>
+					<li>Synthread</li>
+					<li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

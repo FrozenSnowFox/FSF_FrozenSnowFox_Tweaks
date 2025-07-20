@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVehicleFrameworkRenameCarParts</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Rename Car Parts -->
+			
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingCategoryDef[defName = "VVE_CarParts"]/label</xpath>
+				<value>
+					<label>vehicle parts</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_EngineBlock"]/label</xpath>
+				<value>
+					<label>vehicle engine block</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarAlternator"]/label</xpath>
+				<value>
+					<label>vehicle alternator</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarExhaust"]/label</xpath>
+				<value>
+					<label>vehicle exhaust</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarExhaust"]/description</xpath>
+				<value>
+					<description>A series of pipes, catalysts and fittings that transfer the exhaust from the vehicle engine away from the driver’s cabin. Engines that will be put under a lot of strain require more exhausts.</description>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarSuspension"]/label</xpath>
+				<value>
+					<label>vehicle suspension</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarWheel"]/label</xpath>
+				<value>
+					<label>vehicle wheel</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarBattery"]/label</xpath>
+				<value>
+					<label>vehicle battery</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarFuelTank"]/label</xpath>
+				<value>
+					<label>vehicle fuel tank</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarTransmission"]/label</xpath>
+				<value>
+					<label>vehicle transmission</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarRadiator"]/label</xpath>
+				<value>
+					<label>vehicle radiator</label>
+				</value>
+			</li>
+				
+			<li MayRequire="OskarPotocki.VanillaVehiclesExpanded" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VVE_CarWiring"]/label</xpath>
+				<value>
+					<label>vehicle wiring</label>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

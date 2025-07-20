@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoEmpireTradingPermit</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Empire Trading Permit -->
+			
+			<!-- Remove Base Trading Requirement -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/TraderKindDef[defName = "Base_Empire_Standard"]/permitRequiredForTrading</xpath>
+			</li>
+
+			<!-- Remove Trade Caravan Requirement -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/TraderKindDef[defName = "Empire_Caravan_TraderGeneral"]/permitRequiredForTrading</xpath>
+			</li>
+
+			<!-- Remove Orbital Trader Requirement -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/TraderKindDef[defName = "Orbital_Empire"]/permitRequiredForTrading</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>
