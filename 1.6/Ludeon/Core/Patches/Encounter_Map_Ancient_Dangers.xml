@@ -13,11 +13,14 @@
 				
 			<!-- Encounter Map Ancient Dangers -->
 			
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps</xpath>
-				<value>
-					<li>ScatterShrines</li>
-				</value>
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps/li[text()="ScatterShrines"]</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps</xpath>
+					<value>
+						<li>ScatterShrines</li>
+					</value>
+				</nomatch>
 			</li>
 				
 			</operations>

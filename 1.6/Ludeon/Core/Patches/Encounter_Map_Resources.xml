@@ -13,11 +13,14 @@
 				
 			<!-- Encounter Map Resources -->
 			
-			<li Class="PatchOperationReplace">
+			<li Class="PatchOperationConditional">		
 				<xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps/li[text()="RocksFromGrid_NoMinerals"]</xpath>
-				<value>
-					<li>RocksFromGrid</li>
-				</value>
+				<match Class="PatchOperationReplace">
+					<xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps/li[text()="RocksFromGrid_NoMinerals"]</xpath>
+					<value>
+						<li>RocksFromGrid</li>
+					</value>
+				</match>
 			</li>
 				
 			</operations>
