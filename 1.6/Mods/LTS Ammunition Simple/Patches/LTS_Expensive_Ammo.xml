@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLTSExpensiveAmmo</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- LTS Expensive Ammo -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!--
+				Primitive Ammo
+				60 Yield / 1.5 Ingredient to Ammo Ratio = 40 Ingredients
+				Wood Log Value 1.2 * 60 Yield = Ammo Price Auto Calculated
+			-->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "AmmoPrimitive"]/statBases/MarketValue</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoPrimitive"]/ingredients/li/count</xpath>
+				<value>
+					<count>40</count>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoPrimitive"]/products/AmmoPrimitive</xpath>
+				<value>
+					<AmmoPrimitive>60</AmmoPrimitive>
+				</value>
+			</li>
+			
+			<!--
+				Medieval Ammo
+				60 Yield / 1.5 Ingredient to Ammo Ratio = 40 Ingredients
+				Stone Chunk = 20 Stone Blocks 0.9 Value Each
+				Steel Slag = 15 Steel 1.9 Value Each
+				Ammo Price in the middle 1.5 = 60 Yield / 1.5 = 40 = 2 Chunks
+			-->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AmmoMedieval"]/statBases/MarketValue</xpath>
+				<value>
+					<MarketValue>1.5</MarketValue>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_Medieval"]/ingredients/li/count</xpath>
+				<value>
+					<count>2</count>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_Medieval"]/products/AmmoMedieval</xpath>
+				<value>
+					<AmmoMedieval>60</AmmoMedieval>
+				</value>
+			</li>
+			
+			<!--
+				Industrial Ammo
+				60 Yield / 1.5 Ingredient to Ammo Ratio = 40 Ingredients
+				Steel Value 1.9 * 60 Yield = Ammo Price Auto Calculated
+			-->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "AmmoIndustrial"]/statBases/MarketValue</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoIndustrial"]/ingredients/li/count</xpath>
+				<value>
+					<count>40</count>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoIndustrial"]/products/AmmoIndustrial</xpath>
+				<value>
+					<AmmoIndustrial>60</AmmoIndustrial>
+				</value>
+			</li>
+			
+			<!--
+				Explosive Ammo
+			-->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "AmmoExplosive"]/statBases/MarketValue</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoExplosive"]/ingredients/li [filter/thingDefs/li[text()="Steel"]] /count</xpath>
+				<value>
+					<count>25</count>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoExplosive"]/ingredients/li [filter/thingDefs/li[text()="Chemfuel"]] /count</xpath>
+				<value>
+					<count>15</count>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoExplosive"]/products/AmmoExplosive</xpath>
+				<value>
+					<AmmoExplosive>60</AmmoExplosive>
+				</value>
+			</li>
+			
+			<!--
+				Spacer Ammo
+				Note: Spacer is nerfed to 1:2 ratio so its cheaper than Ultratech
+			-->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "AmmoSpacer"]/statBases/MarketValue</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoSpacer"]/ingredients/li/count</xpath>
+				<value>
+					<count>30</count>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoSpacer"]/products/AmmoSpacer</xpath>
+				<value>
+					<AmmoSpacer>60</AmmoSpacer>
+				</value>
+			</li>
+			
+			<!--
+				Ultratech Ammo
+			-->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "AmmoUltratech"]/statBases/MarketValue</xpath>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoUltratech"]/ingredients/li [filter/thingDefs/li[text()="Plasteel"]] /count</xpath>
+				<value>
+					<count>25</count>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoUltratech"]/ingredients/li [filter/thingDefs/li[text()="Uranium"]] /count</xpath>
+				<value>
+					<count>15</count>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "Make_AmmoUltratech"]/products/AmmoUltratech</xpath>
+				<value>
+					<AmmoUltratech>60</AmmoUltratech>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>
