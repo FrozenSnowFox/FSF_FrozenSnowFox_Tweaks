@@ -32,7 +32,15 @@
 			<!-- Power Generation Multiplier -->
 				
 			<li Class="XmlExtensions.PatchOperationMath">
-				<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Power"] [(substring-after(basePowerConsumption, '-'))] /basePowerConsumption</xpath>
+				<xpath>/Defs/ThingDef
+					
+					[not(defName = "VanometricPowerCell")]
+					[not(defName = "UnstablePowerCell")]
+					[not(defName = "VFE_SmallVanometricPowerCell")]
+					[not(defName = "VFE_LargeVanometricPowerCell")]
+					[not(defName = "VPE_ArchotechViolenceGenerator")]
+					
+					/comps/li[@Class = "CompProperties_Power"] [(substring-after(basePowerConsumption, '-'))] /basePowerConsumption</xpath>
 				<value>{FSFPowerGenerationMultiplier}</value>
 				<operation>*</operation>
 			</li>

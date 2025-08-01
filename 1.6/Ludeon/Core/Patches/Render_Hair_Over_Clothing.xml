@@ -15,6 +15,8 @@
 				
 			<!-- Note: The method of adding shellRenderedBehindHead true creates a new bug for short hairstyles which is rendering the head over clothing. -->
 				
+			<!-- Note: The Vanilla Expanded Heraldy system messes with the rendering system somehow.  Changing the layer does not move the tabard above or below any other layer. -->
+				
 			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef [apparel/layers/li[text()="Shell"]] /apparel</xpath>
 				<value>
