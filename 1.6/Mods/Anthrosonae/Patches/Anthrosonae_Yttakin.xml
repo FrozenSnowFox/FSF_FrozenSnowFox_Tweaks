@@ -13,6 +13,13 @@
 			<success>Normal</success>
 			<operations>
 				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/iconPath</xpath>
+				<value>
+					<iconPath>UI/Icons/Xenotypes/Anthrosonae/Anthrowolf</iconPath>
+				</value>
+			</li>
+				
 			<li Class="PatchOperationRemove">
 				<xpath>/Defs/XenotypeDef[defName = "Yttakin"]/genes/li[text()="VoiceRoar"]</xpath>
 			</li>

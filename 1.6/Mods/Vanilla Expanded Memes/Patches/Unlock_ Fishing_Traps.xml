@@ -12,17 +12,26 @@
 			<operations>
 				
 			<!-- Unlock Fishing Traps -->
-			
-			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationRemove">
-				<xpath>/Defs/ThingDef[defName = "VME_SmallFishingTrap"]/canGenerateDefaultDesignator</xpath>
+				
+			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName = "VME_SmallFishingTrap"]</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName = "VME_SmallFishingTrap"]/canGenerateDefaultDesignator</xpath>
+				</match>
 			</li>
-			
-			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationRemove">
-				<xpath>/Defs/ThingDef[defName = "VME_MediumFishingTrap"]/canGenerateDefaultDesignator</xpath>
+				
+			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName = "VME_MediumFishingTrap"]</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName = "VME_MediumFishingTrap"]/canGenerateDefaultDesignator</xpath>
+				</match>
 			</li>
-			
-			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationRemove">
-				<xpath>/Defs/ThingDef[defName = "VME_LargeFishingTrap"]/canGenerateDefaultDesignator</xpath>
+				
+			<li MayRequire="VanillaExpanded.VCEF" Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName = "VME_LargeFishingTrap"]</xpath>
+				<match Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName = "VME_LargeFishingTrap"]/canGenerateDefaultDesignator</xpath>
+				</match>
 			</li>
 				
 			</operations>

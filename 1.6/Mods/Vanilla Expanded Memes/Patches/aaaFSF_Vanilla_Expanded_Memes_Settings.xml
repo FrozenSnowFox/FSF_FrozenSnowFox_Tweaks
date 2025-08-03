@@ -36,6 +36,14 @@
 				<tKey>FSFTweaksUnlockFishingTrapsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Warning: Fishing traps are not added if the Odyssey DLC is active.  If you have the Odyssey DLC in your mod list do not enable this tweak.</text>
+				<tKey>FSFTweaksUnlockFishingTrapsWarning</tKey>
+			</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>					
 						

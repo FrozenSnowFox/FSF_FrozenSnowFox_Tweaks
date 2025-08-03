@@ -51,6 +51,46 @@
 					
 				</value>
 			</li>
+					
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					
+	<ThingDef ParentName="PlantBase">
+		<defName>FSFPastureGrassNight</defName>
+		<label>night pasture grass</label>
+		<description>A grass-like fungus that grows as part of a massive mycelium network designed for feeding grazing animals.  It lives for a long time and although it can be grown in low fertility soil it thrives in lushier soil.</description>
+		<statBases>
+			<MaxHitPoints>65</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.50</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/Nightgrass</texPath>
+			<drawSize>1.4</drawSize>
+		</graphicData>
+		<uiIconScale>0.715</uiIconScale>
+		<hideAtSnowOrSandDepth>0.5</hideAtSnowOrSandDepth>
+		<ingestible />
+		<plant>
+			<fertilityMin>0.05</fertilityMin>
+			<fertilitySensitivity>0.7</fertilitySensitivity>
+			<growDays>2.5</growDays>
+			<lifespanDaysPerGrowDays>48</lifespanDaysPerGrowDays>
+			<neverBlightable>true</neverBlightable>
+			<harvestWork>40</harvestWork>
+			<maxMeshCount>9</maxMeshCount>
+			<visualSizeRange>0.4~0.6</visualSizeRange>
+			<topWindExposure>0.4</topWindExposure>
+			<pollution>Any</pollution>
+			<growMinGlow>0</growMinGlow>
+			<growOptimalGlow>0</growOptimalGlow>
+			<diesToLight>true</diesToLight>
+		</plant>
+	</ThingDef>
+					
+				</value>
+			</li>
 				
 			</operations>
 		</Operation>

@@ -135,6 +135,55 @@
 				</value>
 			</li>
 				
+			<!-- 
+				Volcanic Ash
+				baseChance 1
+				minRefireDays 30
+				durationDays 2~4
+			-->
+				
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "VolcanicAsh"]/durationDays</xpath>
+				<value>
+					<durationDays>3~7</durationDays>
+				</value>
+			</li>
+				
+			<!-- 
+				Drought
+				baseChance 1
+				minRefireDays 40
+				durationDays 6~10
+			-->
+				
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "Drought"]/durationDays</xpath>
+				<value>
+					<durationDays>10~15</durationDays>
+				</value>
+			</li>
+				
+			<!-- 
+				Gill Rot
+				baseChance 0.15
+				minRefireDays 45
+				durationDays 3~6
+			-->
+				
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "GillRot"]/minRefireDays</xpath>
+				<value>
+					<minRefireDays>75</minRefireDays>
+				</value>
+			</li>
+				
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
+				<xpath>/Defs/IncidentDef[defName = "GillRot"]/durationDays</xpath>
+				<value>
+					<durationDays>10~30</durationDays>
+				</value>
+			</li>
+				
 			<!-- Vanilla Events Expanded -->
 				
 			<!-- 
