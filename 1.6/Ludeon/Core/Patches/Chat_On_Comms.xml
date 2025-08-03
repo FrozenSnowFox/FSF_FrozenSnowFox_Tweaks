@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFChatOnComms</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Chat On Comms -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+					
+	<JoyGiverDef>
+		<defName>FSF_ChatOnComms</defName>
+		<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+		<baseChance>4</baseChance>
+		<thingDefs>
+			<li>CommsConsole</li>
+		</thingDefs>
+		<jobDef>FSF_ChatOnComms</jobDef>
+		<desireSit>false</desireSit>
+		<joyKind>Social</joyKind>
+		<requiredCapacities>
+			<li>Sight</li>
+			<li>Manipulation</li>
+			<li>Hearing</li>
+			<li>Talking</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+					
+	<JobDef>
+		<defName>FSF_ChatOnComms</defName>
+		<driverClass>JobDriver_WatchBuilding</driverClass>
+		<reportString>Chatting on Comms</reportString>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joyKind>Social</joyKind>
+		<joySkill>Social</joySkill>
+		<joyDuration>4000</joyDuration>
+		<joyXpPerTick>0.004</joyXpPerTick>
+	</JobDef>
+					
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "CommsConsole"]/building</xpath>
+				<value>
+					<joyKind>Social</joyKind>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>
