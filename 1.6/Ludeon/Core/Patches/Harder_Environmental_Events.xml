@@ -168,19 +168,20 @@
 				baseChance 0.15
 				minRefireDays 45
 				durationDays 3~6
+				Note: Fish population takes time to recover
 			-->
 				
 			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
 				<xpath>/Defs/IncidentDef[defName = "GillRot"]/minRefireDays</xpath>
 				<value>
-					<minRefireDays>75</minRefireDays>
+					<minRefireDays>60</minRefireDays>
 				</value>
 			</li>
 				
 			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
 				<xpath>/Defs/IncidentDef[defName = "GillRot"]/durationDays</xpath>
 				<value>
-					<durationDays>10~30</durationDays>
+					<durationDays>7~15</durationDays>
 				</value>
 			</li>
 				

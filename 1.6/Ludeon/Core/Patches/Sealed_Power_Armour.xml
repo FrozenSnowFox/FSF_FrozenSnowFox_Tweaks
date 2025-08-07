@@ -307,17 +307,19 @@
 				</value>
 			</li>
 				
-			<!-- Vanilla Factions Expanded - Vikings -->
+			<!-- Vanilla Quests Expanded - Cryptoforge -->
 				
-			<li MayRequire="oskarpotocki.vfe.vikings" Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[@Name = "VFEV_ApparelArmorCryptoBase"]/equippedStatOffsets</xpath>
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "VQE_ApparelArmorCryptoBase"]</xpath>
 				<value>
-					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+					<equippedStatOffsets>
+						<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+					</equippedStatOffsets>
 				</value>
 			</li>
 				
-			<li MayRequire="oskarpotocki.vfe.vikings" Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[@Name = "VFEV_ApparelCryptoHelmetPowerBase"]</xpath>
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "VQE_ApparelCryptoHelmetPowerBase"]</xpath>
 				<value>
 					<equippedStatOffsets>
 						<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
@@ -325,8 +327,8 @@
 				</value>
 			</li>
 			
-			<li MayRequire="oskarpotocki.vfe.vikings" Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[@Name = "VFEV_ApparelCryptoHelmetPowerBase"]/apparel</xpath>
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "VQE_ApparelCryptoHelmetPowerBase"]/apparel</xpath>
 				<value>
 					<immuneToToxGasExposure>true</immuneToToxGasExposure>
 				</value>
