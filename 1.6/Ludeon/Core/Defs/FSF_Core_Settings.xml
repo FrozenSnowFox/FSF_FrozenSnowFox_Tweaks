@@ -20,6 +20,10 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
+			<li Class="XmlExtensions.Setting.Searchbox">
+				<highlightColor>(160,32,240)</highlightColor>
+			</li>
+			
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Core Tweaks</text>
 				<font>Medium</font>
