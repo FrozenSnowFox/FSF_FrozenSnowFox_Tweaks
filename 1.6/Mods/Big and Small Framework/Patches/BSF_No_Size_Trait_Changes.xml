@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBSFNoSizeTraitChanges</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- No Size Trait Changes -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraitDef[defName = "Gigantism"]/degreeDatas/li/description</xpath>
+				<value>
+					<description>{PAWN_nameDef} is truly gigantic by the standards of their kind and as a result they are sturdier than usual.</description>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraitDef[defName = "Gigantism"]/degreeDatas/li/statFactors</xpath>
+				<value>
+					<statFactors>
+						<SM_BodySizeMultiplier>1.30</SM_BodySizeMultiplier>
+					</statFactors>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraitDef[defName = "Large"]/degreeDatas/li/description</xpath>
+				<value>
+					<description>{PAWN_nameDef} is both taller and bulkier than usual for their kind which makes also makes them somewhat sturdier.</description>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraitDef[defName = "Large"]/degreeDatas/li/statFactors</xpath>
+				<value>
+					<statFactors>
+						<SM_BodySizeMultiplier>1.15</SM_BodySizeMultiplier>
+					</statFactors>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraitDef[defName = "Small"]/degreeDatas/li/statFactors</xpath>
+				<value>
+					<statFactors>
+						<SM_BodySizeMultiplier>0.80</SM_BodySizeMultiplier>
+					</statFactors>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/TraitDef[defName = "Dwarfism"]/degreeDatas/li/statFactors</xpath>
+				<value>
+					<statFactors>
+						<SM_BodySizeMultiplier>0.60</SM_BodySizeMultiplier>
+					</statFactors>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

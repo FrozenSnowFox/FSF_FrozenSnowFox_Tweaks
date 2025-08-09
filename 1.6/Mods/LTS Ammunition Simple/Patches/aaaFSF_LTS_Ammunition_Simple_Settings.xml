@@ -36,6 +36,26 @@
 				<tKey>FSFTweaksLTSExpensiveAmmoDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- LTS No Kit Movement Speed Malus -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Kit Movement Speed Malus</label>
+				<key>FSFLTSKitSpeedMalus</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksLTSKitSpeedMalusTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the movement speed malus from LTS Ammo Kits.</text>
+				<tKey>FSFTweaksLTSKitSpeedMalusDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
 			
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>					

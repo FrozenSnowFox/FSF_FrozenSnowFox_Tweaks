@@ -1998,6 +1998,15 @@
 				</settings>
 			</li>
 			
+			<!-- Big and Small - Framework Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksBigandSmallFramework</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
 			<!-- Common Sense Settings -->
 			
 			<li Class="XmlExtensions.Setting.Group">

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLTSKitSpeedMalus</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- LTS No Kit Movement Speed Malus -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "LTS_KitMedium"]/equippedStatOffsets/MoveSpeed</xpath>
+			</li>
+				
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "LTS_KitLarge"]/equippedStatOffsets/MoveSpeed</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

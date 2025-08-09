@@ -256,6 +256,9 @@
 		<!-- Anthrosonae -->
 		<li IfModActive="ATK.Anthrosonae">1.6/Mods/Anthrosonae</li>
 		
+		<!-- Big and Small Framework -->
+		<li IfModActive="RedMattis.BetterPrerequisites">1.6/Mods/Big and Small Framework</li>
+		
 		<!-- Common Sense -->
 		<li IfModActive="avilmask.CommonSense">1.6/Mods/Common Sense</li>
 		
