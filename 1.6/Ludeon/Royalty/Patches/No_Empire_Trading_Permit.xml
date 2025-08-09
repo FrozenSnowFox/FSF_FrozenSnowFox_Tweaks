@@ -13,22 +13,8 @@
 				
 			<!-- No Empire Trading Permit -->
 			
-			<!-- Remove Base Trading Requirement -->
-			
 			<li Class="XmlExtensions.PatchOperationSafeRemove">
-				<xpath>/Defs/TraderKindDef[defName = "Base_Empire_Standard"]/permitRequiredForTrading</xpath>
-			</li>
-
-			<!-- Remove Trade Caravan Requirement -->
-			
-			<li Class="XmlExtensions.PatchOperationSafeRemove">
-				<xpath>/Defs/TraderKindDef[defName = "Empire_Caravan_TraderGeneral"]/permitRequiredForTrading</xpath>
-			</li>
-
-			<!-- Remove Orbital Trader Requirement -->
-			
-			<li Class="XmlExtensions.PatchOperationSafeRemove">
-				<xpath>/Defs/TraderKindDef[defName = "Orbital_Empire"]/permitRequiredForTrading</xpath>
+				<xpath>/Defs/TraderKindDef [faction [text()="Empire"] ] /permitRequiredForTrading</xpath>
 			</li>
 				
 			</operations>
