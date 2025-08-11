@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPsychicSensBonuses</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Psychic Sensitivity Bonuses -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/StatDef[defName = "MeditationFocusGain"]</xpath>
+				<value>
+					<statFactors>
+						<li>PsychicSensitivity</li>
+					</statFactors>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/StatDef[defName = "PsychicEntropyRecoveryRate"]</xpath>
+				<value>
+					<statFactors>
+						<li>PsychicSensitivity</li>
+					</statFactors>
+				</value>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/GeneDef/statOffsets/MeditationFocusGain</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/GeneDef/statOffsets/PsychicEntropyRecoveryRate</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/HediffDef/stages/li/statOffsets/MeditationFocusGain</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/HediffDef/stages/li/statOffsets/PsychicEntropyRecoveryRate</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/ThingDef/equippedStatOffsets/MeditationFocusGain</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/ThingDef/equippedStatOffsets/PsychicEntropyRecoveryRate</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/TraitDef/degreeDatas/li/statOffsets/MeditationFocusGain</xpath>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/ThingDef/degreeDatas/li/statOffsets/PsychicEntropyRecoveryRate</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

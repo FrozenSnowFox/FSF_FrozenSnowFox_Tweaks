@@ -1510,6 +1510,26 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Psychic Sensitivity Bonuses -->
+			
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.Checkbox">
+				<label>Psychic Sensitivity Bonuses</label>
+				<key>FSFPsychicSensBonuses</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPsychicSensBonusesTitle</tKey>
+			</li>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.Text">
+				<text>Changes the stats Meditation Psyfocus Gain and Neural Heat Recovery Rate to be affected by Psychic Sensitivity.  Also removes the bonuses to these stats from all GeneDef's (Genes), HediffDef's (Health Conditions), ThingDef's (Weapons and Apparel) and TraitDef's (Traits).  What this means is that Psychic Sensitivity itself will provide these bonuses instead of the aforementioned things.  In this way all bonuses are equally balanced, and those that didn't provide bonuses but probably should have do now.  So now there is a good reason to stack your psycasters with as much Psychic Sensitivity as you can because doing so will increase their overall recovery speed.  With Vanilla Psycasts Expanded the increase in Psyfocus gain will also result in your psycasters gaining XP faster.</text>
+				<tKey>FSFTweaksPsychicSensBonusesDesc</tKey>
+			</li>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.SetColor"/>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- Randy Fixes -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -1782,26 +1802,6 @@
 				</caseTrue>
 			</li>
 			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Update Psychic Stuff -->
-			
-			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.Checkbox">
-				<label>Update Psychic Stuff</label>
-				<key>FSFUpdatePsychicStuff</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksUpdatePsychicStuffTitle</tKey>
-			</li>
-			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.Text">
-				<text>Updates the Psychic Sensitivity traits and Psychic Sensitizer to have bonuses for Meditation Focus Gain and Psychic Entropy Recovery Rate.  These stats appear on Biotech genes relating to Psychic Sensitivity but these items were never changed.</text>
-				<tKey>FSFTweaksUpdatePsychicStuffDesc</tKey>
-			</li>
-			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.SetColor"/>
-			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
 			
