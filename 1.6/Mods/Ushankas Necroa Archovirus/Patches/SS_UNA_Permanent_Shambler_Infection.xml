@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFShamblerSettingsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+			
+			
+			
+		<!-- Ushankas Necroa Archovirus Permanent Shambler Infection-->
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPermanentShamblerInfection</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li MayRequire="Ludeon.RimWorld.Anomaly,Ushanka.NecroaArchovirus" Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+
+  <HediffDef>
+    <defName>FSF_PermanentNecroa</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <label>permanent necroa</label>
+    <description>A dormant strain of the necroa archovirus.  Upon death the host will turn into a shambler.</description>
+	<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+	<initialSeverity>1.0</initialSeverity>
+	<isBad>false</isBad>
+	<scenarioCanAdd>True</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties">
+        <compClass>USH_NA.HediffCompNecroa</compClass>
+      </li>
+    </comps>
+	<stages>
+	  <li>
+		<becomeVisible>false</becomeVisible>
+	  </li>
+	</stages>
+  </HediffDef>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+			
+			
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

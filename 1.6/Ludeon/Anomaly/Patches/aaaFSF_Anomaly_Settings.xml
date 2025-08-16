@@ -42,20 +42,37 @@
 					
 					<!-- Lethal Shambler Infections -->
 					
-					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare" Class="XmlExtensions.Setting.Checkbox">
+					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfarel,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Checkbox">
 						<label>Lethal Shambler Infections</label>
 						<key>FSFLethalShamblers</key>
 						<defaultValue>false</defaultValue>
 						<tKey>FSFTweaksLethalShamblersTitle</tKey>
 					</li>
-					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare" Class="XmlExtensions.Setting.SetColor">
+					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor">
 						<color>(163,177,188)</color>
 					</li>
-					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare" Class="XmlExtensions.Setting.Text">
-						<text>Changes Shambler infections from Alpha Genes and Ushankas Biological Warfare to be lethal.  These infections can no longer be tended and the natural immunity gain is non-existent.</text>
+					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Text">
+						<text>Changes Shambler infections from Alpha Genes, Ushankas Biological Warfare and Ushankas Necroa Archovirus to be lethal.  These infections can no longer be tended and the natural immunity gain is non-existent.</text>
 						<tKey>FSFTweaksLethalShamblersDesc</tKey>
 					</li>
-					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare" Class="XmlExtensions.Setting.SetColor"/>
+					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor"/>
+					
+					<!-- Permanent Shambler Infection -->
+					
+					<li MayRequireAnyOf="Ushanka.BiologicalWarfarel,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Checkbox">
+						<label>Permanent Shambler Infection</label>
+						<key>FSFPermanentShamblerInfection</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksPermanentShamblerInfectionTitle</tKey>
+					</li>
+					<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Text">
+						<text>Adds a hidden hediff that can be applied in the Scenario Settings.  This hediff is a Shambler Infection that does not progress and cannot be cured.  This allows the pawn to immediately return as a shambler in the event of their death even if they weren't previously infected by a shambler.</text>
+						<tKey>FSFTweaksPermanentShamblerInfectionDesc</tKey>
+					</li>
+					<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor"/>
 					
 					<!-- Shamblers Aggro Further -->
 					

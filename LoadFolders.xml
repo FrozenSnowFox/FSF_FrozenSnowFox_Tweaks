@@ -298,6 +298,9 @@
 		<!-- Ushankas Biological Warfare -->
 		<li IfModActive="Ushanka.BiologicalWarfare">1.6/Mods/Ushankas Biological Warfare</li>
 		
+		<!-- Ushankas Necroa Archovirus -->
+		<li IfModActive="Ushanka.NecroaArchovirus">1.6/Mods/Ushankas Necroa Archovirus</li>
+		
 		<!-- Vanilla Chemfuel Expanded -->
 		<li IfModActive="vanillaexpanded.vchemfuele">1.6/Mods/Vanilla Chemfuel Expanded</li>
 		
