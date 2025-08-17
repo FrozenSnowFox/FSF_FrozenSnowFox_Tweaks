@@ -13,17 +13,6 @@
 				
 			<!-- Sorted Steps VFE Tribals -->
 				
-			<!-- Core -->
-				
-			<li MayRequire="OskarPotocki.VFE.Tribals,ReGrowth.BOTR.Core" Class="RR.PatchOperationAddOrReplace">
-				<xpath>/Defs/ResearchProjectDef[defName="Devilstrand"]</xpath>
-				<value>
-					<researchPrerequisites>
-						<li>RG_MushroomCultivation</li>
-					</researchPrerequisites>
-				</value>
-			</li>
-				
 			<!-- Adaptive Primitive Storage -->
 				
 			<li MayRequire="OskarPotocki.VFE.Tribals,Adaptive.PrimitiveStorage,adaptive.storage.neolithic" Class="RR.PatchOperationAddOrReplace">
