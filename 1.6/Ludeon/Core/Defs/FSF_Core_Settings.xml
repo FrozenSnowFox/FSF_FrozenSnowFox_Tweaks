@@ -1912,7 +1912,7 @@
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the FilthRate to 1, Petness to 1 and nuzzleMtbHours to 12 to match dogs allowing you to have clean, friendly, nuzzle happy wolves.  Also adds mating pairs of Timber Wolves and Arctic Wolves for sale at faction bases so they're easy to acquire.</text>
+				<text>Changes the FilthRate to 1, Wildness to 0, Petness to 1, nuzzleMtbHours to 12, removes the manhunter on failed taming chance and adds the Special Trainable Comfort.  This puts them on par with dogs allowing you to have clean, friendly, nuzzle happy wolves.  Also adds mating pairs of Timber Wolves and Arctic Wolves for sale at faction bases so they're easy to acquire.</text>
 				<tKey>FSFTweaksWolvesAreDogsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>

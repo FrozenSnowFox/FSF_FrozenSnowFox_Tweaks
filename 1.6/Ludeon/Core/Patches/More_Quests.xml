@@ -32,21 +32,21 @@
 	<!-- Modify All StorytellerCompProperties_RandomQuest -->
 		
  		<li Class="PatchOperationReplace">
-			<xpath>/Defs/StorytellerDef//comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/onDays</xpath>
+			<xpath>/Defs/StorytellerDef/comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/onDays</xpath>
 			<value>
 				<onDays>{FSFMoreQuestsonDays}</onDays>
 			</value>
 		</li>
 			
  		<li Class="PatchOperationReplace">
-			<xpath>/Defs/StorytellerDef//comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/numIncidentsRange</xpath>
+			<xpath>/Defs/StorytellerDef/comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/numIncidentsRange</xpath>
 			<value>
 				<numIncidentsRange>{FSFMoreQuestsnumIncidentsRange}</numIncidentsRange>
 			</value>
 		</li>
 			
  		<li Class="PatchOperationReplace">
-			<xpath>/Defs/StorytellerDef//comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/minSpacingDays</xpath>
+			<xpath>/Defs/StorytellerDef/comps/li[@Class = "StorytellerCompProperties_RandomQuest"]/minSpacingDays</xpath>
 			<value>
 				<minSpacingDays>{FSFMoreQuestsminSpacingDays}</minSpacingDays>
 			</value>

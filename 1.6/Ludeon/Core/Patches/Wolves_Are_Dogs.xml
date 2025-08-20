@@ -19,6 +19,13 @@
 					<FilthRate>1</FilthRate>
 				</value>
 			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "ThingBaseWolf"]/statBases/Wildness</xpath>
+				<value>
+					<Wildness>0</Wildness>
+				</value>
+			</li>
 
 			<li Class="PatchOperationReplace">
 				<xpath>/Defs/ThingDef[@Name = "ThingBaseWolf"]/race/petness</xpath>
@@ -31,6 +38,20 @@
 				<xpath>/Defs/ThingDef[@Name = "ThingBaseWolf"]/race</xpath>
 				<value>
 					<nuzzleMtbHours>12</nuzzleMtbHours>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "ThingBaseWolf"]/race/specialTrainables</xpath>
+				<value>
+					<li MayRequire="Ludeon.RimWorld.Odyssey">Comfort</li>
+				</value>
+			</li>
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "ThingBaseWolf"]/race/manhunterOnTameFailChance</xpath>
+				<value>
+					<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
 				</value>
 			</li>
 				

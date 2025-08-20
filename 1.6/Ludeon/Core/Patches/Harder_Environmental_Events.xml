@@ -123,7 +123,7 @@
 				
 			<!-- 
 				Death Pall
-				baseChance 0.12
+				baseChance 0.5
 				minRefireDays 30
 				durationDays 1~3
 			-->

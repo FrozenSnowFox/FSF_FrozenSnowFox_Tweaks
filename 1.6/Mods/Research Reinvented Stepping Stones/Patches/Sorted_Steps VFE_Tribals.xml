@@ -301,6 +301,15 @@
 
 			-->
 				
+			<li MayRequire="OskarPotocki.VFE.Tribals,Harkon.VEAddOn.VanillaExpandedExtraEmbrasures,ReBuild.COTR.DoorsAndCorners" Class="RR.PatchOperationAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="HRK_RusticEmbrasure"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>VFET_Construction</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+				
 			<!-- [LTS] Ammunition Framework -->
 				
 			<li MayRequire="OskarPotocki.VFE.Tribals,LimeTreeSnake.Ammunition" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
