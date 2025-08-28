@@ -24,12 +24,16 @@
 				<highlightColor>(160,32,240)</highlightColor>
 			</li>
 			
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Core Tweaks</text>
-				<font>Medium</font>
+			
+			
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Core Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksCoreTweaksTitle</tKey>
-			</li>
+				<settings>							
+			
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
@@ -1232,7 +1236,7 @@
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Adds breeding pairs of Horses always for sale at Neolithic bases so you have an easy way to get caravan animals.</text>
+				<text>Adds breeding pairs of Horses always for sale at Neolithic and Medieval bases so you have an easy way to get caravan animals.</text>
 				<tKey>FSFTweaksMountsForSaleDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
@@ -1361,24 +1365,23 @@
 			</li>
 			
 			<!-- No Starting Research -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
 				<label>No Starting Research</label>
-				<key>FSFNoStartingResearchOn</key>
-				<defaultValue>false</defaultValue>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
 				<tKey>FSFTweaksNoStartingResearchTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows you to pick which starting Player Factions should start the game with no completed research projects.</text>
-				<tKey>FSFNoStartingResearchOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFNoStartingResearchOn</key>
-				<caseTrue>
+				<settings>
+
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to pick which starting Player Factions should start the game with no completed research projects.</text>
+						<tKey>FSFNoStartingResearchOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+
 					<li Class="XmlExtensions.Setting.SetColor">
 						<color>(163,177,188)</color>
 					</li>
@@ -1423,7 +1426,8 @@
 						<tKey>FSFTweaksNoStartingResearchTribalDesc</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
+					
+				</settings>
 			</li>
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
@@ -1936,11 +1940,11 @@
 				<tKey>FSFTweaksYoungerPeopleDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
-			
-			
-			
-			<li Class="XmlExtensions.Setting.GapLine">
+							
+				</settings>
 			</li>
+
+			
 			
 			<!-- Anomaly Settings -->
 			

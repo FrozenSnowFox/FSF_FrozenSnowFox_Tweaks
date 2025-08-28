@@ -49,6 +49,25 @@
 				</value>
 			</li>
 				
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/TraderKindDef [defName [contains(text(), "Base")]] [defName [contains(text(), "Medieval")]] /stockGenerators</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef [defName [contains(text(), "Base")]] [defName [contains(text(), "Medieval")]] /stockGenerators</xpath>
+					<value>
+					<li Class="StockGenerator_Animals">
+						<tradeTagsSell>
+							<li>FSFHorse</li>
+						</tradeTagsSell>
+						<kindCountRange>2</kindCountRange>
+						<countRange>4</countRange>
+						<createMatingPair>
+							<li>FSFHorse</li>
+						</createMatingPair>
+					</li>
+					</value>
+				</match>
+			</li>
+				
 			</operations>
 		</Operation>
 			

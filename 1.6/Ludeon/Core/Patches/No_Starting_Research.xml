@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	
-	<Operation Class="XmlExtensions.OptionalPatch">
-		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFNoStartingResearchOn</key>
-		<defaultValue>false</defaultValue>
-		<caseTrue>
 			
-		<!-- Option is nested so patch isn't always run -->
-			
-			<!-- No Starting Research -->
+		<!-- No Starting Research -->
 			
 		<Operation Class="XmlExtensions.OptionalPatch">
 			<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
@@ -118,8 +110,5 @@
 			
 			</caseTrue>
 		</Operation>
-			
-		</caseTrue>
-	</Operation>
 
 </Patch>

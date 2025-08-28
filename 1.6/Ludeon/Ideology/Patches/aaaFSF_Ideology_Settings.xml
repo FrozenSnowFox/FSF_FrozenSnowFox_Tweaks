@@ -11,34 +11,28 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Ideology Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Ideology Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksIdeologyTweaksTitle</tKey>
-			</li>
+				<settings>
+
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
-			
-			<!-- All Roles Are Capable -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>All Roles Are Capable</label>
-				<key>FSFAllRolesAreCapable</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksAllRolesAreCapableTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes all the disabled worktypes from all ideoligion roles.</text>
-				<tKey>FSFTweaksAllRolesAreCapableDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
+					
+			<!-- Tab - Misc -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Misc</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksPreceptsandMemesTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
 					
 			<!-- Archonexus Radius -->
 			
@@ -59,25 +53,6 @@
 				<spacing>12</spacing>
 			</li>
 					
-			<!-- Artists Are Production Specialists -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Artists Are Production Specialists</label>
-				<key>FSFArtistsAreProductionSpecialists</key>
-				<tKey>FSFTweaksArtistsAreProductionSpecialistsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the Production Specialist role to include Artistic as a viable skill.</text>
-				<tKey>FSFTweaksArtistsAreProductionSpecialistsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
 			<!-- Better Mining Worksite Resources -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -92,26 +67,6 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Changes Mining Worksites so they can spawn with extra resource types like Jade, Plasteel and Uranium.  The weighting odds are balanced around the Deep Drill commonality.</text>
 				<tKey>FSFTweaksMiningWorksiteResourcesDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Berserk Trance No Mental Break -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Berserk Trance No Mental Break</label>
-				<key>FSFBerserkTranceNoMentalBreak</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksBerserkTranceNoMentalBreakTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the mental break from the berserk trance.  This allows you to continue controlling your pawn while the ability is active.</text>
-				<tKey>FSFTweaksBerserkTranceNoMentalBreakDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -172,6 +127,7 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Allows you to customise the cooldown, chance and certainly gain/loss when performing conversion rituals.</text>
 				<tKey>FSFTweaksConversionRitualEffectivenessOnDesc</tKey>
+
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.ToggleableSettings">
@@ -303,26 +259,6 @@
 				<spacing>12</spacing>
 			</li>
 					
-			<!-- Embodied Theist Number Of Deities -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Embodied Theist Number Of Deities</label>
-				<key>FSFEmbodiedTheistDeities</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksEmbodiedTheistDeitiesTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the minimum and maximum amount of Deities allowed from 2-4 to 1-10.</text>
-				<tKey>FSFTweaksEmbodiedTheistDeitiesDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
 			<!-- More Ideology Colours -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -403,7 +339,62 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
+					
+			<!-- Wear Masks With Hats -->
 			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Wear Masks With Hats</label>
+				<key>FSFWearMasksWithHats</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksWearMasksWithHatsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the Visage Mask layer to EyeCover so it can be worn with hats.</text>
+				<tKey>FSFTweaksWearMasksWithHatsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+					
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+				
+			<!-- Tab - Precepts and Memes -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Precepts and Memes</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksPreceptsandMemesTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- Embodied Theist Number Of Deities -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Embodied Theist Number Of Deities</label>
+				<key>FSFEmbodiedTheistDeities</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksEmbodiedTheistDeitiesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the minimum and maximum amount of Deities allowed from 2-4 to 1-10.</text>
+				<tKey>FSFTweaksEmbodiedTheistDeitiesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
 			<!-- Pain Idealized Pain Threshold -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -418,6 +409,120 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Adds a buff to the Pain Idealized precept that increases the pain shock threshold.</text>
 				<tKey>FSFTweaksPainIdealizedPainThresholdDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Raider No Work Speed Malus -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Raider No Work Speed Malus</label>
+				<key>FSFRaiderNoWorkSpeedMalus</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRaiderNoWorkSpeedMalusTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the work speed penalty from the Raiding precepts.</text>
+				<tKey>FSFTweaksRaiderNoWorkSpeedMalusDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Ranching No Plant Malus -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Ranching No Plant Malus</label>
+				<key>FSFRanchingNoPlantMalus</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRanchingNoPlantMalusTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the dislike of plants from the Ranching precept.</text>
+				<tKey>FSFTweaksRanchingNoPlantMalusDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+					
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Tab - Roles -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Roles</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksRolesTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- All Roles Are Capable -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>All Roles Are Capable</label>
+				<key>FSFAllRolesAreCapable</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAllRolesAreCapableTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes all the disabled worktypes from all ideoligion roles.</text>
+				<tKey>FSFTweaksAllRolesAreCapableDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Artists Are Production Specialists -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Artists Are Production Specialists</label>
+				<key>FSFArtistsAreProductionSpecialists</key>
+				<tKey>FSFTweaksArtistsAreProductionSpecialistsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the Production Specialist role to include Artistic as a viable skill.</text>
+				<tKey>FSFTweaksArtistsAreProductionSpecialistsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Berserk Trance No Mental Break -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Berserk Trance No Mental Break</label>
+				<key>FSFBerserkTranceNoMentalBreak</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBerserkTranceNoMentalBreakTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the mental break from the berserk trance.  This allows you to continue controlling your pawn while the ability is active.</text>
+				<tKey>FSFTweaksBerserkTranceNoMentalBreakDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -464,46 +569,6 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
-			
-			<!-- Raider No Work Speed Malus -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Raider No Work Speed Malus</label>
-				<key>FSFRaiderNoWorkSpeedMalus</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksRaiderNoWorkSpeedMalusTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the work speed penalty from the Raiding precepts.</text>
-				<tKey>FSFTweaksRaiderNoWorkSpeedMalusDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Ranching No Plant Malus -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Ranching No Plant Malus</label>
-				<key>FSFRanchingNoPlantMalus</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksRanchingNoPlantMalusTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the dislike of plants from the Ranching precept.</text>
-				<tKey>FSFTweaksRanchingNoPlantMalusDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
 					
 			<!-- Roles Don't Require Memes -->
 			
@@ -529,30 +594,16 @@
 				<tKey>FSFTweaksRolesDontRequireMemesWarning</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
 					
-			<!-- Wear Masks With Hats -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Wear Masks With Hats</label>
-				<key>FSFWearMasksWithHats</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksWearMasksWithHatsTitle</tKey>
+				</settings>
 			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the Visage Mask layer to EyeCover so it can be worn with hats.</text>
-				<tKey>FSFTweaksWearMasksWithHatsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
 					
 					
 					
 			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+				</settings>
 			</li>
 						
 						

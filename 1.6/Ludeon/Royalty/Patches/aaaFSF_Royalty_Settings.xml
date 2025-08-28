@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Royalty Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Royalty Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksRoyaltyTweaksTitle</tKey>
-			</li>
+				<settings>
+
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
@@ -416,6 +418,9 @@
 					
 					
 			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+				</settings>
 			</li>
 						
 						

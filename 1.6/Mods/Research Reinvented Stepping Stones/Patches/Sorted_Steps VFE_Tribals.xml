@@ -265,7 +265,7 @@
 				
 			<!-- Eccentric Extras - Flares -->
 				
-			<li MayRequire="OskarPotocki.VFE.Tribals,River.Tribal.Shoes" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+			<li MayRequire="OskarPotocki.VFE.Tribals,Aelanna.EccentricTech.Flares2" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName="EccentricFlares_TorchPack"]</xpath>
 				<compare>Both</compare>
 				<value>

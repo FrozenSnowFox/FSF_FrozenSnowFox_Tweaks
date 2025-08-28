@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Biotech Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Biotech Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksBiotechTweaksTitle</tKey>
-			</li>
+				<settings>
+
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
@@ -959,6 +961,9 @@
 					
 					
 			<li Class="XmlExtensions.Setting.GapLine">
+			</li>					
+					
+				</settings>
 			</li>
 						
 						
