@@ -162,10 +162,10 @@
 			</value>
 		</li>
 			
-		<!-- Remove Anima Tree Artificial Building Radius -->
+		<!-- Remove Artificial Building Radius -->
 
 		<li Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName = "Plant_TreeAnima"]/comps/li[@Class = "CompProperties_MeditationFocus"]/offsets/li[@Class = "FocusStrengthOffset_ArtificialBuildings"]/radius</xpath>
+			<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_MeditationFocus"]/offsets/li[@Class = "FocusStrengthOffset_ArtificialBuildings"]/radius</xpath>
 			<value>
 				<radius>0</radius>
 			</value>

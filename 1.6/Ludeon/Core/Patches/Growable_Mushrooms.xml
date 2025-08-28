@@ -87,18 +87,6 @@
 				<value>
 					<interferesWithRoof>false</interferesWithRoof>
 					<mustBeWildToSow>false</mustBeWildToSow>
-					<sowTags>
-						<li>Ground</li>
-					</sowTags>
-				</value>
-			</li>
-				
-			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName = "Plant_Timbershroom"]/plant/sowResearchPrerequisites</xpath>
-				<value>
-					<sowResearchPrerequisites>
-						<li>RG_MushroomCultivation</li>
-					</sowResearchPrerequisites>
 				</value>
 			</li>
 				

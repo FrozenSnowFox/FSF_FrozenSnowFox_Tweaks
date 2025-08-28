@@ -260,7 +260,7 @@
 						<color>(163,177,188)</color>
 					</li>
 					<li Class="XmlExtensions.Setting.Text">
-						<text>List of active changes.\n- Meditation Focus item is available in Architect Menu.\n- Anima Grass lifespan has been greatly extended to prevent premature death.\n- Negative Artificial Building Radius has been disabled on Anima Trees and Anima Grass.\n- Anima Trees can now be moved and planted.\n- Anima Trees can be planted adjacent to trees and can be planted under roofs.\n- Nature Shrines can be built without a Nature Psycaster.</text>
+						<text>List of active changes.\n- Meditation Focus item is available in Architect Menu.\n- Anima Grass lifespan has been greatly extended to prevent premature death.\n- Negative Artificial Building Radius is disabled on all things.\n- Anima Trees can now be moved and planted.\n- Anima Trees can be planted adjacent to trees and can be planted under roofs.\n- Nature Shrines can be built without a Nature Psycaster.</text>
 						<tKey>FSFTweaksMeditationFreedomDesc</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.Checkbox">

@@ -28,7 +28,7 @@
 				<label>Misc</label>
 				<defaultState>Closed</defaultState>
 				<anchor>Left</anchor>
-				<tKey>FSFTweaksPreceptsandMemesTitle</tKey>
+				<tKey>FSFTweaksMiscTitle</tKey>
 				<settings>
 					<li Class="XmlExtensions.Setting.GapLine">
 						<spacing>12</spacing>
