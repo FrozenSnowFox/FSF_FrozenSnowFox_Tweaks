@@ -215,44 +215,42 @@
 				</value>
 			</li>
 				
-			<!-- Regrowth Core -->
+			<!-- Vanilla Expanded Memes (Non Odyssey DLC Only) -->
 				
-			<li MayRequire="ReGrowth.BOTR.Core" Class="RR.PatchOperationAddOrReplace">
-				<xpath>/Defs/ThingDef[defName="RG_Hedge"]</xpath>
-				<value>
-					<researchPrerequisites>
-						<li>RR_Agriculture</li>
-					</researchPrerequisites>
-				</value>
-			</li>
-				
-			<!-- Vanilla Expanded Memes -->
-				
-			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="PatchOperationConditional">
 				<xpath>/Defs/ThingDef[defName="VME_SmallFishingTrap"]</xpath>
-				<value>
-					<researchPrerequisites>
-						<li>RR_Trapping</li>
-					</researchPrerequisites>
-				</value>
+				<match Class="RR.PatchOperationAddOrReplace">
+					<xpath>/Defs/ThingDef[defName="VME_SmallFishingTrap"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Hunting</li>
+						</researchPrerequisites>
+					</value>
+				</match>
 			</li>
 				
-			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="PatchOperationConditional">
 				<xpath>/Defs/ThingDef[defName="VME_MediumFishingTrap"]</xpath>
-				<value>
-					<researchPrerequisites>
-						<li>RR_Trapping</li>
-					</researchPrerequisites>
-				</value>
+				<match Class="RR.PatchOperationAddOrReplace">
+					<xpath>/Defs/ThingDef[defName="VME_MediumFishingTrap"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Hunting</li>
+						</researchPrerequisites>
+					</value>
+				</match>
 			</li>
 				
-			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="RR.PatchOperationAddOrReplace">
+			<li MayRequire="VanillaExpanded.VMemesE,VanillaExpanded.VCEF" Class="PatchOperationConditional">
 				<xpath>/Defs/ThingDef[defName="VME_LargeFishingTrap"]</xpath>
-				<value>
-					<researchPrerequisites>
-						<li>RR_Trapping</li>
-					</researchPrerequisites>
-				</value>
+				<match Class="RR.PatchOperationAddOrReplace">
+					<xpath>/Defs/ThingDef[defName="VME_LargeFishingTrap"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Hunting</li>
+						</researchPrerequisites>
+					</value>
+				</match>
 			</li>
 				
 			<!-- Vanilla Furniture Expanded Architect -->
