@@ -1883,6 +1883,26 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
+					
+			<!-- Wear Masks With Hats -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Wear Masks With Hats</label>
+				<key>FSFWearMasksWithHats</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksWearMasksWithHatsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes all items with a label name containing the word mask to the layer EyeCover so they can be worn with hats.</text>
+				<tKey>FSFTweaksWearMasksWithHatsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
 			
 			<!-- Wild Animal Reproduction -->
 			

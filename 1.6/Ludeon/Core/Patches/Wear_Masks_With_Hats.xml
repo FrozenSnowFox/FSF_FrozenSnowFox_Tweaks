@@ -14,7 +14,7 @@
 	<!-- Wear Masks With Hats -->
 				
 			<li Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName = "Apparel_VisageMask"]/apparel/layers</xpath>
+				<xpath>/Defs/ThingDef [label [contains(text(), "mask")]]/apparel/layers</xpath>
 				<value>
 					<layers>
 						<li>EyeCover</li>
