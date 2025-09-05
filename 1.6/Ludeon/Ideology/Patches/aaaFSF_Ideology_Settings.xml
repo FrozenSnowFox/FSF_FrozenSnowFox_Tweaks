@@ -336,9 +336,6 @@
 				<tKey>FSFTweaksNoAgeRestrictionForIdeologiesDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
 					
 				</settings>
 			</li>

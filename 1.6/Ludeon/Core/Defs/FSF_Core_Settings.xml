@@ -422,7 +422,7 @@
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<label>Chat On Comms</label>
-				<key>FSFFSFChatOnComms</key>
+				<key>FSFChatOnComms</key>
 				<defaultValue>false</defaultValue>
 				<tKey>FSFTweaksFSFChatOnCommsTitle</tKey>
 			</li>
