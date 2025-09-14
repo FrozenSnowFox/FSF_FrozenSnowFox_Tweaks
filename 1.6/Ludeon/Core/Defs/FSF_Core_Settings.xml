@@ -37,6 +37,445 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
+			<!-- Tab - Animals -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Animals</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksAnimalsTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+			
+			<!-- Animals Dont Eat Random Things -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Animals Dont Eat Random Things</label>
+				<key>FSFAnimalsDontEatRandomThings</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimalsDontEatRandomThingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the action of eating random things for curiosity from animal AI logic trees.</text>
+				<tKey>FSFTweaksAnimalsDontEatRandomThingsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Animals Don't Mine To Escape -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Animals Don't Mine To Escape</label>
+				<key>FSFAnimalsDontMineToEscape</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimalsDontMineToEscapeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the action of mining through walls and rock to escape when hungry from animal AI logic trees.  Instead they will now just starve to death.\nNote: This does not apply to Alpha Animals creatures who use the Animal Digger logic tree since they are designed to dig through things.</text>
+				<tKey>FSFTweaksAnimalsDontMineToEscapeDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Herd Migration On Any Biome -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Herd Migration On Any Biome</label>
+				<key>FSFHerdMigrationOnAnyBiome</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHerdMigrationOnAnyBiomeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the allowedBiomes tag on the Herd Migration event so it can trigger on any biome.</text>
+				<tKey>FSFTweaksHerdMigrationOnAnyBiomeDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Mounts For Sale -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Mounts For Sale</label>
+				<key>FSFMountsForSaleOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksMountsForSaleTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds breeding pairs of Horses always for sale at Neolithic and Medieval bases so you have an easy way to get caravan animals.</text>
+				<tKey>FSFTweaksMountsForSaleDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Wild Animal Reproduction -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Wild Animal Reproduction</label>
+				<key>FSFWildAnimalReproduction</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksWildAnimalReproductionTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows wild animals to mate so they become pregnant just like colony animals.  Also removes the deterioration rate of fertilized eggs so they can survive outdoors.</text>
+				<tKey>FSFTweaksWildAnimalReproductionDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Wolves Are Dogs -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Wolves Are Dogs</label>
+				<key>FSFWolvesAreDogs</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksWolvesAreDogsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the FilthRate to 1, Wildness to 0, Petness to 1, nuzzleMtbHours to 12, removes the manhunter on failed taming chance and adds the Special Trainable Comfort.  This puts them on par with dogs allowing you to have clean, friendly, nuzzle happy wolves.  Also adds mating pairs of Timber Wolves and Arctic Wolves for sale at faction bases so they're easy to acquire.</text>
+				<tKey>FSFTweaksWolvesAreDogsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Tab - Filters and Storage -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Filters and Storage</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksFiltersAndStorageTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- More Filters Drugs -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>More Filters Drugs</label>
+					<key>FSFMoreFiltersDrugs</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksMoreFiltersDrugsTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Adds a number of new categories for drugs and organises items so they can be more easily accessed.  The following categories are added, Hard, Medical, Social.</text>
+					<tKey>FSFTweaksMoreFiltersDrugsDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+				
+			<!-- More Filters Food -->
+				
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>More Filters Food</label>
+					<key>FSFMoreFiltersFood</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksMoreFiltersFoodTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Adds a number of new categories for food and organises items so they can be more easily accessed.  The following categories are added, Awful, Simple, Fine, Lavish, Gourmet (VCE), Confectionery (VCE), Long Term, Jelly (Alpha Animals), Milk (Alpha Animals), Raw Tasty, Baby Food (Biotech DLC), Animal Feed, Gluttonous, Blood (Biotech DLC), Cocktails (VBE).</text>
+					<tKey>FSFTweaksMoreFiltersFoodDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(187,0,0)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Warning: Due to changing item categories this tweak can interfere with stacking mods that rely on categories.  For OgreStack this causes the items to be classed under Other instead of their default categories.  If you use more specific stacking settings be sure to account for this.</text>
+					<tKey>FSFTweaksMoreFiltersFoodWarning</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+				
+			<!-- No Default Storage Settings -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Default Storage Settings</label>
+				<key>FSFNoDefaultStorageSettings</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoDefaultStorageSettingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes every ThingDef to remove the defaultStorageSettings and changes the default priority to normal.  Unlike the mod No Default Shelf Storage which intentionally looks for a ThingClass to target only storage items this patch goes for everything.  This means it'll target things like Mortars, Sarcophaguses, Biosculpters, Growth Pods and more.</text>
+				<tKey>FSFTweaksNoDefaultStorageSettingsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Stackable Chunks -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Stackable Chunks</label>
+				<key>FSFStackableChunksOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksStackableChunksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes rock and slag chunks to be stacklable and allows you to customise the stack limit.</text>
+				<tKey>FSFTweaksStackableChunksOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Warning: If enabled midsave this option may cause all rock and slag chunks to vanish.</text>
+				<tKey>FSFTweaksStackableChunksWarningDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFStackableChunksOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFStackableChunksRocks</key>
+						<defaultValue>25</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Rock Chunks Stack Limit</label>
+						<tKey>FSFTweaksStackableChunksRocks</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFStackableChunksSlag</key>
+						<defaultValue>25</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Slag Chunks Stack Limit</label>
+						<tKey>FSFTweaksStackableChunksSlag</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFStackableChunksMechanoid</key>
+						<defaultValue>25</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Mechanoid Slag Chunks Stack Limit</label>
+						<tKey>FSFTweaksStackableChunksMechanoid</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input values to adjust the stack limit.</text>
+						<tKey>FSFTweaksStackableChunksDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+					
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Tab - Food -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Food</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksFoodTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- Foods Are Safe -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Foods Are Safe</label>
+				<key>FSFFoodsAreSafe</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksFoodsAreSafeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the food poisoning chance from all RawTasty foods and all Gluttonous items that have the ParentDef OrganicProductBase.  Foods that use RawTasty are things like Berries, Milk and modded items such as Fruits.  Gluttonous items that have the ParentDef OrganicProductBase are things such as Insect Jelly and modded items such as Honey.</text>
+				<tKey>FSFTweaksFoodsAreSafeDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Insect Jelly Isn't A Meal -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Insect Jelly Isn't A Meal</label>
+				<key>FSFInsectJellyIsntAMeal</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksInsectJellyIsntAMealTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the preferability of Insect Jelly from Fine Meal to Raw Tasty.  This means pawns will only prefer it as food if there are no cooked meals.  However, they will still eat it for Gluttonous Recreation.  This allows you to easier keep your expensive jelly for sale and recreation.</text>
+				<tKey>FSFTweaksInsectJellyIsntAMealDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Less Desirable Long Term Food -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Less Desirable Long Term Food</label>
+				<key>FSFLessDesirableLongTermFood</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksLessDesirableLongTermFoodTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes long term foods like Pemmican and Packaged Survival Meals to be less desirable than normal meals.\nNote: Distance seems to be factored into food choice so for best results long term foods should be stored near other meals.</text>
+				<tKey>FSFTweaksLessDesirableLongTermFoodDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Warning: This tweak may cause friendlies to pilfer your food supplies more as their preserved meals are considered less desirable.</text>
+				<tKey>FSFTweaksLessDesirableLongTermFoodWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No Default Fungus In Meals -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Default Fungus In Meals</label>
+				<key>FSFNoDefaultFungusInMeals</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoDefaultFungusInMealsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds Raw Fungus to the list of default disallowed ingredients on meals.</text>
+				<tKey>FSFTweaksNoDefaultFungusInMealsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Table Search Radius -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Table Search Radius</label>
+				<key>FSFTableSearchRadiusOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksTableSearchRadiusTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to set a maximum radius pawns will search for a table when consuming ingestible items.  This patches all items with a preferability except ones with NeverForNutrition.</text>
+				<tKey>FSFTweaksTableSearchRadiusOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFTableSearchRadiusOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFTableSearchRadius</key>
+						<defaultValue>75</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Table Search Radius</label>
+						<tKey>FSFTweaksTableSearchRadius</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to set a maximum radius pawns will search for a table when consuming ingestible items.  This patches all items with a preferability except ones with NeverForNutrition.\nNote: If a table is within this radius they will go to it before consuming items so be careful not to set it too high.  The default value of 75 is what I've found to be a nice middle ground.</text>
+						<tKey>FSFTweaksTableSearchRadiusDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+					
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Tab - Misc -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Misc</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksMiscTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
 			<!-- Accurate Mechanoid Disassembly -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -116,46 +555,6 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Changes turrets to be rearmed even if they are 99% full of ammo.</text>
 				<tKey>FSFTweaksAlwaysRefuelTurretsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Animals Dont Eat Random Things -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Animals Dont Eat Random Things</label>
-				<key>FSFAnimalsDontEatRandomThings</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksAnimalsDontEatRandomThingsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the action of eating random things for curiosity from animal AI logic trees.</text>
-				<tKey>FSFTweaksAnimalsDontEatRandomThingsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Animals Don't Mine To Escape -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Animals Don't Mine To Escape</label>
-				<key>FSFAnimalsDontMineToEscape</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksAnimalsDontMineToEscapeTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the action of mining through walls and rock to escape when hungry from animal AI logic trees.  Instead they will now just starve to death.\nNote: This does not apply to Alpha Animals creatures who use the Animal Digger logic tree since they are designed to dig through things.</text>
-				<tKey>FSFTweaksAnimalsDontMineToEscapeDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -630,106 +1029,6 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- Foods Are Safe -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Foods Are Safe</label>
-				<key>FSFFoodsAreSafe</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksFoodsAreSafeTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the food poisoning chance from all RawTasty foods and all Gluttonous items that have the ParentDef OrganicProductBase.  Foods that use RawTasty are things like Berries, Milk and modded items such as Fruits.  Gluttonous items that have the ParentDef OrganicProductBase are things such as Insect Jelly and modded items such as Honey.</text>
-				<tKey>FSFTweaksFoodsAreSafeDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Growable Ambrosia -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Growable Ambrosia</label>
-				<key>FSFGrowableAmbrosia</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksGrowableAmbrosiaTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows ambrosia to be researched and planted in growing zones.</text>
-				<tKey>FSFTweaksGrowableAmbrosiaDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Growable Grass -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Growable Grass</label>
-				<key>FSFGrowableGrass</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksGrowableGrassTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows grass to be planted in growing zones.</text>
-				<tKey>FSFTweaksGrowableGrassDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Growable Mushrooms -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Growable Mushrooms</label>
-				<key>FSFGrowableMushrooms</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksGrowableMushroomsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes Glowstool, Agarilux and Timbershroom to be plantable crops.  Glowstool and Agarilux have tweaked growth/yield so they are comparable to other crops.</text>
-				<tKey>FSFTweaksGrowableMushroomsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Growable Pasture Grass -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Growable Pasture Grass</label>
-				<key>FSFPastureGrass</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksPastureGrassTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Adds a new type of grass called Pasture Grass.  It's a species of grass designed for feeding grazing animals.  It lives for a long time and although it can be grown in low fertility soil it likes lushier soil.</text>
-				<tKey>FSFTweaksPastureGrassDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			<!-- Harder Drop Pod Raids -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -770,26 +1069,6 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- Herd Migration On Any Biome -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Herd Migration On Any Biome</label>
-				<key>FSFHerdMigrationOnAnyBiome</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksHerdMigrationOnAnyBiomeTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the allowedBiomes tag on the Herd Migration event so it can trigger on any biome.</text>
-				<tKey>FSFTweaksHerdMigrationOnAnyBiomeDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			<!-- Immortal Power Conduits -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -810,73 +1089,6 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- Indoor Tree Farms -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Indoor Tree Farms</label>
-				<key>FSFIndoorTreeFarmsOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksIndoorTreeFarmsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows you to individually enable options that will allow plants to be plantable under roofs, allow adjacent sowing and allow planting regardless of biome.  These limitations ordinarily only appear on tree or tree like plants.</text>
-				<tKey>FSFTweaksIndoorTreeFarmsOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFIndoorTreeFarmsOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Allow Adjacent Sowing on plants.</label>
-						<key>FSFIndoorTreeFarmsAdjacentSow</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksIndoorTreeFarmsAdjacentSow</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Allow plants to be planted under roofs.</label>
-						<key>FSFIndoorTreeFarmsRoof</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksIndoorTreeFarmsRoof</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Allow plants to be planted regardless of biome.</label>
-						<key>FSFIndoorTreeFarmsWildToSow</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksIndoorTreeFarmsWildToSow</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Insect Jelly Isn't A Meal -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Insect Jelly Isn't A Meal</label>
-				<key>FSFInsectJellyIsntAMeal</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksInsectJellyIsntAMealTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the preferability of Insect Jelly from Fine Meal to Raw Tasty.  This means pawns will only prefer it as food if there are no cooked meals.  However, they will still eat it for Gluttonous Recreation.  This allows you to easier keep your expensive jelly for sale and recreation.</text>
-				<tKey>FSFTweaksInsectJellyIsntAMealDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			<!-- Interaction Spots Can Overlap -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -891,34 +1103,6 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Removes the restriction on everything so interaction spots can overlap.  The interaction spot is where a pawn stands while using the building and typically where you place a seat for them.</text>
 				<tKey>FSFTweaksInteractionSpotsCanOverlapDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Less Desirable Long Term Food -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Less Desirable Long Term Food</label>
-				<key>FSFLessDesirableLongTermFood</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksLessDesirableLongTermFoodTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes long term foods like Pemmican and Packaged Survival Meals to be less desirable than normal meals.\nNote: Distance seems to be factored into food choice so for best results long term foods should be stored near other meals.</text>
-				<tKey>FSFTweaksLessDesirableLongTermFoodDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(187,0,0)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Warning: This tweak may cause friendlies to pilfer your food supplies more as their preserved meals are considered less desirable.</text>
-				<tKey>FSFTweaksLessDesirableLongTermFoodWarning</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -1028,63 +1212,6 @@
 					<li Class="XmlExtensions.Setting.Text">
 						<text>Input a value to adjust the flammability of each metal.  The lower the number the less flammable it is.  The displayed number is a percentage of its flammability.  Setting it to 0 will make that metal completely immune to fire.\nVanilla flammability is 0.4 (40%).</text>
 						<tKey>FSFTweaksMetalFlammabilityDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- More Filters -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>More Filters</label>
-				<key>FSFMoreFiltersOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksMoreFiltersTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows you to individually toggle on options to add new filters for easier organisation and accessibility.  Such as sorting food or drugs into more specific categories.</text>
-				<tKey>FSFTweaksMoreFiltersDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFMoreFiltersOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>More Filters Drugs</label>
-						<key>FSFMoreFiltersDrugs</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksMoreFiltersDrugsTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Adds a number of new categories for drugs and organises items so they can be more easily accessed.  The following categories are added, Hard, Medical, Social.</text>
-						<tKey>FSFTweaksMoreFiltersDrugsDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>More Filters Food</label>
-						<key>FSFMoreFiltersFood</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksMoreFiltersFoodTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Adds a number of new categories for food and organises items so they can be more easily accessed.  The following categories are added, Awful, Simple, Fine, Lavish, Gourmet (VCE), Confectionery (VCE), Long Term, Jelly (Alpha Animals), Milk (Alpha Animals), Raw Tasty, Baby Food (Biotech DLC), Animal Feed, Gluttonous, Blood (Biotech DLC), Cocktails (VBE).</text>
-						<tKey>FSFTweaksMoreFiltersFoodDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(187,0,0)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Warning: Due to changing item categories this tweak can interfere with stacking mods that rely on categories.  For OgreStack this causes the items to be classed under Other instead of their default categories.  If you use more specific stacking settings be sure to account for this.</text>
-						<tKey>FSFTweaksMoreFiltersFoodWarning</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
 				</caseTrue>
@@ -1224,26 +1351,6 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- Mounts For Sale -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Mounts For Sale</label>
-				<key>FSFMountsForSaleOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksMountsForSaleTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Adds breeding pairs of Horses always for sale at Neolithic and Medieval bases so you have an easy way to get caravan animals.</text>
-				<tKey>FSFTweaksMountsForSaleDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			<!-- No Debuff For Banishing -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -1258,46 +1365,6 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Changes the duration of all thoughts for banishing or rejecting people to expire instantly.</text>
 				<tKey>FSFTweaksNoDebuffForBanishingDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- No Default Fungus In Meals -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>No Default Fungus In Meals</label>
-				<key>FSFNoDefaultFungusInMeals</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksNoDefaultFungusInMealsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Adds Raw Fungus to the list of default disallowed ingredients on meals.</text>
-				<tKey>FSFTweaksNoDefaultFungusInMealsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- No Default Storage Settings -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>No Default Storage Settings</label>
-				<key>FSFNoDefaultStorageSettings</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksNoDefaultStorageSettingsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes every ThingDef to remove the defaultStorageSettings and changes the default priority to normal.  Unlike the mod No Default Shelf Storage which intentionally looks for a ThingClass to target only storage items this patch goes for everything.  This means it'll target things like Mortars, Sarcophaguses, Biosculpters, Growth Pods and more.</text>
-				<tKey>FSFTweaksNoDefaultStorageSettingsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -1360,75 +1427,6 @@
 				<tKey>FSFTweaksNoOneEverFleesDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- No Starting Research -->
-					
-			<li Class="XmlExtensions.Setting.CollapsibleSettings">
-				<label>No Starting Research</label>
-				<defaultState>Closed</defaultState>
-				<anchor>Left</anchor>
-				<tKey>FSFTweaksNoStartingResearchTitle</tKey>
-				<settings>
-
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Allows you to pick which starting Player Factions should start the game with no completed research projects.</text>
-						<tKey>FSFNoStartingResearchOnDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>All Factions</label>
-						<key>FSFNoStartingResearchAll</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksNoStartingResearchAllTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Removes all starting research from every Player Faction.  This should work for all DLC and mods.  If this is enabled then none of the following settings should be enabled.\nNote: This does not remove any research added by starting Scenarios.</text>
-						<tKey>FSFTweaksNoStartingResearchAllDesc</tKey>
-					</li>	
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Colony Faction</label>
-						<key>FSFNoStartingResearchColony</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksNoStartingResearchColonyTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Removes all starting research from the Player Colony Faction called New Arrivals which is used for industrial starting scenarios like Crashlanded.</text>
-						<tKey>FSFTweaksNoStartingResearchColonyDesc</tKey>
-					</li>
-					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.Checkbox">
-						<label>Research Expedition</label>
-						<key>FSFNoStartingResearchResearchEx</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksNoStartingResearchResearchExTitle</tKey>
-					</li>
-					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.Text">
-						<text>Removes all starting research from the Player Research Expedition Faction called Research Expedition which is used for industrial starting scenarios like The Anomaly.</text>
-						<tKey>FSFTweaksNoStartingResearchResearchExDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Tribal Faction</label>
-						<key>FSFNoStartingResearchTribal</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksNoStartingResearchTribalTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Removes all starting research from the Player Tribal Faction called New Tribe which is used for tribal starting scenarios like Lost Tribe.</text>
-						<tKey>FSFTweaksNoStartingResearchTribalDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-					
-				</settings>
-			</li>
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
@@ -1588,132 +1586,6 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Changes power armour to be airtight if it fully covers the head or body.  Meaning when the body armour and helmet are worn together it provides full Toxic Environmental Resistance.  The helmets will also provide immunity to Toxic Gas.</text>
 				<tKey>FSFTweaksSealedPowerArmourDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Stackable Chunks -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Stackable Chunks</label>
-				<key>FSFStackableChunksOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksStackableChunksTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes rock and slag chunks to be stacklable and allows you to customise the stack limit.</text>
-				<tKey>FSFTweaksStackableChunksOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(187,0,0)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Warning: If enabled midsave this option may cause all rock and slag chunks to vanish.</text>
-				<tKey>FSFTweaksStackableChunksWarningDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFStackableChunksOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFStackableChunksRocks</key>
-						<defaultValue>25</defaultValue>
-						<min>1</min>
-						<max>1000</max>
-						<label>Rock Chunks Stack Limit</label>
-						<tKey>FSFTweaksStackableChunksRocks</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFStackableChunksSlag</key>
-						<defaultValue>25</defaultValue>
-						<min>1</min>
-						<max>1000</max>
-						<label>Slag Chunks Stack Limit</label>
-						<tKey>FSFTweaksStackableChunksSlag</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFStackableChunksMechanoid</key>
-						<defaultValue>25</defaultValue>
-						<min>1</min>
-						<max>1000</max>
-						<label>Mechanoid Slag Chunks Stack Limit</label>
-						<tKey>FSFTweaksStackableChunksMechanoid</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Input values to adjust the stack limit.</text>
-						<tKey>FSFTweaksStackableChunksDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Table Search Radius -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Table Search Radius</label>
-				<key>FSFTableSearchRadiusOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksTableSearchRadiusTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows you to set a maximum radius pawns will search for a table when consuming ingestible items.  This patches all items with a preferability except ones with NeverForNutrition.</text>
-				<tKey>FSFTweaksTableSearchRadiusOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFTableSearchRadiusOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFTableSearchRadius</key>
-						<defaultValue>75</defaultValue>
-						<min>1</min>
-						<max>1000</max>
-						<label>Table Search Radius</label>
-						<tKey>FSFTweaksTableSearchRadius</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Input a value to set a maximum radius pawns will search for a table when consuming ingestible items.  This patches all items with a preferability except ones with NeverForNutrition.\nNote: If a table is within this radius they will go to it before consuming items so be careful not to set it too high.  The default value of 75 is what I've found to be a nice middle ground.</text>
-						<tKey>FSFTweaksTableSearchRadiusDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Tidy Crop Textures -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Tidy Crop Textures</label>
-				<key>FSFTidyCropTextures</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksTidyCropTexturesTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the texture drawing of crops like rice that have messy texture placement to be nice and uniform like corn.</text>
-				<tKey>FSFTweaksTidyCropTexturesDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -1904,46 +1776,6 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- Wild Animal Reproduction -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Wild Animal Reproduction</label>
-				<key>FSFWildAnimalReproduction</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksWildAnimalReproductionTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows wild animals to mate so they become pregnant just like colony animals.  Also removes the deterioration rate of fertilized eggs so they can survive outdoors.</text>
-				<tKey>FSFTweaksWildAnimalReproductionDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Wolves Are Dogs -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Wolves Are Dogs</label>
-				<key>FSFWolvesAreDogs</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksWolvesAreDogsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the FilthRate to 1, Wildness to 0, Petness to 1, nuzzleMtbHours to 12, removes the manhunter on failed taming chance and adds the Special Trainable Comfort.  This puts them on par with dogs allowing you to have clean, friendly, nuzzle happy wolves.  Also adds mating pairs of Timber Wolves and Arctic Wolves for sale at faction bases so they're easy to acquire.</text>
-				<tKey>FSFTweaksWolvesAreDogsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			<!-- Younger People -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -1960,6 +1792,263 @@
 				<tKey>FSFTweaksYoungerPeopleDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
+					
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Tab - Plants -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Plants</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksPlantsTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- Growable Ambrosia -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Growable Ambrosia</label>
+				<key>FSFGrowableAmbrosia</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGrowableAmbrosiaTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows ambrosia to be researched and planted in growing zones.</text>
+				<tKey>FSFTweaksGrowableAmbrosiaDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Growable Grass -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Growable Grass</label>
+				<key>FSFGrowableGrass</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGrowableGrassTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows grass to be planted in growing zones.</text>
+				<tKey>FSFTweaksGrowableGrassDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Growable Mushrooms -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Growable Mushrooms</label>
+				<key>FSFGrowableMushrooms</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGrowableMushroomsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Glowstool, Agarilux and Timbershroom to be plantable crops.  Glowstool and Agarilux have tweaked growth/yield so they are comparable to other crops.</text>
+				<tKey>FSFTweaksGrowableMushroomsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Growable Pasture Grass -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Growable Pasture Grass</label>
+				<key>FSFPastureGrass</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPastureGrassTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Adds a new type of grass called Pasture Grass.  It's a species of grass designed for feeding grazing animals.  It lives for a long time and although it can be grown in low fertility soil it likes lushier soil.</text>
+				<tKey>FSFTweaksPastureGrassDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Indoor Tree Farms -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Indoor Tree Farms</label>
+				<key>FSFIndoorTreeFarmsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksIndoorTreeFarmsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to individually enable options that will allow plants to be plantable under roofs, allow adjacent sowing and allow planting regardless of biome.  These limitations ordinarily only appear on tree or tree like plants.</text>
+				<tKey>FSFTweaksIndoorTreeFarmsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFIndoorTreeFarmsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow Adjacent Sowing on plants.</label>
+						<key>FSFIndoorTreeFarmsAdjacentSow</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksIndoorTreeFarmsAdjacentSow</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow plants to be planted under roofs.</label>
+						<key>FSFIndoorTreeFarmsRoof</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksIndoorTreeFarmsRoof</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow plants to be planted regardless of biome.</label>
+						<key>FSFIndoorTreeFarmsWildToSow</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksIndoorTreeFarmsWildToSow</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Plants Give Hay -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Plants Give Hay</label>
+				<key>FSFPlantsGiveHay</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPlantsGiveHayTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Patches grass and grass like plants to give Hay when they are cut with harvest yields starting at 33% grown.  Normal grass plants gives 3 Hay when fully grown which is around 50% less efficient than Haygrass.  Tall Grass plants give 6 Hay when fully grown which is around 25% less efficient than Haygrass.</text>
+				<tKey>FSFTweaksPlantsGiveHayDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Tidy Crop Textures -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Tidy Crop Textures</label>
+				<key>FSFTidyCropTextures</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksTidyCropTexturesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the texture drawing of crops like rice that have messy texture placement to be nice and uniform like corn.</text>
+				<tKey>FSFTweaksTidyCropTexturesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+					
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No Starting Research -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>No Starting Research</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksNoStartingResearchTitle</tKey>
+				<settings>
+
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to pick which starting Player Factions should start the game with no completed research projects.</text>
+						<tKey>FSFNoStartingResearchOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>All Factions</label>
+						<key>FSFNoStartingResearchAll</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNoStartingResearchAllTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Removes all starting research from every Player Faction.  This should work for all DLC and mods.  If this is enabled then none of the following settings should be enabled.\nNote: This does not remove any research added by starting Scenarios.</text>
+						<tKey>FSFTweaksNoStartingResearchAllDesc</tKey>
+					</li>	
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Colony Faction</label>
+						<key>FSFNoStartingResearchColony</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNoStartingResearchColonyTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Removes all starting research from the Player Colony Faction called New Arrivals which is used for industrial starting scenarios like Crashlanded.</text>
+						<tKey>FSFTweaksNoStartingResearchColonyDesc</tKey>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.Checkbox">
+						<label>Research Expedition</label>
+						<key>FSFNoStartingResearchResearchEx</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNoStartingResearchResearchExTitle</tKey>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.Text">
+						<text>Removes all starting research from the Player Research Expedition Faction called Research Expedition which is used for industrial starting scenarios like The Anomaly.</text>
+						<tKey>FSFTweaksNoStartingResearchResearchExDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Tribal Faction</label>
+						<key>FSFNoStartingResearchTribal</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNoStartingResearchTribalTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Removes all starting research from the Player Tribal Faction called New Tribe which is used for tribal starting scenarios like Lost Tribe.</text>
+						<tKey>FSFTweaksNoStartingResearchTribalDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
 							
 				</settings>
 			</li>

@@ -3,12 +3,6 @@
 	
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFMoreFiltersOn</key>
-		<defaultValue>false</defaultValue>
-		<caseTrue>
-	
-	<Operation Class="XmlExtensions.OptionalPatch">
-		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
 		<key>FSFMoreFiltersDrugs</key>
 		<defaultValue>false</defaultValue>
 		<caseTrue>
@@ -93,9 +87,6 @@
 				
 			</operations>
 		</Operation>
-			
-		</caseTrue>
-	</Operation>
 			
 		</caseTrue>
 	</Operation>
