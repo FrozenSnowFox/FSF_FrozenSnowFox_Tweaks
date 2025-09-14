@@ -106,6 +106,28 @@
 				</value>
 			</li>
 				
+		<!-- ReGrowth -->
+				
+			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "RG_GrassBase"]/plant</xpath>
+				<value>
+					<harvestMinGrowth>0.33</harvestMinGrowth>
+					<harvestTag>Standard</harvestTag>
+					<harvestedThingDef>Hay</harvestedThingDef>
+					<harvestYield>3</harvestYield>
+				</value>
+			</li>
+				
+			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "RG_TallGrassBase"]/plant</xpath>
+				<value>
+					<harvestMinGrowth>0.33</harvestMinGrowth>
+					<harvestTag>Standard</harvestTag>
+					<harvestedThingDef>Hay</harvestedThingDef>
+					<harvestYield>6</harvestYield>
+				</value>
+			</li>
+				
 			</operations>
 		</Operation>
 			
