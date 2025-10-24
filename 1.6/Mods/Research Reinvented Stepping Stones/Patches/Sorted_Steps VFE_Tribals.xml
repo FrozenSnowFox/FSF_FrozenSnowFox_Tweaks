@@ -372,7 +372,7 @@
 				
 			<!-- ReBuild: Doors and Corners -->
 				
-			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VFEArchitect" Class="RR.PatchOperationAddOrReplace">
+			<li MayRequire="OskarPotocki.VFE.Tribals,ReBuild.COTR.DoorsAndCorners" Class="RR.PatchOperationAddOrReplace">
 				<xpath>/Defs/TerrainDef[@Name="RB_FinePlankWoodBase"]</xpath>
 				<value>
 					<researchPrerequisites>
