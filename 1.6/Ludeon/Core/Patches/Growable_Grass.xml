@@ -72,6 +72,26 @@
 					</sowTags>
 				</value>
 			</li>
+			
+	<!-- Regrowth 2 -->
+		
+			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "RG_GrassBase"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+					</sowTags>
+				</value>
+			</li>
+			
+			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "RG_TallGrassBase"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+					</sowTags>
+				</value>
+			</li>
 				
 			</operations>
 		</Operation>
