@@ -84,6 +84,17 @@
 					</layers>
 				</value>
 			</li>
+			
+			<!-- Vanilla Weapons Expanded Grenades - Reinforced Mechanoid 2 (Continued) -->
+			
+			<li MayRequire="VanillaExpanded.VWEG,Mlie.ReinforcedMechanoid2" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadePlasmaImmolator"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>PacksAreNotBelts_Artifact</li>
+					</layers>
+				</value>
+			</li>
 				
 			</operations>
 		</Operation>
