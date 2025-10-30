@@ -271,6 +271,15 @@
 					<li>Legs</li>
 				</value>
 			</li>
+			
+			<!-- Vanilla Weapons Expanded Grenades - Reinforced Mechanoid 2 (Continued) -->
+			
+			<li MayRequire="VanillaExpanded.VWEG,Mlie.ReinforcedMechanoid2" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VWE_Apparel_GrenadePlasmaImmolator"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
 				
 			</operations>
 		</Operation>
