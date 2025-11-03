@@ -28,14 +28,14 @@
 		<iconPath>UI/Icons/ThingCategories/FoodRaw</iconPath>
 	</ThingCategoryDef>
 					
-	<ThingCategoryDef MayRequireAnyOf="DankPyon.Medieval.Overhaul,sarg.alphaanimals">
+	<ThingCategoryDef>
 		<defName>FSFJelly</defName>
 		<label>jelly</label>
 		<parent>AnimalProductRaw</parent>
 		<iconPath>UI/Icons/ThingCategories/AnimalProductRaw</iconPath>
 	</ThingCategoryDef>
 					
-	<ThingCategoryDef MayRequire="sarg.alphaanimals">
+	<ThingCategoryDef>
 		<defName>FSFMilk</defName>
 		<label>milk</label>
 		<parent>AnimalProductRaw</parent>
@@ -379,7 +379,7 @@
 				
 			<!-- Jelly -->
 				
-			<li MayRequireAnyOf="DankPyon.Medieval.Overhaul,sarg.alphaanimals" Class="XmlExtensions.PatchOperationAddOrReplace">
+			<li Class="XmlExtensions.PatchOperationAddOrReplace">
 				<xpath>/Defs/ThingDef [defName [contains(text(), "Jelly")]] [ingestible/foodType[contains(text(), "AnimalProduct")]]</xpath>
 				<value>
 					<thingCategories Inherit="False">
@@ -392,7 +392,7 @@
 				Note: Medieval Overhaul uses the thingCategories DankPyon_Milk for cheese processing, so it needs reverting.
 			-->
 				
-			<li MayRequire="sarg.alphaanimals" Class="XmlExtensions.PatchOperationAddOrReplace">
+			<li Class="XmlExtensions.PatchOperationAddOrReplace">
 				<xpath>/Defs/ThingDef [defName [contains(text(), "Milk")]] [ingestible/foodType[contains(text(), "AnimalProduct")]]</xpath>
 				<value>
 					<thingCategories Inherit="False">
