@@ -502,21 +502,21 @@
 			<!-- Medieval Overhaul - Rations -->
 				
 			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName = "DankPyon_MealRations"]/ingestible/preferability</xpath>
+				<xpath>/Defs/ThingDef[@Name = "DankPyon_RationsBase"]/ingestible/preferability</xpath>
 				<value>
 					<preferability>RawBad</preferability>
 				</value>
 			</li>
 			
 			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName = "DankPyon_MealRations"]/ingestible/optimalityOffsetHumanlikes</xpath>
+				<xpath>/Defs/ThingDef[@Name = "DankPyon_RationsBase"]/ingestible/optimalityOffsetHumanlikes</xpath>
 				<value>
 					<optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
 				</value>
 			</li>
 				
 			<li MayRequire="DankPyon.Medieval.Overhaul" Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName = "DankPyon_MealRations"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
+				<xpath>/Defs/ThingDef[@Name = "DankPyon_RationsBase"]/ingestible/optimalityOffsetFeedingAnimals</xpath>
 				<value>
 					<optimalityOffsetFeedingAnimals>-5</optimalityOffsetFeedingAnimals>
 				</value>
