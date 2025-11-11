@@ -146,7 +146,7 @@
 			<!-- Anima Obelisk -->
 				
 			<li MayRequire="OskarPotocki.VFE.Tribals,DimonSever000.AnimaObelisk.Specific" Class="RR.PatchOperationAddOrReplace">
-				<xpath>/Defs/ThingDef[defName="AnimaObelisk_ThingDef_AnimaObelisk"]</xpath>
+				<xpath>/Defs/ThingDef[defName="AnimaObelisk"]</xpath>
 				<value>
 					<researchPrerequisites>
 						<li>VFET_Construction</li>
