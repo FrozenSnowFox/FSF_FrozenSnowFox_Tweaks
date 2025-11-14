@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFIncreasedLinkablesRange</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Increased Linkables Range -->
+        
+            <li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef/comps/li[@Class = "CompProperties_Facility"]/mustBePlacedAdjacent</xpath>
+            </li>
+				
+            <li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>Defs/ThingDef/comps/li[@Class = "CompProperties_Facility"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<requiresLOS>false</requiresLOS>
+					<maxDistance>50</maxDistance>
+				</value>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

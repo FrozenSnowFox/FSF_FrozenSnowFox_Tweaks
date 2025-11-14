@@ -1089,6 +1089,26 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Increased Linkables Range -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Increased Linkables Range</label>
+				<key>FSFIncreasedLinkablesRange</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksIncreasedLinkablesRangeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes linkables to have a maximum connection distance of 50 tiles, removes the line of sight requirement and removes the must be placed adjacent requirement.\nNote: The adjacent change is only for certain linkables like Vitals Monitors.</text>
+				<tKey>FSFTweaksIncreasedLinkablesRangeDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- Interaction Spots Can Overlap -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
