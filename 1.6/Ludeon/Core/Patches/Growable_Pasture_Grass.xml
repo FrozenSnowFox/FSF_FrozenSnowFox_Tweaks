@@ -56,7 +56,7 @@
 				<xpath>/Defs</xpath>
 				<value>
 					
-	<ThingDef ParentName="PlantBase">
+	<ThingDef ParentName="CavePlantBase">
 		<defName>FSFPastureGrassNight</defName>
 		<label>night pasture grass</label>
 		<description>A grass-like fungus that grows as part of a massive mycelium network designed for feeding grazing animals.  It lives for a long time and although it can be grown in low fertility soil it thrives in lushier soil.</description>
@@ -73,6 +73,9 @@
 		<hideAtSnowOrSandDepth>0.5</hideAtSnowOrSandDepth>
 		<ingestible />
 		<plant>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
 			<fertilityMin>0.05</fertilityMin>
 			<fertilitySensitivity>0.7</fertilitySensitivity>
 			<growDays>2.5</growDays>
