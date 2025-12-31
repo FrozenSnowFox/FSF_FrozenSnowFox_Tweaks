@@ -410,7 +410,7 @@
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes all techprints from the game.</text>
+				<text>Removes all techprints from the game.  Note: If the mod Configurable Techprints is enabled the patch will be disabled without you needing to turn this setting off.</text>
 				<tKey>FSFTweaksRemoveTechprintsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>

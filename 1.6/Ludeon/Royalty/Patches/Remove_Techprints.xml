@@ -7,24 +7,29 @@
 		<defaultValue>false</defaultValue>
 		<caseTrue>
 			
-		<Operation Class="PatchOperationSequence">
+		<Operation Class="PatchOperationFindMod">
+			<mods>
+				<li>Configurable Techprints</li>
+			</mods>
+			<nomatch Class="PatchOperationSequence">
 			<success>Normal</success>
 			<operations>
 				
-			<!-- Remove Techprints -->
+				<!-- Remove Techprints -->
 			
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/ResearchProjectDef/techprintCount</xpath>
-				<value>
-					<techprintCount>0</techprintCount>
-				</value>
-			</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef/techprintCount</xpath>
+					<value>
+						<techprintCount>0</techprintCount>
+					</value>
+				</li>
 			
-			<li Class="PatchOperationRemove">
-				<xpath>/Defs/ResearchProjectDef/heldByFactionCategoryTags</xpath>
-			</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ResearchProjectDef/heldByFactionCategoryTags</xpath>
+				</li>
 				
 			</operations>
+			</nomatch>
 		</Operation>
 			
 		</caseTrue>
