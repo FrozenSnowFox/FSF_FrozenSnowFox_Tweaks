@@ -46,6 +46,13 @@
 					</li>
 				</value>
 			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly,Ludeon.RimWorld.Biotech,Ushanka.BiologicalWarfare" Class="PatchOperationAdd">
+				<xpath>/Defs/GeneDef[defName="PerfectImmunity"]/makeImmuneTo</xpath>
+					<value>
+						<li>USH_Necroa</li>
+					</value>
+			</li>
 				
 			</operations>
 		</Operation>

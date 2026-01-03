@@ -58,6 +58,13 @@
 					
 				</value>
 			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly,Ludeon.RimWorld.Biotech,Ushanka.BiologicalWarfare" Class="PatchOperationAdd">
+				<xpath>/Defs/GeneDef[defName="PerfectImmunity"]/makeImmuneTo</xpath>
+					<value>
+						<li>FSF_PermanentNecroa</li>
+					</value>
+			</li>
 				
 			</operations>
 		</Operation>
