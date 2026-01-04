@@ -17,6 +17,7 @@
 			
             <li Class="PatchOperationRemove">
 				<xpath>/Defs/ThingDef
+				[defName != "Filth_Water"]
 				[defName != "Filth_GrayFlesh"]
 				[defName != "Filth_RevenantBloodPool"]
 				[defName != "Filth_RevenantSmear"]
@@ -27,6 +28,7 @@
 
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef
+				[defName != "Filth_Water"]
 				[defName != "Filth_GrayFlesh"]
 				[defName != "Filth_RevenantBloodPool"]
 				[defName != "Filth_RevenantSmear"]
