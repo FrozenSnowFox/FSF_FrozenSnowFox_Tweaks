@@ -16,11 +16,23 @@
 			<!-- Remove all entries for rainWashes then readd them to ensure they're all true -->
 			
             <li Class="PatchOperationRemove">
-				<xpath>/Defs/ThingDef[filth]/filth/rainWashes</xpath>
+				<xpath>/Defs/ThingDef
+				[defName != "Filth_GrayFlesh"]
+				[defName != "Filth_RevenantBloodPool"]
+				[defName != "Filth_RevenantSmear"]
+				[defName != "RG_FilthWater"]
+				[defName != "RG_FilthWaterSpatter"]
+				[filth] /filth/rainWashes</xpath>
             </li>
 
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[filth]/filth</xpath>
+				<xpath>/Defs/ThingDef
+				[defName != "Filth_GrayFlesh"]
+				[defName != "Filth_RevenantBloodPool"]
+				[defName != "Filth_RevenantSmear"]
+				[defName != "RG_FilthWater"]
+				[defName != "RG_FilthWaterSpatter"]
+				[filth] /filth</xpath>
 				<value>
 					<rainWashes>true</rainWashes>
 				</value>
@@ -37,37 +49,69 @@
 				
 			</operations>
 		</Operation>
-			
+		
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFFilthVWRATRevenant</key>
+		<key>FSFFilthVWRATGrayFlesh</key>
 		<defaultValue>false</defaultValue>
-		<caseFalse>
+		<caseTrue>
 				
 		<Operation Class="PatchOperationSequence">
 			<success>Normal</success>
 			<operations>
 				
-			<!-- Anomaly DLC - Revert Revenant Changes if option is off/False -->
+			<!-- Anomaly DLC - Change Gray Flesh Filth to Vanish -->
 			
 			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName = "Filth_RevenantSmear"]/filth/rainWashes</xpath>
+				<xpath>/Defs/ThingDef[defName = "Filth_GrayFlesh"]/filth/rainWashes</xpath>
 				<value>
-					<rainWashes>false</rainWashes>
+					<rainWashes>true</rainWashes>
 				</value>
 			</li>
 			
 			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName = "Filth_RevenantBloodPool"]/filth/rainWashes</xpath>
+				<xpath>/Defs/ThingDef[defName = "Filth_GrayFlesh"]/filth/rainWashes</xpath>
 				<value>
-					<rainWashes>false</rainWashes>
+					<rainWashes>true</rainWashes>
 				</value>
 			</li>
 				
 			</operations>
 		</Operation>
 			
-		</caseFalse>
+		</caseTrue>
+	</Operation>
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFFilthVWRATRevenant</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+				
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Anomaly DLC - Change Revenant Filth to Vanish -->
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_RevenantSmear"]/filth/rainWashes</xpath>
+				<value>
+					<rainWashes>true</rainWashes>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Filth_RevenantBloodPool"]/filth/rainWashes</xpath>
+				<value>
+					<rainWashes>true</rainWashes>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
 	</Operation>
 			
 		</caseTrue>

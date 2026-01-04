@@ -1009,6 +1009,29 @@
 						<color>(163,177,188)</color>
 					</li>
 					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow Gray Flesh trails to wash away with rain/snow.</label>
+						<key>FSFFilthVWRATGrayFlesh</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksFilthVWRATGrayFlesh</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(187,0,0)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Warning: This will make Metalhorrors more dangerous during bad weather as their traces will disappear almost immediately.</text>
+						<tKey>FSFTweaksFilthVWRATGrayFleshDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFFilthVanishesWithRainAndTime</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
 						<label>Allow Revenant blood and trails to wash away with rain/snow.</label>
 						<key>FSFFilthVWRATRevenant</key>
 						<defaultValue>false</defaultValue>
