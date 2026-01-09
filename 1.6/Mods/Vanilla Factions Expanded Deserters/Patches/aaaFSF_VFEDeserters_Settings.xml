@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Vanilla Factions Expanded Deserters Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vanilla Factions Expanded Deserters Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksVFEDesertersTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
@@ -59,8 +61,9 @@
 			
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
-						
-				
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>

@@ -18,7 +18,10 @@
             </li>
 				
             <li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
-				<xpath>Defs/ThingDef/comps/li[@Class = "CompProperties_Facility"]</xpath>
+				<xpath>Defs/ThingDef
+				[defName != "BioferriteHarvester"]
+				[defName != "IVDrugInfuser"]
+				/comps/li[@Class = "CompProperties_Facility"]</xpath>
 				<compare>Both</compare>
 				<value>
 					<requiresLOS>false</requiresLOS>

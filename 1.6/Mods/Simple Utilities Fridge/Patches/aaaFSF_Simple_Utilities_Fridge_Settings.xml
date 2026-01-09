@@ -19,6 +19,17 @@
 			</li>
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
+			
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Simple Utilities Fridge Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksSimpleUtilitiesFridgeTweaksTitle</tKey>
+				<settings>
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
 					
 			<!-- Cheaper Utilities -->
 			
@@ -64,11 +75,13 @@
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
 				</caseTrue>
-			</li>			
+			</li>
+			
 			<li Class="XmlExtensions.Setting.GapLine">
-			</li>						
-						
-				
+			</li>
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>

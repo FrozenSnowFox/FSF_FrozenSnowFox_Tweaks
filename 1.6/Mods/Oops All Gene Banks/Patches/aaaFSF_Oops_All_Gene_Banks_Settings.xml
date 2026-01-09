@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Oops All Gene Banks Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Oops All Gene Banks Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksOopsAllGeneBanksTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
@@ -70,7 +72,8 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
-						
+				</settings>
+			</li>						
 				
 				</value>
 			</li>

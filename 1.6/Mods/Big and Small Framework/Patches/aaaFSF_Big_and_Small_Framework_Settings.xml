@@ -5,41 +5,46 @@
 			<success>Normal</success>
 			<operations>
 				
-			<li MayRequire="RedMattis.BigSmall.Core" Class="PatchOperationAdd">
+			<li Class="PatchOperationAdd">
 				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksBigandSmallFramework"]/settings</xpath>
 				<value>
 
 			
 						
-			<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Text">
-				<text>Big and Small - Framework Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Big and Small - Framework Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
-				<tKey>FSFTweaksAnthrosonaeTweaksTitle</tKey>
-			</li>
-			<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.GapLine">
+				<tKey>FSFTweaksBSFTweaksTitle</tKey>
+				<settings>
+					
+			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
 			<!-- Note: The MayRequires are set to require Big and Small Genes, remove the upper MayRequires if that ever changes -->
 					
 			<!-- No Size Trait Changes -->
 			
-			<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Checkbox">
+			<li Class="XmlExtensions.Setting.Checkbox">
 				<label>No Size Trait Changes</label>
 				<key>FSFBSFNoSizeTraitChanges</key>
 				<defaultValue>false</defaultValue>
 				<tKey>FSFTweaksBSFNoSizeTraitChangesTitle</tKey>
 			</li>
-			<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor">
+			<li Class="XmlExtensions.Setting.SetColor">
 				<color>(163,177,188)</color>
 			</li>
-			<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Text">
+			<li Class="XmlExtensions.Setting.Text">
 				<text>Removes all the skill and lifespan modifiers from the Big and Small size traits.</text>
 				<tKey>FSFTweaksBSFNoSizeTraitChangesDesc</tKey>
 			</li>
-			<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor"/>
 			
-			<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.GapLine">
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+				</settings>
 			</li>
 					
 				</value>

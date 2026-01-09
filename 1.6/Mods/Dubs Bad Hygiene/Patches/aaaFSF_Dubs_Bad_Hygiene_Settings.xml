@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Dubs Bad Hygiene Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Dubs Bad Hygiene Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksDubsBadHygieneTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
@@ -40,7 +42,8 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
-						
+				</settings>
+			</li>						
 				
 				</value>
 			</li>

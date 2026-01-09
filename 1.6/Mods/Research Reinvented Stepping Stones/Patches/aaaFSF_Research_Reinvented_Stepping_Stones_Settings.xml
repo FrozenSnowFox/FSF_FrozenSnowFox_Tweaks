@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Research Reinvented Stepping Stones Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Research Reinvented Stepping Stones Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksRRSSTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
@@ -56,8 +58,9 @@
 			
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
-						
-				
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>

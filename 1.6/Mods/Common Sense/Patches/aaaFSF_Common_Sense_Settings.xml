@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Common Sense Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Common Sense Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksCommonSenseTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
@@ -39,8 +41,9 @@
 			
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
-					
-						
+			
+				</settings>
+			</li>						
 				
 				</value>
 			</li>

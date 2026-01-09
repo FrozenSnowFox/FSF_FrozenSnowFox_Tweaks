@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVQENoDeadlifeApocalypse</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Deadlife Apocalypse -->
+		
+			<li MayRequire="vanillaquestsexpanded.deadlife" Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_Deadlife_AncientICBMLaunchSite"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]/conditionSucceedQuestsCount/VQE_Deadlife_AncientSilo</xpath>
+				<value>
+					<VQE_Deadlife_AncientSilo>99999</VQE_Deadlife_AncientSilo>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

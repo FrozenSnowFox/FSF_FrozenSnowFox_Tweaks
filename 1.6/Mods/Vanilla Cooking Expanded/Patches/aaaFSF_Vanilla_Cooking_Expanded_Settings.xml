@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Vanilla Cooking Expanded Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vanilla Cooking Expanded Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksVanillaCookingExpandedTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
@@ -56,10 +58,12 @@
 				<tKey>FSFTweaksVCookENoRuinedGrillsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
+
 			<li Class="XmlExtensions.Setting.GapLine">
-			</li>					
-						
-				
+			</li>
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>

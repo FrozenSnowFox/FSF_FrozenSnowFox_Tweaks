@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVQE"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vanilla Quests Expanded Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksVQETweaksTitle</tKey>
+				<settings>
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Vanilla Quests Expanded -->
+			
+			<!-- Tab - Vanilla Quests Expanded Ancients -->
+					
+			<li MayRequireAnyOf="vanillaquestsexpanded.ancients" Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vanilla Quests Expanded Ancients</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksVQEAncientsTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+					<!-- More Ancient Vaults -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>More Ancient Vaults</label>
+						<key>FSFVQEMoreAncientVaultsOn</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksVQEMoreAncientVaultsTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to change the interval between random Ancient Vault quests with an input number.  These random quests only begin appearing after advancing the quest chain enough and they trigger when a quest finishes whether that be success, failure or expiry.</text>
+						<tKey>FSFTweaksVQEMoreAncientVaultsDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.ToggleableSettings">
+						<key>FSFVQEMoreAncientVaultsOn</key>
+						<caseTrue>
+							<li Class="XmlExtensions.Setting.SetColor">
+								<color>(163,177,188)</color>
+							</li>
+							<li Class="XmlExtensions.Setting.Numeric">
+								<key>FSFVQEMoreAncientVaults</key>
+								<defaultValue>60</defaultValue>
+								<min>1</min>
+								<max>1000</max>
+								<label>Days Between Ancient Vaults</label>
+								<tKey>FSFTweaksVQEMoreAncientVaults</tKey>
+							</li>
+							<li Class="XmlExtensions.Setting.Text">
+								<text>Input a value to adjust the interval between random Ancient Vault quests.\nVanilla value 60 Days.</text>
+								<tKey>FSFTweaksOAGNLargerGenebanksDesc</tKey>
+							</li>
+							<li Class="XmlExtensions.Setting.SetColor"/>
+						</caseTrue>
+					</li>
+					
+				</settings>
+			</li>
+			
+			<!-- Tab - Vanilla Quests Expanded Cryptoforge -->
+					
+			<li MayRequireAnyOf="vanillaquestsexpanded.cryptoforge" Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vanilla Quests Expanded Cryptoforge</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksVQECryptoforgeTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+					<!-- Repeatable Cryptoforge -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Repeatable Cryptoforge</label>
+						<key>FSFVQERepeatableCryptoforge</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksVQERepeatableCryptoforgeTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Changes the Cryptoforge quests to repeat on success after 30 days.  Allowing you to keep looting crashed ships and making crypto equipment.</text>
+						<tKey>FSFTweaksVQERepeatableCryptoforgeDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>					
+					
+				</settings>
+			</li>
+			
+			
+			
+			<!-- Tab - Vanilla Quests Expanded Deadlife -->
+					
+			<li MayRequireAnyOf="vanillaquestsexpanded.deadlife" Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vanilla Quests Expanded Deadlife</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksVQEDeadlifeTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+					<!-- No Deadlife Apocalypse -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>No Deadlife Apocalypse</label>
+						<key>FSFVQENoDeadlifeApocalypse</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksVQENoDeadlifeApocalypseTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Changes the required number of completed silos for the ending quest with the General to require 99999 completed silos.  This will allow you to explore and complete the deadlife silos repeatedly without worrying about triggering the ending.  If you do want to see the ending at some point just turn this tweak off.</text>
+						<tKey>FSFTweaksVQENoDeadlifeApocalypseDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>					
+					
+				</settings>
+			</li>				
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+				</settings>
+			</li>
+						
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

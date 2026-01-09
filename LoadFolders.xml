@@ -257,7 +257,7 @@
 		<li IfModActive="ATK.Anthrosonae">1.6/Mods/Anthrosonae</li>
 		
 		<!-- Big and Small Framework -->
-		<li IfModActive="RedMattis.BetterPrerequisites">1.6/Mods/Big and Small Framework</li>
+		<li IfModActive="RedMattis.BigSmall.Core">1.6/Mods/Big and Small Framework</li>
 		
 		<!-- Common Sense -->
 		<li IfModActive="avilmask.CommonSense">1.6/Mods/Common Sense</li>
@@ -334,6 +334,9 @@
 		<!-- Vanilla Psycasts Expanded -->
 		<li IfModActive="VanillaExpanded.VPsycastsE">1.6/Mods/Vanilla Psycasts Expanded</li>
 
+		<!-- Vanilla Quests Expanded -->
+		<li IfModActive="vanillaquestsexpanded.ancients,vanillaquestsexpanded.cryptoforge,vanillaquestsexpanded.deadlife">1.6/Mods/Vanilla Quests Expanded</li>
+
 		<!-- Vanilla Races Expanded - Android -->
 		<li IfModActive="vanillaracesexpanded.android">1.6/Mods/Vanilla Races Expanded Android</li>
 		
@@ -343,8 +346,8 @@
 		<!-- Vanilla Races Expanded - Highmate -->
 		<li IfModActive="vanillaracesexpanded.highmate">1.6/Mods/Vanilla Races Expanded Highmate</li>
 		
-		<!-- Vanilla Races Expanded - Phytoki -->
-		<li IfModActive="vanillaracesexpanded.phytokin">1.6/Mods/Vanilla Races Expanded Phytoki</li>
+		<!-- Vanilla Races Expanded - Phytokin -->
+		<li IfModActive="vanillaracesexpanded.phytokin">1.6/Mods/Vanilla Races Expanded Phytokin</li>
 
 		<!-- Vanilla Races Expanded - Sanguophage -->
 		<li IfModActive="vanillaracesexpanded.sanguophage">1.6/Mods/Vanilla Races Expanded Sanguophage</li>

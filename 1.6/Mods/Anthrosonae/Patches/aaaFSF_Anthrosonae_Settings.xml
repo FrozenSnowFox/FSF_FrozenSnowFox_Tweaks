@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Anthrosonae Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Anthrosonae Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksAnthrosonaeTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
@@ -59,6 +61,9 @@
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			
 			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+				</settings>
 			</li>
 					
 				</value>

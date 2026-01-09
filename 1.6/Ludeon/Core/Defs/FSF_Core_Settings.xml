@@ -2361,6 +2361,15 @@
 				</settings>
 			</li>
 			
+			<!-- Vanilla Quests Expanded Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksVQE</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
 			<!-- Vanilla Races Expanded - Android Settings -->
 			
 			<li Class="XmlExtensions.Setting.Group">
@@ -2388,10 +2397,10 @@
 				</settings>
 			</li>
 			
-			<!-- Vanilla Races Expanded - Phytoki Settings -->
+			<!-- Vanilla Races Expanded - Phytokin Settings -->
 			
 			<li Class="XmlExtensions.Setting.Group">
-				<tag>FrozenSnowFoxTweaksVREPhytoki</tag>
+				<tag>FrozenSnowFoxTweaksVREPhytokin</tag>
 				<settings>
                 <!--Will inject settings here-->
 				</settings>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVQEMoreAncientVaultsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFVQEMoreAncientVaults</li>
+		</keys>
+		<defaultValues>
+			<li>60</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- More Ancient Vaults -->
+				
+			<li MayRequire="vanillaquestsexpanded.ancients" Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_AncientResearchVault"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]/daysUntilGrantAgainOnSuccess</xpath>
+				<value>
+					<daysUntilGrantAgainOnSuccess>{FSFVQEMoreAncientVaults}</daysUntilGrantAgainOnSuccess>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaquestsexpanded.ancients" Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_AncientResearchVault"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]/daysUntilGrantAgainOnFailure</xpath>
+				<value>
+					<daysUntilGrantAgainOnFailure>{FSFVQEMoreAncientVaults}</daysUntilGrantAgainOnFailure>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaquestsexpanded.ancients" Class="PatchOperationReplace">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_AncientResearchVault"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]/daysUntilGrantAgainOnExpiry</xpath>
+				<value>
+					<daysUntilGrantAgainOnExpiry>{FSFVQEMoreAncientVaults}</daysUntilGrantAgainOnExpiry>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

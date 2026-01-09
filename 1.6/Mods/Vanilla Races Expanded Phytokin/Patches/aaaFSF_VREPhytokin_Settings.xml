@@ -6,17 +6,19 @@
 			<operations>
 				
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVREPhytoki"]/settings</xpath>
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksVREPhytokin"]/settings</xpath>
 				<value>
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Vanilla Races Expanded Phytoki Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vanilla Races Expanded Phytokin Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
-				<tKey>FSFTweaksVREPhytokiTweaksTitle</tKey>
-			</li>
+				<tKey>FSFTweaksVREPhytokinTweaksTitle</tKey>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
@@ -24,23 +26,24 @@
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
 				<label>No Workspeed Malus On Sap Blood</label>
-				<key>FSFVREPhytokiSapBloodNoWorkspeedMalus</key>
+				<key>FSFVREPhytokinSapBloodNoWorkspeedMalus</key>
 				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksVREPhytokiSapBloodNoWorkspeedMalusTitle</tKey>
+				<tKey>FSFTweaksVREPhytokinSapBloodNoWorkspeedMalusTitle</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor">
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Removes the work speed malus on the Sap Blood gene and lowers the gene complexity from -2 to -1.</text>
-				<tKey>FSFTweaksVREPhytokiSapBloodNoWorkspeedMalusDesc</tKey>
+				<tKey>FSFTweaksVREPhytokinSapBloodNoWorkspeedMalusDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			
 			<li Class="XmlExtensions.Setting.GapLine">
-			</li>						
-						
-				
+			</li>
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>

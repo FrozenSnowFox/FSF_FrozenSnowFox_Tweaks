@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Research Appropriation Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Research Appropriation Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksResearchAppropriationTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
@@ -68,8 +70,9 @@
 			
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
-						
-				
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>

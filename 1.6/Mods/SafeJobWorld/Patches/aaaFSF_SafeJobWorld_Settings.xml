@@ -20,6 +20,17 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>SafeJobWorld Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksSafeJobWorldTweaksTitle</tKey>
+				<settings>
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
 			<!-- No Genital Size Debuffs -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -39,8 +50,9 @@
 			
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
-						
-				
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>

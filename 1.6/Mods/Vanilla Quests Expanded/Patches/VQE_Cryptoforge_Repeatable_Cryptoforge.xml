@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFVQERepeatableCryptoforge</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Repeatable Cryptoforge -->
+			
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationRemove">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_Cryptoforge_Chapter2"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]/isRepeatable</xpath>
+			</li>
+			
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationRemove">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_Cryptoforge_Chapter3"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]/isRepeatable</xpath>
+			</li>
+			
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationRemove">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_Cryptoforge_Chapter4"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]/isRepeatable</xpath>
+			</li>
+			
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationAdd">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_Cryptoforge_Chapter2"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]</xpath>
+				<value>
+					<grantAgainOnSuccess>true</grantAgainOnSuccess>
+					<daysUntilGrantAgainOnSuccess>30</daysUntilGrantAgainOnSuccess>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationAdd">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_Cryptoforge_Chapter3"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]</xpath>
+				<value>
+					<grantAgainOnSuccess>true</grantAgainOnSuccess>
+					<daysUntilGrantAgainOnSuccess>30</daysUntilGrantAgainOnSuccess>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="PatchOperationAdd">
+				<xpath>/Defs/QuestScriptDef[defName = "VQE_Cryptoforge_Chapter4"]/modExtensions/li[@Class = "VEF.Storyteller.QuestChainExtension"]</xpath>
+				<value>
+					<grantAgainOnSuccess>true</grantAgainOnSuccess>
+					<daysUntilGrantAgainOnSuccess>30</daysUntilGrantAgainOnSuccess>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Vanilla Races Expanded Genie Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vanilla Races Expanded Genie Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksVREGenieTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
@@ -38,9 +40,10 @@
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			
 			<li Class="XmlExtensions.Setting.GapLine">
-			</li>						
-						
-				
+			</li>
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>

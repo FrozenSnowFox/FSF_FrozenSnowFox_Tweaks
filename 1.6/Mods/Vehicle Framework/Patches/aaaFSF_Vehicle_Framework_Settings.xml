@@ -11,12 +11,14 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Vehicle Framework Tweaks</text>
-				<font>Medium</font>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Vehicle Framework Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
 				<anchor>Middle</anchor>
 				<tKey>FSFTweaksVehicleFrameworkTweaksTitle</tKey>
-			</li>
+				<settings>
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
@@ -147,10 +149,12 @@
 				<tKey>FSFTweaksVehicleFrameworkRenameCarPartsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
+
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
-						
-				
+					
+				</settings>
+			</li>
 					
 				</value>
 			</li>
