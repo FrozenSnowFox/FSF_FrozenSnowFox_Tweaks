@@ -11,15 +11,6 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>SafeJobWorld Tweaks</text>
-				<font>Medium</font>
-				<anchor>Middle</anchor>
-				<tKey>FSFTweaksSafeJobWorldTweaksTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-			</li>
-			
 			<li Class="XmlExtensions.Setting.CollapsibleSettings">
 				<label>SafeJobWorld Tweaks</label>
 				<headerFont>Medium</headerFont>

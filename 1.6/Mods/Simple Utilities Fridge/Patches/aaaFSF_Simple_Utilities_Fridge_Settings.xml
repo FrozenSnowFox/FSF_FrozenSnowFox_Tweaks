@@ -11,15 +11,6 @@
 
 			
 						
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Simple Utilities Fridge Tweaks</text>
-				<font>Medium</font>
-				<anchor>Middle</anchor>
-				<tKey>FSFTweaksSimpleUtilitiesFridgeTweaksTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-			</li>
-			
 			<li Class="XmlExtensions.Setting.CollapsibleSettings">
 				<label>Simple Utilities Fridge Tweaks</label>
 				<headerFont>Medium</headerFont>
