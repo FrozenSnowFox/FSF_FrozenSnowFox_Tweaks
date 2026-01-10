@@ -3,7 +3,7 @@
 	
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFBiotechMechsOn</key>
+		<key>FSFWastepacksOn</key>
 		<defaultValue>false</defaultValue>
 		<caseTrue>
 			

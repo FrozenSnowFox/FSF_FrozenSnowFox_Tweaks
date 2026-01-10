@@ -2199,15 +2199,6 @@
 				</settings>
 			</li>
 			
-			<!-- Oops All Gene Banks Settings -->
-			
-			<li Class="XmlExtensions.Setting.Group">
-				<tag>FrozenSnowFoxTweaksOopsAllGeneBanks</tag>
-				<settings>
-                <!--Will inject settings here-->
-				</settings>
-			</li>
-			
 			<!-- Packs Are Not Belts Settings -->
 			
 			<li Class="XmlExtensions.Setting.Group">

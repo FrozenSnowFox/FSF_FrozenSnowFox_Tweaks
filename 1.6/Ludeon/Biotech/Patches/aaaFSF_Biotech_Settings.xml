@@ -22,202 +22,318 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 					
-			<!-- Additional Xenotypes -->
+
+			<!-- Tab - Genetics -->
 			
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Genetics</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksGeneticsTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+				<!-- Additional Xenotypes -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Additional Xenotypes</label>
+					<key>FSFAddXenotypesOn</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksAddXenotypesTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Adds a number of different Custom Xenotypes as Defs for better compatibility with mods.  Enabling this option alone does not toggle anything on, it only displays more options.  All Xenotypes are off by default and can be enabled individually.</text>
+					<tKey>FSFTweaksAddXenotypesOnDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.ToggleableSettings">
+					<key>FSFAddXenotypesOn</key>
+					<caseTrue>
+						<li Class="XmlExtensions.Setting.Checkbox">
+							<label>Venerated Xenotype</label>
+							<key>FSFAddXenotypesVenerated</key>
+							<defaultValue>false</defaultValue>
+							<tKey>FSFTweaksAddXenotypesVeneratedTitle</tKey>
+						</li>
+						<li Class="XmlExtensions.Setting.SetColor">
+							<color>(163,177,188)</color>
+						</li>
+						<li Class="XmlExtensions.Setting.Text">
+							<text>Adds a dummy xenotype to the game meant to be used with the mod Venerated Xenotype Flexibility.  The xenotype itself does not appear in any faction and uses only a couple genes that will likely be used in any end game custom xenotype build.  As such, regardless of the game's theme the Venerated Xenotype should fit the end game custom xenotype when used alongside the Precept that requires specific genes but allows any additional genes.  The genes used are Archite Metabolism, Dark Vision, Quick Study and Xenogerm Reimplanter.</text>
+							<tKey>FSFTweaksAddXenotypesVeneratedDesc</tKey>
+						</li>
+						<li Class="XmlExtensions.Setting.SetColor"/>
+					</caseTrue>
+				</li>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+
+				<!-- Multiple Birth Gene -->
+					
+				<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Checkbox">
+					<label>Multiple Birth Gene</label>
+					<key>FSFMultipleBirthGene</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksMultipleBirthGeneTitle</tKey>
+				</li>
+				<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Text">
+					<text>Adds a new gene that allows pawns to rarely give birth to multiple babies.  With the gene there is a 97% chance of one baby, a 1% chance of twins, a 1% chance of triplets and a 1% chance of quads.</text>
+					<tKey>FSFTweaksMultipleBirthGeneDesc</tKey>
+				</li>
+				<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor"/>
+					
+				<!-- Twins Birth Gene -->
+					
+				<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Checkbox">
+					<label>Twins Birth Gene</label>
+					<key>FSFTwinsBirthGene</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksTwinsBirthGeneTitle</tKey>
+				</li>
+				<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Text">
+					<text>Adds a new gene that causes a pawn to always give birth to twins.</text>
+					<tKey>FSFTweaksTwinsBirthGeneDesc</tKey>
+				</li>
+				<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor"/>
+				
+				<!-- Growth Vat No Default Settings -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Growth Vat No Default Settings</label>
+					<key>FSFGrowthVatNoDefaultSettings</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksGrowthVatNoDefaultSettingsTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>When enabled Growth Vats will no longer have any default settings for nutrition.\nNote: This tweak is not needed if No Default Storage Settings is enabled but it will not cause issues if it is.</text>
+					<tKey>FSFTweaksGrowthVatNoDefaultSettingsDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+				
+				<!-- Larger Gene Banks -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Larger Gene Banks</label>
+					<key>FSFLargerGenebanksOn</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksLargerGenebanksTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Allows you to customise the amount of Genepacks a Gene Bank can hold.</text>
+					<tKey>FSFTweaksLargerGenebanksOnDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.ToggleableSettings">
+					<key>FSFLargerGenebanksOn</key>
+					<caseTrue>
+						<li Class="XmlExtensions.Setting.SetColor">
+							<color>(163,177,188)</color>
+						</li>
+						<li Class="XmlExtensions.Setting.Numeric">
+							<key>FSFLargerGenebanks</key>
+							<defaultValue>4</defaultValue>
+							<min>1</min>
+							<max>1000</max>
+							<label>Gene Bank Storage Limit</label>
+							<tKey>FSFTweaksLargerGenebanks</tKey>
+						</li>
+						<li MayRequire="redundant.oopsallgenepacks" Class="XmlExtensions.Setting.Numeric">
+							<key>FSFOAGNLargerGeneArchive</key>
+							<defaultValue>24</defaultValue>
+							<min>1</min>
+							<max>1000</max>
+							<label>Gene Bank Storage Limit</label>
+							<tKey>FSFTweaksOAGNLargerGeneArchive</tKey>
+						</li>
+						<li MayRequire="redundant.oopsallgenepacks" Class="XmlExtensions.Setting.Numeric">
+							<key>FSFOAGNLargerGeneRegister</key>
+							<defaultValue>80</defaultValue>
+							<min>1</min>
+							<max>1000</max>
+							<label>Gene Bank Storage Limit</label>
+							<tKey>FSFTweaksOAGNLargerGeneRegister</tKey>
+						</li>						
+						<li Class="XmlExtensions.Setting.Text">
+							<text>Input a value to adjust the capacity of Gene Banks.  The value is how many Genepacks can be stored per Gene Bank.\nThe Vanilla value Gene Bank 4 (Texture shows 8 slots), Gene Archive 24 (Texture shows 48 slots), Gene Register 80 (Texture shows 144 slots).</text>
+							<tKey>FSFTweaksLargerGenebanksDesc</tKey>
+						</li>
+						<li Class="XmlExtensions.Setting.SetColor"/>
+					</caseTrue>
+				</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- More Genepacks On Traders -->
+					
 			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Additional Xenotypes</label>
-				<key>FSFAddXenotypesOn</key>
+				<label>More Genepacks On Traders</label>
+				<key>FSFMoreGenepacksOnTradersOn</key>
 				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksAddXenotypesTitle</tKey>
+				<tKey>FSFTweaksMoreGenepacksOnTradersTitle</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor">
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Adds a number of different Custom Xenotypes as Defs for better compatibility with mods.  Enabling this option alone does not toggle anything on, it only displays more options.  All Xenotypes are off by default and can be enabled individually.</text>
-				<tKey>FSFTweaksAddXenotypesOnDesc</tKey>
+				<text>Changes the traders stock for Genepacks and Archite Capsules to the input amount.</text>
+				<tKey>FSFTweaksMoreGenepacksOnTradersOnDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFAddXenotypesOn</key>
+				<key>FSFMoreGenepacksOnTradersOn</key>
 				<caseTrue>
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Venerated Xenotype</label>
-						<key>FSFAddXenotypesVenerated</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksAddXenotypesVeneratedTitle</tKey>
-					</li>
 					<li Class="XmlExtensions.Setting.SetColor">
 						<color>(163,177,188)</color>
 					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreGenepacksOnTradersGenepackMin</key>
+						<defaultValue>5</defaultValue>
+						<min>0</min>
+						<max>1000</max>
+						<label>Genepack Amount Minimum Range</label>
+						<tKey>FSFTweaksMoreGenepacksOnTradersGenepackMin</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreGenepacksOnTradersGenepackMax</key>
+						<defaultValue>6</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Genepack Amount Maximum Range</label>
+						<tKey>FSFTweaksMoreGenepacksOnTradersGenepackMax</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreGenepacksOnTradersArchiteCapulesMin</key>
+						<defaultValue>6</defaultValue>
+						<min>0</min>
+						<max>1000</max>
+						<label>Archite Capsule Minimum Range</label>
+						<tKey>FSFTweaksMoreGenepacksOnTradersArchiteCapulesMin</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreGenepacksOnTradersArchiteCapulesMax</key>
+						<defaultValue>7</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Archite Capsule Maximum Range</label>
+						<tKey>FSFTweaksMoreGenepacksOnTradersArchiteCapulesMax</tKey>
+					</li>
 					<li Class="XmlExtensions.Setting.Text">
-						<text>Adds a dummy xenotype to the game meant to be used with the mod Venerated Xenotype Flexibility.  The xenotype itself does not appear in any faction and uses only a couple genes that will likely be used in any end game custom xenotype build.  As such, regardless of the game's theme the Venerated Xenotype should fit the end game custom xenotype when used alongside the Precept that requires specific genes but allows any additional genes.  The genes used are Archite Metabolism, Dark Vision, Quick Study and Xenogerm Reimplanter.</text>
-						<tKey>FSFTweaksAddXenotypesVeneratedDesc</tKey>
+						<text>Changes the traders stock for Genepacks and Archite Capsules to the input amount.  Input values to adjust the minimum and maximum ranges for the above items.  You can set a minimum and maximum for the range.  The game will then use RNG to determine a number between those two numbers.\nDefault settings (5-6, 6-7).</text>
+						<tKey>FSFTweaksMoreGenepacksOnTradersDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>			
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Xenogene Regrow Time -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Xenogene Regrow Time</label>
+				<key>FSFXenogeneRegrowTimeOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksXenogeneRegrowTimeTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to adjust the time it takes for Xenogenes to regrow when using the Implant Genes ability from the Gene Implanter gene.</text>
+				<tKey>FSFTweaksXenogeneRegrowTimeOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFXenogeneRegrowTimeOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFXenogeneRegrowTimeMin</key>
+						<defaultValue>6000000</defaultValue>
+						<min>0</min>
+						<max>6000000</max>
+						<label>Xenogene Regrow Time Minimum Range</label>
+						<tKey>FSFTweaksXenogeneRegrowTimeMin</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFXenogeneRegrowTimeMax</key>
+						<defaultValue>8400000</defaultValue>
+						<min>1</min>
+						<max>8400000</max>
+						<label>Xenogene Regrow Time Maximum Range</label>
+						<tKey>FSFTweaksXenogeneRegrowTimeMax</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the regrowth time of Xenogenes.  The value is written in what the game calls ticks.  There are 2500 ticks in one game hour and 60000 ticks in one game day.\nThe Vanilla value is 6000000 (100 days) to 8400000 (140 Days).\nSome values for easy input, (5 Days) 300000 ticks, (10 Days) 600000 ticks, (15 Days) 900000 ticks, (30 Days) 1800000 ticks, (45 Days) 2700000 ticks, (60 Days) 3600000 ticks.</text>
+						<tKey>FSFTweaksXenogeneRegrowTimeDesc</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
 				</caseTrue>
 			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
-			<!-- Coagulate Can Target Self -->
 			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Coagulate Can Target Self</label>
-				<key>FSFCoagulateCanTargetSelf</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksCoagulateCanTargetSelfTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows the Sanguophages to target themselves with the Coagulate power.</text>
-				<tKey>FSFTweaksCoagulateCanTargetSelfDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
 					
-			<!-- Genetics Settings -->
+				<!-- No RNG Gene Tools -->
 					
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Genetics Settings</label>
-				<key>FSFGeneticsOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksGeneticsSettingsTitle</tKey>
+				<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.Checkbox">
+					<label>No RNG Gene Tools</label>
+					<key>FSFNoRNGGeneTools</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksNoRNGGeneToolsTitle</tKey>
+				</li>
+				<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.Text">
+					<text>Changes the randomness of the normal Gene Tools from Alpha Genes to use the Archotech variant which allows you to specifically target a gene of your choice.</text>
+					<tKey>FSFTweaksNoRNGGeneToolsDesc</tKey>
+				</li>
+				<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.SetColor"/>
+				<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+				
+				</settings>
 			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Provides a suite of options related to Genetics.  This might include adding new genes, tweaking gene related buildings or other similar things.</text>
-				<tKey>FSFTweaksGeneticsOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFGeneticsOn</key>
-				<caseTrue>
-					
-					<!-- Multiple Birth Gene -->
-					
-					<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Checkbox">
-						<label>Multiple Birth Gene</label>
-						<key>FSFMultipleBirthGene</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksMultipleBirthGeneTitle</tKey>
-					</li>
-					<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Text">
-						<text>Adds a new gene that allows pawns to rarely give birth to multiple babies.  With the gene there is a 97% chance of one baby, a 1% chance of twins, a 1% chance of triplets and a 1% chance of quads.</text>
-						<tKey>FSFTweaksMultipleBirthGeneDesc</tKey>
-					</li>
-					<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor"/>
-					
-					<!-- Twins Birth Gene -->
-					
-					<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Checkbox">
-						<label>Twins Birth Gene</label>
-						<key>FSFTwinsBirthGene</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksTwinsBirthGeneTitle</tKey>
-					</li>
-					<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.Text">
-						<text>Adds a new gene that causes a pawn to always give birth to twins.</text>
-						<tKey>FSFTweaksTwinsBirthGeneDesc</tKey>
-					</li>
-					<li MayRequire="RedMattis.BigSmall.Core" Class="XmlExtensions.Setting.SetColor"/>
-					
-					<!-- No RNG Gene Tools -->
-					
-					<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.Checkbox">
-						<label>No RNG Gene Tools</label>
-						<key>FSFNoRNGGeneTools</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksNoRNGGeneToolsTitle</tKey>
-					</li>
-					<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.Text">
-						<text>Changes the randomness of the normal Gene Tools from Alpha Genes to use the Archotech variant which allows you to specifically target a gene of your choice.</text>
-						<tKey>FSFTweaksNoRNGGeneToolsDesc</tKey>
-					</li>
-					<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.SetColor"/>
-					
-					
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
-			<!-- Growth Vat No Default Settings -->
+		
+			<!-- Tab - Human Reproduction -->
 			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Growth Vat No Default Settings</label>
-				<key>FSFGrowthVatNoDefaultSettings</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksGrowthVatNoDefaultSettingsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>When enabled Growth Vats will no longer have any default settings for nutrition.\nNote: This tweak is not needed if No Default Storage Settings is enabled but it will not cause issues if it is.</text>
-				<tKey>FSFTweaksGrowthVatNoDefaultSettingsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
-			<!-- Hemogen For Food -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Hemogen For Food</label>
-				<key>FSFHemogenForFood</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksHemogenForFoodTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the preferability on Hemogen Packs so pawns will prioritise them as meals.  Also changes the nutrition they provide to match meals.</text>
-				<tKey>FSFTweaksHemogenForFoodDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
-			<!-- Human Reproduction Settings -->
-					
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Human Reproduction Settings</label>
-				<key>FSFHumanReproductonOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksReproductonSettingsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Provides a suite of options to adjust how fertility, lactation and pregnancy functions.</text>
-				<tKey>FSFTweaksHumanReproductonOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFHumanReproductonOn</key>
-				<caseTrue>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Human Reproduction</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksHumanReproductonTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
 					
 					<!-- Lactating No Fertility Malus -->
 					
@@ -252,6 +368,26 @@
 						<tKey>FSFTweaksNeolithicFertilityProceduresDesc</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
+					
+					<!-- Human Reproduction Settings -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Human Reproduction Settings</label>
+						<key>FSFHumanReproductonOn</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksReproductonSettingsTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Provides a suite of options to adjust how fertility, lactation and pregnancy functions.</text>
+						<tKey>FSFTweaksHumanReproductonOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.ToggleableSettings">
+						<key>FSFHumanReproductonOn</key>
+						<caseTrue>
 					
 					<!-- Lactation Duration -->
 					
@@ -536,9 +672,149 @@
 						<tKey>FSFTweaksVRESauridEggFatigueDaysDesc</tKey>
 					</li>
 					<li MayRequire="vanillaracesexpanded.saurid" Class="XmlExtensions.Setting.SetColor"/>
-
-				</caseTrue>
+					
+						</caseTrue>
+					</li>
+					
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+				</settings>
 			</li>
+			
+			<!-- Tab - Mechanoids and Mechanitors -->
+			
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Mechanoids and Mechanitors</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksGeneticsTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>					
+					
+					<!-- Mechanoids and Mechanitors -->
+			
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Wastepack Generation and Management</label>
+						<key>FSFWastepacksOn</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksWastepacksTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Allows you to customise various aspects relating to wastepack generation and management.</text>
+						<tKey>FSFTweaksWastepacksOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.ToggleableSettings">
+						<key>FSFWastepacksOn</key>
+						<caseTrue>
+							<li Class="XmlExtensions.Setting.SetColor">
+								<color>(163,177,188)</color>
+							</li>
+							<li Class="XmlExtensions.Setting.Numeric">
+								<key>FSFMechanoidRechargeWaste</key>
+								<defaultValue>5</defaultValue>
+								<min>0</min>
+								<max>100</max>
+								<label>Mechanoid Wastepacks Per Recharge</label>
+								<tKey>FSFTweaksMechanoidRechargeWaste</tKey>
+							</li>					
+							<li Class="XmlExtensions.Setting.Text">
+								<text>Input a value to adjust the amount of Wastepacks mechanoids generate per recharge.  The value itself is multiplied by the mechanoids bandwidth consumption.\nThe Vanilla value is 5.</text>
+								<tKey>FSFTweaksMechanoidRechargeWasteDesc</tKey>
+							</li>
+							<li Class="XmlExtensions.Setting.Numeric">
+								<key>FSFWastepackAtomizerPower</key>
+								<defaultValue>400</defaultValue>
+								<min>0</min>
+								<max>100000</max>
+								<label>Wastepack Atomizer Power Consumption</label>
+								<tKey>FSFTweaksWastepackAtomizerPower</tKey>
+							</li>
+							<li Class="XmlExtensions.Setting.Numeric">
+								<key>FSFWastepackAtomizerStackLimit</key>
+								<defaultValue>10</defaultValue>
+								<min>0</min>
+								<max>1000</max>
+								<label>Wastepack Atomizer Wastepack Stack Limit</label>
+								<tKey>FSFTweaksWastepackAtomizerStackLimit</tKey>
+							</li>
+							<li Class="XmlExtensions.Setting.Numeric">
+								<key>FSFWastepackAtomizerSpeed</key>
+								<defaultValue>30000</defaultValue>
+								<min>0</min>
+								<max>1000000</max>
+								<label>Wastepack Atomizer Ticks Required to Destroy a Wastepack</label>
+								<tKey>FSFTweaksWastepackAtomizerSpeed</tKey>
+							</li>
+							<li Class="XmlExtensions.Setting.Text">
+								<text>Input values to adjust statistics of the WastePack Atomizer.  Ticks are a game term for time.  There are 2500 ticks in one game hour and 60000 ticks in one game day.\nVanilla Values 400, 10, 30000.</text>
+								<tKey>FSFTweaksWastepackAtomizerSpeedDesc</tKey>
+							</li>
+							<li Class="XmlExtensions.Setting.SetColor"/>
+						</caseTrue>
+					</li>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+			
+				</settings>
+			</li>
+			
+			<!-- Tab - Misc -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Misc</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksMiscTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- Coagulate Can Target Self -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Coagulate Can Target Self</label>
+				<key>FSFCoagulateCanTargetSelf</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksCoagulateCanTargetSelfTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows the Sanguophages to target themselves with the Coagulate power.</text>
+				<tKey>FSFTweaksCoagulateCanTargetSelfDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+			<!-- Hemogen For Food -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Hemogen For Food</label>
+				<key>FSFHemogenForFood</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHemogenForFoodTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the preferability on Hemogen Packs so pawns will prioritise them as meals.  Also changes the nutrition they provide to match meals.</text>
+				<tKey>FSFTweaksHemogenForFoodDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
@@ -582,47 +858,6 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
-			
-			<!-- Larger Gene Banks -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Larger Gene Banks</label>
-				<key>FSFLargerGenebanksOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksLargerGenebanksTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows you to customise the amount of Genepacks a Gene Bank can hold.</text>
-				<tKey>FSFTweaksLargerGenebanksOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFLargerGenebanksOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFLargerGenebanks</key>
-						<defaultValue>4</defaultValue>
-						<min>1</min>
-						<max>1000</max>
-						<label>Gene Bank Storage Limit</label>
-						<tKey>FSFTweaksLargerGenebanks</tKey>
-					</li>					
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Input a value to adjust the capacity of Gene Banks.  The value is how many Genepacks can be stored per Gene Bank.\nThe Vanilla value is 4, the texture has 8 slots, input whatever you want.</text>
-						<tKey>FSFTweaksLargerGenebanksDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
 					
 			<!-- Love Is Blind -->
 			
@@ -643,76 +878,7 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
-					
-			<!-- Mechanoids and Mechanitors -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Mechanoids and Mechanitors</label>
-				<key>FSFBiotechMechsOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksBiotechMechsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows you to customise various aspects relating to mechanoids, mechanitors and wastepack management.</text>
-				<tKey>FSFTweaksBiotechMechsOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFBiotechMechsOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFMechanoidRechargeWaste</key>
-						<defaultValue>5</defaultValue>
-						<min>0</min>
-						<max>100</max>
-						<label>Mechanoid Wastepacks Per Recharge</label>
-						<tKey>FSFTweaksMechanoidRechargeWaste</tKey>
-					</li>					
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Input a value to adjust the amount of Wastepacks mechanoids generate per recharge.  The value itself is multiplied by the mechanoids bandwidth consumption.\nThe Vanilla value is 5.</text>
-						<tKey>FSFTweaksMechanoidRechargeWasteDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFWastepackAtomizerPower</key>
-						<defaultValue>400</defaultValue>
-						<min>0</min>
-						<max>100000</max>
-						<label>Wastepack Atomizer Power Consumption</label>
-						<tKey>FSFTweaksWastepackAtomizerPower</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFWastepackAtomizerStackLimit</key>
-						<defaultValue>10</defaultValue>
-						<min>0</min>
-						<max>1000</max>
-						<label>Wastepack Atomizer Wastepack Stack Limit</label>
-						<tKey>FSFTweaksWastepackAtomizerStackLimit</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFWastepackAtomizerSpeed</key>
-						<defaultValue>30000</defaultValue>
-						<min>0</min>
-						<max>1000000</max>
-						<label>Wastepack Atomizer Ticks Required to Destroy a Wastepack</label>
-						<tKey>FSFTweaksWastepackAtomizerSpeed</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Input values to adjust statistics of the WastePack Atomizer.  Ticks are a game term for time.  There are 2500 ticks in one game hour and 60000 ticks in one game day.\nVanilla Values 400, 10, 30000.</text>
-						<tKey>FSFTweaksWastepackAtomizerSpeedDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
+				
 			<!-- More Children Clothing -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -729,71 +895,6 @@
 				<tKey>FSFTweaksMoreChildrenClothingDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
-			<!-- More Genepacks On Traders -->
-					
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>More Genepacks On Traders</label>
-				<key>FSFMoreGenepacksOnTradersOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksMoreGenepacksOnTradersTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the traders stock for Genepacks and Archite Capsules to the input amount.</text>
-				<tKey>FSFTweaksMoreGenepacksOnTradersOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFMoreGenepacksOnTradersOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFMoreGenepacksOnTradersGenepackMin</key>
-						<defaultValue>5</defaultValue>
-						<min>0</min>
-						<max>1000</max>
-						<label>Genepack Amount Minimum Range</label>
-						<tKey>FSFTweaksMoreGenepacksOnTradersGenepackMin</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFMoreGenepacksOnTradersGenepackMax</key>
-						<defaultValue>6</defaultValue>
-						<min>1</min>
-						<max>1000</max>
-						<label>Genepack Amount Maximum Range</label>
-						<tKey>FSFTweaksMoreGenepacksOnTradersGenepackMax</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFMoreGenepacksOnTradersArchiteCapulesMin</key>
-						<defaultValue>6</defaultValue>
-						<min>0</min>
-						<max>1000</max>
-						<label>Archite Capsule Minimum Range</label>
-						<tKey>FSFTweaksMoreGenepacksOnTradersArchiteCapulesMin</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFMoreGenepacksOnTradersArchiteCapulesMax</key>
-						<defaultValue>7</defaultValue>
-						<min>1</min>
-						<max>1000</max>
-						<label>Archite Capsule Maximum Range</label>
-						<tKey>FSFTweaksMoreGenepacksOnTradersArchiteCapulesMax</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Changes the traders stock for Genepacks and Archite Capsules to the input amount.  Input values to adjust the minimum and maximum ranges for the above items.  You can set a minimum and maximum for the range.  The game will then use RNG to determine a number between those two numbers.\nDefault settings (5-6, 6-7).</text>
-						<tKey>FSFTweaksMoreGenepacksOnTradersDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
@@ -908,60 +1009,15 @@
 					<li Class="XmlExtensions.Setting.SetColor"/>
 				</caseTrue>
 			</li>
+			
+				</settings>
+			</li>
+					
+					
+					
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
-			</li>
-					
-			<!-- Xenogene Regrow Time -->
-					
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Xenogene Regrow Time</label>
-				<key>FSFXenogeneRegrowTimeOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksXenogeneRegrowTimeTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows you to adjust the time it takes for Xenogenes to regrow when using the Implant Genes ability from the Gene Implanter gene.</text>
-				<tKey>FSFTweaksXenogeneRegrowTimeOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFXenogeneRegrowTimeOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFXenogeneRegrowTimeMin</key>
-						<defaultValue>6000000</defaultValue>
-						<min>0</min>
-						<max>6000000</max>
-						<label>Xenogene Regrow Time Minimum Range</label>
-						<tKey>FSFTweaksXenogeneRegrowTimeMin</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFXenogeneRegrowTimeMax</key>
-						<defaultValue>8400000</defaultValue>
-						<min>1</min>
-						<max>8400000</max>
-						<label>Xenogene Regrow Time Maximum Range</label>
-						<tKey>FSFTweaksXenogeneRegrowTimeMax</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Input a value to adjust the regrowth time of Xenogenes.  The value is written in what the game calls ticks.  There are 2500 ticks in one game hour and 60000 ticks in one game day.\nThe Vanilla value is 6000000 (100 days) to 8400000 (140 Days).\nSome values for easy input, (5 Days) 300000 ticks, (10 Days) 600000 ticks, (15 Days) 900000 ticks, (30 Days) 1800000 ticks, (45 Days) 2700000 ticks, (60 Days) 3600000 ticks.</text>
-						<tKey>FSFTweaksXenogeneRegrowTimeDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-					
-					
-					
-			<li Class="XmlExtensions.Setting.GapLine">
-			</li>					
+			</li>			
 					
 				</settings>
 			</li>

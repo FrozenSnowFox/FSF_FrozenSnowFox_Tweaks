@@ -26,7 +26,7 @@
 			
 			<!-- Tab - Vanilla Quests Expanded Ancients -->
 					
-			<li MayRequireAnyOf="vanillaquestsexpanded.ancients" Class="XmlExtensions.Setting.CollapsibleSettings">
+			<li MayRequire="vanillaquestsexpanded.ancients" Class="XmlExtensions.Setting.CollapsibleSettings">
 				<label>Vanilla Quests Expanded Ancients</label>
 				<defaultState>Closed</defaultState>
 				<anchor>Left</anchor>
@@ -79,7 +79,7 @@
 			
 			<!-- Tab - Vanilla Quests Expanded Cryptoforge -->
 					
-			<li MayRequireAnyOf="vanillaquestsexpanded.cryptoforge" Class="XmlExtensions.Setting.CollapsibleSettings">
+			<li MayRequire="vanillaquestsexpanded.cryptoforge" Class="XmlExtensions.Setting.CollapsibleSettings">
 				<label>Vanilla Quests Expanded Cryptoforge</label>
 				<defaultState>Closed</defaultState>
 				<anchor>Left</anchor>
@@ -113,7 +113,7 @@
 			
 			<!-- Tab - Vanilla Quests Expanded Deadlife -->
 					
-			<li MayRequireAnyOf="vanillaquestsexpanded.deadlife" Class="XmlExtensions.Setting.CollapsibleSettings">
+			<li MayRequire="vanillaquestsexpanded.deadlife" Class="XmlExtensions.Setting.CollapsibleSettings">
 				<label>Vanilla Quests Expanded Deadlife</label>
 				<defaultState>Closed</defaultState>
 				<anchor>Left</anchor>

@@ -14,13 +14,18 @@
 			<!-- Increased Linkables Range -->
         
             <li Class="PatchOperationRemove">
-				<xpath>Defs/ThingDef/comps/li[@Class = "CompProperties_Facility"]/mustBePlacedAdjacent</xpath>
+				<xpath>Defs/ThingDef
+				[defName != "BioferriteHarvester"]
+				[defName != "IVDrugInfuser"]
+				[defName != "AnesthesiaIVStand_IVStand"]
+				/comps/li[@Class = "CompProperties_Facility"]/mustBePlacedAdjacent</xpath>
             </li>
 				
             <li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>Defs/ThingDef
 				[defName != "BioferriteHarvester"]
 				[defName != "IVDrugInfuser"]
+				[defName != "AnesthesiaIVStand_IVStand"]
 				/comps/li[@Class = "CompProperties_Facility"]</xpath>
 				<compare>Both</compare>
 				<value>

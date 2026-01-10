@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	        <!-- Vanilla Expanded Gravship Mechanoids -->
+        
+            <li MayRequire="vanillaexpanded.gravship" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "VGE_Astropede"]</xpath>
+				<value>
+					<butcherProducts>
+						<GravlitePanel>120</GravlitePanel>
+						<Plasteel>255</Plasteel>
+						<ComponentIndustrial>8</ComponentIndustrial>
+						<SubcoreHigh MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="vanillaexpanded.gravship" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "VGE_Hunter"]</xpath>
+				<value>
+					<butcherProducts>
+						<GravlitePanel>40</GravlitePanel>
+						<Plasteel>75</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreRegular MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Ludeon.RimWorld.Biotech,vanillaexpanded.gravship" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "VGE_Astronaut"]</xpath>
+				<value>
+					<butcherProducts>
+						<GravlitePanel>10</GravlitePanel>
+						<SubcoreRegular MayRequire="Ludeon.RimWorld.Biotech">1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

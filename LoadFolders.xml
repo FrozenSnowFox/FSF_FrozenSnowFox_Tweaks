@@ -271,9 +271,6 @@
 		<!-- [LTS]Ammunition - Simple Ammo Pack -->
 		<li IfModActive="LimeTreeSnake.Ammo">1.6/Mods/LTS Ammunition Simple</li>
 		
-		<!-- Oops All Gene Banks -->
-		<li IfModActive="redundant.oopsallgenepacks">1.6/Mods/Oops All Gene Banks</li>
-		
 		<!-- Packs Are Not Belts -->
 		<li IfModActive="turnovus.submod.backpacksarenotbelts">1.6/Mods/Packs Are Not Belts</li>
 		
