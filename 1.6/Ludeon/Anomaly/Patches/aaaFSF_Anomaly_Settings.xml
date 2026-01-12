@@ -21,6 +21,26 @@
 					
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
+			
+			<!-- Ghouls Can Use Any Ability -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Ghouls Can Use Any Ability</label>
+				<key>FSFGhoulsAnyAbility</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGhoulsAnyAbilityTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Ghouls have a white list of abilities they are allowed to use.  Any ability not on this list will not appear on the ghoul as a UI button to activate.  This tweak removes the white list which results in the game allowing ghouls to use any ability they might have gained via genes, bionics or other methods.</text>
+				<tKey>FSFTweaksGhoulsAnyAbilityDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
 					
 			<!-- Shambler Settings -->
 					
