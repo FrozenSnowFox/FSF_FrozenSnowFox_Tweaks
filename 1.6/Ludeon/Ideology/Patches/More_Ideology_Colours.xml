@@ -19,81 +19,97 @@
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoArchotech</defName>
+						<label>archotech</label>
 						<color>(139, 143, 104)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoLimestone</defName>
+						<label>limestone</label>
 						<color>(158, 153, 135)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoMarble</defName>
+						<label>marble</label>
 						<color>(132, 135, 132)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoSandstone</defName>
+						<label>sandstone</label>
 						<color>(126, 104, 94)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoGranite</defName>
+						<label>granite</label>
 						<color>(105, 95, 97)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoSlate</defName>
+						<label>slate</label>
 						<color>(70, 70, 70)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoSynthread</defName>
+						<label>synthread</label>
 						<color>(174, 219, 228)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoMuffaloLeather</defName>
+						<label>muffalo leather</label>
 						<color>(152, 170, 174)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoHyperweave</defName>
+						<label>hyperweave</label>
 						<color>(0, 106, 126)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoAlpaca</defName>
+						<label>alpaca</label>
 						<color>(237, 216, 174)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoDevilstrand</defName>
+						<label>devilstrand</label>
 						<color>(180, 60, 60)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoViolet</defName>
+						<label>violet</label>
 						<color>(91, 62, 114)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoDarkViolet</defName>
+						<label>dark violet</label>
 						<color>(71, 43, 93)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoDarkScarlet</defName>
+						<label>dark scarlet</label>
 						<color>(86, 3, 25)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoPitchBlack</defName>
+						<label>pitch black</label>
 						<color>(0.1, 0.1, 0.1)</color>
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoBluishPitchBlack</defName>
+						<label>bluish pitch black</label>
 						<color>(28, 29, 33)</color>
 					</ColorDef>
 					
