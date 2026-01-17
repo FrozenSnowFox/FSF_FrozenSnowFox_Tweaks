@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNoPsychicRitualCD</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- No Psychic Ritual Cooldown -->
+			
+			<!-- Anomaly DLC -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_VoidProvocation[defName = "VoidProvocation"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_ImbueDeathRefusal[defName = "ImbueDeathRefusal"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_Philophagy[defName = "Philophagy"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_SummonAnimals[defName = "SummonAnimals"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_SummonShamblers[defName = "SummonShamblers"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_SummonPitGate[defName = "SummonPitGate"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_Chronophagy[defName = "Chronophagy"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_PleasurePulse[defName = "PleasurePulse"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_NeurosisPulse[defName = "NeurosisPulse"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_BloodRain[defName = "BloodRain"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_Brainwipe[defName = "Brainwipe"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_Psychophagy[defName = "Psychophagy"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_SkipAbductionPlayer[defName = "SkipAbductionPlayer"]/cooldownHours</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_SummonFleshbeastsPlayer[defName = "SummonFleshbeastsPlayer"]/cooldownHours</xpath>
+			</li>
+			
+			<!-- Attract Creep Joiner Ritual -->
+			
+			<li MayRequire="teri.attractcreepjoinerritual" Class="PatchOperationRemove">
+				<xpath>/Defs/PsychicRitualDef_AttractCreepJoiner[defName = "AttractCreepJoiner"]/cooldownHours</xpath>
+			</li>
+			
+			<!-- ReSplice: Core -->
+			
+			<li MayRequire="ReSplice.XOTR.Core" Class="PatchOperationRemove">
+				<xpath>/Defs/ReSpliceCore.PsychicRitualDef_CreateVoidSpike[defName = "RS_DarkArchiteHarvesting"]/cooldownHours</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

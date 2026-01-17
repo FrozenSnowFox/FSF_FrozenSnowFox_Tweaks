@@ -41,6 +41,26 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
+			
+			<!-- No Psychic Ritual Cooldown -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Psychic Ritual Cooldown</label>
+				<key>FSFNoPsychicRitualCD</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoPsychicRitualCDTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the cooldown of Psychic Rituals allowing you to perform them again immediately providing you have the time and resources.</text>
+				<tKey>FSFTweaksNoPsychicRitualCDDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
 					
 			<!-- Shambler Settings -->
 					

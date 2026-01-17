@@ -204,6 +204,15 @@
 					<li>Legs</li>
 				</value>
 			</li>
+			
+			<!-- Vanilla Gravship Expanded -->
+			
+			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VGE_Apparel_OxygenPack"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Torso</li>
+				</value>
+			</li>
 				
 			<!-- Vanilla Ideology Expanded Memes and Structures -->
 			
