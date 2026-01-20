@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFNormalGhoulAppearance</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Normal Ghoul Appearance -->
+			
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationRemove">
+				<xpath>/Defs/MutantDef[defName = "Ghoul"]/disablesGenes/li[text()="Furskin"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/MutantDef[defName = "Ghoul"]/bodyTypeGraphicPaths</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/MutantDef[defName = "Ghoul"]/forcedHeadTypes</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/MutantDef[defName = "Ghoul"]/hairTagFilter</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/MutantDef[defName = "Ghoul"]/beardTagFilter</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

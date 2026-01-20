@@ -22,135 +22,177 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
-			<!-- Ghouls Can Use Any Ability -->
+			<!-- Tab - Ghouls -->
 			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Ghouls Can Use Any Ability</label>
-				<key>FSFGhoulsAnyAbility</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksGhoulsAnyAbilityTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Ghouls have a white list of abilities they are allowed to use.  Any ability not on this list will not appear on the ghoul as a UI button to activate.  This tweak removes the white list which results in the game allowing ghouls to use any ability they might have gained via genes, bionics or other methods.</text>
-				<tKey>FSFTweaksGhoulsAnyAbilityDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Ghouls</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksGhoulsTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+				<!-- Ghouls Can Use Any Ability -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Ghouls Can Use Any Ability</label>
+					<key>FSFGhoulsAnyAbility</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksGhoulsAnyAbilityTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Ghouls have a white list of abilities they are allowed to use.  Any ability not on this list will not appear on the ghoul as a UI button to activate.  This tweak removes the white list which results in the game allowing ghouls to use any ability they might have gained via genes, bionics or other methods.</text>
+					<tKey>FSFTweaksGhoulsAnyAbilityDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+				
+				<!-- Normal Ghoul Appearance -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Normal Ghoul Appearance</label>
+					<key>FSFNormalGhoulAppearance</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksNormalGhoulAppearanceTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Disables the custom body, head and hairstyles ghouls normally use.  This means pawns made into ghouls will retain their normal appearance but have the dead greenish skin look.</text>
+					<tKey>FSFTweaksNormalGhoulAppearanceDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+				
+				</settings>
 			</li>
 			
-			<!-- No Psychic Ritual Cooldown -->
+			<!-- Tab - Misc -->
 			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>No Psychic Ritual Cooldown</label>
-				<key>FSFNoPsychicRitualCD</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksNoPsychicRitualCDTitle</tKey>
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Misc</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksMiscTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+				<!-- No Psychic Ritual Cooldown -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>No Psychic Ritual Cooldown</label>
+					<key>FSFNoPsychicRitualCD</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksNoPsychicRitualCDTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Removes the cooldown of Psychic Rituals allowing you to perform them again immediately providing you have the time and resources.</text>
+					<tKey>FSFTweaksNoPsychicRitualCDDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+					
+				</settings>
 			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the cooldown of Psychic Rituals allowing you to perform them again immediately providing you have the time and resources.</text>
-				<tKey>FSFTweaksNoPsychicRitualCDDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
-			<!-- Shambler Settings -->
-					
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Shambler Settings</label>
-				<key>FSFShamblerSettingsOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksShamblerSettingsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Provides a suite of options to adjust how shamblers function.</text>
-				<tKey>FSFTweaksShamblerSettingsOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFShamblerSettingsOn</key>
-				<caseTrue>
-					
-					<!-- Lethal Shambler Infections -->
-					
-					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfarel,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Checkbox">
-						<label>Lethal Shambler Infections</label>
-						<key>FSFLethalShamblers</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksLethalShamblersTitle</tKey>
+			
+			<!-- Tab - Shamblers -->
+			
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Shamblers</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksShamblersTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
 					</li>
-					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Text">
-						<text>Changes Shambler infections from Alpha Genes, Ushankas Biological Warfare and Ushankas Necroa Archovirus to be lethal.  These infections can no longer be tended and the natural immunity gain is non-existent.</text>
-						<tKey>FSFTweaksLethalShamblersDesc</tKey>
-					</li>
-					<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor"/>
-					
-					<!-- Permanent Shambler Infection -->
-					
-					<li MayRequireAnyOf="Ushanka.BiologicalWarfarel,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Checkbox">
-						<label>Permanent Shambler Infection</label>
-						<key>FSFPermanentShamblerInfection</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksPermanentShamblerInfectionTitle</tKey>
-					</li>
-					<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Text">
-						<text>Adds a hidden hediff that can be applied in the Scenario Settings.  This hediff is a Shambler Infection that does not progress and cannot be cured.  This allows the pawn to immediately return as a shambler in the event of their death even if they weren't previously infected by a shambler.</text>
-						<tKey>FSFTweaksPermanentShamblerInfectionDesc</tKey>
-					</li>
-					<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor"/>
-					
-					<!-- Shamblers Aggro Further -->
-					
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Shamblers Aggro Further</label>
-						<key>FSFShamblersAggroFurther</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksShamblersAggroFurtherTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Changes the Shambler Acquire Aggro Radius from 20 to 50 and the Keep Aggro Radius from 30 to 60.  This causes Shamblers to seek out targets much further than before.</text>
-						<tKey>FSFTweaksShamblersAggroFurtherDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-					
-					<!-- Shamblers Wander Further -->
-					
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Shamblers Wander Further</label>
-						<key>FSFShamblersWanderFurther</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksShamblersWanderFurtherTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Changes the Shambler wander radius from 5 to the maximum 12.  This causes Shamblers to wander and spread out more instead of idling near the map edge.</text>
-						<tKey>FSFTweaksShamblersWanderFurtherDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
+				
+				<!-- Lethal Shambler Infections -->
+				
+				<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfarel,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Checkbox">
+					<label>Lethal Shambler Infections</label>
+					<key>FSFLethalShamblers</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksLethalShamblersTitle</tKey>
+				</li>
+				<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Text">
+					<text>Changes Shambler infections from Alpha Genes, Ushankas Biological Warfare and Ushankas Necroa Archovirus to be lethal.  These infections can no longer be tended and the natural immunity gain is non-existent.</text>
+					<tKey>FSFTweaksLethalShamblersDesc</tKey>
+				</li>
+				<li MayRequireAnyOf="sarg.alphagenes,Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor"/>
+				
+				<!-- Permanent Shambler Infection -->
+				
+				<li MayRequireAnyOf="Ushanka.BiologicalWarfarel,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Checkbox">
+					<label>Permanent Shambler Infection</label>
+					<key>FSFPermanentShamblerInfection</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksPermanentShamblerInfectionTitle</tKey>
+				</li>
+				<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.Text">
+					<text>Adds a hidden hediff that can be applied in the Scenario Settings.  This hediff is a Shambler Infection that does not progress and cannot be cured.  This allows the pawn to immediately return as a shambler in the event of their death even if they weren't previously infected by a shambler.</text>
+					<tKey>FSFTweaksPermanentShamblerInfectionDesc</tKey>
+				</li>
+				<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor"/>
+				
+				<!-- Shamblers Aggro Further -->
+				
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Shamblers Aggro Further</label>
+					<key>FSFShamblersAggroFurther</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksShamblersAggroFurtherTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Changes the Shambler Acquire Aggro Radius from 20 to 50 and the Keep Aggro Radius from 30 to 60.  This causes Shamblers to seek out targets much further than before.</text>
+					<tKey>FSFTweaksShamblersAggroFurtherDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				
+				<!-- Shamblers Wander Further -->
+				
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Shamblers Wander Further</label>
+					<key>FSFShamblersWanderFurther</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksShamblersWanderFurtherTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Changes the Shambler wander radius from 5 to the maximum 12.  This causes Shamblers to wander and spread out more instead of idling near the map edge.</text>
+					<tKey>FSFTweaksShamblersWanderFurtherDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
 
-				</caseTrue>
+				</settings>
 			</li>
 
 					

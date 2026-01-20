@@ -108,6 +108,12 @@
 					</ColorDef>
 					
 					<ColorDef ParentName="IdeoColorBase">
+						<defName>FSFIdeoBluishBlack</defName>
+						<label>bluish black</label>
+						<color>(47, 52, 59)</color>
+					</ColorDef>					
+					
+					<ColorDef ParentName="IdeoColorBase">
 						<defName>FSFIdeoBluishPitchBlack</defName>
 						<label>bluish pitch black</label>
 						<color>(28, 29, 33)</color>

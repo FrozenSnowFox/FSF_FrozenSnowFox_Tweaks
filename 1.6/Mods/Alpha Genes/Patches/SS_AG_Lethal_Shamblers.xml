@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	
-	<Operation Class="XmlExtensions.OptionalPatch">
-		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFShamblerSettingsOn</key>
-		<defaultValue>false</defaultValue>
-		<caseTrue>
-			
-		<!-- Option is nested so patch isn't always run -->
-			
-			
-			
-			
-		<!-- Alpha Genes Lethal Shamblers -->
+	<!-- Alpha Genes Lethal Shamblers -->
 			
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
@@ -49,11 +38,6 @@
 				
 			</operations>
 		</Operation>
-			
-		</caseTrue>
-	</Operation>
-			
-			
 			
 		</caseTrue>
 	</Operation>

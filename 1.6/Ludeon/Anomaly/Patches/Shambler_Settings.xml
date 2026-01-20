@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 	
-	<Operation Class="XmlExtensions.OptionalPatch">
-		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFShamblerSettingsOn</key>
-		<defaultValue>false</defaultValue>
-		<caseTrue>
-			
-		<!-- Option is nested so patch isn't always run -->
-			
-			
-			
-			
 		<!-- Shamblers Aggro Further -->
 			
 	<Operation Class="XmlExtensions.OptionalPatch">
@@ -61,11 +50,6 @@
 				
 			</operations>
 		</Operation>
-			
-		</caseTrue>
-	</Operation>
-			
-			
 			
 		</caseTrue>
 	</Operation>
