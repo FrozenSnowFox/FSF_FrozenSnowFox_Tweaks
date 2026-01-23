@@ -66,7 +66,7 @@
 					<color>(163,177,188)</color>
 				</li>
 				<li Class="XmlExtensions.Setting.Text">
-					<text>Disables the custom body, head and hairstyles ghouls normally use.  This means pawns made into ghouls will retain their normal appearance but have the dead greenish skin look.</text>
+					<text>Disables the custom body, head and hairstyles ghouls normally use.  This means pawns made into ghouls will retain their normal appearance but have the dead greenish skin and grey hair.</text>
 					<tKey>FSFTweaksNormalGhoulAppearanceDesc</tKey>
 				</li>
 				<li Class="XmlExtensions.Setting.SetColor"/>
