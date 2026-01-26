@@ -310,6 +310,20 @@
 					<gestationPeriodDays>{FSFHumanPregnancyDays}</gestationPeriodDays>
 				</value>
 			</li>
+			
+			<li MayRequire="vanillaracesexpanded.archon" Class="PatchOperationReplace">
+				<xpath>/Defs/GeneDef[defName = "VRE_LongPregnancy"]/description</xpath>
+				<value>
+					<description>Carriers of this gene take twice as long to develop a child during pregnancy.</description>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.archon" Class="PatchOperationReplace">
+				<xpath>/Defs/GeneDef[defName = "VRE_ShortPregnancy"]/description</xpath>
+				<value>
+					<description>Carriers of this gene take two thirds as long to develope a child during pregnancy.</description>
+				</value>
+			</li>
 				
 	        <!-- Update Description of Pregnant HediffDef -->				
 	        <!-- Check for plurality and change text accordingly -->

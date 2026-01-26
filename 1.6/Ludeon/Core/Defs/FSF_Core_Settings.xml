@@ -1906,7 +1906,7 @@
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes Glowstool, Agarilux and Timbershroom to be plantable crops.  Glowstool and Agarilux have tweaked growth/yield so they are comparable to other crops.</text>
+				<text>Changes a number of cave mushrooms into plantable crops.  Some have had their growth days and yield modified to make them viable as the original numbers were absurdly high.</text>
 				<tKey>FSFTweaksGrowableMushroomsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
