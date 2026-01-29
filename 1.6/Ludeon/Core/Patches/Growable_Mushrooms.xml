@@ -94,6 +94,13 @@
 				</value>
 			</li>
 			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Plant_Timbershroom"]/plant/mustBePermanentDarknessToSow</xpath>
+				<value>
+					<mustBePermanentDarknessToSow>false</mustBePermanentDarknessToSow>
+				</value>
+			</li>
+			
 	<!-- Odyssey DLC -->
 	
 			<!-- Boomshroom -->

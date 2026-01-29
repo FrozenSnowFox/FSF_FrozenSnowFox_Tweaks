@@ -12,6 +12,13 @@
 		<Operation Class="PatchOperationSequence">
 			<success>Normal</success>
 			<operations>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly,Ushanka.BiologicalWarfare" Class="PatchOperationReplace">
+				<xpath>/Defs/HediffDef[defName="USH_Necroa"]/description</xpath>
+				<value>
+					<description>An infectious disease caused by the necroa archovirus. It is lethal, it progresses rapidly and it cannot be treated or cured.\n\nRule #2\nDouble tap</description>
+				</value>
+			</li>
 				
 			<li MayRequire="Ludeon.RimWorld.Anomaly,Ushanka.BiologicalWarfare" Class="PatchOperationReplace">
 				<xpath>/Defs/HediffDef[defName="USH_Necroa"]/tendable</xpath>
