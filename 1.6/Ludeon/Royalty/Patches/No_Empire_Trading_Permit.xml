@@ -14,7 +14,7 @@
 			<!-- No Empire Trading Permit -->
 			
 			<li Class="XmlExtensions.PatchOperationSafeRemove">
-				<xpath>/Defs/TraderKindDef [faction [text()="Empire"] ] /permitRequiredForTrading</xpath>
+				<xpath>/Defs/TraderKindDef/permitRequiredForTrading</xpath>
 			</li>
 				
 			</operations>

@@ -105,6 +105,18 @@
 					<harvestYield>6</harvestYield>
 				</value>
 			</li>
+			
+		<!-- Lightless Empyrean -->
+		
+			<li MayRequire="pphhyy.lightlessempyrean" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "pphhyy_LightlessEmpyrean_LightlessGrass"]/plant</xpath>
+				<value>
+					<harvestMinGrowth>0.33</harvestMinGrowth>
+					<harvestTag>Standard</harvestTag>
+					<harvestedThingDef>Hay</harvestedThingDef>
+					<harvestYield>3</harvestYield>
+				</value>
+			</li>
 				
 		<!-- ReGrowth -->
 				
