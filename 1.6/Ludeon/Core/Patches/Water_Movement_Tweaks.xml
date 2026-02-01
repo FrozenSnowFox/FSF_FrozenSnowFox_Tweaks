@@ -74,6 +74,15 @@
 				<passability>Impassable</passability>
 			</value>
 		</li>
+		
+			<!-- Vanilla Landmarks Expanded -->
+		
+ 		<li MayRequire="VanillaExpanded.VExplorationE" Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name = "VEE_AnimaWaterChestDeepBase"]</xpath>
+			<value>
+				<passability>Impassable</passability>
+			</value>
+		</li>
 				
 			</operations>
 		</Operation>
@@ -99,6 +108,15 @@
 				<passability>Impassable</passability>
 			</value>
 		</li>
+		
+			<!-- Vanilla Landmarks Expanded -->
+		
+ 		<li MayRequire="VanillaExpanded.VExplorationE" Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name = "VEE_AnimaWaterShallowBase"]</xpath>
+			<value>
+				<passability>Impassable</passability>
+			</value>
+		</li>
 				
 			</operations>
 		</Operation>
@@ -120,6 +138,12 @@
 			
  		<li Class="PatchOperationRemove">
 			<xpath>/Defs/TerrainDef[@Name = "WaterDeepBase"]/passability</xpath>
+		</li>
+		
+			<!-- Vanilla Landmarks Expanded -->
+			
+ 		<li MayRequire="VanillaExpanded.VExplorationE" Class="PatchOperationRemove">
+			<xpath>/Defs/TerrainDef[@Name = "VEE_AnimaWaterDeepBase"]/passability</xpath>
 		</li>
 				
 			</operations>
