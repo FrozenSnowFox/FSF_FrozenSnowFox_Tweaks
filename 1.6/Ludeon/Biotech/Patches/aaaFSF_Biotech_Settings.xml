@@ -819,26 +819,6 @@
 				<spacing>12</spacing>
 			</li>
 					
-			<!-- Immortal Mechanoid Chips -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Immortal Mechanoid Chips</label>
-				<key>FSFImmortalMechanoidChips</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksImmortalMechanoidChipsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Makes the special mechanoid chips immortal, they have no health, can't catch fire, deteriorate from weather or be damaged from combat.</text>
-				<tKey>FSFTweaksImmortalMechanoidChipsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
 			<!-- Killed A Child Malus -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">

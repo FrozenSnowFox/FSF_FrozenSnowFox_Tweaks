@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFDangerousSkyfallers</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Dangerous Skyfallers -->
+	
+			<!-- Core - Crashed Ship Part -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "CrashedShipPartIncoming"]/skyfaller/explosionRadius</xpath>
+				<value>
+					<explosionRadius>10</explosionRadius>
+				</value>
+			</li>
+			
+			<!-- Core - Meteor -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "MeteoriteIncoming"]/skyfaller/explosionRadius</xpath>
+				<value>
+					<explosionRadius>8</explosionRadius>
+				</value>
+			</li>
+			
+			<!-- Core - Ship Chunk -->
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "ShipChunkIncoming"]/skyfaller/explosionRadius</xpath>
+				<value>
+					<explosionRadius>4</explosionRadius>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRandyBigThreatIntOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRandyBigThreatInt</key>
+		<defaultValue>13</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Randy Big Threat Interval -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/StorytellerDef[defName = "Randy"]/comps/li[@Class = "StorytellerCompProperties_RandomMain"]/maxThreatBigIntervalDays</xpath>
+				<value>
+					<maxThreatBigIntervalDays>{FSFRandyBigThreatInt}</maxThreatBigIntervalDays>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="PatchOperationReplace">
+				<xpath>/Defs/StorytellerDef[defName = "VPE_Basilicus"]/comps/li[@Class = "StorytellerCompProperties_RandomMain"]/maxThreatBigIntervalDays</xpath>
+				<value>
+					<maxThreatBigIntervalDays>{FSFRandyBigThreatInt}</maxThreatBigIntervalDays>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

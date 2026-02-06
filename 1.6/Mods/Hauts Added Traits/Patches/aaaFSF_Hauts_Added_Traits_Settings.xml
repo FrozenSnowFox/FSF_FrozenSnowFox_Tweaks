@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksHautsAddedTraits"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Hauts Added Traits Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksHATTweaksTitle</tKey>
+				<settings>
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+			<!-- Latent Psychics Revealed -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Latent Psychics Revealed</label>
+				<key>FSFHATLatentPsychics</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHATLatentPsychicsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes all the mystery for Latent Psychics so you know exactly how to get them to awaken.  The traits now show the unlock type in their label and the description has full details explaining all the methods and their odds to awaken a person.</text>
+				<tKey>FSFTweaksHATLatentPsychicsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+				</settings>
+			</li>						
+				
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

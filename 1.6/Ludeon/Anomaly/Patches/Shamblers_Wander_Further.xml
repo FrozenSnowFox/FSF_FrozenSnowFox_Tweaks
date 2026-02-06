@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFShamblersWanderFurther</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+			<!-- Shamblers Wander Further -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThinkTreeDef[defName="Shambler"]/thinkRoot/subNodes/li[@Class = "JobGiver_ShamblerWander"]/wanderRadius</xpath>
+				<value>
+					<wanderRadius>12</wanderRadius>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

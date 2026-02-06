@@ -158,6 +158,23 @@
 				</li>
 				<li MayRequireAnyOf="Ushanka.BiologicalWarfare,Ushanka.NecroaArchovirus" Class="XmlExtensions.Setting.SetColor"/>
 				
+				<!-- Realistic Shamblers -->
+				
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Realistic Shamblers</label>
+					<key>FSFRealisticShamblers</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksRealisticShamblersTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Makes a number of changes to Shamblers so they more accurately resemble people from factions.  They can have bionics, they can have helmets and they can have better gear with higher health and quality.\nNote: This will make shamblers especially soldier variants more dangerous as they now can spawn with proper armour.</text>
+					<tKey>FSFTweaksRealisticShamblersDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				
 				<!-- Shamblers Aggro Further -->
 				
 				<li Class="XmlExtensions.Setting.Checkbox">
@@ -170,7 +187,7 @@
 					<color>(163,177,188)</color>
 				</li>
 				<li Class="XmlExtensions.Setting.Text">
-					<text>Changes the Shambler Acquire Aggro Radius from 20 to 50 and the Keep Aggro Radius from 30 to 60.  This causes Shamblers to seek out targets much further than before.</text>
+					<text>Changes the Shambler Acquire Aggro Radius from 20 to 50 and the Keep Aggro Radius from 30 to 60.  This causes Shamblers to seek out targets much further than before.\nNote this may negatively affect performance.</text>
 					<tKey>FSFTweaksShamblersAggroFurtherDesc</tKey>
 				</li>
 				<li Class="XmlExtensions.Setting.SetColor"/>
@@ -187,7 +204,7 @@
 					<color>(163,177,188)</color>
 				</li>
 				<li Class="XmlExtensions.Setting.Text">
-					<text>Changes the Shambler wander radius from 5 to the maximum 12.  This causes Shamblers to wander and spread out more instead of idling near the map edge.</text>
+					<text>Changes the Shambler wander radius from 5 to the maximum 12.  This causes Shamblers to wander and spread out more instead of idling near the map edge.\nNote this may negatively affect performance.</text>
 					<tKey>FSFTweaksShamblersWanderFurtherDesc</tKey>
 				</li>
 				<li Class="XmlExtensions.Setting.SetColor"/>

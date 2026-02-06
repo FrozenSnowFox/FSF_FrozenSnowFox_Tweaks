@@ -857,6 +857,26 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Dangerous Skyfallers -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Dangerous Skyfallers</label>
+				<key>FSFDangerousSkyfallers</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksDangerousSkyfallersTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Doubles the explosion radius of skyfallers so they are more dangerous when they land.  Skyfallers are things that drop out of the sky like meteors, ship parts and ship chunks.</text>
+				<tKey>FSFTweaksDangerousSkyfallersDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- Default White Lights -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -1086,6 +1106,26 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Modifies the duration of Environmental Events and increases the refire interval somewhat to compensate.  This makes events overall harder as they last longer.\n\nCold Snap and Heat Wave x2 Duration, Toxic Fallout x4 Duration, Volcanic Winter x2.5 Min and x1.5 Max Duration, Blood Rain x4.5 Min and x2 Max Duration (Anomaly DLC), Death Pall x2 Duration (Anomaly DLC), Volcanic Ash x1.5 Min and x1.75 Max Duration (Odyssey DLC), Drought x1.67 Min and x1.5 Max Duration (Odyssey DLC), Gill Rot x2.34 Min and x2.5 Max Duration (Odyssey DLC), Drought (Vanilla Events Expanded) x1.7 Min and x3 Max Duration.</text>
 				<tKey>FSFTweaksHarderEnvironmentalEventsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Immortal Special Items -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Immortal Special Items</label>
+				<key>FSFImmortalSpecialItems</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksImmortalSpecialItemsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes all special valuable items you get under special circumstances to be immortal, they have no health, can't catch fire, deteriorate from weather or be damaged from combat.  These items are things like Mechanoid Chips (Biotech DLC), Shuttle Engines (Odyssey DLC) and Special Mod Added items that drop in combat.</text>
+				<tKey>FSFTweaksImmortalSpecialItemsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -1572,6 +1612,47 @@
 			</li>
 			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.SetColor"/>
 			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Randy Big Threat Interval -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Randy Big Threat Interval</label>
+				<key>FSFRandyBigThreatIntOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRandyBigThreatIntTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the maxThreatBigIntervalDays for Randy (and storytellers based on him) to the input number.  If Randy hasn't triggered a major threat in X days, the next event he fires will be a major threat, regardless of the random chance.  It does not guarantee a major threat every X days as Randy can still choose not to fire an event at all during that time.\nThe vanilla value is 13, I recommend a value of 7 if you like him being more aggressive.</text>
+				<tKey>FSFTweaksRandyBigThreatIntDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFRandyBigThreatIntOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFRandyBigThreatInt</key>
+						<defaultValue>13</defaultValue>
+						<min>1</min>
+						<max>9999</max>
+						<label>maxThreatBigIntervalDays</label>
+						<tKey>FSFTweaksRandyBigThreatIntRange</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to set the maximum amount of days before threats are upgraded to major threats.</text>
+						<tKey>FSFTweaksRandyBigThreatIntDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
 			
@@ -2176,6 +2257,15 @@
 			
 			<li Class="XmlExtensions.Setting.Group">
 				<tag>FrozenSnowFoxTweaksDubsBadHygiene</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Hauts Added Traits Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksHautsAddedTraits</tag>
 				<settings>
                 <!--Will inject settings here-->
 				</settings>

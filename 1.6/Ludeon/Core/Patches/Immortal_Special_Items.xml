@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFImmortalSpecialItems</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				
+			<!-- Immortal Special Items -->
+			
+			<!-- Note: Patch is set to Always to hide it from erroring since Core has nothing that needs patching  -->
+			
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[@Name = "MechResourceBase"
+					or defName = "ShuttleEngine"
+					or defName = "Artifuscle"
+					or defName = "Neurocomputer"
+					or defName = "ComponentTransmitter"
+					or defName = "ComponentFireControl"
+					or @Name = "Mashed_Bloodmoon_TotemBase"
+					]</xpath>
+				<value>
+					<useHitPoints>false</useHitPoints>
+					<statBases>
+						<DeteriorationRate>0</DeteriorationRate>
+						<Flammability>0</Flammability>
+					</statBases>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

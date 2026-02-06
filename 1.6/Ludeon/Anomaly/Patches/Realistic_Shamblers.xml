@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFRealisticShamblers</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+			<!-- Realistic Shamblers -->
+				
+			<!-- Outlander Villager to Guard -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSwarmer"]</xpath>
+				<value>
+					<techHediffsChance>0.04</techHediffsChance>
+					<techHediffsMoney>0~700</techHediffsMoney>
+					<techHediffsTags>
+						<li>Poor</li>
+						<li>Simple</li>
+						<li>ImplantEmpireCommon</li>
+					</techHediffsTags>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSwarmer"]/gearHealthRange</xpath>
+				<value>
+					<gearHealthRange>0.2~0.9</gearHealthRange>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSwarmer"]/itemQuality</xpath>
+				<value>
+					<itemQuality>Normal</itemQuality>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSwarmer"]/apparelAllowHeadgearChance</xpath>
+				<value>
+					<apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSwarmer"]/apparelMoney</xpath>
+				<value>
+					<apparelMoney>0~600</apparelMoney>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSwarmer"]/apparelTags</xpath>
+				<value>
+					<li>IndustrialAdvanced</li>
+					<li>IndustrialMilitaryBasic</li>
+					<li>BeltDefensePop</li>
+				</value>
+			</li>
+			
+			<!-- Soldier -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSoldier"]/gearHealthRange</xpath>
+				<value>
+					<gearHealthRange>0.2~0.9</gearHealthRange>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSoldier"]/itemQuality</xpath>
+				<value>
+					<itemQuality>Normal</itemQuality>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/PawnKindDef[defName="ShamblerSoldier"]</xpath>
+				<value>
+					<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

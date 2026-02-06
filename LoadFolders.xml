@@ -265,6 +265,9 @@
 		<!-- Dubs Bad Hygiene -->
 		<li IfModActive="dubwise.dubsbadhygiene">1.6/Mods/Dubs Bad Hygiene</li>
 		
+		<!-- Hauts Added Traits -->
+		<li IfModActive="Hautarche.HautsTraits">1.6/Mods/Hauts Added Traits</li>
+		
 		<!-- Lethal Darkness -->
 		<li IfModActive="Aranmaho.BetterDarkness">1.6/Mods/Lethal Darkness</li>
 		

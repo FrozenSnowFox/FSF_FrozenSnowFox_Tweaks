@@ -12,9 +12,11 @@
 			<operations>
 				
 	<!-- More Varied Raid Loot -->
+	
+			<!-- Maximum Value should not exceed around 100 to ensure items can spawn -->
 			
 			<!--
-				Tribal - Tribal
+				Tribal - Neolithic (Natural Stuff, Valuable Materials)
 
             	Silver
             	Jade
@@ -33,13 +35,14 @@
 					<li>InsectJelly</li>
 					<li>Leather_Thrumbo</li>
 					<li MayRequire="sarg.alphaanimals">Leather_Gallatross</li>
+					<li MayRequire="Ludeon.RimWorld.Odyssey">Obsidian</li>
 					<li>PsychiteTea</li>
 					<li MayRequire="OskarPotocki.VFE.Medieval2">VFEM2_Honey</li>
 				</value>
 			</li>
 			
 			<!--
-				Outlander - Industrial
+				Outlander - Industrial (Industrial Stuff)
 
             	Silver
             	MedicineIndustrial
@@ -69,7 +72,7 @@
 			</li>
 			
 			<!--
-				Pirate - Spacer
+				Pirate - Spacer (Valuables, Drugs)
 
 	            Silver
     	        MedicineIndustrial
@@ -91,6 +94,10 @@
 					<li>DevilstrandCloth</li>
 					<li>Gold</li>
 					<li>Hyperweave</li>
+					<li>Jade</li>
+					<li>Leather_Thrumbo</li>
+					<li MayRequire="sarg.alphaanimals">Leather_Gallatross</li>
+					<li MayRequire="Ludeon.RimWorld.Odyssey">Obsidian</li>
 					<li MayRequire="sarg.alphacrafts">AC_Sake</li>
 					<li>Synthread</li>
 					<li MayRequire="VanillaExpanded.VBrewE">VBE_Vodka</li>
@@ -113,7 +120,7 @@
 			</li>
 			
 			<!--
-				Empire - Ultra (Royalty DLC)
+				Empire - Ultra (Royalty DLC) (High Tech Stuff, Military, Royalty Stuff)
 
             	Gold
             	MedicineUltratech
@@ -128,6 +135,7 @@
 					<li MayRequire="LimeTreeSnake.Ammo">AmmoSpacer</li>
 					<li MayRequire="vanillaracesexpanded.genie">VRE_Antibiotics</li>
 					<li MayRequire="OskarPotocki.VFE.Empire">VFEE_Aperitif</li>
+					<li>Chemfuel</li>
 					<li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
 					<li>GoJuice</li>
 					<li>Hyperweave</li>
@@ -141,7 +149,7 @@
 			</li>
 				
 			<!--
-				Deserters - Ultra (Vanilla Factions Expanded Empire)
+				Deserters - Ultra (Vanilla Factions Expanded Empire) (High Tech Stuff, Military)
 
             	Gold
             	MedicineUltratech
@@ -154,6 +162,7 @@
 				<value>
 					<li MayRequire="LimeTreeSnake.Ammo">AmmoSpacer</li>
 					<li MayRequire="vanillaracesexpanded.genie">VRE_Antibiotics</li>
+					<li>Chemfuel</li>
 					<li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
 					<li>Hyperweave</li>
 					<li>Neutroamine</li>
@@ -164,7 +173,7 @@
 			</li>
 				
 			<!--
-				Cultists - Spacer (Anomaly DLC)
+				Cultists - Spacer (Anomaly DLC) (Ritual/Void Stuff)
 
 				Note: Cultists have their loot table disabled.  First remove raidLootValueFromPointsCurve to allow loot then add a loot table.
 			-->
@@ -197,10 +206,11 @@
 										<li>Hyperweave</li>
 										<li>MedicineIndustrial</li>
 										<li>Neutroamine</li>
+										<li>MealSurvivalPack</li>
 										<li>MindNumbSerum</li>
-										<li>VoidsightSerum</li>
 										<li MayRequire="sarg.alphacrafts">AC_ScentedCandle</li>
 										<li>Synthread</li>
+										<li>VoidsightSerum</li>
 									</thingDefs>
 								</filter>
 							</fixedParams>
