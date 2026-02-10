@@ -106,6 +106,28 @@
 				</value>
 			</li>
 			
+		<!-- Gulden Biome -->
+		
+			<li MayRequire="pphhyy.GuldenNew" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_GuldenGrass"]/plant</xpath>
+				<value>
+					<harvestMinGrowth>0.33</harvestMinGrowth>
+					<harvestTag>Standard</harvestTag>
+					<harvestedThingDef>Hay</harvestedThingDef>
+					<harvestYield>3</harvestYield>
+				</value>
+			</li>
+			
+			<li MayRequire="pphhyy.GuldenNew" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_GuldenTallGrass"]/plant</xpath>
+				<value>
+					<harvestMinGrowth>0.33</harvestMinGrowth>
+					<harvestTag>Standard</harvestTag>
+					<harvestedThingDef>Hay</harvestedThingDef>
+					<harvestYield>6</harvestYield>
+				</value>
+			</li>
+			
 		<!-- Lightless Empyrean -->
 		
 			<li MayRequire="pphhyy.lightlessempyrean" Class="PatchOperationAdd">
