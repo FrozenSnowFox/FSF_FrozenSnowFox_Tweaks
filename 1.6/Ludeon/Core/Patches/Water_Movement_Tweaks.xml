@@ -140,6 +140,15 @@
 			<xpath>/Defs/TerrainDef[@Name = "WaterDeepBase"]/passability</xpath>
 		</li>
 		
+			<!-- Alpha Biomes Lava Impassable -->
+			
+ 		<li MayRequire="sarg.alphabiomes" Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[defName = "AB_LiquidLava"]</xpath>
+			<value>
+				<passability>Impassable</passability>
+			</value>
+		</li>
+		
 			<!-- Vanilla Landmarks Expanded -->
 			
  		<li MayRequire="VanillaExpanded.VExplorationE" Class="PatchOperationRemove">
