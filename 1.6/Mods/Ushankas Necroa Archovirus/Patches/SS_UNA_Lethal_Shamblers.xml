@@ -43,11 +43,14 @@
 				</value>
 			</li>
 			
-			<li MayRequire="Ludeon.RimWorld.Anomaly,Ludeon.RimWorld.Biotech,Ushanka.NecroaArchovirus" Class="PatchOperationAdd">
-				<xpath>/Defs/GeneDef[defName="PerfectImmunity"]/makeImmuneTo</xpath>
+			<li MayRequire="Ludeon.RimWorld.Anomaly,Ludeon.RimWorld.Biotech,Ushanka.NecroaArchovirus" Class="PatchOperationConditional">		
+				<xpath>/Defs/GeneDef[defName="PerfectImmunity"]/makeImmuneTo [li [text()="USH_Necroa"] ]</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/GeneDef[defName="PerfectImmunity"]/makeImmuneTo</xpath>
 					<value>
 						<li>USH_Necroa</li>
 					</value>
+				</nomatch>
 			</li>
 				
 			</operations>

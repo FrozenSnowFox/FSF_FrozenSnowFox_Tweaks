@@ -37,7 +37,7 @@
 			<li MayRequire="Ludeon.RimWorld.Royalty,Hautarche.HautsTraits" Class="PatchOperationReplace">
 				<xpath>/Defs/TraitDef[defName = "HVT_LatentPsychic"]/degreeDatas/li[degree = "2"]/description</xpath>
 				<value>
-					<description>[PAWN_nameDef] has an innate connection to the archotechs. This connection might awaken if [PAWN_pronoun] experiences something related to Misery, permanently transforming [PAWN_objective] into a powerful psycaster.\n\nMisery can be achieved by experiencing a mental break 2% chance, an extreme mental break 50% chance, gaining an inspiration during catharsis.</description>
+					<description>[PAWN_nameDef] has an innate connection to the archotechs. This connection might awaken if [PAWN_pronoun] experiences something related to Misery, permanently transforming [PAWN_objective] into a powerful psycaster.\n\nMisery can be achieved by experiencing a mental break 2% chance, an extreme mental break 50% chance, or gaining an inspiration during catharsis.</description>
 				</value>
 			</li>
 			
@@ -51,7 +51,7 @@
 			<li MayRequire="Ludeon.RimWorld.Royalty,Hautarche.HautsTraits" Class="PatchOperationReplace">
 				<xpath>/Defs/TraitDef[defName = "HVT_LatentPsychic"]/degreeDatas/li[degree = "3"]/description</xpath>
 				<value>
-					<description>[PAWN_nameDef] has an innate connection to the archotechs. This connection might awaken if [PAWN_pronoun] experiences something related to Love, permanently transforming [PAWN_objective] into a powerful psycaster.\n\nLove can be achieved by bonding with an animal 50% chance, entering a romantic relationship 50% chance, getting engaged 75% chance, getting married 100% chance, having 500 positive opinion of other people, if a child they are related to reaches maturity.</description>
+					<description>[PAWN_nameDef] has an innate connection to the archotechs. This connection might awaken if [PAWN_pronoun] experiences something related to Love, permanently transforming [PAWN_objective] into a powerful psycaster.\n\nLove can be achieved by bonding with an animal 50% chance, entering a romantic relationship 50% chance, getting engaged 75% chance, getting married 100% chance, having 500 positive opinion of other people, or if a child they are related to reaches maturity.</description>
 				</value>
 			</li>
 			
@@ -65,7 +65,7 @@
 			<li MayRequire="Ludeon.RimWorld.Royalty,Hautarche.HautsTraits" Class="PatchOperationReplace">
 				<xpath>/Defs/TraitDef[defName = "HVT_LatentPsychic"]/degreeDatas/li[degree = "4"]/description</xpath>
 				<value>
-					<description>[PAWN_nameDef] has an innate connection to the archotechs. This connection might awaken if [PAWN_pronoun] experiences something related to Loss, permanently transforming [PAWN_objective] into a powerful psycaster.\n\nLoss can be achieved by having kin or a romantic related individual with 60+ positive or negative opinion die 50-100% chance based on opinion score, a bonded animal dies 50% chance, a person they have a 100 opinion of dies on the map or in a caravan 50% chance, if kin or a romantic related individual with 60+ positive or negative opinion is banished 2% chance.</description>
+					<description>[PAWN_nameDef] has an innate connection to the archotechs. This connection might awaken if [PAWN_pronoun] experiences something related to Loss, permanently transforming [PAWN_objective] into a powerful psycaster.\n\nLoss can be achieved by having kin or a romantic related individual with 60+ positive or negative opinion die 50-100% chance based on opinion score, a bonded animal dies 50% chance, a person they have a 100 opinion of dies on the map or in a caravan 50% chance, or if kin or a romantic related individual with 60+ positive or negative opinion is banished 2% chance.</description>
 				</value>
 			</li>
 			
@@ -79,7 +79,7 @@
 			<li MayRequire="Ludeon.RimWorld.Royalty,Hautarche.HautsTraits" Class="PatchOperationReplace">
 				<xpath>/Defs/TraitDef[defName = "HVT_LatentPsychic"]/degreeDatas/li[degree = "5"]/description</xpath>
 				<value>
-					<description>[PAWN_nameDef] has an innate connection to the archotechs. This connection might awaken if [PAWN_pronoun] experiences something related to Life, permanently transforming [PAWN_objective] into a powerful psycaster.\n\nLife can be achieved by aging 1% chance on birthday, becoming immune to a illness that's progressed to life-threatening stage 20% chance, being resurrected, giving birth 33% chance.</description>
+					<description>[PAWN_nameDef] has an innate connection to the archotechs. This connection might awaken if [PAWN_pronoun] experiences something related to Life, permanently transforming [PAWN_objective] into a powerful psycaster.\n\nLife can be achieved by aging 1% chance on birthday, becoming immune to a illness that's progressed to life-threatening stage 20% chance, being resurrected, or giving birth 33% chance.</description>
 				</value>
 			</li>
 			
