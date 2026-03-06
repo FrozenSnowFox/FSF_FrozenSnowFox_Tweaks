@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFLargerGeneProcessorsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFLargerGeneProcessor</li>
+			<li>FSFOAGNLargerGeneSubprocessor</li>
+			<li>FSFOAGNLargerGeneMacroprocessor</li>
+		</keys>
+		<defaultValues>
+			<li>2</li>
+			<li>4</li>
+			<li>8</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Larger Gene Banks -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "GeneProcessor"]/statBases/GeneticComplexityIncrease</xpath>
+				<value>
+					<GeneticComplexityIncrease>{FSFLargerGeneProcessor}</GeneticComplexityIncrease>
+				</value>
+			</li>
+			
+			<!-- OAGN Larger Gene Banks -->
+				
+			<li MayRequire="redundant.oopsallgenepacks" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "ThingGeneSubprocessor"]/statBases/GeneticComplexityIncrease</xpath>
+				<value>
+					<GeneticComplexityIncrease>{FSFOAGNLargerGeneSubprocessor}</GeneticComplexityIncrease>
+				</value>
+			</li>
+				
+			<li MayRequire="redundant.oopsallgenepacks" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "ThingGeneMacroprocessor"]/statBases/GeneticComplexityIncrease</xpath>
+				<value>
+					<GeneticComplexityIncrease>{FSFOAGNLargerGeneMacroprocessor}</GeneticComplexityIncrease>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

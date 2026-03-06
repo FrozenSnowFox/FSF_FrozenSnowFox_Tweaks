@@ -185,6 +185,63 @@
 				<spacing>12</spacing>
 			</li>
 			
+				<!-- Larger Gene Processors -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Larger Gene Processors</label>
+					<key>FSFLargerGeneProcessorsOn</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksLargerGeneProcessorsTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Allows you to customise the amount of Complexity Gene Processors give.</text>
+					<tKey>FSFTweaksLargerGeneProcessorsOnDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.ToggleableSettings">
+					<key>FSFLargerGeneProcessorsOn</key>
+					<caseTrue>
+						<li Class="XmlExtensions.Setting.SetColor">
+							<color>(163,177,188)</color>
+						</li>
+						<li Class="XmlExtensions.Setting.Numeric">
+							<key>FSFLargerGeneProcessor</key>
+							<defaultValue>2</defaultValue>
+							<min>1</min>
+							<max>1000</max>
+							<label>Gene Processor Complexity Increase</label>
+							<tKey>FSFTweaksLargerGeneProcessor</tKey>
+						</li>
+						<li MayRequire="redundant.oopsallgenepacks" Class="XmlExtensions.Setting.Numeric">
+							<key>FSFOAGNLargerGeneSubprocessor</key>
+							<defaultValue>4</defaultValue>
+							<min>1</min>
+							<max>1000</max>
+							<label>Gene Subprocessor Complexity Increase</label>
+							<tKey>FSFTweaksOAGNLargerGeneSubprocessor</tKey>
+						</li>
+						<li MayRequire="redundant.oopsallgenepacks" Class="XmlExtensions.Setting.Numeric">
+							<key>FSFOAGNLargerGeneMacroprocessor</key>
+							<defaultValue>8</defaultValue>
+							<min>1</min>
+							<max>1000</max>
+							<label>Gene Macroprocessor Complexity Increase</label>
+							<tKey>FSFTweaksOAGNLargerGeneMacroprocessor</tKey>
+						</li>						
+						<li Class="XmlExtensions.Setting.Text">
+							<text>Input a value to adjust the complexity provided by Gene Processors.  The value is how much Complexity given by each Gene Processor.\nThe Vanilla value Gene Processor 2, Gene Subprocessor 4, Gene Macroprocessor 8.</text>
+							<tKey>FSFTweaksLargerGeneProcessorsDesc</tKey>
+						</li>
+						<li Class="XmlExtensions.Setting.SetColor"/>
+					</caseTrue>
+				</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- More Genepacks On Traders -->
 					
 			<li Class="XmlExtensions.Setting.Checkbox">
