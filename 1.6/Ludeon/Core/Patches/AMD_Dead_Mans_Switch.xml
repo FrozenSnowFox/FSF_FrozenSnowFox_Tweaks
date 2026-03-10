@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	        <!-- Dead Man's Switch Mechanoids -->
+
+            <li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "DMS_Mech_Mammoth"]</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>400</Steel>
+						<ComponentIndustrial>10</ComponentIndustrial>
+						<ComponentStamped>2</ComponentStamped>
+					</butcherProducts>
+				</value>
+            </li>
+
+            <li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "DMS_Mech_Ape"]</xpath>
+				<value>
+					<butcherProducts>
+					<Steel>175</Steel>
+					<Tungsteel>15</Tungsteel>
+					<ComponentIndustrial>10</ComponentIndustrial>
+					<ComponentStamped>2</ComponentStamped>
+					</butcherProducts>
+				</value>
+			</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_BattleFrame"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>150</Steel>
+      <Synthread>20</Synthread>
+      <Polyester>20</Polyester>
+      <ComponentStamped>2</ComponentStamped>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_FieldCommand"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>120</Steel>
+      <Synthread>20</Synthread>
+      <Polyester>20</Polyester>
+      <ComponentStamped>2</ComponentStamped>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentTransmitter>1</ComponentTransmitter>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_EscortLifter"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>130</Steel>
+      <Synthread>15</Synthread>
+      <Polyester>15</Polyester>
+      <ComponentStamped>1</ComponentStamped>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_ShaftWorker"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>160</Steel>
+      <Synthread>50</Synthread>
+      <Polyester>50</Polyester>
+      <ComponentStamped>4</ComponentStamped>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Ronin"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>100</Tungsteel>
+      <Synthread>25</Synthread>
+      <Polyester>25</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Gladiator"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>105</Tungsteel>
+      <Synthread>25</Synthread>
+      <Polyester>25</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Siegebreaker"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>115</Tungsteel>
+      <Synthread>25</Synthread>
+      <Polyester>25</Polyester>
+      <Chemfuel>75</Chemfuel>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Protector"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>140</Tungsteel>
+      <Synthread>35</Synthread>
+      <Polyester>35</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Phalanx"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>40</Steel>
+      <Tungsteel>60</Tungsteel>
+      <Synthread>15</Synthread>
+      <Polyester>15</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Arquebusier"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>80</Tungsteel>
+      <Synthread>25</Synthread>
+      <Polyester>25</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Pioneer"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>50</Steel>
+      <Tungsteel>35</Tungsteel>
+      <Synthread>25</Synthread>
+      <Polyester>25</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Sniper"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>80</Tungsteel>
+      <Synthread>25</Synthread>
+      <Polyester>25</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ComponentFireControl>1</ComponentFireControl>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Jaeger"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>70</Tungsteel>
+      <Plasfiber>25</Plasfiber>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Iguana"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>225</Tungsteel>
+      <Steel>155</Steel>
+      <ComponentStamped>6</ComponentStamped>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Gecko"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>185</Tungsteel>
+      <Steel>110</Steel>
+      <Plasfiber>20</Plasfiber>
+      <Chemfuel>25</Chemfuel>
+      <ComponentStamped>6</ComponentStamped>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Geochelone"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>325</Tungsteel>
+      <Steel>120</Steel>
+      <BroadshieldCore MayRequire="ludeon.rimworld.royalty">1</BroadshieldCore>
+      <ComponentStamped>6</ComponentStamped>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Killdozer"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>325</Tungsteel>
+      <Steel>145</Steel>
+      <DMS_Ceramics>200</DMS_Ceramics>
+      <ComponentStamped>10</ComponentStamped>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Caretta"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>375</Tungsteel>
+      <Steel>100</Steel>
+      <ComponentStamped>10</ComponentStamped>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+      <ComponentFireControl>1</ComponentFireControl>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_HermitCrab"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>200</Tungsteel>
+      <ComponentStamped>8</ComponentStamped>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Neurocomputer>1</Neurocomputer>
+      <ComponentControlChip>1</ComponentControlChip>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Tarbosaurus"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>575</Tungsteel>
+      <Artifuscle>175</Artifuscle>
+      <Plasfiber>50</Plasfiber>
+      <ComponentStamped>25</ComponentStamped>
+      <ComponentSpacer>3</ComponentSpacer>
+      <Neurocomputer>1</Neurocomputer>
+      <ComponentFireControl>1</ComponentFireControl>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Hyrax"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>100</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Falcon"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>75</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Noctula"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>75</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentTransmitter>1</ComponentTransmitter>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Dogge"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>150</Steel>
+      <Artifuscle>25</Artifuscle>
+      <ComponentIndustrial>7</ComponentIndustrial>
+      <ComponentStamped>2</ComponentStamped>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Soldat"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>115</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Grenadier"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>100</Steel>
+      <Synthread>15</Synthread>
+      <Polyester>15</Polyester>
+      <Tungsteel>25</Tungsteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Core" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Sergeant"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>115</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentTransmitter>1</ComponentTransmitter>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Synthetic" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Armiman"]</xpath>
+  <value>
+    <butcherProducts>
+      <Artifuscle>80</Artifuscle>
+      <Tungsteel>40</Tungsteel>
+      <ComponentStamped>4</ComponentStamped>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Synthetic" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_BigSister"]</xpath>
+  <value>
+    <butcherProducts>
+      <Artifuscle>160</Artifuscle>
+      <Tungsteel>100</Tungsteel>
+      <ComponentStamped>8</ComponentStamped>
+      <ComponentSpacer>2</ComponentSpacer>
+      <BroadshieldCore MayRequire="ludeon.rimworld.royalty">1</BroadshieldCore>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Synthetic" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Lady"]</xpath>
+  <value>
+    <butcherProducts>
+      <Artifuscle>80</Artifuscle>
+      <ComponentStamped>4</ComponentStamped>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.Synthetic" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Maiden"]</xpath>
+  <value>
+    <butcherProducts>
+      <Artifuscle>40</Artifuscle>
+      <Steel>40</Steel>
+      <ComponentStamped>2</ComponentStamped>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.AncientCorps" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Krepost"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>575</Tungsteel>
+      <Artifuscle>175</Artifuscle>
+      <Plasfiber>50</Plasfiber>
+      <ComponentStamped>25</ComponentStamped>
+      <ComponentSpacer>3</ComponentSpacer>
+      <Neurocomputer>1</Neurocomputer>
+      <ComponentFireControl>1</ComponentFireControl>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.AncientCorps" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Pravda"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>575</Tungsteel>
+      <Artifuscle>175</Artifuscle>
+      <Plasfiber>50</Plasfiber>
+      <ComponentStamped>25</ComponentStamped>
+      <ComponentSpacer>3</ComponentSpacer>
+      <Neurocomputer>1</Neurocomputer>
+      <ComponentFireControl>1</ComponentFireControl>
+    </butcherProducts>
+  </value>
+</li>	
+
+<li MayRequire="Aoba.DeadManSwitch.AncientCorps" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Zabor"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>185</Tungsteel>
+      <Steel>110</Steel>
+      <Plasfiber>20</Plasfiber>
+      <Chemfuel>25</Chemfuel>
+      <ComponentStamped>6</ComponentStamped>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.AncientCorps" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Tsvetnik"]</xpath>
+  <value>
+    <butcherProducts>
+      <Tungsteel>185</Tungsteel>
+      <Steel>110</Steel>
+      <Plasfiber>20</Plasfiber>
+      <Chemfuel>25</Chemfuel>
+      <ComponentStamped>6</ComponentStamped>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <Neurocomputer>1</Neurocomputer>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.AncientCorps" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Gorod"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>50</Steel>
+      <Tungsteel>35</Tungsteel>
+      <Synthread>25</Synthread>
+      <Polyester>25</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+<li MayRequire="Aoba.DeadManSwitch.AncientCorps" Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName = "DMS_Mech_Molot"]</xpath>
+  <value>
+    <butcherProducts>
+      <Steel>50</Steel>
+      <Tungsteel>35</Tungsteel>
+      <Synthread>25</Synthread>
+      <Polyester>25</Polyester>
+      <ComponentStamped>3</ComponentStamped>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </butcherProducts>
+  </value>
+</li>
+
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>
