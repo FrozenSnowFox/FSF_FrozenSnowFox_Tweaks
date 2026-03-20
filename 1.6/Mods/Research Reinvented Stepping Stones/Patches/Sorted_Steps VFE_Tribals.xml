@@ -636,18 +636,6 @@
 				</value>
 			</li>
 				
-			<!-- Vanilla Weapons Expanded -->
-				
-			<li MayRequire="OskarPotocki.VFE.Tribals,VanillaExpanded.VWE" Class="RR.PatchOperationAddOrReplace">
-				<xpath>/Defs/ResearchProjectDef[defName="Gunsmithing"]</xpath>
-				<value>
-					<prerequisites>
-						<li>Machining</li>
-						<li>VWE_Gunpowder</li>
-					</prerequisites>
-				</value>
-			</li>
-				
 
 				
 			<!-- Research Reinvented Blacklist -->
