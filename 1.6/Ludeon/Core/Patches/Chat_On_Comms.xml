@@ -23,6 +23,7 @@
 		<baseChance>4</baseChance>
 		<thingDefs>
 			<li>CommsConsole</li>
+			<li MayRequire="Arcjc007.WallStuffV2">WallMountedCommsConsole</li>
 		</thingDefs>
 		<jobDef>FSF_ChatOnComms</jobDef>
 		<desireSit>false</desireSit>
@@ -50,7 +51,9 @@
 			</li>
 				
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "CommsConsole"]/building</xpath>
+				<xpath>/Defs/ThingDef[defName = "CommsConsole"
+					or defName = "WallMountedCommsConsole"
+					]/building</xpath>
 				<value>
 					<joyKind>Social</joyKind>
 				</value>
