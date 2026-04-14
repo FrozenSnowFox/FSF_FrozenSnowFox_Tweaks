@@ -23,6 +23,7 @@
 					or defName = "ComponentTransmitter"
 					or defName = "ComponentFireControl"
 					or @Name = "Mashed_Bloodmoon_TotemBase"
+					or @Name = "VFEI2_PherocoreBase"
 					]</xpath>
 				<value>
 					<useHitPoints>false</useHitPoints>
