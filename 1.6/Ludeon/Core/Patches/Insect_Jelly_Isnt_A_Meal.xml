@@ -30,6 +30,15 @@
 					<preferability>RawTasty</preferability>
 				</value>
 			</li>
+			
+			<!-- Alpha Crafts -->
+				
+			<li MayRequire="sarg.alphacrafts" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AC_CuredHiveConfections"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawTasty</preferability>
+				</value>
+			</li>
 				
 			</operations>
 		</Operation>
