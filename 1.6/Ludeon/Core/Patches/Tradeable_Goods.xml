@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFTradeableGoods</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Tradeable Goods -->
+			
+		<!-- Core -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "MealCookedIngredientless"]/tradeability</xpath>
+				<value>
+					<tradeability>All</tradeability>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "StoneBlocksBase"]/tradeability</xpath>
+				<value>
+					<tradeability>All</tradeability>
+				</value>
+			</li>
+			
+		<!-- Royalty DLC -->
+		
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AnimusStone"]/tradeability</xpath>
+				<value>
+					<tradeability>All</tradeability>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

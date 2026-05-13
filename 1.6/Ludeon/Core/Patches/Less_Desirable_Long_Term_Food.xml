@@ -538,6 +538,15 @@
 					<optimalityOffsetFeedingAnimals>-8</optimalityOffsetFeedingAnimals>
 				</value>
 			</li>
+			
+			<!-- Vanilla Plants Expanded - Prunes -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCE_RawPrunes"]/ingestible/preferability</xpath>
+				<value>
+					<preferability>RawBad</preferability>
+				</value>
+			</li>
 				
 			</operations>
 		</Operation>

@@ -421,6 +421,18 @@
 					</thingCategories>
 				</value>
 			</li>
+			
+			<!-- Raw Fruit -->
+				
+			<li MayRequire="VanillaExpanded.VPlantsE" Class="XmlExtensions.PatchOperationSafeAdd">
+				<xpath>/Defs/ThingDef[defName = "RawBerries"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<thingCategories>
+						<li>VCE_Fruit</li>
+					</thingCategories>
+				</value>
+			</li>
 				
 			<!-- Gluttonous -->
 

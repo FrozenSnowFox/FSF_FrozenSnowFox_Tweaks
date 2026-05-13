@@ -246,6 +246,9 @@
 		<!-- DLC Anomaly -->		
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/Ludeon/Anomaly</li>
 		
+		<!-- DLC Odyssey -->		
+		<li IfModActive="Ludeon.RimWorld.Odyssey">1.6/Ludeon/Odyssey</li>
+		
 		
 		
 		<!-- Mods -->

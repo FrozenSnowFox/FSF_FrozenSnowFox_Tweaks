@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XmlExtensions.SettingsMenuDef[defName = "FrozenSnowFoxTweaksSettings"]/settings/li[tag="FrozenSnowFoxTweaksOdyssey"]/settings</xpath>
+				<value>
+
+			
+						
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Odyssey Tweaks</label>
+				<headerFont>Medium</headerFont>
+				<defaultState>Closed</defaultState>
+				<anchor>Middle</anchor>
+				<tKey>FSFTweaksOdysseyTweaksTitle</tKey>
+				<settings>
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			
+			<!-- Tab - Misc -->
+			
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Misc</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksMiscTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+				<!-- Land On Any Site -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Land On Any Site</label>
+					<key>FSFLandOnAnySite</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksLandOnAnySiteTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Patches all SitePartDef's to add the tag gravShipsCanLandOn allowing Gravships to land on any site spawned on the world map.  Some sites may have events which are scaled to map wealth so landing a very expensive gravship there can be a bad idea.  This issue should only happen with a few mod added sites, regardless its a good idea to save before flying your ship anywhere in case things go horribly wrong.</text>
+					<tKey>FSFTweaksLandOnAnySiteDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+					
+				</settings>
+			</li>
+
+					
+					
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+					
+				</settings>
+			</li>
+						
+						
+						
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+	
+</Patch>

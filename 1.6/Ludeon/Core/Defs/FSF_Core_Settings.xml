@@ -1703,6 +1703,26 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Tradeable Goods -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Tradeable Goods</label>
+				<key>FSFTradeableGoods</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksTradeableGoodsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the tradability of a number of items allowing you to sell them to traders.  For example this allows you to sell meals and stone blocks.</text>
+				<tKey>FSFTweaksTradeableGoodsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- Tribal Patchleather -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -2188,6 +2208,15 @@
 			
 			<li Class="XmlExtensions.Setting.Group">
 				<tag>FrozenSnowFoxTweaksIdeology</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Odyssey Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksOdyssey</tag>
 				<settings>
                 <!--Will inject settings here-->
 				</settings>

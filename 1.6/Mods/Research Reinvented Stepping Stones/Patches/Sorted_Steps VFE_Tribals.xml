@@ -12,6 +12,30 @@
 			<operations>
 				
 			<!-- Sorted Steps VFE Tribals -->
+			
+			<!-- Ideology DLC -->
+			
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_Collar"]</xpath>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_BodyStrap"]</xpath>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
 				
 			<!-- Adaptive Primitive Storage -->
 				
@@ -424,6 +448,19 @@
 			<li MayRequire="OskarPotocki.VFE.Tribals,River.Tribal.Shoes" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName="River_Tribal_mukluks"]</xpath>
 				<compare>Both</compare>
+				<value>
+					<recipeMaker>
+						<researchPrerequisites>
+							<li>VFET_Tribalwear</li>
+						</researchPrerequisites>
+					</recipeMaker>
+				</value>
+			</li>
+			
+			<!-- Stylized Slave Collars and Headgears -->
+			
+			<li MayRequire="Ludeon.RimWorld.Ideology,Gerrymon.StylizedSlaveCollar" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/ThingDef[defName="Apparel_GMBridle"]</xpath>
 				<value>
 					<recipeMaker>
 						<researchPrerequisites>
