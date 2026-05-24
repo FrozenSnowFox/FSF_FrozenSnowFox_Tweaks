@@ -2180,7 +2180,196 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
-							
+			
+			<!-- Tab - Special Trees -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Special Trees</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksSpecialTreesTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- Tab - Polux -->
+					
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Polux</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksPoluxTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- No Artificial Building Radius -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Artificial Building Radius</label>
+				<key>FSFPoluxNoArtificialBuilding</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPoluxNoArtificialBuildingTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the radius that prevents Polux plants from functioning if they are too close to artificial buildings.</text>
+				<tKey>FSFTweaksPoluxNoArtificialBuildingDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Warning: This tweak will only take effect on new plants and will not affect existing ones.</text>
+				<tKey>FSFTweaksMoreFiltersFoodWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<!-- Pollution Absorption -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Pollution Absorption</label>
+				<key>FSFPoluxPollutionOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPoluxPollutionTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to adjust the radius and speed at which Polux plants absorb pollution from the area.</text>
+				<tKey>FSFTweaksXenogeneRegrowTimeOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFPoluxPollutionOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFPoluxTreeRadius</key>
+						<defaultValue>7</defaultValue>
+						<min>1</min>
+						<max>50</max>
+						<label>Polux Tree Absorption Radius (Default 7)</label>
+						<tKey>FSFTweaksPoluxTreeRadius</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFPoluxTreeSpeed</key>
+						<defaultValue>25000</defaultValue>
+						<min>250</min>
+						<max>999999</max>
+						<label>Polux Tree Absorption Speed (Default 25000)</label>
+						<tKey>FSFTweaksPoluxTreeSpeed</tKey>
+					</li>
+					<li MayRequire="vanillaracesexpanded.phytokin" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFPoluxBushRadius</key>
+						<defaultValue>7</defaultValue>
+						<min>1</min>
+						<max>50</max>
+						<label>Polux Bush Absorption Radius (Default 1)</label>
+						<tKey>FSFTweaksPoluxBushRadius</tKey>
+					</li>
+					<li MayRequire="vanillaracesexpanded.phytokin" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFPoluxBushSpeed</key>
+						<defaultValue>25000</defaultValue>
+						<min>250</min>
+						<max>999999</max>
+						<label>Polux Bush Absorption Speed (Default 25000)</label>
+						<tKey>FSFTweaksPoluxBushSpeed</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input values to adjust the radius and speed at which Polux plants absorb pollution.  The Radius is written in tiles which use a circular radius.  The Speed value is written in what the game calls ticks.  There are 2500 ticks in one game hour and 60000 ticks in one game day.</text>
+						<tKey>FSFTweaksPoluxPollutionDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Replantable -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Replantable</label>
+				<key>FSFPoluxReplantable</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPoluxReplantableTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Polux plants to be replantable allowing you to move them to another area.</text>
+				<tKey>FSFTweaksPoluxReplantableDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+					
+			<!-- Seeds On Traders -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Seeds On Traders</label>
+				<key>FSFPoluxSeedsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksPoluxSeedsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Causes exotic traders and empire traders to stock extra Polux Seeds.</text>
+				<tKey>FSFTweaksPoluxSeedsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFPoluxSeedsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFPoluxSeedsMin</key>
+						<defaultValue>0</defaultValue>
+						<min>0</min>
+						<max>1000</max>
+						<label>Polux Seed Amount Minimum Range (Default 0)</label>
+						<tKey>FSFTweaksPoluxSeedsMin</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFPoluxSeedsMax</key>
+						<defaultValue>1</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Polux Seed Amount Maximum Range (Default 1)</label>
+						<tKey>FSFTweaksPoluxSeedsMax</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Causes exotic traders and empire traders to stock extra Polux Seeds.  Input values to adjust the minimum and maximum ranges for the above items.  You can set a minimum and maximum for the range.  The game will then use RNG to determine a number between those two numbers.</text>
+						<tKey>FSFTweaksPoluxSeedsDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+
+					
+				</settings>
+			</li>
+
+			
+				</settings>
+			</li>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
 				</settings>
 			</li>
 

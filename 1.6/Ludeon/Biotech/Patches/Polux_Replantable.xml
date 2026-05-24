@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPoluxReplantable</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Polux Replantable -->
+				
+			<!-- Biotech DLC -->
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/ThingDef[defName = "Plant_TreePolux"]/minifiedDef</xpath>
+			</li>
+				
+			<!-- Vanilla Races Expanded Phytokin -->
+			
+			<li MayRequire="vanillaracesexpanded.phytokin" Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/ThingDef[defName = "VRE_PoluxBush"]/minifiedDef</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

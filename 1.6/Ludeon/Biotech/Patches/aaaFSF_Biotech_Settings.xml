@@ -936,55 +936,6 @@
 				<spacing>12</spacing>
 			</li>
 					
-			<!-- More Trader Items Polux Seeds -->
-					
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>More Polux Seeds On Traders</label>
-				<key>FSFMoreTraderItemsPoluxSeedOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksMoreTraderItemsPoluxSeedTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Causes exotic traders and empire traders to stock extra Polux Seeds.</text>
-				<tKey>FSFTweaksMoreTraderItemsPoluxSeedOnDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFMoreTraderItemsPoluxSeedOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFMoreTraderItemsPoluxSeedMin</key>
-						<defaultValue>0</defaultValue>
-						<min>0</min>
-						<max>1000</max>
-						<label>Polux Seed Amount Minimum Range</label>
-						<tKey>FSFTweaksMoreTraderItemsPoluxSeedMin</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFMoreTraderItemsPoluxSeedMax</key>
-						<defaultValue>1</defaultValue>
-						<min>1</min>
-						<max>1000</max>
-						<label>Polux Seed Amount Maximum Range</label>
-						<tKey>FSFTweaksMoreTraderItemsPoluxSeedMax</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Causes exotic traders and empire traders to stock extra Polux Seeds.  Input values to adjust the minimum and maximum ranges for the above items.  You can set a minimum and maximum for the range.  The game will then use RNG to determine a number between those two numbers.\nDefault settings (0-1).</text>
-						<tKey>FSFTweaksMoreTraderItemsPoluxSeedDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-					
 			<!-- Pollution Pumps -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">

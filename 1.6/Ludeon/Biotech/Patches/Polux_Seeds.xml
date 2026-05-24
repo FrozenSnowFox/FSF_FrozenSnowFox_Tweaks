@@ -3,7 +3,7 @@
 	
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFMoreTraderItemsPoluxSeedOn</key>
+		<key>FSFPoluxSeedsOn</key>
 		<defaultValue>false</defaultValue>
 		<caseTrue>
 			
@@ -12,8 +12,8 @@
 	<Operation Class="XmlExtensions.UseSettings">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
 		<keys>
-			<li>FSFMoreTraderItemsPoluxSeedMin</li>
-			<li>FSFMoreTraderItemsPoluxSeedMax</li>
+			<li>FSFPoluxSeedsMin</li>
+			<li>FSFPoluxSeedsMax</li>
 		</keys>
 		<defaultValues>
 			<li>0</li>
@@ -31,7 +31,7 @@
 					
 					<li Class="StockGenerator_SingleDef">
 						<thingDef>PoluxSeed</thingDef>
-						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+						<countRange>{FSFPoluxSeedsMin}~{FSFPoluxSeedsMax}</countRange>
 					</li>
 
 				</value>
@@ -43,7 +43,7 @@
 					
 					<li Class="StockGenerator_SingleDef">
 						<thingDef>PoluxSeed</thingDef>
-						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+						<countRange>{FSFPoluxSeedsMin}~{FSFPoluxSeedsMax}</countRange>
 					</li>
 
 				</value>
@@ -55,7 +55,7 @@
 					
 					<li Class="StockGenerator_SingleDef">
 						<thingDef>PoluxSeed</thingDef>
-						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+						<countRange>{FSFPoluxSeedsMin}~{FSFPoluxSeedsMax}</countRange>
 					</li>
 					
 				</value>
@@ -67,7 +67,7 @@
 					
 					<li Class="StockGenerator_SingleDef">
 						<thingDef>PoluxSeed</thingDef>
-						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+						<countRange>{FSFPoluxSeedsMin}~{FSFPoluxSeedsMax}</countRange>
 					</li>
 				</value>
 			</li>
@@ -78,7 +78,7 @@
 					
 					<li Class="StockGenerator_SingleDef">
 						<thingDef>PoluxSeed</thingDef>
-						<countRange>{FSFMoreTraderItemsPoluxSeedMin}~{FSFMoreTraderItemsPoluxSeedMax}</countRange>
+						<countRange>{FSFPoluxSeedsMin}~{FSFPoluxSeedsMax}</countRange>
 					</li>
 				</value>
 			</li>

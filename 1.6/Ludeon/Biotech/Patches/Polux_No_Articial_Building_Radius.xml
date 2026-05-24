@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPoluxNoArtificialBuilding</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Polux No Artificial Building Radius -->
+				
+			<!-- Biotech DLC -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Plant_TreePolux"]/comps/li[@Class = "CompProperties_PollutionPump"]/disabledByArtificialBuildings</xpath>
+				<value>
+					<disabledByArtificialBuildings>false</disabledByArtificialBuildings>
+				</value>
+			</li>
+				
+			<!-- Vanilla Races Expanded Phytokin -->
+			
+			<li MayRequire="vanillaracesexpanded.phytokin" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_PoluxBush"]/comps/li[@Class = "VanillaRacesExpandedPhytokin.CompProperties_VariablePollutionPump"]/disabledByArtificialBuildings</xpath>
+				<value>
+					<disabledByArtificialBuildings>false</disabledByArtificialBuildings>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

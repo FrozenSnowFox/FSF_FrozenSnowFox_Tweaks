@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPoluxPollutionOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSettings">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<keys>
+			<li>FSFPoluxBushRadius</li>
+			<li>FSFPoluxBushSpeed</li>
+		</keys>
+		<defaultValues>
+			<li>1</li>
+			<li>25000</li>
+		</defaultValues>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+
+			<!-- Biotech DLC -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_PoluxBush"]/comps/li[@Class = "VanillaRacesExpandedPhytokin.CompProperties_VariablePollutionPump"]/radius</xpath>
+				<value>
+					<radius>{FSFPoluxBushRadius}.9</radius>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_PoluxBush"]/comps/li[@Class = "VanillaRacesExpandedPhytokin.CompProperties_VariablePollutionPump"]/intervalTicks</xpath>
+				<value>
+					<intervalTicks>{FSFPoluxBushSpeed}</intervalTicks>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>
