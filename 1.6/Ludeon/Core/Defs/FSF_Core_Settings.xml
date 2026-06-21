@@ -2701,6 +2701,15 @@
 				</settings>
 			</li>
 			
+			<!-- Setting Reset -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksGlobalReset</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
 		</settings>
 	</XmlExtensions.SettingsMenuDef>
 

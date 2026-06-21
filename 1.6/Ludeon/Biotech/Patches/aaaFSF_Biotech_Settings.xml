@@ -569,6 +569,29 @@
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
 					
+					<!-- Intimacy Friends n Lovers - Human Refractory Duration -->
+					
+					<li MayRequire="LovelyDovey.Sex.WithEuterpe" Class="XmlExtensions.Setting.Text">
+						<text>Human Refractory Duration</text>
+						<tKey>FSFTweaksRefractoryDurationTitle</tKey>
+					</li>
+					<li MayRequire="LovelyDovey.Sex.WithEuterpe" Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li MayRequire="LovelyDovey.Sex.WithEuterpe" Class="XmlExtensions.Setting.Numeric">
+						<key>FSFRefractoryDuration</key>
+						<defaultValue>300000</defaultValue>
+						<min>0</min>
+						<max>6000000</max>
+						<label>Refractory Duration In Ticks</label>
+						<tKey>FSFTweaksRefractoryDuration</tKey>
+					</li>
+					<li MayRequire="LovelyDovey.Sex.WithEuterpe" Class="XmlExtensions.Setting.Text">
+						<text>Input a value to set the duration of Human Refractory.  Ticks are a game term for time.  There are 2500 ticks in one game hour and 60000 ticks in one game day.\nThe Vanilla value is 300000 ticks (5 days).</text>
+						<tKey>FSFTweaksPostpartumDurationDesc</tKey>
+					</li>
+					<li MayRequire="LovelyDovey.Sex.WithEuterpe" Class="XmlExtensions.Setting.SetColor"/>
+					
 					<!-- Alpha Genes Asexual Fission Interval -->
 					
 					<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.Text">

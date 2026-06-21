@@ -271,6 +271,9 @@
 		<!-- Hauts Added Traits -->
 		<li IfModActive="Hautarche.HautsTraits">1.6/Mods/Hauts Added Traits</li>
 		
+		<!-- Intimacy - Friends n' Lovers -->
+		<li IfModActive="LovelyDovey.Sex.WithEuterpe">1.6/Mods/Intimacy Friends n Lovers</li>
+		
 		<!-- Lethal Darkness -->
 		<li IfModActive="Aranmaho.BetterDarkness">1.6/Mods/Lethal Darkness</li>
 		
