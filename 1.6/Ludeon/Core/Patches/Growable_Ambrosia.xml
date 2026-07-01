@@ -70,6 +70,20 @@
 						<li>FSFAmbrosiaResearch</li>
 					</sowResearchPrerequisites>
 				</value>
+			</li>			
+			
+			<!-- Progression Agriculture (Remove Research Stuff) -->
+			
+			<li MayRequire="ferny.progressionagriculture" Class="PatchOperationRemove">
+				<xpath>/Defs/ResearchProjectDef[defName = "FSFAmbrosiaResearch"]</xpath>
+			</li>
+			
+			<li MayRequire="ferny.progressionagriculture" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "Plant_Ambrosia"]/plant/sowResearchPrerequisites</xpath>
+			</li>
+			
+			<li MayRequire="ferny.progressionagriculture,BiomesTeam.BiomesCaverns" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "BMT_AmbrosyxFungus"]/plant/sowResearchPrerequisites</xpath>
 			</li>
 				
 			</operations>

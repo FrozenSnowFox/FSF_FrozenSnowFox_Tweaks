@@ -392,6 +392,34 @@
 						<spacing>12</spacing>
 					</li>
 					
+					<!-- Human Lactation Settings -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Human Lactation Settings</label>
+						<key>FSFHumanLactationOn</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksHumanLactationSettingsTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Provides a set of options for changing things related to human lactation.</text>
+						<tKey>FSFTweaksHumanLactationOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li MayRequire="Euterpe.MilkyTitfuck" Class="XmlExtensions.Setting.SetColor">
+						<color>(187,0,0)</color>
+					</li>
+					<li MayRequire="Euterpe.MilkyTitfuck" Class="XmlExtensions.Setting.Text">
+						<text>Warning: These settings are not compatible with the mod Lactation Expansion.</text>
+						<tKey>FSFTweaksHumanLactationWarning</tKey>
+					</li>
+					<li MayRequire="Euterpe.MilkyTitfuck" Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.ToggleableSettings">
+						<key>FSFHumanLactationOn</key>
+						<caseTrue>
+						
 					<!-- Lactating No Fertility Malus -->
 					
 					<li Class="XmlExtensions.Setting.Checkbox">
@@ -408,44 +436,7 @@
 						<tKey>FSFTweaksLactatingNoFertilityMalusDesc</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
-					
-					<!-- Primitive Fertility Procedures -->
-					
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Primitive Fertility Procedures</label>
-						<key>FSFNeolithicFertilityProcedures</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksNeolithicFertilityProceduresTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Adds a new research project for the Neolithic era which provides surgery recipes that use medicine for boosting/inhibiting fertility, inducing/stopping lactation and sterilizing pawns.  Locks the sterilize animal and terminate pregnancy surgery recipes to this research.  Also makes this research a requirement for the Fertility Procedures research but lowers the research cost to compensate.</text>
-						<tKey>FSFTweaksNeolithicFertilityProceduresDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-					
-					<!-- Human Reproduction Settings -->
-					
-					<li Class="XmlExtensions.Setting.Checkbox">
-						<label>Human Reproduction Settings</label>
-						<key>FSFHumanReproductonOn</key>
-						<defaultValue>false</defaultValue>
-						<tKey>FSFTweaksReproductonSettingsTitle</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Provides a suite of options to adjust how fertility, lactation and pregnancy functions.</text>
-						<tKey>FSFTweaksHumanReproductonOnDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-					<li Class="XmlExtensions.Setting.ToggleableSettings">
-						<key>FSFHumanReproductonOn</key>
-						<caseTrue>
-					
+						
 					<!-- Lactation Duration -->
 					
 					<li Class="XmlExtensions.Setting.Text">
@@ -499,6 +490,46 @@
 						<tKey>FSFTweaksLactationRechargeSpeedWarning</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
+						
+						</caseTrue>
+					</li>
+					
+					<!-- Primitive Fertility Procedures -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Primitive Fertility Procedures</label>
+						<key>FSFNeolithicFertilityProcedures</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksNeolithicFertilityProceduresTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Adds a new research project for the Neolithic era which provides surgery recipes that use medicine for boosting/inhibiting fertility, inducing/stopping lactation and sterilizing pawns.  Locks the sterilize animal and terminate pregnancy surgery recipes to this research.  Also makes this research a requirement for the Fertility Procedures research but lowers the research cost to compensate.</text>
+						<tKey>FSFTweaksNeolithicFertilityProceduresDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					
+					<!-- Human Reproduction Settings -->
+					
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Human Reproduction Settings</label>
+						<key>FSFHumanReproductonOn</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksReproductonSettingsTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Provides a suite of options to adjust how fertility, lactation and pregnancy functions.</text>
+						<tKey>FSFTweaksHumanReproductonOnDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.ToggleableSettings">
+						<key>FSFHumanReproductonOn</key>
+						<caseTrue>
 					
 					<!-- Ovum Extracted Duration -->
 					

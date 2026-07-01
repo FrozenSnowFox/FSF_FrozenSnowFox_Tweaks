@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFPoluxSeedsSpawnOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_TreePolux"]/comps</xpath>
+				<value>					
+					<li Class="CompProperties_Spawner">
+						<thingToSpawn>PoluxSeed</thingToSpawn>
+						<spawnCount>1</spawnCount>
+						<spawnIntervalRange>1800000~3600000</spawnIntervalRange>
+						<spawnForbidden>true</spawnForbidden>
+						<saveKeysPrefix>seed</saveKeysPrefix>
+					</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+		
+		</caseTrue>
+	</Operation>
+
+</Patch>
