@@ -151,9 +151,9 @@
 				
 			<!-- 
 				Drought
-				baseChance 1
-				minRefireDays 40
-				durationDays 6~10
+				baseChance 0.12
+				minRefireDays 90
+				durationDays 4.5~12.5
 			-->
 				
 			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">

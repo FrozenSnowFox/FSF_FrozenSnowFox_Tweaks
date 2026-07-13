@@ -95,11 +95,11 @@
 					
 				<!-- Remove Initial Lovin ability from Very High Libido Gene to prevent conflicts -->
 				
-				<li Class="PatchOperationRemove">
+				<li Class="XmlExtensions.PatchOperationSafeRemove">
 					<xpath>/Defs/GeneDef[defName = "VRE_Libido_VeryHigh"]/abilities</xpath>
 				</li>
 					
-				<li Class="PatchOperationRemove">
+				<li Class="XmlExtensions.PatchOperationSafeRemove">
 					<xpath>/Defs/GeneDef[defName = "VRE_Libido_VeryHigh"]/descriptionHyperlinks</xpath>
 				</li>
 				

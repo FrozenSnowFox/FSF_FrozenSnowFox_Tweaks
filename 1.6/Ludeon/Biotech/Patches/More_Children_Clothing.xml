@@ -249,23 +249,29 @@
 			</li>
 				
 			<!-- Vanilla Armour Expanded -->
-				
-			<li MayRequire="VanillaExpanded.VARME" Class="PatchOperationAdd">
+			
+			<li Class="PatchOperationConditional">		
 				<xpath>/Defs/ThingDef[defName = "VAE_Footwear_PlateBoots"]/apparel</xpath>
-				<value>
-					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
-				</value>
+				<match Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+					<xpath>/Defs/ThingDef[defName = "VAE_Footwear_PlateBoots"]/apparel</xpath>
+					<value>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef[defName = "VAE_Handwear_PlateGloves"]/apparel</xpath>
+				<match Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+					<xpath>/Defs/ThingDef[defName = "VAE_Handwear_PlateGloves"]/apparel</xpath>
+					<value>
+						<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+					</value>
+				</match>
 			</li>
 				
 			<li MayRequire="VanillaExpanded.VARME" Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName = "VAE_Footwear_MarineBoots"]/apparel</xpath>
-				<value>
-					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
-				</value>
-			</li>
-				
-			<li MayRequire="VanillaExpanded.VARME" Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "VAE_Handwear_PlateGloves"]/apparel</xpath>
 				<value>
 					<developmentalStageFilter>Child, Adult</developmentalStageFilter>
 				</value>

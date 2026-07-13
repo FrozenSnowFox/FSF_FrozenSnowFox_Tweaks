@@ -20,6 +20,9 @@
 				<value>
 					<li>RawFungus</li>
 					<li MayRequire="sarg.alphaanimals">AA_AgariluxRawFungus</li>
+					<li MayRequire="sarg.alphabiomes">AB_PinkRawFungus</li>
+					<li MayRequire="sarg.alphabiomes">AB_BlueRawFungus</li>
+					<li MayRequire="sarg.alphabiomes">AB_PurpleRawFungus</li>
 				</value>
 			</li>
 				
@@ -35,6 +38,9 @@
 						<disallowedThingDefs>
 							<li>RawFungus</li>
 							<li MayRequire="sarg.alphaanimals">AA_AgariluxRawFungus</li>
+							<li MayRequire="sarg.alphabiomes">AB_PinkRawFungus</li>
+							<li MayRequire="sarg.alphabiomes">AB_BlueRawFungus</li>
+							<li MayRequire="sarg.alphabiomes">AB_PurpleRawFungus</li>
 						</disallowedThingDefs>
 					</defaultIngredientFilter>
 				</value>

@@ -32,7 +32,7 @@
 			
 		<!-- Core -->
 
-			<li Class="PatchOperationAdd">
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_Grass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -42,7 +42,7 @@
 				</value>
 			</li>
 			
-			<li Class="PatchOperationAdd">
+			<li Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_TallGrass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -54,7 +54,7 @@
 			
 		<!-- Biotech -->
 			
-			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationAdd">
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_GrayGrass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -66,7 +66,7 @@
 			
 		<!-- Odyssey -->
 			
-			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_Nightgrass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -76,7 +76,7 @@
 				</value>
 			</li>
 			
-			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_YellowGrass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -86,7 +86,7 @@
 				</value>
 			</li>
 			
-			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_YellowTallGrass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -96,7 +96,7 @@
 				</value>
 			</li>
 			
-			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_Reeds"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -108,7 +108,7 @@
 			
 		<!-- Gulden Biome -->
 		
-			<li MayRequire="pphhyy.GuldenNew" Class="PatchOperationAdd">
+			<li MayRequire="pphhyy.GuldenNew" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_GuldenGrass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -118,7 +118,7 @@
 				</value>
 			</li>
 			
-			<li MayRequire="pphhyy.GuldenNew" Class="PatchOperationAdd">
+			<li MayRequire="pphhyy.GuldenNew" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "Plant_GuldenTallGrass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -130,7 +130,7 @@
 			
 		<!-- Lightless Empyrean -->
 		
-			<li MayRequire="pphhyy.lightlessempyrean" Class="PatchOperationAdd">
+			<li MayRequire="pphhyy.lightlessempyrean" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[defName = "pphhyy_LightlessEmpyrean_LightlessGrass"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -142,7 +142,7 @@
 				
 		<!-- ReGrowth -->
 				
-			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+			<li MayRequire="ReGrowth.BOTR.Core" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[@Name = "RG_GrassBase"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>
@@ -152,7 +152,7 @@
 				</value>
 			</li>
 				
-			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+			<li MayRequire="ReGrowth.BOTR.Core" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
 				<xpath>/Defs/ThingDef[@Name = "RG_TallGrassBase"]/plant</xpath>
 				<value>
 					<harvestMinGrowth>0.33</harvestMinGrowth>

@@ -800,7 +800,7 @@
 				<label>Mechanoids and Mechanitors</label>
 				<defaultState>Closed</defaultState>
 				<anchor>Left</anchor>
-				<tKey>FSFTweaksGeneticsTitle</tKey>
+				<tKey>FSFTweaksMechanoidsMechanitorsTitle</tKey>
 				<settings>
 					<li Class="XmlExtensions.Setting.GapLine">
 						<spacing>12</spacing>
