@@ -41,7 +41,33 @@
 			<operations>
 				
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/TraderKindDef [defName [contains(text(), "Empire")] ]/stockGenerators</xpath>
+				<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+				<value>
+					
+					<li Class="StockGenerator_Category">
+						<categoryDef>NeurotrainersPsycast</categoryDef>
+						<thingDefCountRange>{FSFBuyablePsytrainerMin}~{FSFBuyablePsytrainerMax}</thingDefCountRange>
+						<countRange>{FSFBuyablePsytrainerRangeMin}~{FSFBuyablePsytrainerRangeMax}</countRange>
+					</li>
+
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]/stockGenerators</xpath>
+				<value>
+					
+					<li Class="StockGenerator_Category">
+						<categoryDef>NeurotrainersPsycast</categoryDef>
+						<thingDefCountRange>{FSFBuyablePsytrainerMin}~{FSFBuyablePsytrainerMax}</thingDefCountRange>
+						<countRange>{FSFBuyablePsytrainerRangeMin}~{FSFBuyablePsytrainerRangeMax}</countRange>
+					</li>
+
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
 				<value>
 					
 					<li Class="StockGenerator_Category">
