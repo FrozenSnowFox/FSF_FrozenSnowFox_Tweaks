@@ -10,6 +10,84 @@
 		<!-- Option is nested so patch isn't always run -->
 			
 			<!-- Better Quest Rewards -->
+			
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterQuestRewardsDevilstrand</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Devilstrand -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "Reward_ItemsStandard"]/root[@Class = "ThingSetMaker_Sum"]/options/li [minTotalMarketValue=5500]/thingSetMaker[@Class = "ThingSetMaker_RandomOption"]/options</xpath>
+				<value>
+					
+			  <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>DevilstrandCloth</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterQuestRewardsLeather</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Leather/Wool -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "Reward_ItemsStandard"]/root[@Class = "ThingSetMaker_Sum"]/options/li [minTotalMarketValue=5500]/thingSetMaker[@Class = "ThingSetMaker_RandomOption"]/options</xpath>
+				<value>
+					
+			  <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <categories>
+                        <li>Leathers</li>
+						<li>Wools</li>
+                      </categories>
+					  <disallowCheaperThan>8</disallowCheaperThan>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
 	
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
@@ -28,7 +106,7 @@
 				<value>
 					
 			  <li>
-                <weight>1</weight>
+                <weight>0.5</weight>
                 <thingSetMaker Class="ThingSetMaker_MarketValue">
                   <fixedParams>
                     <filter>
@@ -86,6 +164,44 @@
 			
 		</caseTrue>
 	</Operation>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterQuestRewardsObsidian</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Obsidian -->
+				
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingSetMakerDef[defName = "Reward_ItemsStandard"]/root[@Class = "ThingSetMaker_Sum"]/options/li [minTotalMarketValue=5500]/thingSetMaker[@Class = "ThingSetMaker_RandomOption"]/options</xpath>
+				<value>
+					
+			  <li>
+                <weight>0.5</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <thingDefs>
+                        <li>Obsidian</li>
+                      </thingDefs>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+					
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
 			
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
@@ -104,7 +220,7 @@
 				<value>
 					
 			  <li>
-                <weight>0.75</weight>
+                <weight>0.5</weight>
                 <thingSetMaker Class="ThingSetMaker_MarketValue">
                   <fixedParams>
                     <filter>

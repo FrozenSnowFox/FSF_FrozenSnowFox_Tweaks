@@ -708,6 +708,12 @@
 						<color>(163,177,188)</color>
 					</li>
 					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Adds Devilstrand as a filler material.</label>
+						<key>FSFBetterQuestRewardsDevilstrand</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterQuestRewardsDevilstrand</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
 						<label>Adds Hyperweave as a filler material.</label>
 						<key>FSFBetterQuestRewardsHyperweave</key>
 						<defaultValue>false</defaultValue>
@@ -718,6 +724,18 @@
 						<key>FSFBetterQuestRewardsJade</key>
 						<defaultValue>false</defaultValue>
 						<tKey>FSFTweaksBetterQuestRewardsJade</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Adds expensive Leather/Wool as a filler material.</label>
+						<key>FSFBetterQuestRewardsLeather</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterQuestRewardsLeather</tKey>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Odyssey" Class="XmlExtensions.Setting.Checkbox">
+						<label>Adds Obsidian as a filler material.</label>
+						<key>FSFBetterQuestRewardsObsidian</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterQuestRewardsObsidian</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.Checkbox">
 						<label>Adds Synthread as a filler material.</label>
