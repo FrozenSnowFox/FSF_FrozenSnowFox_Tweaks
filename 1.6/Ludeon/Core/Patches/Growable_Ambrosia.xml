@@ -60,7 +60,6 @@
 			<li MayRequire="BiomesTeam.BiomesCaverns" Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName = "BMT_AmbrosyxFungus"]/plant</xpath>
 				<value>
-					<minifiedDef>MinifiedTree</minifiedDef>
 					<sowMinSkill>10</sowMinSkill>
 					<sowTags>
 						<li>Ground</li>
