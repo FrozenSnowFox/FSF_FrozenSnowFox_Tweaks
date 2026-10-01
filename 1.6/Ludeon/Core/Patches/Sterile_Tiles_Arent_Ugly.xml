@@ -3,7 +3,7 @@
 	
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFDefaultWhiteLights</key>
+		<key>FSFSterileTilesBeauty</key>
 		<defaultValue>false</defaultValue>
 		<caseTrue>
 			
@@ -11,14 +11,15 @@
 			<success>Normal</success>
 			<operations>
 				
-			<!-- Default White Lights -->
-				
-			<!-- Search for and replace all lights capable of using the colour picker while set to glowcolour (214,148,94,0) -->
+			<!-- Sterile Tiles Aren't Ugly -->
 			
 			<li Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_Glower"] [colorPickerEnabled [text()="true"]] [glowColor [text()="(214,148,94,0)"]]/ glowColor</xpath>
+				<xpath>/Defs/TerrainDef[defName = "SterileTile"
+					or defName = "RB_SterileGrateTile"
+					or defName = "RB_SterileStuddedTile"
+					]/statBases/Beauty</xpath>
 				<value>
-					<glowColor>(255,255,255,0)</glowColor>
+					<Beauty>0</Beauty>
 				</value>
 			</li>
 				

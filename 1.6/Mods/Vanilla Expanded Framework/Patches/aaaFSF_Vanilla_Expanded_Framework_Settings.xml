@@ -22,6 +22,26 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 			</li>
 			
+			<!-- Bulk Processing -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Bulk Processing</label>
+				<key>FSFBulkProcessing</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBulkProcessingTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes a number of time consuming recipes/processors that are generally done in bulk to require/output larger amounts of resources.  Many of these recipes/processors work off the idea of processing a single stack of items (75 units).  This tweak changes them to work off larger stack sizes (750 units).  For example Meat Drying Racks take 15 days to process 75 Meat, with this change they will take 15 days to process 750 Meat.</text>
+				<tKey>FSFTweaksBulkProcessingDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- Vanilla Expanded Pipe Network -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">

@@ -33,6 +33,22 @@
                     </value>
                 </match>
 			</li>
+			
+	        <!-- Vanilla Gravship Expanded - Manually patch in autoRefuelPercent -->
+			
+			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VGE_PointDefenseTurret"
+					or defName = "VGE_JavelinPod"
+					or defName = "VGE_GravshipMinigunTurret"
+					or defName = "VGE_GravshipAutocannonTurret"
+					or defName = "VGE_GravshipUraniumSlugTurret"
+					or defName = "VGE_JavelinLauncher"
+					or defName = "VGE_AstrofireLauncher"
+					]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+				<value>
+					<autoRefuelPercent>0.99</autoRefuelPercent>
+				</value>
+			</li>
 				
 			</operations>
 		</Operation>

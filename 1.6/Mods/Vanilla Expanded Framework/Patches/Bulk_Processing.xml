@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBulkProcessing</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Bulk Processing -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+			<!-- Vanilla Factions Expanded Classical -->
+			
+			<!-- Concrete -->
+
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_PressConcrete"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<description>Turns 10 chunks into 750 concrete.</description>
+					<labelOverride>Press 10 chunks into 750 concrete</labelOverride>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_PressConcrete"]/ingredients/li/countNeeded</xpath>
+				<value>
+					<countNeeded>10</countNeeded>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_PressConcrete"]/results/li/count</xpath>
+				<value>
+					<count>750</count>
+				</value>
+			</li>
+			
+			<!-- Dried Meat -->
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_DryMeat"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<description>Turns 750 meat into 750 jerky.</description>
+					<labelOverride>Dry 750 meat into 750 jerky</labelOverride>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_DryMeat"]/ingredients/li/countNeeded</xpath>
+				<value>
+					<countNeeded>750</countNeeded>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_DryMeat"]/results/li/count</xpath>
+				<value>
+					<count>750</count>
+				</value>
+			</li>
+			
+			<!-- Tyrian Cloth -->
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_ProcessCloth"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<description>Turns 750 cloth into 750 tyrian.</description>
+					<labelOverride>Process 750 cloth into 750 tyrian</labelOverride>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_DryMeat"]/ingredients/li/countNeeded</xpath>
+				<value>
+					<countNeeded>750</countNeeded>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VFE.Classical" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VFEC_DryMeat"]/results/li/count</xpath>
+				<value>
+					<count>750</count>
+				</value>
+			</li>
+			
+			<!-- Vanilla Cooking Expanded -->
+			
+			<!-- Canned Meat -->
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanMeats"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<label>can meats x750</label>
+					<uiIconThing>VCE_CannedMeat</uiIconThing>
+				    <workAmount>4200</workAmount>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanMeats"]/ingredients/li[1]/count</xpath>
+				<value>
+					<count>37.5</count>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanMeats"]/ingredients/li[2]/count</xpath>
+				<value>
+					<count>38</count>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanMeats"]/products</xpath>
+				<value>
+					<products>
+						<VCE_CannedMeat>750</VCE_CannedMeat>
+					</products>
+				</value>
+			</li>
+			
+			<!-- Canned Produce -->
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanProduce"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<label>can produce x750</label>
+					<uiIconThing>VCE_CannedProduce</uiIconThing>
+				    <workAmount>4200</workAmount>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanProduce"]/ingredients/li[1]/count</xpath>
+				<value>
+					<count>37.5</count>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanProduce"]/ingredients/li[2]/count</xpath>
+				<value>
+					<count>38</count>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanProduce"]/products</xpath>
+				<value>
+					<products>
+						<VCE_CannedProduce>750</VCE_CannedProduce>
+					</products>
+				</value>
+			</li>
+			
+			<!-- Canned Fruit -->
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanFruit"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<label>can fruit x750</label>
+					<uiIconThing>VCE_CannedFruit</uiIconThing>
+				    <workAmount>4200</workAmount>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanFruit"]/ingredients/li[1]/count</xpath>
+				<value>
+					<count>37.5</count>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanFruit"]/ingredients/li[2]/count</xpath>
+				<value>
+					<count>38</count>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanFruit"]/products</xpath>
+				<value>
+					<products>
+						<VCE_CannedFruit>750</VCE_CannedFruit>
+					</products>
+				</value>
+			</li>
+			
+			<!-- Canned Eggs -->
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanEggs"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<label>can eggs x750</label>
+					<uiIconThing>VCE_CannedAP</uiIconThing>
+				    <workAmount>4200</workAmount>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanEggs"]/ingredients/li[1]/count</xpath>
+				<value>
+					<count>37.5</count>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanEggs"]/ingredients/li[2]/count</xpath>
+				<value>
+					<count>38</count>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanEggs"]/products</xpath>
+				<value>
+					<products>
+						<VCE_CannedAP>750</VCE_CannedAP>
+					</products>
+				</value>
+			</li>
+			
+			<!-- Canned Fish -->
+			
+			<li MayRequire="Ludeon.RimWorld.Odyssey,VanillaExpanded.VCEF,VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanFish"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<label>can fish x750</label>
+					<uiIconThing>VCE_CannedFish</uiIconThing>
+				    <workAmount>4200</workAmount>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Odyssey,VanillaExpanded.VCEF,VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanFish"]/ingredients/li[1]/count</xpath>
+				<value>
+					<count>37.5</count>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Odyssey,VanillaExpanded.VCEF,VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanFish"]/ingredients/li[2]/count</xpath>
+				<value>
+					<count>38</count>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Odyssey,VanillaExpanded.VCEF,VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName = "VCE_CanFish"]/products</xpath>
+				<value>
+					<products>
+						<VCE_CannedFish>750</VCE_CannedFish>
+					</products>
+				</value>
+			</li>
+			
+			<!-- Cheese Milk -->
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VCE_MilkIntoCheese"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<description>Turns 750 milk into 375 cheese.</description>
+					<labelOverride>Turn 750 milk into 375 cheese.</labelOverride>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VCE_MilkIntoCheese"]/ingredients/li/countNeeded</xpath>
+				<value>
+					<countNeeded>750</countNeeded>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VCE_MilkIntoCheese"]/results/li/count</xpath>
+				<value>
+					<count>375</count>
+				</value>
+			</li>
+			
+			<!-- Cheese Insect -->
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VCE_JellyIntoCheese"]</xpath>
+				<compare>Both</compare>
+				<value>
+					<description>Turns 750 insect jelly into 375 cheese.</description>
+					<labelOverride>Turn 750 insect jelly into 375 cheese.</labelOverride>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VCE_JellyIntoCheese"]/ingredients/li/countNeeded</xpath>
+				<value>
+					<countNeeded>750</countNeeded>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationReplace">
+				<xpath>/Defs/PipeSystem.ProcessDef[defName = "VCE_JellyIntoCheese"]/results/li/count</xpath>
+				<value>
+					<count>375</count>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

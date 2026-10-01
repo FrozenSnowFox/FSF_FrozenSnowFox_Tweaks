@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFChunksMakeAnyBlocks</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Chunks Make Any Blocks -->
+	
+	<!-- Search for any RecipeDef's defName for StoneBlocks, check description for "chunks into usable blocks", exclude Vacstone -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef [defName [contains(text(), "StoneBlocks")]] [description [contains(text(), "chunks into usable blocks")]] [fixedIngredientFilter/thingDefs/li [text()!="ChunkVacstone"]] /ingredients/li/filter</xpath>
+				<value>
+					<filter>
+						<categories>
+							<li>StoneChunks</li>
+						</categories>
+					</filter>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef [defName [contains(text(), "StoneBlocks")]] [description [contains(text(), "chunks into usable blocks")]] [fixedIngredientFilter/thingDefs/li [text()!="ChunkVacstone"]]/fixedIngredientFilter</xpath>
+				<value>
+					<fixedIngredientFilter>
+						<categories>
+							<li>StoneChunks</li>
+						</categories>
+					</fixedIngredientFilter>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

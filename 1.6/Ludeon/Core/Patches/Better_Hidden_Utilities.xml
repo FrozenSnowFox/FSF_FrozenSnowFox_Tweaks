@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterHiddenUtilities</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Better Hidden Utilities -->
+
+			<!-- Core -->
+	
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "HiddenConduit"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>140</WorkToBuild>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "HiddenConduit"]/costList/Steel</xpath>
+				<value>
+					<Steel>1</Steel>
+				</value>
+			</li>
+			
+			<!-- Dubs Bad Hygiene -->
+			
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "sewagePipeHidden"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>180</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef[defName="airPipeHidden"]/statBases/WorkToBuild</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "airPipeHidden"]/statBases/WorkToBuild</xpath>
+					<value>
+						<WorkToBuild>180</WorkToBuild>
+					</value>
+				</match>
+			</li>
+			
+			<!-- Vanilla Chemfuel Expanded -->
+			
+			<li MayRequire="VanillaExpanded.VChemfuelE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCHE_UndergroundChemfuelPipe"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>140</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VChemfuelE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCHE_UndergroundChemfuelPipe"]/costList/Steel</xpath>
+				<value>
+					<Steel>2</Steel>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VChemfuelE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCHE_UndergroundDeepchemPipe"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>140</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VChemfuelE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VCHE_UndergroundDeepchemPipe"]/costList/Steel</xpath>
+				<value>
+					<Steel>4</Steel>
+				</value>
+			</li>
+			
+			<!-- Vanilla Gravship Expanded -->
+			<!-- Note: Left Hidden Astrofuel Pipe flammability as there's an event specifically for it being set on fire. -->
+			
+			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VGE_HiddenAstrofuelPipe"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>280</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VGE_HiddenAstrofuelPipe"]/costList/Steel</xpath>
+				<value>
+					<Steel>2</Steel>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VGE_HiddenOxygenPipe"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>140</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VGE_HiddenOxygenPipe"]/costList/Steel</xpath>
+				<value>
+					<Steel>1</Steel>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VGE_HiddenOxygenPipe"]/statBases/Flammability</xpath>
+				<value>
+					<Flammability>0</Flammability>
+				</value>
+			</li>
+			
+			<!-- Vanilla Helixien Gas Expanded -->
+			
+			<li MayRequire="VanillaExpanded.HelixienGas" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VHGE_SubterraneanHelixienPipe"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>140</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.HelixienGas" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VHGE_SubterraneanHelixienPipe"]/costList/Steel</xpath>
+				<value>
+					<Steel>2</Steel>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.HelixienGas" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VHGE_SubterraneanHelixienPipe"]/building</xpath>
+				<value>
+					<canConstructInCorner>true</canConstructInCorner>
+				</value>
+			</li>
+			
+			<!-- Vanilla Nutrient Paste Expanded -->
+			
+			<li MayRequire="VanillaExpanded.VNutrientE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VNPE_UndergroundNutrientPastePipe"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>140</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VNutrientE" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VNPE_UndergroundNutrientPastePipe"]/costList/Steel</xpath>
+				<value>
+					<Steel>2</Steel>
+				</value>
+			</li>
+			
+			<!-- Vanilla Races Expanded Android -->
+			
+			<li MayRequire="vanillaracesexpanded.android" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VREA_NeutroPipe"]/building</xpath>
+				<value>
+					<canConstructInCorner>true</canConstructInCorner>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.android" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VREA_SubterraneanNeutroPipe"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>180</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.android" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VREA_SubterraneanNeutroPipe"]/costList/Silver</xpath>
+				<value>
+					<Silver>4</Silver>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.android" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VREA_SubterraneanNeutroPipe"]/building</xpath>
+				<value>
+					<canConstructInCorner>true</canConstructInCorner>
+				</value>
+			</li>
+			
+			<!-- Vanilla Races Expanded Sanguophage -->
+			
+			<li MayRequire="vanillaracesexpanded.sanguophage" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_UndergroundHemogenPipe"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>140</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.sanguophage" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VRE_UndergroundHemogenPipe"]/costList</xpath>
+				<value>
+					<costList>
+						<Steel>3</Steel>
+						<Gold>1</Gold>
+					</costList>
+				</value>
+			</li>
+			
+			<!-- Vanilla Temperature Expanded -->
+			
+			<li MayRequire="VanillaExpanded.Temperature" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VTE_UndergroundAirDuct"]/statBases/WorkToBuild</xpath>
+				<value>
+					<WorkToBuild>140</WorkToBuild>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.Temperature" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VTE_UndergroundAirDuct"]/statBases/Flammability</xpath>
+				<value>
+					<Flammability>0</Flammability>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.Temperature" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VTE_UndergroundAirDuct"]/building</xpath>
+				<value>
+					<ai_neverTrashThis>true</ai_neverTrashThis>
+					<isTargetable>false</isTargetable>
+					<expandHomeArea>false</expandHomeArea>
+					<canBeDamagedByAttacks>false</canBeDamagedByAttacks>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

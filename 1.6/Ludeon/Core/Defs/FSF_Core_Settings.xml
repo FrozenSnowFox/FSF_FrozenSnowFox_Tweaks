@@ -685,6 +685,26 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Better Hidden Utilities -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Better Hidden Utilities</label>
+				<key>FSFBetterHiddenUtilities</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBetterHiddenUtilitiesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Makes a number of changes to hidden utilities across DLC and Mods to ensure they follow the same logic.  Hidden utilities are safe (they can't be targeted by raids and can't be damaged).  Hidden utilities have no flammability and can be built on corners.  Hidden utilities have identical material costs to non hidden utilities.  Hidden utilities take four times longer to build than non hidden utilities.</text>
+				<tKey>FSFTweaksBetterHiddenUtilitiesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- Better Quest Rewards -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -849,6 +869,26 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Allows pawns to chat on the Comms Console to gain Social Recreation and Social Experience.</text>
 				<tKey>FSFTweaksFSFChatOnCommsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Chunks Make Any Blocks -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Chunks Make Any Blocks</label>
+				<key>FSFChunksMakeAnyBlocks</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksChunksMakeAnyBlocksTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Patches all Make Stone Block recipes to take any type of chunk (except for making Vacstone).</text>
+				<tKey>FSFTweaksChunksMakeAnyBlocksDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -1715,6 +1755,26 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Changes power armour to be airtight if it fully covers the head or body.  Meaning when the body armour and helmet are worn together it provides full Toxic Environmental Resistance.  The helmets will also provide immunity to Toxic Gas.</text>
 				<tKey>FSFTweaksSealedPowerArmourDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Sterile Tiles Aren't Ugly -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Sterile Tiles Aren't Ugly</label>
+				<key>FSFSterileTilesBeauty</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksSterileTilesBeautyTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the beauty bonus of Sterile Tiles to be neutral so they no longer give a beauty penalty.</text>
+				<tKey>FSFTweaksSterileTilesBeautyDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
