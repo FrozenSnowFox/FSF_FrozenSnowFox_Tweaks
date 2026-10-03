@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAnthrosonaeCatgirlHighmates</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Anthrosonae Catgirl Highmates -->
+	
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+	
+			<!-- Highmate -->
+		
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes/li[text()="Skin_SheerWhite"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes/li[text()="Skin_Blue"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes/li[text()="Skin_Purple"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes/li[text()="Hair_SnowWhite"]</xpath>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes</xpath>
+				<order>Prepend</order>
+				<value>
+					<li>ATK_AnthrocatFur</li>
+					<li>ATK_AnthrocatEars</li>
+					<li>ATK_AnthrocatTail</li>
+				</value>
+			</li>
+			
+			<!-- Vanilla Races Expanded Highmate -->
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes/li[text()="VRE_FelineEars"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes/li[text()="VRE_FelineTail"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes/li[text()="VRE_HighmateHair"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes/li[text()="VRE_PerfectBody"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="PatchOperationAdd">
+				<xpath>/Defs/XenotypeDef[defName = "Highmate"]/genes</xpath>
+				<order>Prepend</order>
+				<value>
+					<li>Hair_LongOnly</li>
+					<li>Immunity_Strong</li>
+				</value>
+			</li>
+			
+			<!-- Vanilla Races Expanded Lowmate -->
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "VRE_Lowmate"]/genes/li[text()="Skin_SheerWhite"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "VRE_Lowmate"]/genes/li[text()="Skin_LightGray"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "VRE_Lowmate"]/genes/li[text()="Hair_LightBlue"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "VRE_Lowmate"]/genes/li[text()="Hair_LightTeal"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="PatchOperationRemove">
+				<xpath>/Defs/XenotypeDef[defName = "VRE_Lowmate"]/genes/li[text()="Hair_LightPurple"]</xpath>
+			</li>
+			
+			<li MayRequire="vanillaracesexpanded.highmate" Class="PatchOperationAdd">
+				<xpath>/Defs/XenotypeDef[defName = "VRE_Lowmate"]/genes</xpath>
+				<order>Prepend</order>
+				<value>
+					<li>Immunity_Strong</li>
+					<li>ATK_AnthrocatFur</li>
+					<li>ATK_AnthrocatEars</li>
+					<li>ATK_AnthrocatTail</li>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

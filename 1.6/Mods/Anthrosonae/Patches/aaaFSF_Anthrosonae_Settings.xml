@@ -42,6 +42,27 @@
 			<li MayRequire="sarg.alphagenes" Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
+			
+			<!-- Anthrosonae Catgirl Highmates -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Anthrosonae Catgirl Highmates</label>
+				<key>FSFAnthrosonaeCatgirlHighmates</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnthrosonaeCatgirlHighmatesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the Highmates from the Biotech DLC and Lowmates from Vanilla Races Expanded Highmate to use cosmetic Anthrosonae Anthrocat genes.  If the Vanilla Expanded version is loaded the Perfect Body gene will be swapped for Strong Immunity to preserve the metabolic efficiency as Perfect Body conflicts with Anthrosonae Fur.  Intended for those who find the furry scale of their catgirl companions lacking.</text>
+				<tKey>FSFTweaksAnthrosonaeCatgirlHighmatesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
 					
 			<!-- Anthrosonae Yttakin -->
 			

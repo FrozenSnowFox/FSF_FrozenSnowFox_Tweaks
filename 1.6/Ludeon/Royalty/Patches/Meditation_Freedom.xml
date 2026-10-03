@@ -127,6 +127,10 @@
 			<li Class="XmlExtensions.PatchOperationSafeRemove">
 				<xpath>/Defs/MeditationFocusDef[defName = "Natural"]/requiredBackstoriesAny</xpath>
 			</li>
+			
+			<li Class="XmlExtensions.PatchOperationSafeRemove">
+				<xpath>/Defs/HediffDef/allowedMeditationFocusTypes/li[text()="Natural"]</xpath>
+			</li>
 				
 			<!-- Remove Natural Meditation Type from Traits -->
 				

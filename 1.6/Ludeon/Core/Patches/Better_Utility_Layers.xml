@@ -205,12 +205,30 @@
 				</value>
 			</li>
 			
-			<!-- Vanilla Gravship Expanded -->
+			<!-- Vanilla Factions Expanded Deserters -->
+			
+			<li MayRequire="OskarPotocki.VFE.Deserters" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFED_DeserterDeclassifier"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
+				</value>
+			</li>
+			
+			<!-- Vanilla Gravship Expanded Chapter 1 -->
 			
 			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
 				<xpath>/Defs/ThingDef[defName = "VGE_Apparel_OxygenPack"]/apparel/bodyPartGroups/li</xpath>
 				<value>
 					<li>Torso</li>
+				</value>
+			</li>
+			
+			<!-- Vanilla Gravship Expanded Chapter 2 -->
+			
+			<li MayRequire="vanillaexpanded.gravship2" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VGE_GravshipBombardmentTargeter"]/apparel/bodyPartGroups/li</xpath>
+				<value>
+					<li>Legs</li>
 				</value>
 			</li>
 				
