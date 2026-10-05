@@ -50,7 +50,7 @@
 			<!-- Vanilla Furniture Expanded Security -->
 			
 			<li MayRequire="VanillaExpanded.VFESecurity" Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName = "VFET_AnimalTrap"]/description</xpath>
+				<xpath>/Defs/ThingDef[defName = "VFES_BearTrap"]/description</xpath>
 				<value>
 					<description>Two heavy metal jaws held open under tension, connected to a pressure-sensitive trigger. When stepped on, the jaws snap shut with high force, inflicting severe damage. When triggered, it can be re-armed.</description>
 				</value>
