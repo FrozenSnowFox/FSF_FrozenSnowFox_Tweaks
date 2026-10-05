@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterRoomStats</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Better Room Stats -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RoomStatDef[defName = "Impressiveness"]/scoreStages</xpath>
+				<value>
+					<scoreStages>
+						<li>
+							<label>awful</label>
+						</li>
+						<li>
+							<minScore>15</minScore>
+							<label>dull</label>
+						</li>
+						<li>
+							<minScore>22</minScore>
+							<label>mediocre</label>
+						</li>
+						<li>
+							<minScore>30</minScore>
+							<label>decent</label>
+						</li>
+						<li>
+							<minScore>38</minScore>
+							<label>slightly impressive</label>
+						</li>
+						<li>
+							<minScore>48</minScore>
+							<label>somewhat impressive</label>
+						</li>
+						<li>
+							<minScore>64</minScore>
+							<label>very impressive</label>
+						</li>
+						<li>
+							<minScore>90</minScore>
+							<label>extremely impressive</label>
+						</li>
+						<li>
+							<minScore>128</minScore>
+							<label>unbelievably impressive</label>
+						</li>
+						<li>
+							<minScore>180</minScore>
+							<label>wondrously impressive</label>
+						</li>
+					</scoreStages>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RoomStatDef[defName = "Wealth"]/scoreStages</xpath>
+				<value>
+					<scoreStages>
+						<li>
+							<label>impoverished</label>
+						</li>
+						<li>
+							<minScore>375</minScore>
+							<label>somewhat poor</label>
+						</li>
+						<li>
+							<minScore>525</minScore>
+							<label>mediocre</label>
+						</li>
+						<li>
+							<minScore>1500</minScore>
+							<label>somewhat rich</label>
+						</li>
+						<li>
+							<minScore>3000</minScore>
+							<label>rich</label>
+						</li>
+						<li>
+							<minScore>7500</minScore>
+							<label>luxurious</label>
+						</li>
+						<li>
+							<minScore>30000</minScore>
+							<label>very luxurious</label>
+						</li>
+						<li>
+							<minScore>75000</minScore>
+							<label>extremely luxurious</label>
+						</li>
+						<li>
+							<minScore>750000</minScore>
+							<label>unbelievably luxurious</label>
+						</li>
+					</scoreStages>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RoomStatDef[defName = "Space"]/scoreStages</xpath>
+				<value>
+					<scoreStages>
+						<li>
+							<label>cramped</label>
+						</li>
+						<li>
+							<minScore>6</minScore>
+							<label>rather tight</label>
+						</li>
+						<li>
+							<minScore>14</minScore>
+							<label>average-sized</label>
+						</li>
+						<li>
+							<minScore>27</minScore>
+							<label>somewhat spacious</label>
+						</li>
+						<li>
+							<minScore>35</minScore>
+							<label>quite spacious</label>
+						</li>
+						<li>
+							<minScore>65</minScore>
+							<label>very spacious</label>
+						</li>
+						<li>
+							<minScore>174.5</minScore>
+							<label>extremely spacious</label>
+						</li>
+					</scoreStages>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RoomStatDef[defName = "Beauty"]/scoreStages</xpath>
+				<value>
+					<scoreStages>
+						<li>
+							<label>hideous</label>
+						</li>
+						<li>
+							<minScore>-3.5</minScore>
+							<label>ugly</label>
+						</li>
+						<li>
+							<minScore>0.0</minScore>
+							<label>neutral</label>
+						</li>
+						<li>
+							<minScore>1.8</minScore>
+							<label>pretty</label>
+						</li>
+						<li>
+							<minScore>3.75</minScore>
+							<label>beautiful</label>
+						</li>
+						<li>
+							<minScore>11.25</minScore>
+							<label>very beautiful</label>
+						</li>
+						<li>
+							<minScore>37.5</minScore>
+							<label>extremely beautiful</label>
+						</li>
+						<li>
+							<minScore>75.0</minScore>
+							<label>unbelievably beautiful</label>
+						</li>
+					</scoreStages>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

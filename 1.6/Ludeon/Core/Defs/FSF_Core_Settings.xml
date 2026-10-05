@@ -464,6 +464,145 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Tab - Harder Difficulty -->
+					
+			<li Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Harder Difficulty</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksHarderDifficultyTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- Dangerous Skyfallers -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Dangerous Skyfallers</label>
+				<key>FSFDangerousSkyfallers</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksDangerousSkyfallersTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Doubles the explosion radius of skyfallers so they are more dangerous when they land.  Skyfallers are things that drop out of the sky like meteors, ship parts and ship chunks.</text>
+				<tKey>FSFTweaksDangerousSkyfallersDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Harder Drop Pod Raids -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Harder Drop Pod Raids</label>
+				<key>FSFHarderDropPodRaids</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHarderDropPodRaidsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Doubles the selection weight of Drop Pod raid strategies.  Also removes the raid point scaling so drop pod raids are the same size as normal raids.</text>
+				<tKey>FSFTweaksHarderDropPodRaidsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Harder Environmental Events -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Harder Environmental Events</label>
+				<key>FSFHarderEnvironmentalEvents</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHarderEnvironmentalEventsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Modifies the duration of Environmental Events and increases the refire interval somewhat to compensate.  This makes events overall harder as they last longer.\n\nCold Snap and Heat Wave x2 Duration, Toxic Fallout x4 Duration, Volcanic Winter x2.5 Min and x1.5 Max Duration, Blood Rain x4.5 Min and x2 Max Duration (Anomaly DLC), Death Pall x2 Duration (Anomaly DLC), Volcanic Ash x1.5 Min and x1.75 Max Duration (Odyssey DLC), Drought x1.67 Min and x1.5 Max Duration (Odyssey DLC), Gill Rot x2.34 Min and x2.5 Max Duration (Odyssey DLC), Drought (Vanilla Events Expanded) x1.7 Min and x3 Max Duration.</text>
+				<tKey>FSFTweaksHarderEnvironmentalEventsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- No One Ever Flees -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No One Ever Flees</label>
+				<key>FSFNoOneEverFlees</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksNoOneEverFleesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Patches every faction adding autoflee false as a tag so they will never break or flee no matter how many people die.\nThis setting is best used in combination with other mods.  See the No One Ever Flees workshop page for full details.</text>
+				<tKey>FSFTweaksNoOneEverFleesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
+			<!-- Randy Big Threat Interval -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Randy Big Threat Interval</label>
+				<key>FSFRandyBigThreatIntOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksRandyBigThreatIntTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the maxThreatBigIntervalDays for Randy (and storytellers based on him) to the input number.  If Randy hasn't triggered a major threat in X days, the next event he fires will be a major threat, regardless of the random chance.  It does not guarantee a major threat every X days as Randy can still choose not to fire an event at all during that time.\nThe vanilla value is 13, I recommend a value of 7 if you like him being more aggressive.</text>
+				<tKey>FSFTweaksRandyBigThreatIntDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFRandyBigThreatIntOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFRandyBigThreatInt</key>
+						<defaultValue>13</defaultValue>
+						<min>1</min>
+						<max>9999</max>
+						<label>maxThreatBigIntervalDays</label>
+						<tKey>FSFTweaksRandyBigThreatIntRange</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to set the maximum amount of days before threats are upgraded to major threats.</text>
+						<tKey>FSFTweaksRandyBigThreatIntDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+					
+				</settings>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- Tab - Misc -->
 					
 			<li Class="XmlExtensions.Setting.CollapsibleSettings">
@@ -770,6 +909,118 @@
 				<spacing>12</spacing>
 			</li>
 			
+			<!-- Better Room Stats -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Better Room Stats</label>
+				<key>FSFBetterRoomStats</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBetterRoomStatsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Lowers the threshold value of room Space by 50%.  Also lowers the threshold values of room Impressiveness, Wealth and Beauty by 25% to compensate for the smaller rooms.  This allows you to build smaller, more sensible sized rooms that can achieve the upper tiers of room scoring with some reasonable investment.</text>
+				<tKey>FSFTweaksBetterRoomStatsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+
+			<!-- Better Traps -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Better Traps</label>
+				<key>FSFBetterTrapsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksBetterTrapsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to individually enable options that will allow traps to be placed adjacent, change their material cost and add new stone only trap with faster build time.</text>
+				<tKey>FSFTweaksBetterTrapsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFBetterTrapsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Allow traps to be placed adjacent to each other.</label>
+						<key>FSFBetterTrapsAdjacent</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterTrapsAdjacent</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Enable Stone Spike Traps, a stone only spike trap with build time lowered to match normal Spike Traps.</label>
+						<key>FSFBetterTrapsStoneSpikeTrap</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterTrapsStoneSpikeTrap</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Checkbox">
+						<label>Custom Trap Costs</label>
+						<key>FSFBetterTrapsCostOn</key>
+						<defaultValue>false</defaultValue>
+						<tKey>FSFTweaksBetterTrapsCostTitle</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.ToggleableSettings">
+					<key>FSFBetterTrapsCostOn</key>
+					<caseTrue>
+						<li Class="XmlExtensions.Setting.SetColor">
+							<color>(163,177,188)</color>
+						</li>
+						<li Class="XmlExtensions.Setting.Numeric">
+							<key>FSFBetterTrapsSpikeCost</key>
+							<defaultValue>45</defaultValue>
+							<min>1</min>
+							<max>9999</max>
+							<label>FSFBetterTrapsSpikeCost</label>
+							<tKey>FSFTweaksBetterTrapsVanillaSpikeCost</tKey>
+						</li>
+						<li Class="XmlExtensions.Setting.Text">
+							<text>Input a value to set the material cost of Spike Traps (Default 45).</text>
+							<tKey>FSFTweaksBetterTrapsVanillaSpikeCostDesc</tKey>
+						</li>
+						<li MayRequire="OskarPotocki.VFE.Tribals" Class="XmlExtensions.Setting.Numeric">
+							<key>FSFBetterTrapsAnimalTrapCost</key>
+							<defaultValue>45</defaultValue>
+							<min>1</min>
+							<max>9999</max>
+							<label>FSFBetterTrapsAnimalTrapCost</label>
+							<tKey>FSFTweaksBetterTrapsAnimalTrapCost</tKey>
+						</li>
+						<li MayRequire="OskarPotocki.VFE.Tribals" Class="XmlExtensions.Setting.Text">
+							<text>Input a value to set the material cost of Animal Traps (Default 45).</text>
+							<tKey>FSFTweaksBetterTrapsAnimalTrapCostDesc</tKey>
+						</li>
+						<li MayRequire="VanillaExpanded.VFESecurity" Class="XmlExtensions.Setting.Numeric">
+							<key>FSFBetterTrapsBearTrapCost</key>
+							<defaultValue>65</defaultValue>
+							<min>1</min>
+							<max>9999</max>
+							<label>FSFBetterTrapsBearTrapCost</label>
+							<tKey>FSFTweaksBetterTrapsBearTrapCost</tKey>
+						</li>
+						<li MayRequire="VanillaExpanded.VFESecurity" Class="XmlExtensions.Setting.Text">
+							<text>Input a value to set the material cost of Bear Traps (Default 65).</text>
+							<tKey>FSFTweaksBetterTrapsBearTrapCostDesc</tKey>
+						</li>
+						<li Class="XmlExtensions.Setting.SetColor"/>
+					</caseTrue>
+					</li>
+				</caseTrue>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+				<spacing>12</spacing>
+			</li>
+			
 			<!-- Better Utility Layers -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -909,26 +1160,6 @@
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Changes the Global Learning Speed stat to be affected by consciousness.  This makes it so people with brain injuries learn slower while those with increased consciousness from bionics or drugs learn faster.</text>
 				<tKey>FSFTweaksConsciousnessLearningSpeedDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Dangerous Skyfallers -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Dangerous Skyfallers</label>
-				<key>FSFDangerousSkyfallers</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksDangerousSkyfallersTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Doubles the explosion radius of skyfallers so they are more dangerous when they land.  Skyfallers are things that drop out of the sky like meteors, ship parts and ship chunks.</text>
-				<tKey>FSFTweaksDangerousSkyfallersDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
@@ -1126,46 +1357,6 @@
 					<li Class="XmlExtensions.Setting.SetColor"/>
 				</caseTrue>
 			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Harder Drop Pod Raids -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Harder Drop Pod Raids</label>
-				<key>FSFHarderDropPodRaids</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksHarderDropPodRaidsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Doubles the selection weight of Drop Pod raid strategies.  Also removes the raid point scaling so drop pod raids are the same size as normal raids.</text>
-				<tKey>FSFTweaksHarderDropPodRaidsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
-			<!-- Harder Environmental Events -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Harder Environmental Events</label>
-				<key>FSFHarderEnvironmentalEvents</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksHarderEnvironmentalEventsTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Modifies the duration of Environmental Events and increases the refire interval somewhat to compensate.  This makes events overall harder as they last longer.\n\nCold Snap and Heat Wave x2 Duration, Toxic Fallout x4 Duration, Volcanic Winter x2.5 Min and x1.5 Max Duration, Blood Rain x4.5 Min and x2 Max Duration (Anomaly DLC), Death Pall x2 Duration (Anomaly DLC), Volcanic Ash x1.5 Min and x1.75 Max Duration (Odyssey DLC), Drought x1.67 Min and x1.5 Max Duration (Odyssey DLC), Gill Rot x2.34 Min and x2.5 Max Duration (Odyssey DLC), Drought (Vanilla Events Expanded) x1.7 Min and x3 Max Duration.</text>
-				<tKey>FSFTweaksHarderEnvironmentalEventsDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
@@ -1552,26 +1743,6 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- No One Ever Flees -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>No One Ever Flees</label>
-				<key>FSFNoOneEverFlees</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksNoOneEverFleesTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Patches every faction adding autoflee false as a tag so they will never break or flee no matter how many people die.\nThis setting is best used in combination with other mods.  See the No One Ever Flees workshop page for full details.</text>
-				<tKey>FSFTweaksNoOneEverFleesDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			<!-- Power Generation Multiplier -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -1660,47 +1831,6 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- Randy Big Threat Interval -->
-			
-			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Randy Big Threat Interval</label>
-				<key>FSFRandyBigThreatIntOn</key>
-				<defaultValue>false</defaultValue>
-				<tKey>FSFTweaksRandyBigThreatIntTitle</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor">
-				<color>(163,177,188)</color>
-			</li>
-			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes the maxThreatBigIntervalDays for Randy (and storytellers based on him) to the input number.  If Randy hasn't triggered a major threat in X days, the next event he fires will be a major threat, regardless of the random chance.  It does not guarantee a major threat every X days as Randy can still choose not to fire an event at all during that time.\nThe vanilla value is 13, I recommend a value of 7 if you like him being more aggressive.</text>
-				<tKey>FSFTweaksRandyBigThreatIntDesc</tKey>
-			</li>
-			<li Class="XmlExtensions.Setting.SetColor"/>
-			<li Class="XmlExtensions.Setting.ToggleableSettings">
-				<key>FSFRandyBigThreatIntOn</key>
-				<caseTrue>
-					<li Class="XmlExtensions.Setting.SetColor">
-						<color>(163,177,188)</color>
-					</li>
-					<li Class="XmlExtensions.Setting.Numeric">
-						<key>FSFRandyBigThreatInt</key>
-						<defaultValue>13</defaultValue>
-						<min>1</min>
-						<max>9999</max>
-						<label>maxThreatBigIntervalDays</label>
-						<tKey>FSFTweaksRandyBigThreatIntRange</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.Text">
-						<text>Input a value to set the maximum amount of days before threats are upgraded to major threats.</text>
-						<tKey>FSFTweaksRandyBigThreatIntDesc</tKey>
-					</li>
-					<li Class="XmlExtensions.Setting.SetColor"/>
-				</caseTrue>
-			</li>
-			<li Class="XmlExtensions.Setting.GapLine">
-				<spacing>12</spacing>
-			</li>
-			
 			<!-- Randy Fixes -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
@@ -1720,6 +1850,8 @@
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
+			
+
 			
 			<!-- Render Hair Over Clothing -->
 			
@@ -2271,10 +2403,358 @@
 						<spacing>12</spacing>
 					</li>
 					
-			<!-- Tab - Polux -->
+			<!-- Tab - Anima (Royalty DLC) -->
+					
+			<li MayRequire="Ludeon.RimWorld.Royalty" Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Anima (Royalty DLC)</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksAnimaTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- Anima Grass Never Dies -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Anima Grass Never Dies</label>
+				<key>FSFAnimaGrassNeverDies</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimaGrassNeverDiesTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Anima Grass so it never dies from age.</text>
+				<tKey>FSFTweaksAnimaGrassNeverDiesDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<!-- Meditation Focus Strength -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Meditation Focus Strength</label>
+				<key>FSFAnimaMeditationStrengthOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimaMeditationStrengthTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes the Meditation Focus Strength of the Anima Tree.</text>
+				<tKey>FSFTweaksAnimaMeditationStrengthDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFAnimaMeditationStrengthOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFTweaksAnimaMeditationStrength</key>
+						<defaultValue>0.28</defaultValue>
+						<min>0</min>
+						<max>5</max>
+						<decimals>2</decimals>
+						<label>Meditation Focus Strength {FSFTweaksAnimaMeditationStrength}</label>
+						<tKey>FSFTweaksAnimaMeditationStrengthDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+					
+			<!-- No Artificial Building Radius -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Artificial Building Radius</label>
+				<key>FSFAnimaNoArtificialBuilding</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimaNoArtificialBuildingTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the radius that prevents Anima Trees from functioning if they are too close to artificial buildings.</text>
+				<tKey>FSFTweaksAnimaNoArtificialBuildingDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Warning: This tweak will only take effect on new plants and will not affect existing ones.</text>
+				<tKey>FSFTweaksAnimaNoArtificialBuildingWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<!-- Replantable -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Replantable</label>
+				<key>FSFAnimaReplantable</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimaReplantableTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Anima Trees to be replantable allowing you to move them to another area.</text>
+				<tKey>FSFTweaksAnimaReplantableDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<!-- Seeds From Trees -->
+			
+			<li MayRequire="ReGrowth.BOTR.Core" Class="XmlExtensions.Setting.Checkbox">
+				<label>Seeds From Trees</label>
+				<key>FSFAnimaSeedsSpawnOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksAnimaSeedsSpawnTitle</tKey>
+			</li>
+			<li MayRequire="ReGrowth.BOTR.Core" Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li MayRequire="ReGrowth.BOTR.Core" Class="XmlExtensions.Setting.Text">
+				<text>Causes Anima Trees to drop a seed every 30 to 60 days.</text>
+				<tKey>FSFTweaksAnimaSeedsSpawnDesc</tKey>
+			</li>
+			<li MayRequire="ReGrowth.BOTR.Core" Class="XmlExtensions.Setting.SetColor"/>
+
+					
+				</settings>
+			</li>
+			
+			<!-- Tab - Archean (Odyssey DLC) -->
+					
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Archean (Odyssey DLC)</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksArcheanTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+			
+			<!-- Replantable -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Replantable</label>
+				<key>FSFArcheanReplantable</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksArcheanReplantableTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Archean Trees to be replantable allowing you to move them to another area.</text>
+				<tKey>FSFTweaksArcheanReplantableDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<!-- Seeds From Trees -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Seeds From Trees</label>
+				<key>FSFArcheanSeedsSpawnOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksArcheanSeedsSpawnTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Causes Archean Trees to drop a seed every 30 to 60 days.</text>
+				<tKey>FSFTweaksArcheanSeedsSpawnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+					
+				</settings>
+			</li>
+			
+			<!-- Tab - Gauranlen (Ideology DLC) -->
+					
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Gauranlen (Ideology DLC)</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksGauranlenTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+					
+			<!-- No Artificial Building Radius -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>No Artificial Building Radius</label>
+				<key>FSFGauranlenNoArtificialBuilding</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGauranlenNoArtificialBuildingTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Removes the radius that prevents Gauranlen Trees from functioning if they are too close to artificial buildings.</text>
+				<tKey>FSFTweaksGauranlenNoArtificialBuildingDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Warning: This tweak may only take effect on new plants.  Also the plant itself still reports Artificial Buildings as an issue but they have no effect.</text>
+				<tKey>FSFTweaksGauranlenNoArtificialBuildingWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<!-- Replantable -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Replantable</label>
+				<key>FSFGauranlenReplantable</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGauranlenReplantableTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Gauranlen Trees to be replantable allowing you to move them to another area.</text>
+				<tKey>FSFTweaksGauranlenReplantableDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<!-- Seeds From Trees -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Seeds From Trees</label>
+				<key>FSFGauranlenSeedsSpawnOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksGauranlenSeedsSpawnTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Causes Gauranlen Trees to drop a seed every 30 to 60 days.</text>
+				<tKey>FSFTweaksGauranlenSeedsSpawnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+					
+				</settings>
+			</li>
+					
+			<!-- Tab - Harbinger (Anomaly DLC) -->
+					
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="XmlExtensions.Setting.CollapsibleSettings">
+				<label>Harbinger (Anomaly DLC)</label>
+				<defaultState>Closed</defaultState>
+				<anchor>Left</anchor>
+				<tKey>FSFTweaksHarbingerTitle</tKey>
+				<settings>
+					<li Class="XmlExtensions.Setting.GapLine">
+						<spacing>12</spacing>
+					</li>
+			
+			<!-- Replantable -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Replantable</label>
+				<key>FSFHarbingerReplantable</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHarbingerReplantableTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Changes Harbinger Trees to be replantable allowing you to move them to another area.</text>
+				<tKey>FSFTweaksHarbingerReplantableDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			
+			<!-- Seeds From Trees -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Seeds From Trees</label>
+				<key>FSFHarbingerSeedsSpawnOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHarbingerSeedsSpawnTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Causes Harbinger Trees to drop a seed every 30 to 60 days.</text>
+				<tKey>FSFTweaksHarbingerSeedsSpawnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+					
+			<!-- Seeds On Traders -->
+					
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Seeds On Traders</label>
+				<key>FSFHarbingerSeedsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFTweaksHarbingerSeedsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Causes Neolithic Shaman Traders to stock extra Harbinger Seeds.</text>
+				<tKey>FSFTweaksHarbingerSeedsDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFHarbingerSeedsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFHarbingerSeedsMin</key>
+						<defaultValue>0</defaultValue>
+						<min>0</min>
+						<max>1000</max>
+						<label>Harbinger Seed Amount Minimum Range (Default 0)</label>
+						<tKey>FSFTweaksHarbingerSeedsMin</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFHarbingerSeedsMax</key>
+						<defaultValue>1</defaultValue>
+						<min>1</min>
+						<max>1000</max>
+						<label>Harbinger Seed Amount Maximum Range (Default 1)</label>
+						<tKey>FSFTweaksHarbingerSeedsMax</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Causes Neolithic Shaman Traders to stock extra Harbinger Seeds.  Input values to adjust the minimum and maximum ranges for the above items.  You can set a minimum and maximum for the range.  The game will then use RNG to determine a number between those two numbers.</text>
+						<tKey>FSFTweaksHarbingerSeedsDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+
+					
+				</settings>
+			</li>
+					
+			<!-- Tab - Polux (Biotech DLC) -->
 					
 			<li MayRequire="Ludeon.RimWorld.Biotech" Class="XmlExtensions.Setting.CollapsibleSettings">
-				<label>Polux</label>
+				<label>Polux (Biotech DLC)</label>
 				<defaultState>Closed</defaultState>
 				<anchor>Left</anchor>
 				<tKey>FSFTweaksPoluxTitle</tKey>
@@ -2295,7 +2775,7 @@
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Removes the radius that prevents Polux plants from functioning if they are too close to artificial buildings.</text>
+				<text>Removes the radius that prevents Polux Plants from functioning if they are too close to artificial buildings.</text>
 				<tKey>FSFTweaksPoluxNoArtificialBuildingDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
@@ -2304,7 +2784,7 @@
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
 				<text>Warning: This tweak will only take effect on new plants and will not affect existing ones.</text>
-				<tKey>FSFTweaksMoreFiltersFoodWarning</tKey>
+				<tKey>FSFTweaksPoluxNoArtificialBuildingWarning</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
 			
@@ -2320,7 +2800,7 @@
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Allows you to adjust the radius and speed at which Polux plants absorb pollution from the area.</text>
+				<text>Allows you to adjust the radius and speed at which Polux Plants absorb pollution from the area.</text>
 				<tKey>FSFTweaksXenogeneRegrowTimeOnDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
@@ -2363,7 +2843,7 @@
 						<tKey>FSFTweaksPoluxBushSpeed</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.Text">
-						<text>Input values to adjust the radius and speed at which Polux plants absorb pollution.  The Radius is written in tiles which use a circular radius.  The Speed value is written in what the game calls ticks.  There are 2500 ticks in one game hour and 60000 ticks in one game day.</text>
+						<text>Input values to adjust the radius and speed at which Polux Plants absorb pollution.  The Radius is written in tiles which use a circular radius.  The Speed value is written in what the game calls ticks.  There are 2500 ticks in one game hour and 60000 ticks in one game day.</text>
 						<tKey>FSFTweaksPoluxPollutionDesc</tKey>
 					</li>
 					<li Class="XmlExtensions.Setting.SetColor"/>
@@ -2386,7 +2866,7 @@
 				<color>(163,177,188)</color>
 			</li>
 			<li Class="XmlExtensions.Setting.Text">
-				<text>Changes Polux plants to be replantable allowing you to move them to another area.</text>
+				<text>Changes Polux Plants to be replantable allowing you to move them to another area.</text>
 				<tKey>FSFTweaksPoluxReplantableDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>

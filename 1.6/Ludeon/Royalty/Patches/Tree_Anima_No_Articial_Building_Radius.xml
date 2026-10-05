@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAnimaNoArtificialBuilding</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	<!-- Anima No Artificial Building Radius -->
+				
+			<!-- Remove Artificial Building Radius -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_MeditationFocus"]/offsets/li[@Class = "FocusStrengthOffset_ArtificialBuildings"]/radius</xpath>
+				<value>
+					<radius>0</radius>
+				</value>
+			</li>
+			
+			<!-- Remove Anima Grass Artificial Building Radius -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/StatDef[defName = "MeditationPlantGrowthOffset"]/parts/li[@Class = "StatPart_ArtificialBuildingsNearbyOffset"]/radius</xpath>
+				<value>
+					<radius>0</radius>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

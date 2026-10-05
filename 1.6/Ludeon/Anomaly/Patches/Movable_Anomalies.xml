@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFMovableAnomalies</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Movable Anomalies -->
+			
+			<!-- Monolith -->
+		
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VoidMonolith"]</xpath>
+				<value>
+					<minifiedDef>MinifiedThing</minifiedDef>
+					<thingCategories>
+						<li>BuildingsSpecial</li>
+					</thingCategories>
+					<bringAlongOnGravship>true</bringAlongOnGravship>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "VoidMonolith"]/statBases</xpath>
+				<value>
+					<Mass>100</Mass>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VoidMonolith"]/building/claimable</xpath>
+				<value>
+					<claimable>true</claimable>
+				</value>
+			</li>
+			
+			<!-- Obelisks -->
+		
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "WarpedObelisk"]</xpath>
+				<value>
+					<minifiedDef>MinifiedThing</minifiedDef>
+					<thingCategories>
+						<li>BuildingsSpecial</li>
+					</thingCategories>
+					<bringAlongOnGravship>true</bringAlongOnGravship>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[@Name = "WarpedObelisk"]/statBases</xpath>
+				<value>
+					<Mass>100</Mass>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "WarpedObelisk"]/building/claimable</xpath>
+				<value>
+					<claimable>true</claimable>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

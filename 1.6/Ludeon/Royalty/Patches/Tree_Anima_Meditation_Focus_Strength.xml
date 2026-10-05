@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAnimaMeditationStrengthOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFTweaksAnimaMeditationStrength</key>
+		<defaultValue>0.28</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Anima Tree Meditation Focus Strength -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>{FSFTweaksAnimaMeditationStrength}</MeditationFocusStrength>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+	
+		</caseTrue>
+	</Operation>
+
+</Patch>

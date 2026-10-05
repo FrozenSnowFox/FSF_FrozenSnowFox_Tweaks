@@ -3,7 +3,7 @@
 	
 	<Operation Class="XmlExtensions.OptionalPatch">
 		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
-		<key>FSFPoluxSeedsSpawnOn</key>
+		<key>FSFArcheanSeedsSpawnOn</key>
 		<defaultValue>false</defaultValue>
 		<caseTrue>
 			
@@ -12,12 +12,14 @@
 		<Operation Class="PatchOperationSequence">
 			<success>Normal</success>
 			<operations>
+			
+			<!-- Archean Drops Seeds -->
 
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "Plant_TreePolux"]/comps</xpath>
+				<xpath>/Defs/ThingDef[defName = "Plant_TreeArchean"]/comps</xpath>
 				<value>					
 					<li Class="CompProperties_Spawner">
-						<thingToSpawn>PoluxSeed</thingToSpawn>
+						<thingToSpawn>ArcheanSeed</thingToSpawn>
 						<spawnCount>1</spawnCount>
 						<spawnIntervalRange>1800000~3600000</spawnIntervalRange>
 						<spawnForbidden>true</spawnForbidden>

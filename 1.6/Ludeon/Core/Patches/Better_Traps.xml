@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterTrapsOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterTrapsAdjacent</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+			<!-- Better Spike Traps - Adjacent Placement -->
+				
+			<!-- Core -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "TrapSpike"]/description</xpath>
+				<value>
+					<description>Five spikes under tension, connected to a touch-activated trigger. When the victim disturbs the trigger, the spikes spring forth and strike the victim. Animals can sense these when calm.</description>
+				</value>
+			</li>
+
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "TrapSpike"]/placeWorkers/li[text()="PlaceWorker_NeverAdjacentTrap"]</xpath>
+			</li>
+			
+			<!-- Vanilla Factions Expanded Tribals -->
+			
+			<li MayRequire="OskarPotocki.VFE.Tribals" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFET_AnimalTrap"]/description</xpath>
+				<value>
+					<description>A large, sharp spike under tension, connected to a touch-activated trigger. If an animal touches the trigger, the spike springs forth and strikes it. Animals do not sense these when calm, but they are quite obvious to humans and will be avoided by them.</description>
+				</value>
+			</li>
+			
+			<li MayRequire="OskarPotocki.VFE.Tribals" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VFET_AnimalTrap"]/placeWorkers/li[text()="PlaceWorker_NeverAdjacentTrap"]</xpath>
+			</li>
+			
+			<!-- Vanilla Furniture Expanded Security -->
+			
+			<li MayRequire="VanillaExpanded.VFESecurity" Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFET_AnimalTrap"]/description</xpath>
+				<value>
+					<description>Two heavy metal jaws held open under tension, connected to a pressure-sensitive trigger. When stepped on, the jaws snap shut with high force, inflicting severe damage. When triggered, it can be re-armed.</description>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VFESecurity" Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName = "VFES_BearTrap"]/placeWorkers/li[text()="PlaceWorker_NeverAdjacentTrap"]</xpath>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+	
+	
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterTrapsStoneSpikeTrap</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Stone Spike Trap -->
+				
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>
+				
+  <ThingDef ParentName="BuildingBase">
+    <defName>FSFStoneTrapSpike</defName>
+    <label>stone spike trap</label>
+    <description>Five spikes under tension, connected to a touch-activated trigger. When the victim disturbs the trigger, the spikes spring forth and strike the victim. Animals can sense these when calm.</description>
+    <thingClass>Building_TrapDamager</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Security/TrapSpikeArmed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0,0,1,0.15)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <uiOrder>30</uiOrder>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <Mass>2.5</Mass>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-18</Beauty>
+      <Cleanliness>-5</Cleanliness>
+      <TrapMeleeDamage>100</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>45</costStuffCount>
+    <designationCategory>Security</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDestroyOnSpring>true</trapDestroyOnSpring>
+      <trapDamageCategory>Sharp</trapDamageCategory>
+      <expandHomeArea>false</expandHomeArea>
+	  <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+  </ThingDef>
+				
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+	
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterTrapsCostOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<!-- Option is nested so patch isn't always run -->
+	
+	<Operation Class="XmlExtensions.UseSetting">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFBetterTrapsSpikeCost</key>
+		<defaultValue>45</defaultValue>
+		<apply>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Core - Spike Trap -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "TrapSpike"]/costStuffCount</xpath>
+				<value>
+					<costStuffCount>{FSFBetterTrapsSpikeCost}</costStuffCount>
+				</value>
+			</li>
+			
+			<li Class="XmlExtensions.PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "FSFStoneTrapSpike"]/costStuffCount</xpath>
+				<value>
+					<costStuffCount>{FSFBetterTrapsSpikeCost}</costStuffCount>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</apply>
+	</Operation>
+			
+		</caseTrue>
+	</Operation>
+	
+	
+	
+		</caseTrue>
+	</Operation>
+
+</Patch>

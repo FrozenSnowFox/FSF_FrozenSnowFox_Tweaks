@@ -319,6 +319,12 @@
 		<!-- Vanilla Factions Expanded Empire -->
 		<li IfModActive="OskarPotocki.VFE.Empire">1.6/Mods/Vanilla Factions Expanded Empire</li>
 		
+		<!-- Vanilla Factions Expanded Tribal -->
+		<li IfModActive="OskarPotocki.VFE.Tribals">1.6/Mods/Vanilla Factions Expanded Tribal</li>
+		
+		<!-- Vanilla Furniture Expanded Security -->
+		<li IfModActive="VanillaExpanded.VFESecurity">1.6/Mods/Vanilla Furniture Expanded Security</li>
+		
 		<!-- Vanilla Helixien Gas Expanded -->
 		<li IfModActive="VanillaExpanded.HelixienGas">1.6/Mods/Vanilla Helixien Gas Expanded</li>
 		

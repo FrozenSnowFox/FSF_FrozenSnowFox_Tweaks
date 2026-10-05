@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFGauranlenNoArtificialBuilding</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+			<!-- Gauranlen No Artificial Building Radius -->
+				
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Plant_TreeGauranlen"]/comps/li[@Class = "CompProperties_TreeConnection"]/connectionLossDailyPerBuildingDistanceCurve</xpath>
+				<value>
+					<connectionLossDailyPerBuildingDistanceCurve>
+						<points>
+							<li>(0,0)</li>
+							<li>(0,0)</li>
+						</points>
+					</connectionLossDailyPerBuildingDistanceCurve>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

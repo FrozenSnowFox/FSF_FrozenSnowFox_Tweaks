@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAnimaGrassNeverDies</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+		<!-- Anima Grass Never Dies -->
+ 
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Plant_GrassAnima"]/plant/lifespanDaysPerGrowDays</xpath>
+				<value>
+					<lifespanDaysPerGrowDays>1200</lifespanDaysPerGrowDays>
+				</value>
+			</li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>

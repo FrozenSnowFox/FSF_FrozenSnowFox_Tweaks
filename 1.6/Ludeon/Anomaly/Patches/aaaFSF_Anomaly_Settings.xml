@@ -89,6 +89,34 @@
 						<spacing>12</spacing>
 					</li>
 					
+				<!-- Movable Anomalies -->
+			
+				<li Class="XmlExtensions.Setting.Checkbox">
+					<label>Movable Anomalies</label>
+					<key>FSFMovableAnomalies</key>
+					<defaultValue>false</defaultValue>
+					<tKey>FSFTweaksMovableAnomaliesTitle</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(163,177,188)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Patches the Monolith and Obelisks so they can be moved and taken along on gravships.</text>
+					<tKey>FSFTweaksMovableAnomaliesDesc</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.SetColor">
+					<color>(187,0,0)</color>
+				</li>
+				<li Class="XmlExtensions.Setting.Text">
+					<text>Warning: Try to avoid moving the monolith after activating it as the game really doesn't like that.  If you take it along on a gravship make sure you have ample room around it as the monolith has only one orientation and will overwrite anything in its space.  The monolith quest will fail when moving map but you should be able to attune to the monolith to advance its stage when you've encountered enough anomalies.</text>
+					<tKey>FSFTweaksMovableAnomaliesWarning</tKey>
+				</li>
+				<li Class="XmlExtensions.Setting.SetColor"/>
+				<li Class="XmlExtensions.Setting.GapLine">
+					<spacing>12</spacing>
+				</li>
+					
 				<!-- No Psychic Ritual Cooldown -->
 			
 				<li Class="XmlExtensions.Setting.Checkbox">

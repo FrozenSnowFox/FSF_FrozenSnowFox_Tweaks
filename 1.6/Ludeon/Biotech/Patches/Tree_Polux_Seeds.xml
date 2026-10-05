@@ -24,6 +24,8 @@
 		<Operation Class="PatchOperationSequence">
 			<success>Normal</success>
 			<operations>
+			
+			<!-- Polux Seeds on Traders -->
 
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/TraderKindDef[defName = "Caravan_Outlander_Exotic"]/stockGenerators</xpath>

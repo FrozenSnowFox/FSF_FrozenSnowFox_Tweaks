@@ -152,6 +152,7 @@
 	</loadAfter>
 	<incompatibleWith>
 		<li>FrozenSnowFox.BetterPawnLendingQuest</li>
+		<li>FrozenSnowFox.BetterSpikeTraps</li>
 		<li>FrozenSnowFox.EncounterMapResources</li>
 		<li>FrozenSnowFox.FilthVanishesWithRainAndTime</li>
 		<li>FrozenSnowFox.GrowableAmbrosia</li>
