@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+	<Operation Class="XmlExtensions.OptionalPatch">
+		<modId>FrozenSnowFox.FrozenSnowFoxTweaks</modId>
+		<key>FSFAccurateMechDisassemblyOn</key>
+		<defaultValue>false</defaultValue>
+		<caseTrue>
+			
+			<!-- Accurate Mechanoid Disassembly -->
+			
+		<Operation Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				
+	        <!-- Apex Mechanoids -->
+			
+	        <!-- Unlisted Mechanoids -->
+			
+			<!-- Note: The Satellite is summoned via a Mechamancer Pack which uses 30 plasteel to create them -->
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Satellite"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Plasteel>30</Plasteel>
+					</butcherProducts>
+				</value>
+            </li>
+				
+	        <!-- Light Mechanoids -->
+				
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Haze"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>80</Steel>
+						<Plasteel>40</Plasteel>
+						<ComponentIndustrial>3</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+			
+	        <!-- Medium Mechanoids -->
+				
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name = "APM_Mech_Celerus_Base"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>150</Steel>
+						<Plasteel>150</Plasteel>
+						<ComponentSpacer>2</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name = "APM_Mech_Dominus_Base"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>200</Steel>
+						<Plasteel>150</Plasteel>
+						<ComponentSpacer>3</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name = "APM_Mech_ConquerorBase"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>90</Steel>
+						<Plasteel>60</Plasteel>
+						<ComponentIndustrial>3</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Lasher"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>75</Steel>
+						<Plasteel>50</Plasteel>
+						<ComponentIndustrial>3</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Pulse"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>100</Steel>
+						<Plasteel>75</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Vassal"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>80</Steel>
+						<Plasteel>50</Plasteel>
+						<ComponentSpacer>2</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Tinker"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>60</Steel>
+						<Plasteel>40</Plasteel>
+						<ComponentIndustrial>2</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Siren"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>90</Steel>
+						<Plasteel>80</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name = "APM_Mech_Frostivus"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>150</Steel>
+						<Plasteel>80</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreRegular>1</SubcoreRegular>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Javelin"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>200</Steel>
+						<Uranium>30</Uranium>
+						<Plasteel>80</Plasteel>
+						<ComponentIndustrial>4</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+	        <!-- Heavy Mechanoids -->
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Aegis"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>200</Steel>
+						<Plasteel>150</Plasteel>
+						<ComponentSpacer>2</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name = "APM_Mech_Terminus_Base"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>300</Steel>
+						<Plasteel>200</Plasteel>
+						<ComponentSpacer>4</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Maul"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>250</Steel>
+						<Plasteel>180</Plasteel>
+						<ComponentIndustrial>6</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Mantis"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>220</Steel>
+						<Plasteel>100</Plasteel>
+						<ComponentIndustrial>5</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Dynamo"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>180</Steel>
+						<Plasteel>120</Plasteel>
+						<ComponentIndustrial>5</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+	        <!-- Ultra Heavy Mechanoids -->
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Ravager"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>300</Steel>
+						<Plasteel>100</Plasteel>
+						<ComponentIndustrial>5</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name = "APM_Mech_Ingestor"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>220</Steel>
+						<Plasteel>220</Plasteel>
+						<ComponentIndustrial>7</ComponentIndustrial>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+			
+            <li MayRequire="Mortis.ApexMechanoids" Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName = "APM_Mech_Gazer"]/butcherProducts</xpath>
+				<value>
+					<butcherProducts>
+						<Steel>400</Steel>
+						<Plasteel>250</Plasteel>
+						<ComponentSpacer>4</ComponentSpacer>
+						<SubcoreHigh>1</SubcoreHigh>
+					</butcherProducts>
+				</value>
+            </li>
+				
+			</operations>
+		</Operation>
+			
+		</caseTrue>
+	</Operation>
+
+</Patch>
