@@ -37,6 +37,7 @@
 					[not(defName = "VFE_SmallVanometricPowerCell")]
 					[not(defName = "VFE_LargeVanometricPowerCell")]
 					[not(defName = "VPE_ArchotechViolenceGenerator")]
+					[not(defName = "BOR_Reactor_V")]
 					
 					/comps/li[@Class = "CompProperties_Power"] [(substring-after(basePowerConsumption, '-'))] /basePowerConsumption</xpath>
 				<value>{FSFPowerGenerationMultiplier}</value>
