@@ -1381,10 +1381,10 @@
 				<spacing>12</spacing>
 			</li>
 			
-			<!-- Immortal Power Conduits - Discontinued -->
+			<!-- Immortal Power Conduits -->
 			
 			<li Class="XmlExtensions.Setting.Checkbox">
-				<label>Immortal Power Conduits (Discontinued)</label>
+				<label>Immortal Power Conduits</label>
 				<key>FSFImmortalPowerConduits</key>
 				<defaultValue>false</defaultValue>
 				<tKey>FSFTweaksImmortalPowerConduitsTitle</tKey>
@@ -1397,14 +1397,6 @@
 				<tKey>FSFTweaksImmortalPowerConduitsDesc</tKey>
 			</li>
 			<li Class="XmlExtensions.Setting.SetColor"/>
-				<li Class="XmlExtensions.Setting.SetColor">
-					<color>(187,0,0)</color>
-				</li>
-				<li Class="XmlExtensions.Setting.Text">
-					<text>Warning: This tweak has been discontinued and may be removed in the next major Rimworld update cycle.  It is kept for save compatibility only because suddenly removing it is highly destructive.</text>
-					<tKey>FSFTweaksImmortalPowerConduitsWarning</tKey>
-				</li>
-				<li Class="XmlExtensions.Setting.SetColor"/>
 			<li Class="XmlExtensions.Setting.GapLine">
 				<spacing>12</spacing>
 			</li>
@@ -3077,10 +3069,28 @@
 				</settings>
 			</li>
 			
+			<!-- Packs Are Not Belts Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksPacksAreNotBelts</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
 			<!-- Research Appropriation Settings -->
 			
 			<li Class="XmlExtensions.Setting.Group">
 				<tag>FrozenSnowFoxTweaksResearchAppropriation</tag>
+				<settings>
+                <!--Will inject settings here-->
+				</settings>
+			</li>
+			
+			<!-- Research Reinvented Stepping Stones Settings -->
+			
+			<li Class="XmlExtensions.Setting.Group">
+				<tag>FrozenSnowFoxTweaksRRSS</tag>
 				<settings>
                 <!--Will inject settings here-->
 				</settings>
