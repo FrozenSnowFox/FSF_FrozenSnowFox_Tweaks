@@ -14,19 +14,19 @@
 			<!-- No Ruined Grills -->
 			
 			<li Class="PatchOperationRemove">
-				<xpath>/Defs/ThingDef[defName = "VCE_SimpleGrill"]/comps</xpath>
+				<xpath>/Defs/ThingDef[defName = "VCE_SimpleGrill"]/comps/li[@Class = "VEF.Cooking.CompProperties_TempTransforms"]</xpath>
 			</li>
 			
 			<li Class="PatchOperationRemove">
-				<xpath>/Defs/ThingDef[defName = "VCE_FineGrill"]/comps</xpath>
+				<xpath>/Defs/ThingDef[defName = "VCE_FineGrill"]/comps/li[@Class = "VEF.Cooking.CompProperties_TempTransforms"]</xpath>
 			</li>
 			
 			<li Class="PatchOperationRemove">
-				<xpath>/Defs/ThingDef[defName = "VCE_LavishGrill"]/comps</xpath>
+				<xpath>/Defs/ThingDef[defName = "VCE_LavishGrill"]/comps/li[@Class = "VEF.Cooking.CompProperties_TempTransforms"]</xpath>
 			</li>
 			
 			<li Class="PatchOperationRemove">
-				<xpath>/Defs/ThingDef[defName = "VCE_GourmetGrill"]/comps</xpath>
+				<xpath>/Defs/ThingDef[defName = "VCE_GourmetGrill"]/comps/li[@Class = "VEF.Cooking.CompProperties_TempTransforms"]</xpath>
 			</li>
 				
 			<!-- Fix Preferability -->
